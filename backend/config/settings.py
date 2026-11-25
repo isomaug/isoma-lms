@@ -32,6 +32,8 @@ INSTALLED_APPS = [
     "tenants",
     "accounts",
     "academy",
+    "academics",
+    "campus",
     "notifications",
     "courses",
     "programs",

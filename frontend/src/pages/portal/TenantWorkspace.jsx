@@ -22,11 +22,25 @@ import {
   Trophy,
   ClipboardCheck,
   FileSpreadsheet,
+  MoreHorizontal,
+  Pencil,
 } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { customToast } from "../../components/GlobalPopup";
 import { UniversalSelect } from "../../components/ui/UniversalSelect";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "../../components/ui/dropdown-menu";
 import SolidStatCards from "../../components/SolidStatCards";
+import StaffRegistrationWizard from "../../components/forms/StaffRegistrationWizard";
+
+const SUBJECT_TIERS = new Set(["NURSERY", "PRIMARY", "SECONDARY", "COMPREHENSIVE_K12"]);
+function useSubjectTerm(tier) {
+  return SUBJECT_TIERS.has(tier) ? { singular: "Subject", plural: "Subjects" } : { singular: "Course", plural: "Courses" };
+}
 
 const STAFF_ROLE_OPTIONS = [
   { value: "PRINCIPAL", label: "Principal / Admin" },
@@ -74,7 +88,7 @@ const ROLE_CARDS = {
         desc: "Manage shared lesson templates, school subjects, cohorts, and report card sign-offs.",
         cta: "Manage Courses",
         icon: BookOpen,
-        route: "/dashboard/courses",
+        route: "/admissions/subjects",
       },
     ],
   },
@@ -380,16 +394,23 @@ const ROLE_CARDS = {
   },
 };
 
-export default function TenantWorkspace({ onboarding = false }) {
+export default function TenantWorkspace({ onboarding = false, onboardingView = "staff" }) {
   const { tenant, tenantSlug, effectiveRole } = useAuth();
   const navigate = useNavigate();
   const slug = tenant?.subdomain && tenant.subdomain !== "root" ? tenant.subdomain : tenantSlug || "stmarys";
+  const term = useSubjectTerm(tenant?.tier);
 
   const [staff, setStaff] = useState([]);
+  const [hrMetrics, setHrMetrics] = useState(null);
+  const [classes, setClasses] = useState([]);
+  const [subjects, setSubjects] = useState([]);
   const [templatesCount, setTemplatesCount] = useState(0);
   const [saving, setSaving] = useState(false);
   const [addingStaff, setAddingStaff] = useState(false);
   const [customDomain, setCustomDomain] = useState(tenant?.custom_domain || "");
+  const [editingStaffId, setEditingStaffId] = useState(null);
+  const [editStaffForm, setEditStaffForm] = useState(null);
+  const [savingStaffEdit, setSavingStaffEdit] = useState(false);
   const [selectedCurricula, setSelectedCurricula] = useState(
     tenant?.curricula || [tenant?.curriculum || "UNEB_LOWER_SECONDARY"]
   );
@@ -398,14 +419,20 @@ export default function TenantWorkspace({ onboarding = false }) {
     email: "",
     role: "TEACHER",
     phone: "",
+    assigned_curricula: [],
+    assigned_class_ids: [],
+    assigned_subject_ids: [],
+    hr_stage: "ONBOARDED",
+    contract_type: "FULL_TIME",
   });
 
   useEffect(() => {
-    setCustomDomain(tenant?.custom_domain || "");
-    setSelectedCurricula(
-      tenant?.curricula?.length
-        ? tenant.curricula
-        : [tenant?.curriculum || "UNEB_LOWER_SECONDARY"]
+    const curr = tenant?.curricula?.length
+      ? tenant.curricula
+      : [tenant?.curriculum || "UNEB_LOWER_SECONDARY"];
+    setSelectedCurricula(curr);
+    setStaffForm((prev) =>
+      prev.assigned_curricula.length ? prev : { ...prev, assigned_curricula: [curr[0]] }
     );
   }, [tenant]);
 
@@ -425,8 +452,63 @@ export default function TenantWorkspace({ onboarding = false }) {
         const data = await res.json();
         setStaff(data.results || []);
       }
+      const [stRes, hrRes, clsRes, mkRes] = await Promise.all([
+        fetch(`/api/tenant/institutions/${encodeURIComponent(slug)}/staff/`),
+        fetch(`/api/tenant/institutions/${encodeURIComponent(slug)}/hr-metrics/`),
+        fetch(`/api/academics/classes/?tenant=${encodeURIComponent(slug)}`),
+        fetch(`/api/academics/marks/?tenant=${encodeURIComponent(slug)}`),
+      ]);
+      if (stRes.ok) setStaff((await stRes.json()).results || []);
+      if (hrRes.ok) setHrMetrics(await hrRes.json());
+      if (clsRes.ok) setClasses((await clsRes.json()).results || []);
+      if (mkRes.ok) setSubjects((await mkRes.json()).subjects || []);
     } catch {
       // ignore
+    }
+  }
+
+  function startEditStaff(member) {
+    setEditingStaffId(member.id);
+    setEditStaffForm({
+      full_name: member.full_name,
+      email: member.email,
+      role: member.role,
+      phone: member.phone || "",
+      assigned_curricula: member.assigned_curricula?.length
+        ? member.assigned_curricula
+        : [selectedCurricula[0]],
+      assigned_class_ids: (member.assigned_class_ids || []).map(String),
+      assigned_subject_ids: (member.assigned_subject_ids || []).map(String),
+      hr_stage: member.hr_stage || "ACTIVE",
+      contract_type: member.contract_type || "FULL_TIME",
+    });
+  }
+
+  async function saveStaffEdit(userId) {
+    setSavingStaffEdit(true);
+    try {
+      const res = await fetch(
+        `/api/tenant/institutions/${encodeURIComponent(slug)}/staff/${userId}/`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            ...editStaffForm,
+            assigned_class_ids: editStaffForm.assigned_class_ids.map(Number),
+            assigned_subject_ids: editStaffForm.assigned_subject_ids.map(Number),
+          }),
+        }
+      );
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || "Could not update staff.");
+      customToast.success(`Updated ${data.full_name} (${data.role_label} · ${data.hr_stage_label}).`);
+      setEditingStaffId(null);
+      setEditStaffForm(null);
+      await loadStaff();
+    } catch (err) {
+      customToast.error(err.message);
+    } finally {
+      setSavingStaffEdit(false);
     }
   }
 
@@ -438,7 +520,7 @@ export default function TenantWorkspace({ onboarding = false }) {
       .then((data) => {
         if (data) setTemplatesCount(data.count || (data.results || []).length);
       })
-      .catch(() => {});
+      .catch(() => { });
   }, [onboarding, slug]);
 
   async function handleSaveOnboarding(e) {
@@ -492,170 +574,287 @@ export default function TenantWorkspace({ onboarding = false }) {
   }
 
   if (onboarding) {
+    const onboardingHeader = {
+      staff: {
+        title: `${tenant?.name || slug} - Staff Directory`,
+        badge: `${staff.length} Staff & Users`,
+      },
+      "add-staff": {
+        title: `${tenant?.name || slug} - Add Staff / Portal User`,
+        badge: "HR & Curriculum Assignment",
+      },
+      hr: {
+        title: `${tenant?.name || slug} - HR Recruitment-to-Onboarding Pipeline`,
+        badge: hrMetrics ? `${hrMetrics.onboarded_rate}% Onboarded` : "HR Metrics",
+      },
+    }[onboardingView] || {
+      title: `${tenant?.name || slug} - Staff Directory`,
+      badge: `${staff.length} Staff & Users`,
+    };
+
     return (
-      <div className="space-y-4">
+      <div className="flex-1 flex flex-col space-y-4">
         <div className="relative bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
           <div className="h-1 bg-gradient-to-r from-primary via-primary/60 to-primary" />
-          <div className="px-6 py-6 md:px-8 border-b border-gray-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="px-6 py-5 md:px-8 border-b border-gray-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <div>
               <p className="text-[10px] font-bold text-primary uppercase tracking-widest inline-flex items-center gap-1.5">
                 <Globe className="w-3 h-3" />
                 {tenant?.primary_domain || `${slug}.isomaug.com`}
               </p>
-              <h1 className="text-lg md:text-2xl font-bold text-gray-900 mt-1">
-                {tenant?.name || slug} - Onboarding &amp; Staff
+              <h1 className="text-lg md:text-2xl font-bold text-gray-900 mt-0.5">
+                {onboardingHeader.title}
               </h1>
             </div>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-xs font-semibold">
+            <span className="inline-flex items-center gap-1.5 text-emerald-700 text-xs font-bold shrink-0">
               <CheckCircle2 className="w-3.5 h-3.5" />
-              {tenant?.onboarding_status || "IN_PROGRESS"}
+              {onboardingHeader.badge}
             </span>
           </div>
 
-          <form onSubmit={handleSaveOnboarding} className="p-6 md:p-8 space-y-5">
-            <div>
-              <p className="text-xs font-semibold text-gray-700 mb-2">
-                Assigned Curricula (managed by Isoma Landlord ERP - read-only)
-              </p>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 py-1">
-                {selectedCurricula.map((code) => (
-                  <span
-                    key={code}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-primary uppercase tracking-wide"
-                  >
-                    <BookOpen className="w-4 h-4 text-primary" />
-                    {code.replace(/_/g, " ")}
-                  </span>
-                ))}
-              </div>
-              <p className="text-[11px] text-gray-400 mt-1">
-                Staff and students only see subjects and templates belonging to these curricula. Contact Isoma Admin to add another curriculum.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
-              <div className="md:col-span-2">
-                <label className="block text-xs font-semibold text-gray-700 mb-1">
-                  Custom White-Label Domain (Optional)
-                </label>
-                <input
-                  type="text"
-                  value={customDomain}
-                  onChange={(e) => setCustomDomain(e.target.value)}
-                  placeholder="portal.school.ac.ug"
-                  className="w-full rounded-lg border border-gray-200 px-3 py-2 text-xs focus:outline-none focus:border-primary"
-                />
-              </div>
-              <button
-                type="submit"
-                disabled={saving}
-                className="bg-primary text-white text-xs font-medium py-2.5 px-4 rounded-lg hover:bg-primary-hover transition-colors"
-              >
-                {saving ? "Saving..." : "Save School Setup"}
-              </button>
-            </div>
-          </form>
-        </div>
-
-        {/* Add Staff & Directory */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <form
-            onSubmit={handleAddStaff}
-            className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 md:p-6 space-y-3"
-          >
-            <h2 className="text-sm font-semibold text-gray-900 pb-2 border-b border-gray-100">
-              Add Staff / Portal User
-            </h2>
-            <div>
-              <label className="block text-xs font-semibold text-gray-700 mb-1">Full Name</label>
-              <input
-                type="text"
-                required
-                value={staffForm.full_name}
-                onChange={(e) => setStaffForm({ ...staffForm, full_name: e.target.value })}
-                placeholder="e.g. Mr. Musa Lubega"
-                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-xs focus:outline-none focus:border-primary"
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-semibold text-gray-700 mb-1">Email</label>
-              <input
-                type="email"
-                required
-                value={staffForm.email}
-                onChange={(e) => setStaffForm({ ...staffForm, email: e.target.value })}
-                placeholder="canteen@school.ac.ug"
-                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-xs focus:outline-none focus:border-primary"
-              />
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Role Portal</label>
-                <UniversalSelect
-                  value={staffForm.role}
-                  onChange={(val) => setStaffForm({ ...staffForm, role: val })}
-                  options={STAFF_ROLE_OPTIONS}
-                  placeholder="Select role..."
-                  searchPlaceholder="Search roles..."
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Phone</label>
-                <input
-                  type="text"
-                  value={staffForm.phone}
-                  onChange={(e) => setStaffForm({ ...staffForm, phone: e.target.value })}
-                  placeholder="+2567..."
-                  className="w-full rounded-lg border border-gray-200 px-3 py-2 text-xs focus:outline-none focus:border-primary"
-                />
-              </div>
-            </div>
-            <button
-              type="submit"
-              disabled={addingStaff}
-              className="w-full bg-primary text-white text-xs font-medium py-2.5 px-4 rounded-lg hover:bg-primary-hover transition-colors"
-            >
-              {addingStaff ? "Adding..." : "Add to School (Default pw: Isoma2026!)"}
-            </button>
-          </form>
-
-          <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-5 md:p-6">
-            <h2 className="text-sm font-semibold text-gray-900 mb-3">
-              School Staff &amp; Users ({staff.length})
-            </h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs">
-                <thead>
-                  <tr className="border-b border-gray-200 text-gray-600 text-xs">
-                    <th className="py-2 pr-3 font-semibold">Name</th>
-                    <th className="py-2 pr-3 font-semibold">Role Portal</th>
-                    <th className="py-2 pr-3 font-semibold">Email</th>
-                    <th className="py-2 font-semibold">Phone</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-100">
-                  {staff.map((m) => (
-                    <tr key={m.id}>
-                      <td className="py-2.5 pr-3 font-semibold text-gray-800">{m.full_name}</td>
-                      <td className="py-2.5 pr-3">
-                        <span className="rounded-full bg-primary/10 text-primary px-2 py-0.5 text-[10px] font-semibold">
-                          {m.role_label}
-                        </span>
-                      </td>
-                      <td className="py-2.5 pr-3 text-gray-600">{m.email}</td>
-                      <td className="py-2.5 text-gray-500">{m.phone || "-"}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+          {/* Compact 2-line Assigned Curricula strip (no book icons) */}
+          <div className="px-6 py-3.5 md:px-8 space-y-1">
+            <p className="text-xs text-gray-700">
+              <span className="font-semibold">Assigned Curricula (read-only):</span>{" "}
+              <span className="font-bold text-primary uppercase tracking-wide">
+                {selectedCurricula.map((c) => c.replace(/_/g, " ")).join(" · ")}
+              </span>
+            </p>
+            <p className="text-[11px] text-gray-500">
+              Custom Domain &amp; TLS settings and Curriculum assignments are controlled by the ERP Super Admin.
+            </p>
           </div>
         </div>
-      </div>
+
+        {onboardingView === "hr" && (
+          <div className="flex-1 bg-white rounded-t-2xl rounded-b-none shadow-sm border border-b-0 border-gray-100 p-6 md:p-8 space-y-5">
+            <div className="flex items-center justify-between">
+              <h2 className="text-sm font-semibold text-gray-900">
+                HR Recruitment-to-Onboarding Pipeline
+              </h2>
+              {hrMetrics && (
+                <span className="text-xs font-bold text-primary">
+                  {hrMetrics.onboarded_rate}% onboarded
+                </span>
+              )}
+            </div>
+            {hrMetrics ? (
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-center">
+                {Object.entries(hrMetrics.stages || {}).map(([stage, count]) => (
+                  <div
+                    key={stage}
+                    className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-4"
+                  >
+                    <p className="text-2xl font-bold text-primary leading-none">{count}</p>
+                    <p className="text-[11px] font-semibold text-gray-600 mt-1.5">
+                      {stage.charAt(0) + stage.slice(1).toLowerCase()}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-xs text-gray-400">Loading HR pipeline metrics...</p>
+            )}
+          </div>
+        )}
+
+        {onboardingView === "add-staff" && (
+          <StaffRegistrationWizard
+            slug={slug}
+            roleOptions={STAFF_ROLE_OPTIONS}
+            selectedCurricula={selectedCurricula}
+            classes={classes}
+            subjects={subjects}
+            subjectPlural={term.plural}
+            onSuccess={() => loadStaff()}
+          />
+        )}
+
+        {/* Full-Width Staff & Users Table */}
+        {
+          onboardingView === "staff" && (
+            <div className="flex-1 bg-white rounded-t-2xl rounded-b-none shadow-sm border border-b-0 border-gray-100 p-5 md:p-6">
+              <h2 className="text-sm font-semibold text-gray-900 mb-3">
+                School Staff &amp; Users ({staff.length})
+              </h2>
+
+              {editingStaffId && editStaffForm && (
+                <div className="mb-4 rounded-xl border border-primary/30 bg-gray-50 p-4 space-y-3">
+                  <p className="text-xs font-bold text-primary">
+                    Edit Staff Member: {editStaffForm.full_name}
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                    <input
+                      type="text"
+                      value={editStaffForm.full_name}
+                      onChange={(e) => setEditStaffForm({ ...editStaffForm, full_name: e.target.value })}
+                      className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs"
+                      placeholder="Full name"
+                    />
+                    <UniversalSelect
+                      value={editStaffForm.role}
+                      onChange={(val) => setEditStaffForm({ ...editStaffForm, role: val })}
+                      options={STAFF_ROLE_OPTIONS}
+                    />
+                    <UniversalSelect
+                      value={editStaffForm.hr_stage}
+                      onChange={(val) => setEditStaffForm({ ...editStaffForm, hr_stage: val })}
+                      options={[
+                        { value: "APPLIED", label: "Applied" },
+                        { value: "SHORTLISTED", label: "Shortlisted" },
+                        { value: "INTERVIEWED", label: "Interviewed" },
+                        { value: "OFFERED", label: "Offer Issued" },
+                        { value: "ONBOARDED", label: "Onboarded" },
+                        { value: "ACTIVE", label: "Active Staff" },
+                      ]}
+                      searchable={false}
+                    />
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                    <UniversalSelect
+                      multiple
+                      minSelected={1}
+                      value={editStaffForm.assigned_curricula}
+                      onChange={(vals) => setEditStaffForm({ ...editStaffForm, assigned_curricula: vals })}
+                      options={selectedCurricula.map((c) => ({ value: c, label: c.replace(/_/g, " ") }))}
+                      placeholder="Assigned curricula..."
+                    />
+                    <UniversalSelect
+                      multiple
+                      value={editStaffForm.assigned_class_ids}
+                      onChange={(vals) => setEditStaffForm({ ...editStaffForm, assigned_class_ids: vals })}
+                      options={classes.map((c) => ({ value: String(c.id), label: `${c.name} (${c.curriculum_label})` }))}
+                      placeholder="Assigned classes..."
+                    />
+                    <UniversalSelect
+                      multiple
+                      value={editStaffForm.assigned_subject_ids}
+                      onChange={(vals) => setEditStaffForm({ ...editStaffForm, assigned_subject_ids: vals })}
+                      options={subjects.map((s) => ({ value: String(s.id), label: `${s.name} - ${s.class_stream_name}` }))}
+                      placeholder={`Assigned ${term.plural.toLowerCase()}...`}
+                    />
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      disabled={savingStaffEdit}
+                      onClick={() => saveStaffEdit(editingStaffId)}
+                      className="bg-primary text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-primary-hover"
+                    >
+                      {savingStaffEdit ? "Saving..." : "Save Staff Changes"}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEditingStaffId(null);
+                        setEditStaffForm(null);
+                      }}
+                      className="text-xs text-gray-500 hover:text-gray-800 px-3 py-2"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              <div className="overflow-hidden rounded-xl border border-gray-200">
+                <table className="w-full text-left text-xs border-collapse table-fixed">
+                  <thead>
+                    <tr className="bg-gray-50 border-b border-gray-200 text-gray-600 text-xs">
+                      <th className="py-2.5 px-3 font-semibold">Name</th>
+                      <th className="py-2.5 px-3 font-semibold w-[26%] sm:w-[20%]">Role Portal</th>
+                      <th className="py-2.5 px-3 font-semibold hidden md:table-cell w-[22%]">Curricula</th>
+                      <th className="py-2.5 px-3 font-semibold hidden lg:table-cell w-[13%]">HR Stage</th>
+                      <th className="py-2.5 px-3 font-semibold hidden xl:table-cell w-[20%]">Email</th>
+                      <th className="py-2.5 px-3 font-semibold text-right w-14">More</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100 bg-white">
+                    {staff.map((m) => {
+                      const currText = (m.assigned_curricula?.length ? m.assigned_curricula : selectedCurricula)
+                        .map((c) => c.replace(/_/g, " "))
+                        .join(", ");
+                      return (
+                        <tr key={m.id} className="hover:bg-gray-50/80">
+                          <td className="py-2.5 px-3 font-semibold text-gray-800 truncate" title={m.full_name}>
+                            {m.full_name}
+                          </td>
+                          <td className="py-2.5 px-3 font-bold text-primary text-[11px] truncate" title={m.role_label}>
+                            {m.role_label}
+                          </td>
+                          <td className="py-2.5 px-3 text-gray-600 text-[11px] hidden md:table-cell truncate" title={currText}>
+                            {currText}
+                          </td>
+                          <td className="py-2.5 px-3 font-semibold text-gray-700 text-[11px] hidden lg:table-cell truncate">
+                            {m.hr_stage_label || "Active"}
+                          </td>
+                          <td className="py-2.5 px-3 text-gray-600 hidden xl:table-cell truncate" title={m.email}>
+                            {m.email}
+                          </td>
+                          <td className="py-2.5 px-3 text-right">
+                            <DropdownMenu>
+                              <DropdownMenuTrigger asChild>
+                                <button
+                                  type="button"
+                                  className="inline-flex h-7 w-7 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+                                  aria-label={`More actions for ${m.full_name}`}
+                                >
+                                  <MoreHorizontal className="w-4 h-4" />
+                                </button>
+                              </DropdownMenuTrigger>
+                              <DropdownMenuContent
+                                align="end"
+                                className="w-60 bg-white border border-gray-200 shadow-lg rounded-xl p-1.5"
+                              >
+                                <div className="px-2.5 py-1.5 border-b border-gray-100 mb-1 text-[11px] text-gray-500 space-y-0.5">
+                                  <p className="font-bold text-gray-900 truncate">{m.full_name}</p>
+                                  <p className="truncate">{m.email}</p>
+                                  <p className="truncate">HR: {m.hr_stage_label || "Active"} · {currText}</p>
+                                </div>
+                                <DropdownMenuItem
+                                  onClick={() => startEditStaff(m)}
+                                  className="flex items-center gap-2 px-2.5 py-2 text-xs font-semibold text-primary rounded-lg cursor-pointer hover:bg-primary/5"
+                                >
+                                  <Pencil className="w-3.5 h-3.5" />
+                                  Edit Staff &amp; Assignments
+                                </DropdownMenuItem>
+                              </DropdownMenuContent>
+                            </DropdownMenu>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )
+        }
+      </div >
     );
   }
 
-  const roleConfig = ROLE_CARDS[effectiveRole] || ROLE_CARDS.PRINCIPAL;
+  const isSubjectTier = SUBJECT_TIERS.has(tenant?.tier);
+  const adaptTerm = (str) =>
+    isSubjectTier && typeof str === "string"
+      ? str
+        .replace(/\bCourses\b/g, "Subjects")
+        .replace(/\bCourse\b/g, "Subject")
+        .replace(/\bcourses\b/g, "subjects")
+        .replace(/\bcourse\b/g, "subject")
+      : str;
+
+  const rawRoleConfig = ROLE_CARDS[effectiveRole] || ROLE_CARDS.PRINCIPAL;
+  const roleConfig = {
+    ...rawRoleConfig,
+    subtitle: adaptTerm(rawRoleConfig.subtitle),
+    cards: rawRoleConfig.cards.map((c) => ({
+      ...c,
+      title: adaptTerm(c.title),
+      desc: adaptTerm(c.desc),
+      cta: adaptTerm(c.cta),
+    })),
+  };
   const activeCurricula = tenant?.curricula?.length
     ? tenant.curricula
     : [tenant?.curriculum || "UNEB_LOWER_SECONDARY"];
@@ -686,7 +885,7 @@ export default function TenantWorkspace({ onboarding = false }) {
       { label: "Past Papers", value: "Open", sub: "Revision & schemes", icon: ClipboardCheck, to: "/dashboard/past-papers" },
     ],
     STUDENT: [
-      { label: "Available Courses", value: templatesCount, sub: "Open your subjects", icon: BookOpen, to: "/courses" },
+      { label: `Available ${term.plural}`, value: templatesCount, sub: `Open your ${term.plural.toLowerCase()}`, icon: BookOpen, to: "/courses" },
       { label: "My Learning", value: "Active", sub: "Continue lessons", icon: GraduationCap, to: "/my-learning" },
       { label: "Certificates", value: "Verify", sub: "QR verified records", icon: ShieldCheck, to: "/verify" },
       { label: "Curriculum Tracks", value: activeCurricula.length, sub: "Assigned to school", icon: FileSpreadsheet, to: "/courses" },
@@ -785,17 +984,11 @@ export default function TenantWorkspace({ onboarding = false }) {
         </h1>
         <p className="text-gray-500 mt-1.5 text-sm md:text-base">{roleConfig.subtitle}</p>
 
-        {/* Active Curricula - bold text + icon, no transparent pill background */}
-        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
-          {activeCurricula.map((code) => (
-            <span
-              key={code}
-              className="inline-flex items-center gap-1.5 text-primary text-[11px] font-bold tracking-wide uppercase"
-            >
-              <BookOpen className="w-3.5 h-3.5 text-primary" />
-              {code.replace(/_/g, " ")}
-            </span>
-          ))}
+        {/* Active Curricula - bold text only, no book icons */}
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+          <span className="text-primary text-[11px] font-bold tracking-wide uppercase">
+            {activeCurricula.map((code) => code.replace(/_/g, " ")).join(" · ")}
+          </span>
         </div>
 
         <div className="mx-auto mt-6 h-px w-40 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />

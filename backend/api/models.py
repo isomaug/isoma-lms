@@ -8,6 +8,7 @@ class Profile(models.Model):
     email = models.EmailField(default="support@isomaug.com")
     phone = models.CharField(max_length=32, default="+256778261026")
     website = models.URLField(default="https://learn.isomaug.com")
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.full_name

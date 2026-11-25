@@ -1,9 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BookOpen, Search, Layers, ArrowRight, Copy, Lock } from "lucide-react";
+import { Search, Layers, ArrowRight, Copy, Lock } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { customToast } from "../../components/GlobalPopup";
 import { UniversalSelect } from "../../components/ui/UniversalSelect";
+
+const SUBJECT_TIERS = new Set(["NURSERY", "PRIMARY", "SECONDARY", "COMPREHENSIVE_K12"]);
 
 export default function CurriculumTemplatesPage() {
   const { tenant, tenantSlug } = useAuth();
@@ -12,6 +14,9 @@ export default function CurriculumTemplatesPage() {
     tenant?.subdomain && tenant.subdomain !== "root"
       ? tenant.subdomain
       : tenantSlug || "stmarys";
+  const isSubjectTier = SUBJECT_TIERS.has(tenant?.tier);
+  const unitSingular = isSubjectTier ? "Subject" : "Course";
+  const unitPlural = isSubjectTier ? "Subjects" : "Courses";
 
   const [templates, setTemplates] = useState([]);
   const [allowedCurricula, setAllowedCurricula] = useState([]);
@@ -52,22 +57,14 @@ export default function CurriculumTemplatesPage() {
       {/* Header & Strict Curriculum Scope Indicator */}
       <div className="px-5 py-5 md:px-8 border-b border-gray-100 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-1">
-            {allowedCurricula.map((code) => (
-              <span
-                key={code}
-                className="inline-flex items-center gap-1 text-[11px] font-bold text-primary uppercase tracking-wide"
-              >
-                <BookOpen className="w-3.5 h-3.5 text-primary" />
-                {code.replace(/_/g, " ")}
-              </span>
-            ))}
-          </div>
+          <p className="text-[11px] font-bold text-primary uppercase tracking-wide mb-1">
+            {allowedCurricula.map((code) => code.replace(/_/g, " ")).join(" · ")}
+          </p>
           <h1 className="text-lg md:text-2xl font-bold text-gray-900 tracking-tight">
-            Curriculum Lesson Templates
+            {unitSingular} Templates
           </h1>
           <p className="text-xs sm:text-sm text-gray-500 mt-0.5">
-            Strictly scoped to curricula assigned to {tenant?.name || slug}. Teachers can open or clone any template into their class lessons.
+            Strictly scoped to curricula assigned to {tenant?.name || slug}. Teachers can open or clone any {unitSingular.toLowerCase()} template into their class lessons.
           </p>
         </div>
 
@@ -126,7 +123,7 @@ export default function CurriculumTemplatesPage() {
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
                   <tr className="bg-gray-50 border-b border-gray-200 text-gray-600 text-xs">
-                    <th className="py-3 px-4 font-semibold">Template / Subject</th>
+                    <th className="py-3 px-4 font-semibold">{unitSingular} Template</th>
                     <th className="py-3 px-4 font-semibold">Curriculum</th>
                     <th className="py-3 px-4 font-semibold">Level</th>
                     <th className="py-3 px-4 font-semibold text-center">Modules</th>
@@ -146,11 +143,8 @@ export default function CurriculumTemplatesPage() {
                           {tpl.subtitle}
                         </p>
                       </td>
-                      <td className="py-3.5 px-4 whitespace-nowrap">
-                        <span className="inline-flex items-center gap-1 font-bold text-primary text-[11px]">
-                          <BookOpen className="w-3.5 h-3.5" />
-                          {tpl.curriculum_label}
-                        </span>
+                      <td className="py-3.5 px-4 whitespace-nowrap font-bold text-primary text-[11px]">
+                        {tpl.curriculum_label}
                       </td>
                       <td className="py-3.5 px-4 whitespace-nowrap text-gray-600 font-medium">
                         {tpl.level}
@@ -165,11 +159,19 @@ export default function CurriculumTemplatesPage() {
                         <div className="inline-flex items-center gap-2">
                           <button
                             type="button"
-                            onClick={() =>
-                              customToast.success(
-                                `Cloned "${tpl.title}" as a customizable class lesson template.`
-                              )
-                            }
+                            onClick={async () => {
+                              const res = await fetch(`/api/academics/templates/clone/?tenant=${encodeURIComponent(slug)}`, {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({ course_slug: tpl.slug }),
+                              });
+                              const data = await res.json();
+                              if (res.ok) {
+                                customToast.success(`Cloned "${data.name}" (${data.cloned_lessons_count} lessons) into ${data.class_stream}.`);
+                              } else {
+                                customToast.error(data.detail || "Could not clone template.");
+                              }
+                            }}
                             className="inline-flex items-center gap-1 rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-[11px] font-semibold text-gray-700 hover:border-primary hover:text-primary transition-colors"
                           >
                             <Copy className="w-3 h-3" />
@@ -200,8 +202,7 @@ export default function CurriculumTemplatesPage() {
                 >
                   <div className="flex items-start justify-between gap-2">
                     <div>
-                      <span className="inline-flex items-center gap-1 text-[10px] font-bold text-primary uppercase">
-                        <BookOpen className="w-3 h-3" />
+                      <span className="text-[10px] font-bold text-primary uppercase">
                         {tpl.curriculum_label}
                       </span>
                       <h2 className="text-sm font-bold text-gray-900 mt-0.5">

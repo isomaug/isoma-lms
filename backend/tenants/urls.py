@@ -58,6 +58,17 @@ def serialize_member(profile):
         "phone": profile.phone,
         "institution": profile.institution.name if profile.institution else "",
         "subdomain": profile.institution.subdomain if profile.institution else "",
+        "assigned_curricula": profile.assigned_curricula or [],
+        "assigned_class_ids": profile.assigned_class_ids or [],
+        "assigned_subject_ids": profile.assigned_subject_ids or [],
+        "hr_stage": profile.hr_stage,
+        "hr_stage_label": profile.get_hr_stage_display(),
+        "contract_type": profile.contract_type,
+        "department": profile.department,
+        "applied_at": profile.applied_at,
+        "onboarded_at": profile.onboarded_at,
+        "updated_at": profile.updated_at,
+        "updated_by": profile.updated_by,
         "is_active": u.is_active,
     }
 
@@ -385,6 +396,18 @@ def tenant_staff_view(request, subdomain):
     if User.objects.filter(username=username).exists():
         username = f"{username}-{User.objects.count() + 1}"[:40]
 
+    from django.utils import timezone
+
+    allowed_curr = inst.curricula or [inst.curriculum]
+    req_curr = request.data.get("assigned_curricula")
+    if isinstance(req_curr, list) and req_curr:
+        assigned_curricula = [c for c in req_curr if c in allowed_curr] or [allowed_curr[0]]
+    else:
+        assigned_curricula = [allowed_curr[0]]
+
+    hr_stage = (request.data.get("hr_stage") or "ONBOARDED").upper()
+    now = timezone.now()
+
     parts = full_name.split()
     user = User.objects.create_user(
         username=username,
@@ -393,13 +416,98 @@ def tenant_staff_view(request, subdomain):
         first_name=parts[0],
         last_name=" ".join(parts[1:]),
     )
+    dob_raw = (request.data.get("date_of_birth") or "").strip() or None
     profile = UserProfile.objects.create(
         user=user,
         institution=inst,
         role=role,
         phone=phone,
+        assigned_curricula=assigned_curricula,
+        assigned_class_ids=[int(x) for x in (request.data.get("assigned_class_ids") or []) if str(x).isdigit()],
+        assigned_subject_ids=[int(x) for x in (request.data.get("assigned_subject_ids") or []) if str(x).isdigit()],
+        hr_stage=hr_stage,
+        contract_type=(request.data.get("contract_type") or "FULL_TIME").upper(),
+        department=(request.data.get("department") or "").strip(),
+        date_of_birth=dob_raw,
+        gender=(request.data.get("gender") or "").strip(),
+        nationality=(request.data.get("nationality") or "Ugandan").strip(),
+        national_id=(request.data.get("national_id") or "").strip(),
+        home_address=(request.data.get("home_address") or "").strip(),
+        qualification=(request.data.get("qualification") or "").strip(),
+        years_experience=int(request.data.get("years_experience") or 0),
+        salary_ugx=int(request.data.get("salary_ugx") or 0),
+        next_of_kin_name=(request.data.get("next_of_kin_name") or "").strip(),
+        next_of_kin_phone=(request.data.get("next_of_kin_phone") or "").strip(),
+        bank_or_momo_account=(request.data.get("bank_or_momo_account") or "").strip(),
+        applied_at=now,
+        onboarded_at=now if hr_stage in ("ONBOARDED", "ACTIVE") else None,
+        updated_by=_actor_label(request),
     )
     return Response(serialize_member(profile), status=status.HTTP_201_CREATED)
+
+
+@api_view(["PATCH"])
+@permission_classes([AllowAny])
+def tenant_staff_detail_view(request, subdomain, user_id):
+    """Edit an existing staff member: role, curricula, assigned classes/subjects, HR stage, contact."""
+    from django.utils import timezone
+
+    inst = Institution.objects.filter(subdomain=subdomain).first()
+    if not inst:
+        return Response({"detail": "School not found."}, status=status.HTTP_404_NOT_FOUND)
+
+    profile = UserProfile.objects.filter(institution=inst, user_id=user_id).select_related("user", "institution").first()
+    if not profile:
+        return Response({"detail": "Staff member not found."}, status=status.HTTP_404_NOT_FOUND)
+
+    user = profile.user
+    if "full_name" in request.data and (request.data.get("full_name") or "").strip():
+        parts = request.data["full_name"].strip().split()
+        user.first_name = parts[0]
+        user.last_name = " ".join(parts[1:])
+    if "email" in request.data and (request.data.get("email") or "").strip():
+        user.email = request.data["email"].strip().lower()
+    user.save()
+
+    allowed_curr = inst.curricula or [inst.curriculum]
+    if "assigned_curricula" in request.data and isinstance(request.data["assigned_curricula"], list):
+        filtered = [c for c in request.data["assigned_curricula"] if c in allowed_curr]
+        profile.assigned_curricula = filtered or [allowed_curr[0]]
+    if "assigned_class_ids" in request.data and isinstance(request.data["assigned_class_ids"], list):
+        profile.assigned_class_ids = [int(x) for x in request.data["assigned_class_ids"] if str(x).isdigit()]
+    if "assigned_subject_ids" in request.data and isinstance(request.data["assigned_subject_ids"], list):
+        profile.assigned_subject_ids = [int(x) for x in request.data["assigned_subject_ids"] if str(x).isdigit()]
+    for field in ("role", "phone", "hr_stage", "contract_type", "department"):
+        if field in request.data:
+            setattr(profile, field, request.data[field])
+
+    if profile.hr_stage in ("ONBOARDED", "ACTIVE") and not profile.onboarded_at:
+        profile.onboarded_at = timezone.now()
+    profile.updated_by = _actor_label(request)
+    profile.save()
+    return Response(serialize_member(profile))
+
+
+@api_view(["GET"])
+@permission_classes([AllowAny])
+def tenant_hr_metrics_view(request, subdomain):
+    """HR recruitment-to-onboarding funnel metrics for a school."""
+    inst = Institution.objects.filter(subdomain=subdomain).first()
+    if not inst:
+        return Response({"detail": "School not found."}, status=status.HTTP_404_NOT_FOUND)
+
+    profiles = UserProfile.objects.filter(institution=inst)
+    stages = ["APPLIED", "SHORTLISTED", "INTERVIEWED", "OFFERED", "ONBOARDED", "ACTIVE"]
+    counts = {s: profiles.filter(hr_stage=s).count() for s in stages}
+    total = profiles.count()
+    onboarded_total = counts["ONBOARDED"] + counts["ACTIVE"]
+    return Response(
+        {
+            "total_staff": total,
+            "onboarded_rate": round((onboarded_total / total) * 100, 1) if total else 0,
+            "stages": counts,
+        }
+    )
 
 
 @api_view(["GET"])
@@ -417,6 +525,8 @@ urlpatterns = [
     path("institutions/<slug:subdomain>/onboarding/", tenant_onboarding_view, name="tenant-onboarding"),
     path("institutions/<slug:subdomain>/curricula/", landlord_curricula_view, name="landlord-curricula"),
     path("institutions/<slug:subdomain>/staff/", tenant_staff_view, name="tenant-staff"),
+    path("institutions/<slug:subdomain>/staff/<int:user_id>/", tenant_staff_detail_view, name="tenant-staff-detail"),
+    path("institutions/<slug:subdomain>/hr-metrics/", tenant_hr_metrics_view, name="tenant-hr-metrics"),
     path("audit-logs/", landlord_audit_logs_view, name="landlord-audit-logs"),
     path("curriculum-templates/", curriculum_templates_view, name="curriculum-templates"),
     path("users/", landlord_users_view, name="landlord-users"),

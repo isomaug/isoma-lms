@@ -9,6 +9,8 @@ import PortalLayout from "./components/layout/PortalLayout";
 import DashboardHome from "./pages/portal/DashboardHome";
 import TenantWorkspace from "./pages/portal/TenantWorkspace";
 import CurriculumTemplatesPage from "./pages/portal/CurriculumTemplatesPage";
+import AdmissionsPage from "./pages/portal/AdmissionsPage";
+import ReportCardsPage from "./pages/portal/ReportCardsPage";
 import LoginPage from "./pages/auth/LoginPage";
 import {
   SchoolsPage,
@@ -62,7 +64,9 @@ export default function App() {
                     <Route path="/" element={<ModeHome />} />
 
                     {/* Landlord ERP routes (:5176 / isomaug.com) */}
-                    <Route path="/schools" element={<SchoolsPage />} />
+                    <Route path="/schools" element={<SchoolsPage view="list" />} />
+                    <Route path="/schools/new" element={<SchoolsPage view="new" />} />
+                    <Route path="/schools/audit-log" element={<SchoolsPage view="audit-log" />} />
                     <Route path="/categories" element={<CategoriesPage />} />
                     <Route path="/users" element={<UsersPage />} />
                     <Route path="/invoices" element={<InvoicesPage />} />
@@ -70,7 +74,16 @@ export default function App() {
                     <Route path="/settings" element={<SettingsPage />} />
 
                     {/* Tenant Workspace & Shared LMS routes (:5177 / *.isomaug.com / learn.isomaug.com) */}
-                    <Route path="/onboarding" element={<TenantWorkspace onboarding />} />
+                    <Route path="/onboarding" element={<TenantWorkspace onboarding onboardingView="staff" />} />
+                    <Route path="/onboarding/add-staff" element={<TenantWorkspace onboarding onboardingView="add-staff" />} />
+                    <Route path="/onboarding/hr" element={<TenantWorkspace onboarding onboardingView="hr" />} />
+                    <Route path="/admissions" element={<AdmissionsPage view="list" />} />
+                    <Route path="/admissions/new" element={<AdmissionsPage view="new" />} />
+                    <Route path="/admissions/classes" element={<AdmissionsPage view="classes" />} />
+                    <Route path="/admissions/subjects" element={<AdmissionsPage view="subjects" />} />
+                    <Route path="/report-cards" element={<ReportCardsPage view="list" />} />
+                    <Route path="/report-cards/enter-mark" element={<ReportCardsPage view="enter-mark" />} />
+                    <Route path="/report-cards/audit-log" element={<ReportCardsPage view="audit-log" />} />
                     <Route path="/courses" element={<CurriculumTemplatesPage />} />
                     <Route path="/catalog" element={<CoursesIndex />} />
                     <Route path="/courses/:slug" element={<CourseLanding />} />
@@ -82,7 +95,7 @@ export default function App() {
                     <Route path="/verify/:code" element={<VerifyCertificate />} />
                     <Route path="/verify-certificate" element={<VerifyCertificate />} />
                     <Route path="/verify-certificate/:code" element={<VerifyCertificate />} />
-                    <Route path="/dashboard/courses" element={<DashboardCourses />} />
+                    <Route path="/dashboard/courses" element={<CurriculumTemplatesPage />} />
                     <Route path="/dashboard/cohorts" element={<DashboardCohorts />} />
                     <Route path="/dashboard/my-cohorts" element={<DashboardMyCohorts />} />
                     <Route path="/dashboard/instructors" element={<DashboardInstructors />} />
