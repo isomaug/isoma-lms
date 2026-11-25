@@ -1,51 +1,51 @@
-# Isoma UG (isomaug.com) — Architecture & System Design Specification
+# Isoma UG LMS (`learn.isomaug.com` & `*.isomaug.com`) — Architecture & System Design Specification
 
 ## 1. System Topology & Dual-Engine Overview
 
-Isoma UG (`isomaug.com`) is architected with a unified dual-engine topology that seamlessly supports two operating paradigms on a shared backend infrastructure:
+Isoma UG LMS is architected with a unified dual-engine topology that seamlessly supports two operating paradigms on a shared backend infrastructure (under the `isomaug.com` ecosystem alongside `isomaug.com` and `cloud.isomaug.com`):
 
 1. **The Public Open Academy (Independent Learning Marketplace)**:
-   - Operates directly on the root portal (`isomaug.com`).
+   - Operates on **`learn.isomaug.com`** (served by `src/pages/public/` inside Isoma LMS).
    - Open to individual learners worldwide without requiring school or institutional affiliation.
    - Users browse, purchase, and enroll in professional courses, masterclasses, tech bootcamps, and certifications.
    - Features self-paced learning, interactive quizzes, coding environments, assignment submissions, and automated certificate generation.
 
 2. **The Institutional School ERP & LMS (Private Tenant Workspaces)**:
-   - Operates on dedicated subdomains (e.g., `stmarys.isomaug.com`) or **fully custom white-labeled school domains** (e.g., `portal.stmarys.ac.ug`, `lms.greenhill.edu`, `learn.kingscollege.com`).
+   - Operates on dedicated subdomains (e.g., `stmarys.isomaug.com` — excluding reserved platform subdomains such as `learn`, `cloud`, `billing`, `www`, and `cname`) or **fully custom white-labeled school domains** (e.g., `portal.stmarys.ac.ug`, `lms.greenhill.edu`, `learn.kingscollege.com`).
    - Private, isolated ecosystem for enrolled students, teachers, parents, and administrative staff.
    - Nursery tiers manage "Learning Areas & Milestones", Primary and Secondary tiers manage "Subjects" and termly schemes of work, while Higher Education tiers manage "Course Units" and semester credit hours.
    - Dynamic Curriculum & Country Scoping ensures an institution only sees modules, subjects, and schemes belonging to their selected curriculum, while benefiting from a universal shared library of report card templates, certificate designers, and STEM resources.
    - Includes Offline LAN School Box edge caching for zero-data campus learning.
 
 ```
-                               ┌────────────────────────────────────────────────────────┐
-                               │                    ANY HOST / DOMAIN                   │
-                               │  isomaug.com | *.isomaug.com | portal.schoolname.ac.ug │
-                               └───────────────────────────┬────────────────────────────┘
-                                                           │
-                               ┌───────────────────────────▼────────────────────────────┐
-                               │       Edge Router & Custom Domain TLS Manager          │
-                               │     (Cloudflare for SaaS / Caddy On-Demand TLS)        │
-                               └───────────────────────────┬────────────────────────────┘
-                                                           │
-                               ┌───────────────────────────▼────────────────────────────┐
-                               │              Unified Backend API Gateway               │
-                               │              (Django REST + Neon Postgres)             │
-                               │          Tenant Resolution Middleware (Host Header)    │
-                               └───────────────────────────┬────────────────────────────┘
-                                                           │
-                     ┌─────────────────────────────────────┴─────────────────────────────────────┐
-                     │                                                                           │
-                     ▼                                                                           ▼
-       ┌───────────────────────────┐                                               ┌───────────────────────────┐
-       │    Public Open Academy    │                                               │    Institutional ERP/LMS  │
-       │    (Root: isomaug.com)    │                                               │ (Subdomain or Custom Dom) │
-       │  - Public Course Catalog  │                                               │  - Country & Curriculum   │
-       │  - Direct Student Checkout│                                               │  - Nursery / Primary / Sec│
-       │  - Self-Paced Learning    │                                               │  - 18 Operations Modules  │
-       │  - Verified Certificates  │                                               │  - Report Cards & Badges  │
-       │  - Offline Edge LAN Sync  │                                               │  - WhatsApp Bot & Canteen │
-       └───────────────────────────┘                                               └───────────────────────────┘
+                               ┌─────────────────────────────────────────────────────────────┐
+                               │                       ANY HOST / DOMAIN                     │
+                               │ learn.isomaug.com | *.isomaug.com | portal.schoolname.ac.ug │
+                               └──────────────────────────────┬──────────────────────────────┘
+                                                              │
+                               ┌──────────────────────────────▼──────────────────────────────┐
+                               │         Edge Router & Custom Domain TLS Manager             │
+                               │       (Cloudflare for SaaS / Caddy On-Demand TLS)           │
+                               └──────────────────────────────┬──────────────────────────────┘
+                                                              │
+                               ┌──────────────────────────────▼──────────────────────────────┐
+                               │                Unified Backend API Gateway                  │
+                               │                (Django REST + Neon Postgres)                │
+                               │            Tenant Resolution Middleware (Host Header)       │
+                               └──────────────────────────────┬──────────────────────────────┘
+                                                              │
+                     ┌────────────────────────────────────────┴────────────────────────────────────────┐
+                     │                                                                                 │
+                     ▼                                                                                 ▼
+       ┌───────────────────────────┐                                                     ┌───────────────────────────┐
+       │    Public Open Academy    │                                                     │    Institutional ERP/LMS  │
+       │    (learn.isomaug.com)    │                                                     │ (Subdomain or Custom Dom) │
+       │  - Public Course Catalog  │                                                     │  - Country & Curriculum   │
+       │  - Direct Student Checkout│                                                     │  - Nursery / Primary / Sec│
+       │  - Self-Paced Learning    │                                                     │  - 18 Operations Modules  │
+       │  - Verified Certificates  │                                                     │  - Report Cards & Badges  │
+       │  - Offline Edge LAN Sync  │                                                     │  - WhatsApp Bot & Canteen │
+       └───────────────────────────┘                                                     └───────────────────────────┘
 ```
 
 ---
@@ -69,7 +69,7 @@ To ensure teachers and administrators are never confused by irrelevant subject s
      - **Shared Report Card Layout & Theme Designer**: Universal drag-and-drop report card templates (Classic, Modern Grid, Nursery Visual Milestone, Semester Transcript).
      - **Shared Certificate & Award Builder**: Graduation diplomas, termly excellence certificates, sports trophies, and character awards with customizable school borders and watermarks.
      - **Shared STEM & E-Library Assets**: Interactive science simulations, 3D math geometry tools, periodic tables, general programming exercises, and open-source public domain digital textbooks.
-     - **Shared Verification Engine**: Tamper-proof cryptographic QR code verification infrastructure (`isomaug.com/verify/...`) functions universally across all institutions.
+     - **Shared Verification Engine**: Tamper-proof cryptographic QR code verification infrastructure (`learn.isomaug.com/verify/...`) functions universally across all institutions.
 
 ---
 
@@ -464,7 +464,7 @@ lms-isomaug/
 │   │   └── ui/                 # Reusable buttons, modals, data tables, metrics
 │   ├── contexts/               # TenantContext, AuthContext, SocketContext
 │   ├── pages/
-│   │   ├── public/             # Public Open Academy Home, Course Catalog, Careers
+│   │   ├── public/             # Public Open Academy on learn.isomaug.com (Home, Course Catalog, Careers)
 │   │   ├── portal/             # Role-based Dashboard Router
 │   │   ├── academics/          # Nursery Learning Areas, Subjects, LMS Classroom, EkebuLive
 │   │   ├── ai_assistant/       # AI Lesson Plan Generator, Quiz Maker, Comment Engine
