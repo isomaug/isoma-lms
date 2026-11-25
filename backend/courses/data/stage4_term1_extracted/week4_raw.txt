@@ -1,0 +1,55 @@
+Sort 10 number cards by a rule and translate that rule into an if/else statement in plain English
+Code a programme that shows a tick on the LED if the temperature is above 25°C, and a cross if not
+Code a nested condition: if temp > 30 → show sun; else if temp > 20 → show tick; else → show sad face
+Programme a 2-question true/false quiz on the Micro:bit using button inputs
+Identify and fix 2 bugs in a provided piece of code
+Explain each condition in their programme to a partner in plain English
+4 BBC Micro:bit v2 kits with USB cables (temperature sensor built-in)
+Number card sets (10 cards: 4, 17, 8, 31, 26, 12, 5, 29, 20, 3) per pair
+Scenario text cards: 'If a student scores above 50, they pass. Otherwise, they repeat.' (3 scenarios per pair)
+Debug challenge sheet (printed) – MakeCode programme with 2 deliberate errors
+Plain English if/else template sheet: 'If [condition], then [action], otherwise [action].'
+Facilitator device + projected screen
+Pairs receive 10 number cards. Task: sort them from smallest to largest. Ask: 'How did you decide which card goes first? You were using comparison logic!'
+Facilitator gives a rule: 'Any card larger than 15 goes to the left pile. Smaller or equal goes to the right pile.' Pairs sort accordingly.
+Reframe: "You just ran an if/else statement! IF the number > 15, put LEFT. ELSE put RIGHT. This is exactly what code does."
+Show 3 scenario cards. Pairs read and write the if/else logic on their template sheet. Share one with the class.
+Distribute plain English template sheets. Task: write 3 if/else statements for today's temperature programme. Example: 'If the temperature is greater than 25°C, show a tick. Otherwise, show a cross.'
+Maths check: review comparison operators together. Ask: 'Greater than 25 – write it as a symbol.' (> 25). 'Less than or equal to 20?' (≤ 20).
+Pairs share their written statements. Facilitator checks language is precise before coding begins.
+Introduce Boolean: 'When the condition is true, one thing happens. When false, another happens. There are only two options – that is Boolean logic.'
+Step 1 – Simple if/else (8 min): Open MakeCode. Use 'Logic' category → 'if/else' block. Inside: 'if temperature > 25 → show icon (tick); else → show icon (cross)'. Add this to 'on button A pressed'. Download and test. (Hold Micro:bit to test – temperature should read room temperature ~25°C).
+Step 2 – Nested Condition (8 min): Expand to nested: 'if temp > 30 → sun icon; else if temp > 20 → tick icon; else → sad face'. Download and test. Facilitator demonstrates with a warm hand on the sensor.
+Step 3 – True/False Quiz (5 min): Build a quiz: 'on start → show question (e.g. '5 > 3?') → if Button A (True) → show tick; if Button B (False) → show cross'. Programme a second question.
+Step 4 – Debug Challenge (4 min): Distribute debug challenge sheet. Pairs identify and fix the 2 bugs in the printed code, then build the corrected version in MakeCode.
+Each pair demonstrates their temperature programme. Partner explains every condition in plain English using the template: 'If [condition], then [action], otherwise [action].'
+Facilitator asks 3 learners: 'What does Boolean mean? What are the two Boolean values? What symbol means greater than?'
+Maths task: 'From the number cards, find all numbers that are greater than 10 AND less than 25.' Pairs circle on their sheets.
+Teaser: "Next week we will connect the temperature sensor to a data table and a line graph – and find the MEAN temperature from 6 readings!"
+Save project as 'Week4_Logic_[InitialInitial]'.
+Tick: ☑ Simple if/else works ☑ Nested condition works ☑ Quiz programme works ☑ Bugs fixed.
+Collect debug sheets and plain English condition sheets for portfolio.
+ISOMA EDUTECH LIMITED Micro:bit (MakeCode) Lesson Plan Stage 4 (P4 · Cambridge Stage 4/Year 4) Lesson 4: Logic & Conditions – Making Decisions
+Duration | 60 minutes | Term / Week | Term 1 · Week 4
+Age Range | 8–10 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | BBC Micro:bit v2 with temperature sensor, USB cable, shared laptops | Bloom's | L3–L4 Applying / Analysing
+NCDC Ref | Uganda NCDC P4 – Literacy Strand: Reading Comprehension (scenario texts); Numeracy Strand: Comparison Operators, Sorting, Boolean Logic | Cambridge | Cambridge Primary Computing 0845 – Stage 4: Selection in programmes (if/else); Understanding conditions; Logical reasoning
+DDD Phase | DELIVER – Learners translate real-world decision scenarios into if/else logic in MakeCode, then build a temperature-based decision system | Big Idea | Computers make decisions using logic. An if/else condition tells the computer: IF something is true, do this action; OTHERWISE, do a different action. Logic lets computers respond to the real world.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | Reading comprehension: read a scenario card and write the if/else logic in plain English before coding it. Use the template: 'If [condition], then [action], otherwise [action].' Learners write 3 if/else statements from 3 different scenario cards. | Maths | Comparison operators: < (less than), > (greater than), = (equal to), ≠ (not equal to). Boolean values: true/false. Sort number cards in ascending order. Find which numbers satisfy two conditions simultaneously (e.g. greater than 10 AND less than 25).
+LESSON STRUCTURE
+HOOK – Card Sorting Decision Game (10 min)
+DESIGN – Write Logic Before Coding (10 min)
+DELIVER – Build the Decision Programme (25 min)
+DISCOVER – Explain Your Logic (10 min)
+WRAP-UP – Save and Store (5 min)
+ASSESSMENT
+Formative (During) | Plain English if/else sheets collected and checked for correct condition structure. Temperature programme observed: does it correctly show tick/cross based on sensor reading? Debug challenge: were both errors identified and corrected?
+Exit Assessment | Coded quiz with at least 2 if/else conditions submitted and runs correctly. Learner explains each condition in plain English to facilitator – scored: Clear / Partially clear / Needs support.
+Differentiation | Support: Provide the if/else block pre-built in MakeCode; learner only changes the condition value and the icon displayed. Extension: Learner programmes a 3-condition nested system using Button A+B pressed together as a third input.
+KEY VOCABULARY
+if/else · condition · Boolean · true · false · comparison · greater than · less than · nested · debug
+Safeguarding Note: Quiz questions should be factual and neutral (maths facts, science facts). Avoid questions referencing personal information, religion, or any topic that could make a learner feel excluded.
+Facilitator Name: _______________________ | Date Delivered: _______________________ | Signature: _______________________

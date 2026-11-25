@@ -1,0 +1,126 @@
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)  |  Term Two
+Lesson 14: Reading JavaScript – From Blocks to Text Code
+T2 · W6
+(Week 14)
+Duration
+60 minutes
+Term / Week
+Term 2 · Week 6
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L3–L4 Applying / Analysing
+DDD Phase
+DESIGN → DELIVER – Learners use MakeCode's JavaScript toggle to read the text equivalent of their block programmes, annotate it, and make simple text edits — directly implementing the DDD's Stage 3–4 coding paradigm
+NCDC Ref
+Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic & Data
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3: Understanding that programmes can be represented in different ways; Reading and interpreting text-based code; Making simple modifications to text code
+Term Two Focus
+The DDD explicitly states Stage 3–4's coding paradigm: 'Block-based programming with introduction to reading underlying JavaScript/text code. Learners see code translate between blocks and text.' This week makes that transition visible, purposeful, and assessed for the first time in Stage 3.
+Key ILO(s)
+ILO 2.1 (extended) – Read and annotate the JavaScript equivalent of a MakeCode block programme; identify the purpose of at least 5 JavaScript keywords or structures; make a simple text-level modification and verify it changes the programme's behaviour.
+Big Idea
+Every block in MakeCode is secretly a line of text code. The blocks are training wheels — they help you think clearly. But under every block is real JavaScript. Today we peek behind the blocks and read the language that professional developers use.
+Term One / Two Link
+Every MakeCode programme built since T1 Week 1 has a JavaScript equivalent visible with one click. This week uses programmes learners already built — particularly the T2 Week 5 Integration Sprint project — as the source text to read, annotate, and modify.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Use the MakeCode JavaScript toggle (the '{} JavaScript' button) to switch between block view and text view of an existing programme
+2
+Read the JavaScript of their T2 Week 5 Integration Sprint project line by line and annotate each function and variable with a plain-English comment
+3
+Identify and explain 5 JavaScript keywords or structures: 'basic.onStart', 'input.onButtonPressed', 'let', 'if/else', and 'basic.showNumber'
+4
+Answer 5 written JavaScript comprehension questions about a provided code snippet (what does this line do? what is the input? what changes if this number is altered?)
+5
+Make one specific text-level modification — change a value, a string, or a threshold number directly in JavaScript view — and verify it changes the programme's output
+6
+Explain in one sentence why reading the text view of code is a useful skill, even for block-based programmers
+Materials & Preparation
+4 BBC Micro:bit v2 kits + USB cables
+4 shared laptops with MakeCode open — T2 Week 5 projects pre-loaded
+JavaScript annotation worksheet (A4 per learner) – printed JavaScript code snippet (10–12 lines) with blank comment lines beside each line
+JavaScript comprehension questions sheet (A4 per pair) – 5 questions about the code snippet
+JavaScript keyword reference card (A5 per learner): 5 keywords with block equivalent shown beside each one
+Highlighter pens (2 colours: one for keywords, one for values/numbers)
+Facilitator device + projected screen
+Vocabulary cards: 'JavaScript', 'syntax', 'function', 'keyword', 'comment', 'string', 'let', 'const', 'annotation', 'toggle'
+Cross-Curricular Links
+English Literacy
+Reading comprehension of code as text — the DDD's explicit English literacy thread for Stage 3–4 (Part 3.2: 'Reading comprehension of code as text'). Learners annotate every line of the JavaScript snippet with a plain-English comment explaining what that line does. Annotation sentence frame: '// This line ___.' Answer 5 structured comprehension questions in full sentences. Evaluative sentence: 'Reading the JavaScript view helps me understand my programme better because ___.' This connects directly to the DDD's cross-curricular framework (Part 2.4): 'Reading comprehension of code.'
+Mathematics
+Values as numbers in code: learners identify all numeric literals in the JavaScript snippet (delays, thresholds, counts). For each number, they write: what it represents in the programme and what would happen if it doubled. Unit conversion revisited: if a 'basic.pause(2000)' is changed to 'basic.pause(500)', how many times faster does the programme run? (4×). If a variable starts at 0 and the code says 'count += 3' inside a loop that runs 6 times, what is the final value of count? (18). These questions appear on the comprehension questions sheet.
+LESSON STRUCTURE
+Step
+Activity
+HOOK – Behind the Blocks (10 min)
+1
+Show a simple 3-block programme on the projected screen: 'on button A pressed → show number 7 → pause 1000ms'. Ask: 'You all know what this does. But what does MakeCode actually say to the computer to make this happen?'
+2
+Click the '{} JavaScript' toggle live on screen. The blocks disappear — show the equivalent JavaScript. Read line by line slowly: 'input.onButtonPressed(Button.A, function() { basic.showNumber(7); basic.pause(1000); });'. Ask: 'Which part is the button event? Which part is the number 7? Where is the pause?'
+3
+Introduce the key analogy: 'Blocks are like Lego instructions with pictures. JavaScript is the same instruction written as words. Both mean the same thing — but professionals write and read the words. Today you start learning to read the words.'
+4
+Distribute the JavaScript keyword reference card. Learners highlight the 5 keywords with Colour 1 highlighter. Facilitator confirms all cards are marked before moving on.
+DESIGN – Annotate Before You Touch (12 min)
+5
+Distribute the JavaScript annotation worksheet (printed code snippet, 10–12 lines). Silent reading: 3 minutes. Learners read the code without writing anything first.
+6
+Pairs annotate each line together: one learner says the annotation aloud, the other writes it on the worksheet. Every line must have a comment. Facilitator prompt: 'What does THIS line tell the computer to do? Say it in your own words.'
+7
+Highlight all numeric values in the code with Colour 2 highlighter. Pairs complete the 5 comprehension questions on the question sheet. Facilitator circulates: 'Which line contains the condition? What is the threshold value? What happens if you change it to 30?'
+8
+Each pair checks their annotations against another pair's. Discuss any differences — did two pairs annotate the same line differently? Which annotation is more accurate?
+DELIVER – Toggle, Annotate, and Modify (28 min)
+9
+Distribute Micro:bits and open T2 Week 5 Integration Sprint project (pre-loaded). Assign Driver and Navigator.
+10
+Step 1 – Explore the toggle (5 min): Driver clicks '{} JavaScript'. Both learners read the code silently. Navigator identifies the variable declaration line ('let') and highlights it. Driver identifies the if/else block and highlights it.
+11
+Step 2 – Annotate own code (10 min): each learner opens a text editor alongside MakeCode and writes a comment for every line of their own project's JavaScript — at least 8 lines annotated. Must include the variable, the condition, and one sensor input line.
+12
+Step 3 – One text modification (8 min): SWAP Driver and Navigator. New Driver changes ONE value directly in the JavaScript text view (e.g. changes a threshold number, a pause duration, or a display string). Predict: what will change? Switch back to block view to verify. Download and run.
+13
+Step 4 – Verify the change (5 min): confirm the behaviour changed as predicted. If not — debug by tracing the JavaScript line by line. Record: 'I changed ___ from ___ to ___. The programme now ___.'
+DISCOVER – Share and Reflect (8 min)
+14
+Two pairs share their annotated code on screen. They read two consecutive lines aloud and explain what each does. Class confirms or corrects the annotation.
+15
+Facilitator asks: 'What is ONE thing that was EASIER to understand in block view? What is ONE thing that was EASIER to understand in JavaScript view?' Take 4 responses. Build a 2-column comparison on the board: Blocks | JavaScript.
+16
+Evaluative reflection: each learner writes their one-sentence evaluation on the back of the annotation worksheet: 'Reading the JavaScript view helps me because ___.' Facilitator reads 3 aloud (anonymously) to close.
+WRAP-UP – Save and Collect (2 min)
+17
+Rename updated MakeCode project 'T2W6_[Name]_JS'. Disconnect Micro:bit.
+18
+Collect JavaScript annotation worksheets and comprehension question sheets. The annotated worksheet is this week's formally assessed artifact. Facilitator checks: minimum 8 annotated lines and one identified text-level modification recorded.
+Assessment
+Formative (During)
+Observation: Can learner toggle between block and JavaScript views confidently without confusion? (navigation check)
+Are at least 8 lines of own programme annotated with plain-English comments? (annotation worksheet check)
+5 JavaScript comprehension questions answered in full sentences? (question sheet check)
+One text-level modification made, predicted, and verified against actual output? (modification check)
+Exit Assessment
+Facilitator shows 3 JavaScript lines on screen (one at a time) and asks each learner: 'What does this line do?' Lines chosen from: a variable declaration, a condition threshold, and a basic.pause value. Learner answers in one sentence each. 3 points per learner. Record on assessment log — this is the week's formal artifact grade.
+Differentiation
+Support: Reduce the annotation task to 5 lines (pre-highlight the remaining lines for the learner). Provide a word bank of annotation phrases: 'This line sets…', 'This line checks…', 'This line displays…', 'This line waits…'. Allow the learner to annotate in block view first, then match annotations to JavaScript lines. Extension: Write a brand-new 3-line JavaScript function directly in text view without using blocks at all (e.g. display a string on start). Test and verify it compiles. Compare: which felt harder — blocks or text? Write a paragraph explaining why.
+Key Vocabulary
+JavaScript · syntax · function · keyword · annotation · comment · toggle · let · const · if · else · basic.showNumber · input.onButtonPressed · string · modify
+Safeguarding Note: All code viewed and modified during this lesson is code the learner themselves wrote in previous sessions. Learners should not access any external websites, GitHub repositories, or third-party code during the session. Facilitator monitors all browser activity — MakeCode only. If a learner discovers the MakeCode share/embed feature, remind them not to share project links outside the session without facilitator approval.
+Facilitator Name:
+_________________________________
+Date Delivered:
+_________________________________
+Signature:
+_________________________________

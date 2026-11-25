@@ -1,0 +1,220 @@
+# Lesson 11: Data & Graphs Revisited – Light Sensor, Dual Datasets & Comparative Analysis
+
+**Duration:** 60 minutes (split across Week 3 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 2 · Week 3
+**Age Range:** 8–10 years
+**Hardware:** BBC Micro:bit v2 + USB cables + shared laptops
+**Software:** Microsoft MakeCode (makecode.microbit.org)
+**Bloom's:** L4–L5 Analysing / Evaluating
+**DDD Phase:** DELIVER → DISCOVER – Learners deepen ILO 2.3 by collecting data from the light sensor, comparing two datasets on one graph, and writing a comparative analysis paragraph
+**NCDC:** Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic & Data
+**Cambridge:** Cambridge Primary Computing 0845 – Stage 3: Collecting and comparing data from sensors; Interpreting graphical data; Drawing conclusions from evidence
+
+**Big Idea:** One dataset tells a story. Two datasets on the same graph tell a comparison. Scientists compare results from different conditions to understand WHAT changes and WHY it changes — and then they explain their evidence in writing.
+
+**Source plan:** `Stage3_Term2_Week3_Microbit_LessonPlan.docx`
+
+## Learning Objectives
+
+- Programme the Micro:bit to display the live light level reading (0–255) on the LED matrix using the 'light level' sensor block in MakeCode
+- Collect Dataset A: 6 light level readings with the Micro:bit in normal room light, recorded in a labelled data table
+- Collect Dataset B: 6 light level readings with the Micro:bit LED covered (low light simulation), recorded in a second labelled data table
+- Plot both datasets on ONE line graph using two different colours, with a labelled title, axes, and a key/legend identifying each line
+- Calculate the mean for each dataset and identify the range for each dataset
+- Write a 5-sentence comparative analysis: what did each dataset show, how do they differ, and what might explain the difference
+
+## Materials and Preparation
+
+- 4 BBC Micro:bit v2 kits + USB cables
+- 4 shared laptops with MakeCode open
+- Dual data table worksheet (A4 per learner) – two 6-row tables side by side: Dataset A (Normal Light) | Dataset B (Covered)
+- Dual line graph worksheet (A4 per learner) – pre-drawn axes, y-axis 0–255 (light level), x-axis 1–6 (reading number), space for key/legend
+- Two coloured pencils per learner (different colours for each dataset line)
+- Rulers for graph plotting
+- Comparative analysis writing frame (A5 per learner): 5 sentence starters provided
+- Vocabulary cards: 'light sensor', 'light level', 'dataset', 'comparison', 'trend', 'mean', 'range', 'legend', 'axis', 'comparative'
+- Facilitator device + projected screen
+
+## Cross-Curricular Links
+
+**English:** Scientific comparative writing: learners write a 5-sentence comparative analysis paragraph using the structured frame. Sentence starters: ① 'Dataset A showed that…' ② 'Dataset B showed that…' ③ 'The main difference between the two datasets was…' ④ 'This suggests that…' ⑤ 'If we repeated the experiment, we could improve it by…'. Vocabulary: learners use comparative adjectives and connectives (higher, lower, whereas, however, in contrast, both, similarly). The analysis paragraph is a formally assessed artifact.
+
+**Maths:** Dual data analysis: calculate mean = sum ÷ 6 for each dataset. Calculate range = max − min for each dataset. Compare: which dataset had the higher mean? Which had the greater range? By how much? Plot two lines on one graph — discuss why each point is plotted at a different height for the same reading number. Read the graph to answer: 'At which reading number was the difference between the two datasets greatest?' Introduction to the concept of a 'control condition' vs. an 'experimental condition'.
+
+## Lesson Structure
+
+### HOOK – One Graph, Two Stories (10 min)
+1. Show a pre-made dual line graph on the projected screen (temperature inside vs. outside over one week — with two clearly distinct lines). Ask: 'What do you notice? Which line is higher? What is the story this graph is telling?' Take 3 answers.
+2. Ask: 'Why would a scientist want to show TWO datasets on the SAME graph instead of two separate graphs?' Guide to: it makes comparison easier — you can see the difference at a glance.
+3. Introduce today's experiment: 'We will measure light level — how bright the Micro:bit thinks the room is. First in normal light. Then we will cover the LEDs with our hand and measure again. Two conditions. One graph. Then we compare and write about it.'
+4. Distribute vocabulary cards. Learners match: 'dataset' → 'a set of readings from one condition'. 'Legend/key' → 'the label that tells you which line is which'. 'Comparative' → 'describing differences between two things'.
+### DESIGN – Prepare for Data Collection (10 min)
+5. Distribute dual data table worksheets. Pairs label both tables before coding: Dataset A heading: 'Normal Room Light'. Dataset B heading: 'Covered Light (Hand Over LEDs)'. Label columns: Reading No. | Light Level (0–255) | Notes.
+6. Pairs write a hypothesis for EACH dataset: 'We predict Dataset A will have readings around ___ because ___. We predict Dataset B will have readings around ___ because ___.'
+7. Facilitator models the MakeCode light sensor programme on screen: 'forever' → 'show number light level' + 'pause 3000ms'. Learners identify which block reads the light level. Ask: 'What is the range of values the light sensor can return?' (0 = dark, 255 = very bright).
+8. Pairs choose their two pencil colours and label the legend box on the graph worksheet before laptops are distributed.
+### DELIVER – Code, Collect, and Plot (30 min)
+9. Distribute Micro:bits and laptops. Assign Driver and Navigator.
+10. Step 1 – Build the programme (5 min): code 'forever': show number light level; pause 2000ms; clear screen. Download and run. Confirm the Micro:bit is displaying live light readings.
+11. Step 2 – Collect Dataset A (8 min): Micro:bit in normal position on the desk. Each time a reading flashes, Navigator calls it out, Driver records it in Dataset A table. 6 readings. Both learners record in their own worksheets.
+12. Step 3 – Collect Dataset B (8 min): Driver places palm gently over the LED matrix to reduce light. Collect 6 readings in the same way. Record in Dataset B table. Do NOT touch the programme — same code, different condition.
+13. Step 4 – Plot the dual graph (9 min): SWAP Driver and Navigator. Using the two coloured pencils, plot Dataset A points with Colour 1 and connect with a line. Plot Dataset B points with Colour 2 and connect with a line. Label the legend. Check: does the graph have a title, labelled axes, and a key?
+### DISCOVER – Calculate and Write (8 min)
+14. Pairs calculate mean and range for both datasets. Record on the worksheet. Facilitator asks: 'Which dataset has the greater range? What does a large range tell us about consistency?'
+15. Each learner writes their 5-sentence comparative analysis independently using the writing frame. Facilitator circulates: 'Have you used a comparative word? Have you given a reason for the difference?'
+16. Two pairs share their graphs and read one sentence from their analysis. Class asks: 'Did your hypothesis match your results?' Pairs respond with evidence from their data.
+### WRAP-UP – Save and Collect (2 min)
+17. Rename MakeCode project 'T2W3_[Name]_Light'. Disconnect Micro:bit.
+18. Collect dual data tables, dual line graphs, and comparative analysis writing frames. All three are formally assessed artifacts this week. Facilitator checks each graph has a title, two labelled lines, and a legend.
+
+## Assessment
+
+- Formative (During)
+- Observation: Does the Micro:bit display live light level readings correctly? (functionality check)
+- Both data tables completed with 6 readings each and correct headings? (worksheet check)
+- Dual line graph plotted with both lines in different colours, title, labelled axes, and legend? (graph check)
+- Mean and range calculated correctly for both datasets? (maths check)
+- Exit Assessment
+- Facilitator asks each pair: ① 'Which dataset had the higher mean — A or B? By how much?' ② 'What was the range for Dataset B?' ③ 'Read me your strongest comparative sentence from the analysis.' 3 points per learner. Facilitator records on assessment sheet alongside the artifact grade for the graph and writing frame.
+- Differentiation
+- Support: Pre-collect Dataset B readings as a class demonstration so learner only records and plots. Provide a sentence-completion analysis frame with blanks rather than open starters. Allow learner to use a ruler to draw graph lines and a calculator for mean. Extension: Collect a third dataset (Dataset C — very bright light from torch or near a window) and add a third line to the graph using a third colour. Write a 3-dataset comparison paragraph. Discuss: what type of graph (bar vs. line) is more appropriate for this data and why?
+
+## Key Vocabulary
+
+light sensor · light level · dataset · Dataset A · Dataset B · comparison · trend · mean · range · legend · key · axis · comparative · condition Date Delivered: Signature:
+
+## Safeguarding
+
+Safeguarding Note: Ensure learners do not point Micro:bits at other learners' faces when testing the light sensor near a bright source. Remind learners not to cover their eyes or others' eyes when simulating low-light conditions. All data collected is anonymous classroom environmental data only.
+
+## Full source extract (complete)
+
+```
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)  |  Term Two
+Lesson 11: Data & Graphs Revisited – Light Sensor, Dual Datasets & Comparative Analysis
+T2 · W3
+(Week 11)
+Duration
+60 minutes
+Term / Week
+Term 2 · Week 3
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L4–L5 Analysing / Evaluating
+DDD Phase
+DELIVER → DISCOVER – Learners deepen ILO 2.3 by collecting data from the light sensor, comparing two datasets on one graph, and writing a comparative analysis paragraph
+NCDC Ref
+Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic & Data
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3: Collecting and comparing data from sensors; Interpreting graphical data; Drawing conclusions from evidence
+Term Two Focus
+Term Two deepens ILO 2.3 (sensor data + graphs) by introducing a second sensor (light level), a dual-dataset line graph, and comparative analysis — moving from single-variable recording to evaluating patterns across conditions.
+Key ILO(s)
+ILO 2.3 (deepened) – Collect light sensor data under two different conditions, record in separate data tables, plot both datasets on one comparative line graph, and write a 5-sentence comparative analysis identifying trends and differences.
+Big Idea
+One dataset tells a story. Two datasets on the same graph tell a comparison. Scientists compare results from different conditions to understand WHAT changes and WHY it changes — and then they explain their evidence in writing.
+Term One Link
+Term One Week 5 used the temperature sensor to collect 6 readings and draw one line graph. This lesson uses the light sensor, collects two datasets (covered vs. uncovered), and plots both on one graph — extending the same skills into comparative analysis.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Programme the Micro:bit to display the live light level reading (0–255) on the LED matrix using the 'light level' sensor block in MakeCode
+2
+Collect Dataset A: 6 light level readings with the Micro:bit in normal room light, recorded in a labelled data table
+3
+Collect Dataset B: 6 light level readings with the Micro:bit LED covered (low light simulation), recorded in a second labelled data table
+4
+Plot both datasets on ONE line graph using two different colours, with a labelled title, axes, and a key/legend identifying each line
+5
+Calculate the mean for each dataset and identify the range for each dataset
+6
+Write a 5-sentence comparative analysis: what did each dataset show, how do they differ, and what might explain the difference
+Materials & Preparation
+4 BBC Micro:bit v2 kits + USB cables
+4 shared laptops with MakeCode open
+Dual data table worksheet (A4 per learner) – two 6-row tables side by side: Dataset A (Normal Light) | Dataset B (Covered)
+Dual line graph worksheet (A4 per learner) – pre-drawn axes, y-axis 0–255 (light level), x-axis 1–6 (reading number), space for key/legend
+Two coloured pencils per learner (different colours for each dataset line)
+Rulers for graph plotting
+Comparative analysis writing frame (A5 per learner): 5 sentence starters provided
+Vocabulary cards: 'light sensor', 'light level', 'dataset', 'comparison', 'trend', 'mean', 'range', 'legend', 'axis', 'comparative'
+Facilitator device + projected screen
+Cross-Curricular Links
+English Literacy
+Scientific comparative writing: learners write a 5-sentence comparative analysis paragraph using the structured frame. Sentence starters: ① 'Dataset A showed that…' ② 'Dataset B showed that…' ③ 'The main difference between the two datasets was…' ④ 'This suggests that…' ⑤ 'If we repeated the experiment, we could improve it by…'. Vocabulary: learners use comparative adjectives and connectives (higher, lower, whereas, however, in contrast, both, similarly). The analysis paragraph is a formally assessed artifact.
+Mathematics
+Dual data analysis: calculate mean = sum ÷ 6 for each dataset. Calculate range = max − min for each dataset. Compare: which dataset had the higher mean? Which had the greater range? By how much? Plot two lines on one graph — discuss why each point is plotted at a different height for the same reading number. Read the graph to answer: 'At which reading number was the difference between the two datasets greatest?' Introduction to the concept of a 'control condition' vs. an 'experimental condition'.
+LESSON STRUCTURE
+Step
+Activity
+HOOK – One Graph, Two Stories (10 min)
+1
+Show a pre-made dual line graph on the projected screen (temperature inside vs. outside over one week — with two clearly distinct lines). Ask: 'What do you notice? Which line is higher? What is the story this graph is telling?' Take 3 answers.
+2
+Ask: 'Why would a scientist want to show TWO datasets on the SAME graph instead of two separate graphs?' Guide to: it makes comparison easier — you can see the difference at a glance.
+3
+Introduce today's experiment: 'We will measure light level — how bright the Micro:bit thinks the room is. First in normal light. Then we will cover the LEDs with our hand and measure again. Two conditions. One graph. Then we compare and write about it.'
+4
+Distribute vocabulary cards. Learners match: 'dataset' → 'a set of readings from one condition'. 'Legend/key' → 'the label that tells you which line is which'. 'Comparative' → 'describing differences between two things'.
+DESIGN – Prepare for Data Collection (10 min)
+5
+Distribute dual data table worksheets. Pairs label both tables before coding: Dataset A heading: 'Normal Room Light'. Dataset B heading: 'Covered Light (Hand Over LEDs)'. Label columns: Reading No. | Light Level (0–255) | Notes.
+6
+Pairs write a hypothesis for EACH dataset: 'We predict Dataset A will have readings around ___ because ___. We predict Dataset B will have readings around ___ because ___.'
+7
+Facilitator models the MakeCode light sensor programme on screen: 'forever' → 'show number light level' + 'pause 3000ms'. Learners identify which block reads the light level. Ask: 'What is the range of values the light sensor can return?' (0 = dark, 255 = very bright).
+8
+Pairs choose their two pencil colours and label the legend box on the graph worksheet before laptops are distributed.
+DELIVER – Code, Collect, and Plot (30 min)
+9
+Distribute Micro:bits and laptops. Assign Driver and Navigator.
+10
+Step 1 – Build the programme (5 min): code 'forever': show number light level; pause 2000ms; clear screen. Download and run. Confirm the Micro:bit is displaying live light readings.
+11
+Step 2 – Collect Dataset A (8 min): Micro:bit in normal position on the desk. Each time a reading flashes, Navigator calls it out, Driver records it in Dataset A table. 6 readings. Both learners record in their own worksheets.
+12
+Step 3 – Collect Dataset B (8 min): Driver places palm gently over the LED matrix to reduce light. Collect 6 readings in the same way. Record in Dataset B table. Do NOT touch the programme — same code, different condition.
+13
+Step 4 – Plot the dual graph (9 min): SWAP Driver and Navigator. Using the two coloured pencils, plot Dataset A points with Colour 1 and connect with a line. Plot Dataset B points with Colour 2 and connect with a line. Label the legend. Check: does the graph have a title, labelled axes, and a key?
+DISCOVER – Calculate and Write (8 min)
+14
+Pairs calculate mean and range for both datasets. Record on the worksheet. Facilitator asks: 'Which dataset has the greater range? What does a large range tell us about consistency?'
+15
+Each learner writes their 5-sentence comparative analysis independently using the writing frame. Facilitator circulates: 'Have you used a comparative word? Have you given a reason for the difference?'
+16
+Two pairs share their graphs and read one sentence from their analysis. Class asks: 'Did your hypothesis match your results?' Pairs respond with evidence from their data.
+WRAP-UP – Save and Collect (2 min)
+17
+Rename MakeCode project 'T2W3_[Name]_Light'. Disconnect Micro:bit.
+18
+Collect dual data tables, dual line graphs, and comparative analysis writing frames. All three are formally assessed artifacts this week. Facilitator checks each graph has a title, two labelled lines, and a legend.
+Assessment
+Formative (During)
+Observation: Does the Micro:bit display live light level readings correctly? (functionality check)
+Both data tables completed with 6 readings each and correct headings? (worksheet check)
+Dual line graph plotted with both lines in different colours, title, labelled axes, and legend? (graph check)
+Mean and range calculated correctly for both datasets? (maths check)
+Exit Assessment
+Facilitator asks each pair: ① 'Which dataset had the higher mean — A or B? By how much?' ② 'What was the range for Dataset B?' ③ 'Read me your strongest comparative sentence from the analysis.' 3 points per learner. Facilitator records on assessment sheet alongside the artifact grade for the graph and writing frame.
+Differentiation
+Support: Pre-collect Dataset B readings as a class demonstration so learner only records and plots. Provide a sentence-completion analysis frame with blanks rather than open starters. Allow learner to use a ruler to draw graph lines and a calculator for mean. Extension: Collect a third dataset (Dataset C — very bright light from torch or near a window) and add a third line to the graph using a third colour. Write a 3-dataset comparison paragraph. Discuss: what type of graph (bar vs. line) is more appropriate for this data and why?
+Key Vocabulary
+light sensor · light level · dataset · Dataset A · Dataset B · comparison · trend · mean · range · legend · key · axis · comparative · condition
+Safeguarding Note: Ensure learners do not point Micro:bits at other learners' faces when testing the light sensor near a bright source. Remind learners not to cover their eyes or others' eyes when simulating low-light conditions. All data collected is anonymous classroom environmental data only.
+Facilitator Name:
+_________________________________
+Date Delivered:
+_________________________________
+Signature:
+_________________________________
+```

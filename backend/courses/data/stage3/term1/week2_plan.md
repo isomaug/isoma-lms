@@ -1,0 +1,211 @@
+# Lesson 2: Read the Code – Code Comprehension & Debugging
+
+**Duration:** 60 minutes (split across Week 2 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 1 · Week 2
+**Age Range:** 8–10 years
+**Hardware:** BBC Micro:bit v2 + USB cables + shared laptops
+**Software:** Microsoft MakeCode (makecode.microbit.org)
+**Bloom's:** L3 Applying
+**DDD Phase:** DESIGN – Learners analyse and decode an existing programme before modifying it
+**Key ILO:** ILO 2.1 – Write and read block-based Micro:bit programmes in MakeCode, including correct use of on start, forever, and input events.
+**NCDC:** Uganda NCDC P3–P4 Curriculum: ICT Literacy Strand; Numeracy Strand: Patterns & Logic
+**Cambridge:** Cambridge Primary Computing 0845 – Stage 3: Writing and testing simple programmes; Detecting and correcting errors in programmes
+
+**Big Idea:** Reading code is like reading instructions in a book. Before you change anything, you must understand what it already does.
+
+**Source plan:** `Stage3_Week2_Microbit_LessonPlan.docx`
+
+## Learning Objectives
+
+- Read a provided MakeCode programme (printed + on screen) and predict what it will do before running it
+- Answer 5 code comprehension questions about the programme (input, output, sequence, value, effect)
+- Download and run the programme to check predictions against actual behaviour
+- Modify at least one value in the programme (e.g. change a number or delay) and explain the effect
+- Convert a delay value between milliseconds and seconds
+- Explain in one sentence why reading code carefully matters before making changes
+
+## Materials and Preparation
+
+- 4 BBC Micro:bit v2 kits + USB cables
+- 4 shared laptops with MakeCode open
+- Printed 'Code Comprehension Worksheet' (A4 per pair) – shows the MakeCode programme as a screenshot with 5 questions
+- Printed MakeCode programme screenshot (colour, A4 per pair)
+- Sticky notes (for predictions – 3 per learner)
+- Facilitator device + projected screen
+- Vocabulary card set from Week 1 (reused) + new card: 'delay', 'iteration'
+- 'One Star, One Wish' feedback cards
+
+## Cross-Curricular Links
+
+**English:** Reading comprehension: learners read the provided programme 'as a text'. Answer 5 structured questions: What does this programme do? What is the input? What is the output? What happens first? What could go wrong? Learners write answers in full sentences.
+
+**Maths:** Identify all numerical values in the code (delays in milliseconds). Unit conversion: 500ms = 0.5 seconds; 1000ms = 1 second. Challenge: 'If the delay is 2000ms, how long does the LED stay on?' Read and extract numbers from code blocks.
+
+## Lesson Structure
+
+### HOOK – Can You Read This? (10 min)
+1. Show a projected MakeCode programme on screen (a simple programme: on button A pressed → show number 7 → pause 1000ms → clear screen). Do NOT explain it. Ask: 'What do you think this does?'
+2. Pairs write their prediction on a sticky note. Collect predictions and read 2–3 aloud. Bridge: 'Let's find out if you're right!'
+3. Vocabulary recap: hold up 'input', 'output', 'algorithm' cards from Week 1. Learners give a definition. Introduce new cards: 'delay' (how long to wait), 'iteration' (one complete run of a loop).
+4. Ask: 'Why should we read code carefully BEFORE changing it?' Take 2–3 answers. Write on board: 'Read → Predict → Run → Compare → Modify.'
+### DESIGN – Comprehension Questions (10 min)
+5. Distribute printed Code Comprehension Worksheets and the programme screenshot. Pairs read the programme silently for 2 minutes.
+6. Pairs answer the 5 comprehension questions together in writing. Facilitator circulates – prompt: 'Find the INPUT block. What triggers it?'
+7. Pairs share answers with another pair (think-pair-share). Facilitator clarifies any misconceptions before running the code.
+### DELIVER – Run, Compare, Modify (30 min)
+8. Distribute Micro:bits and laptops. Driver opens MakeCode and recreates the provided programme from the worksheet. Navigator checks block by block against the printed sheet.
+9. Step 1 (8 min): Download and run the programme. Pairs compare the actual behaviour to their sticky-note prediction. Were they right? Write 'Prediction: ___ / Actual: ___' on worksheet.
+10. Step 2 (6 min): Code comprehension questions on screen – facilitator asks each pair one question from the worksheet. Pairs respond orally.
+11. Step 3 (10 min): Modify task – change the delay from 1000ms to 500ms. Predict what will change. Download. Run. Confirm. Then change it to 2000ms. What changes now?
+12. Step 4 (6 min): SWAP Driver and Navigator. New Driver modifies the displayed number/icon to something different. Re-download and demonstrate to facilitator.
+### DISCOVER – Debug Challenge (8 min)
+13. Facilitator puts a deliberately broken programme on the projected screen (e.g. missing a block, wrong event). Ask: 'What is wrong with this code? How would you fix it?'
+14. Pairs discuss and write their fix on a sticky note. Two pairs share their solution. Facilitator reveals the correct fix.
+15. Debrief: 'Reading code is like reading instructions – you must understand before you change.' Each learner says one thing they found in the code that surprised them.
+### WRAP-UP – Save and Reflect (2 min)
+16. Rename MakeCode project to 'Week2_[Name]'. Disconnect Micro:bit carefully. Collect worksheets.
+17. Exit prompt: learner completes the sentence on the back of their worksheet: 'When I changed the delay, the programme became ___ because ___.'
+
+## Assessment
+
+- Formative (During)
+- Observation: Did learner answer 4/5 comprehension questions correctly? (worksheet check)
+- Can learner convert 500ms to seconds? (oral or written check)
+- Modified programme runs with the intended change? (screen observation)
+- Exit Assessment
+- Facilitator holds up the programme screenshot. Learner points to: ① the INPUT block ② the OUTPUT block ③ one numerical value ④ and says what would happen if that number doubled. 4 points total – record per learner.
+- Differentiation
+- Support: Pre-recreate the programme in MakeCode so learner only needs to run and observe before modifying. Provide a sentence frame for comprehension questions.
+- Extension: Write a brand-new 3-block programme from scratch that uses a different input event (e.g. shake) and explain it to a partner as if teaching them.
+
+## Key Vocabulary
+
+debug · delay · milliseconds · predict · comprehension · modify · input event · on button pressed · pause · clear screen Date Delivered: Signature:
+
+## Safeguarding
+
+Safeguarding Note: Remind learners that programmes should not be renamed with personal information other than first names. Supervise all internet access during MakeCode sessions.
+
+## Full source extract (complete)
+
+```
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)
+Lesson 2: Read the Code – Code Comprehension & Debugging
+WEEK 2
+Duration
+60 minutes
+Term / Week
+Term 1 · Week 2
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L3 Applying
+DDD Phase
+DESIGN – Learners analyse and decode an existing programme before modifying it
+NCDC Ref
+Uganda NCDC P3–P4 Curriculum: ICT Literacy Strand; Numeracy Strand: Patterns & Logic
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3: Writing and testing simple programmes; Detecting and correcting errors in programmes
+Big Idea
+Reading code is like reading instructions in a book. Before you change anything, you must understand what it already does.
+Key ILO
+ILO 2.1 – Write and read block-based Micro:bit programmes in MakeCode, including correct use of on start, forever, and input events.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Read a provided MakeCode programme (printed + on screen) and predict what it will do before running it
+2
+Answer 5 code comprehension questions about the programme (input, output, sequence, value, effect)
+3
+Download and run the programme to check predictions against actual behaviour
+4
+Modify at least one value in the programme (e.g. change a number or delay) and explain the effect
+5
+Convert a delay value between milliseconds and seconds
+6
+Explain in one sentence why reading code carefully matters before making changes
+Materials & Preparation
+4 BBC Micro:bit v2 kits + USB cables
+4 shared laptops with MakeCode open
+Printed 'Code Comprehension Worksheet' (A4 per pair) – shows the MakeCode programme as a screenshot with 5 questions
+Printed MakeCode programme screenshot (colour, A4 per pair)
+Sticky notes (for predictions – 3 per learner)
+Facilitator device + projected screen
+Vocabulary card set from Week 1 (reused) + new card: 'delay', 'iteration'
+'One Star, One Wish' feedback cards
+Cross-Curricular Links
+English Literacy
+Reading comprehension: learners read the provided programme 'as a text'. Answer 5 structured questions: What does this programme do? What is the input? What is the output? What happens first? What could go wrong? Learners write answers in full sentences.
+Mathematics
+Identify all numerical values in the code (delays in milliseconds). Unit conversion: 500ms = 0.5 seconds; 1000ms = 1 second. Challenge: 'If the delay is 2000ms, how long does the LED stay on?' Read and extract numbers from code blocks.
+LESSON STRUCTURE
+Step
+Activity
+HOOK – Can You Read This? (10 min)
+1
+Show a projected MakeCode programme on screen (a simple programme: on button A pressed → show number 7 → pause 1000ms → clear screen). Do NOT explain it. Ask: 'What do you think this does?'
+2
+Pairs write their prediction on a sticky note. Collect predictions and read 2–3 aloud. Bridge: 'Let's find out if you're right!'
+3
+Vocabulary recap: hold up 'input', 'output', 'algorithm' cards from Week 1. Learners give a definition. Introduce new cards: 'delay' (how long to wait), 'iteration' (one complete run of a loop).
+4
+Ask: 'Why should we read code carefully BEFORE changing it?' Take 2–3 answers. Write on board: 'Read → Predict → Run → Compare → Modify.'
+DESIGN – Comprehension Questions (10 min)
+5
+Distribute printed Code Comprehension Worksheets and the programme screenshot. Pairs read the programme silently for 2 minutes.
+6
+Pairs answer the 5 comprehension questions together in writing. Facilitator circulates – prompt: 'Find the INPUT block. What triggers it?'
+7
+Pairs share answers with another pair (think-pair-share). Facilitator clarifies any misconceptions before running the code.
+DELIVER – Run, Compare, Modify (30 min)
+8
+Distribute Micro:bits and laptops. Driver opens MakeCode and recreates the provided programme from the worksheet. Navigator checks block by block against the printed sheet.
+9
+Step 1 (8 min): Download and run the programme. Pairs compare the actual behaviour to their sticky-note prediction. Were they right? Write 'Prediction: ___ / Actual: ___' on worksheet.
+10
+Step 2 (6 min): Code comprehension questions on screen – facilitator asks each pair one question from the worksheet. Pairs respond orally.
+11
+Step 3 (10 min): Modify task – change the delay from 1000ms to 500ms. Predict what will change. Download. Run. Confirm. Then change it to 2000ms. What changes now?
+12
+Step 4 (6 min): SWAP Driver and Navigator. New Driver modifies the displayed number/icon to something different. Re-download and demonstrate to facilitator.
+DISCOVER – Debug Challenge (8 min)
+13
+Facilitator puts a deliberately broken programme on the projected screen (e.g. missing a block, wrong event). Ask: 'What is wrong with this code? How would you fix it?'
+14
+Pairs discuss and write their fix on a sticky note. Two pairs share their solution. Facilitator reveals the correct fix.
+15
+Debrief: 'Reading code is like reading instructions – you must understand before you change.' Each learner says one thing they found in the code that surprised them.
+WRAP-UP – Save and Reflect (2 min)
+16
+Rename MakeCode project to 'Week2_[Name]'. Disconnect Micro:bit carefully. Collect worksheets.
+17
+Exit prompt: learner completes the sentence on the back of their worksheet: 'When I changed the delay, the programme became ___ because ___.'
+Assessment
+Formative (During)
+Observation: Did learner answer 4/5 comprehension questions correctly? (worksheet check)
+Can learner convert 500ms to seconds? (oral or written check)
+Modified programme runs with the intended change? (screen observation)
+Exit Assessment
+Facilitator holds up the programme screenshot. Learner points to: ① the INPUT block ② the OUTPUT block ③ one numerical value ④ and says what would happen if that number doubled. 4 points total – record per learner.
+Differentiation
+Support: Pre-recreate the programme in MakeCode so learner only needs to run and observe before modifying. Provide a sentence frame for comprehension questions.
+Extension: Write a brand-new 3-block programme from scratch that uses a different input event (e.g. shake) and explain it to a partner as if teaching them.
+Key Vocabulary
+debug · delay · milliseconds · predict · comprehension · modify · input event · on button pressed · pause · clear screen
+Safeguarding Note: Remind learners that programmes should not be renamed with personal information other than first names. Supervise all internet access during MakeCode sessions.
+Facilitator Name:
+_________________________________
+Date Delivered:
+_________________________________
+Signature:
+_________________________________
+```

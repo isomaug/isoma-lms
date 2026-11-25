@@ -1,0 +1,215 @@
+# Lesson 10: Advanced Conditions – Nested Logic & Multi-Input Decision Systems
+
+**Duration:** 60 minutes (split across Week 2 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 2 · Week 2
+**Age Range:** 8–10 years
+**Hardware:** BBC Micro:bit v2 + USB cables + shared laptops
+**Software:** Microsoft MakeCode (makecode.microbit.org)
+**Bloom's:** L4 Analysing
+**DDD Phase:** DELIVER – Learners deepen ILO 2.2 by designing and coding multi-input decision systems with nested if/else conditions and Boolean operators (AND / OR)
+**NCDC:** Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic & Data
+**Cambridge:** Cambridge Primary Computing 0845 – Stage 3: Designing programmes with complex conditions; Using Boolean operators AND and OR; Tracing and predicting programme behaviour
+
+**Big Idea:** One condition decides between two outcomes. Two conditions connected by AND or OR decide between many outcomes. Tracing code on paper — like a detective following clues — lets you predict what a programme will do before you ever run it.
+
+**Source plan:** `Stage3_Term2_Week2_Microbit_LessonPlan.docx`
+
+## Learning Objectives
+
+- Trace a provided MakeCode programme with nested if/else conditions on paper and write the predicted output for 3 different inputs
+- Explain the difference between AND (both conditions must be true) and OR (at least one condition must be true) using a real-world example
+- Code a programme that uses AND: if temperature > 25 AND button A is pressed → show sun icon; otherwise → show moon icon
+- Code a programme that uses OR: if button A is pressed OR the Micro:bit is shaken → show star icon; otherwise → show dot
+- Design a 3-decision system using at least 2 sensors and one Boolean operator, documented in a logic flow diagram on paper before coding
+- Identify and fix 2 logic errors in a provided broken programme using the trace method
+
+## Materials and Preparation
+
+- 4 BBC Micro:bit v2 kits + USB cables
+- 4 shared laptops with MakeCode open
+- Programme trace worksheet (A4 per pair) – printed MakeCode screenshot of a nested if/else programme; 3 rows: Input | Predicted Output | Actual Output
+- Logic flow diagram template (A4 per learner) – blank diamond-box flowchart with space for conditions and outcomes
+- Broken code worksheet (A4 per pair) – printed MakeCode screenshot with 2 highlighted logic errors
+- Vocabulary cards: 'AND', 'OR', 'Boolean operator', 'trace', 'condition', 'nested', 'multi-input', 'true', 'false'
+- Facilitator device + projected screen
+- Sticky notes for logic predictions
+
+## Cross-Curricular Links
+
+**English:** Reading comprehension of code as text: learners read the trace worksheet programme as if it were a story — 'First this happens, then this, then this.' Answer 4 structured questions: What is the first condition checked? What happens if it is false? What two conditions must BOTH be true for the sun icon to appear? Write one sentence explaining what AND means in plain English. The logic flow diagram is treated as a piece of structured writing — each decision box must contain a complete condition written as a full sentence.
+
+**Maths:** Boolean logic and truth tables: learners complete a 4-row truth table for AND (T+T=T, T+F=F, F+T=F, F+F=F) and OR (T+T=T, T+F=T, F+T=T, F+F=F). Comparison operators revisited: < > = ≠ ≤ ≥. Two-condition sorting: given a list of 10 numbers, find all numbers that satisfy BOTH conditions simultaneously (e.g. >5 AND <15). How many numbers satisfy either condition using OR? Count and compare the two sets.
+
+## Lesson Structure
+
+### HOOK – Trace the Code (10 min)
+1. Distribute the programme trace worksheet face-down. Ask: 'Do NOT look yet.' Then flip over. Set a 2-minute silent reading timer. Learners read the programme code on the sheet without touching a computer.
+2. Pairs write their prediction for Input 1 on a sticky note: 'If temperature is 30°C and Button A is not pressed, what shows on the LED?' Collect predictions. Read 3 aloud. Bridge: 'Let's see if our detective work was right — but first let's learn the new tools.'
+3. Introduce AND and OR with a physical activity: 'Stand up IF you are wearing something blue AND you have a pencil.' Count who stands. 'Now stand up IF you are wearing something blue OR you have a pencil.' Count again. Ask: 'Why did more people stand for OR?' Guide to the key distinction.
+4. Write on board: AND = stricter (both must be true). OR = broader (either is enough). Learners copy into vocabulary cards.
+### DESIGN – Logic Flow Diagram (10 min)
+5. Distribute logic flow diagram templates. Learners design their 3-decision system on paper FIRST: 'If ___ AND ___ → outcome A. Else if ___ OR ___ → outcome B. Else → outcome C.' Each decision diamond must be filled before laptops open.
+6. Pairs complete the truth table on the back of the worksheet: AND column (4 rows) and OR column (4 rows). Facilitator checks: 'When is AND true? When is OR false?' Confirm understanding before moving to code.
+7. Two-condition sorting exercise: Facilitator reads 10 numbers aloud (3, 7, 11, 4, 18, 6, 2, 14, 9, 20). Pairs circle numbers that satisfy both conditions on their worksheet: greater than 5 AND less than 15. Then circle numbers for OR: greater than 5 OR less than 15.
+### DELIVER – Code Three Systems (30 min)
+8. Distribute Micro:bits and laptops. Assign Driver and Navigator.
+9. Task 1 – AND condition (10 min): Code 'forever': if temperature > 25 AND button A is pressed → show icon 'sun'; else → show icon 'moon'. Locate the AND block in the Logic category. Download and test: press Button A in a warm hand. Does the sun appear only when BOTH conditions are met?
+10. Task 2 – OR condition (8 min): Code 'on button A pressed OR on shake': show icon 'star'; else → show icon 'small dot'. Test: shake the Micro:bit, then press Button A. Does the star appear for EITHER action?
+11. Task 3 – Own 3-decision system (8 min): pairs code the system from their logic flow diagram. Must use at least 2 sensors and one Boolean operator. SWAP Driver and Navigator for this task.
+12. Trace check (4 min): return to the trace worksheet. Pairs fill in 'Actual Output' for all 3 inputs by running the printed programme on their Micro:bit. Compare prediction vs. actual. Circle any differences and discuss why.
+### DISCOVER – Debug and Explain (8 min)
+13. Distribute the broken code worksheet. Pairs use the trace method to find 2 logic errors WITHOUT running the code. Write fixes on the worksheet. Then download and confirm the fix works.
+14. Two pairs present their 3-decision system. They must use the logic flow diagram as a visual aid and say: 'The AND condition means both ___ AND ___ must be true. The OR condition means either ___ OR ___ is enough.'
+15. Maths debrief: 'From your list of 10 numbers, how many satisfied BOTH conditions? How many satisfied at least ONE? What is the difference?' Pairs calculate and share.
+### WRAP-UP – Save and Collect (2 min)
+16. Rename project 'T2W2_[Name]_Logic'. Disconnect Micro:bit and return to kit box.
+17. Collect trace worksheets, logic flow diagrams, and broken code worksheets. Trace worksheet is this week's formal artifact — check all 3 prediction/actual rows are completed.
+
+## Assessment
+
+- Formative (During)
+- Observation: Does the AND condition programme only show the sun when BOTH temperature > 25 AND Button A are true? (functionality check)
+- Does the OR condition programme correctly respond to EITHER button press OR shake? (functionality check)
+- Logic flow diagram completed with all decision diamonds and outcomes filled in before coding began? (design check)
+- Truth table completed correctly for both AND and OR? (worksheet check)
+- Exit Assessment
+- Facilitator presents 2 verbal scenarios: ① 'Temperature is 22°C and Button A is pressed. What does your AND programme show?' ② 'The Micro:bit is NOT shaken and Button A is NOT pressed. What does your OR programme show?' Learner answers and explains why. 2 points per learner — also record whether the trace worksheet predictions matched actual outputs.
+- Differentiation
+- Support: Provide a pre-built programme with the AND structure already in place; learner only selects the sensor values and icons. Replace the 4-row truth table with a 2-row version (T+T only, F+F only). Extension: Design a 4-decision system using AND, OR, and a nested condition together. Write a paragraph (min. 5 sentences) explaining all 4 outcomes in plain English as if writing instructions for a person who cannot see the code.
+
+## Key Vocabulary
+
+AND · OR · Boolean operator · trace · condition · nested · multi-input · truth table · true · false · predict · comparison operator Date Delivered: Signature:
+
+## Safeguarding
+
+Safeguarding Note: Ensure the logic scenarios used in the lesson (temperature, button, shake) do not inadvertently model surveillance or monitoring of individuals. Framing must remain abstract and device-focused, not person-focused.
+
+## Full source extract (complete)
+
+```
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)  |  Term Two
+Lesson 10: Advanced Conditions – Nested Logic & Multi-Input Decision Systems
+T2 · W2
+(Week 10)
+Duration
+60 minutes
+Term / Week
+Term 2 · Week 2
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L4 Analysing
+DDD Phase
+DELIVER – Learners deepen ILO 2.2 by designing and coding multi-input decision systems with nested if/else conditions and Boolean operators (AND / OR)
+NCDC Ref
+Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic & Data
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3: Designing programmes with complex conditions; Using Boolean operators AND and OR; Tracing and predicting programme behaviour
+Term Two Focus
+Term Two deepens ILO 2.2 (if/else logic) by introducing Boolean AND/OR operators, multi-sensor decision systems, and programme tracing — moving from applying to analysing logic structures.
+Key ILO(s)
+ILO 2.2 (deepened) – Apply logical conditions using AND and OR operators, nested if/else blocks, and multiple sensor inputs to create decision systems; trace programme logic by hand before running it.
+Big Idea
+One condition decides between two outcomes. Two conditions connected by AND or OR decide between many outcomes. Tracing code on paper — like a detective following clues — lets you predict what a programme will do before you ever run it.
+Term One Link
+Term One Week 4 introduced simple and nested if/else with the temperature sensor. This lesson adds Boolean AND/OR and multi-sensor inputs (temperature + button + light level) — the same sensor the learner already knows, used at greater depth.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Trace a provided MakeCode programme with nested if/else conditions on paper and write the predicted output for 3 different inputs
+2
+Explain the difference between AND (both conditions must be true) and OR (at least one condition must be true) using a real-world example
+3
+Code a programme that uses AND: if temperature > 25 AND button A is pressed → show sun icon; otherwise → show moon icon
+4
+Code a programme that uses OR: if button A is pressed OR the Micro:bit is shaken → show star icon; otherwise → show dot
+5
+Design a 3-decision system using at least 2 sensors and one Boolean operator, documented in a logic flow diagram on paper before coding
+6
+Identify and fix 2 logic errors in a provided broken programme using the trace method
+Materials & Preparation
+4 BBC Micro:bit v2 kits + USB cables
+4 shared laptops with MakeCode open
+Programme trace worksheet (A4 per pair) – printed MakeCode screenshot of a nested if/else programme; 3 rows: Input | Predicted Output | Actual Output
+Logic flow diagram template (A4 per learner) – blank diamond-box flowchart with space for conditions and outcomes
+Broken code worksheet (A4 per pair) – printed MakeCode screenshot with 2 highlighted logic errors
+Vocabulary cards: 'AND', 'OR', 'Boolean operator', 'trace', 'condition', 'nested', 'multi-input', 'true', 'false'
+Facilitator device + projected screen
+Sticky notes for logic predictions
+Cross-Curricular Links
+English Literacy
+Reading comprehension of code as text: learners read the trace worksheet programme as if it were a story — 'First this happens, then this, then this.' Answer 4 structured questions: What is the first condition checked? What happens if it is false? What two conditions must BOTH be true for the sun icon to appear? Write one sentence explaining what AND means in plain English. The logic flow diagram is treated as a piece of structured writing — each decision box must contain a complete condition written as a full sentence.
+Mathematics
+Boolean logic and truth tables: learners complete a 4-row truth table for AND (T+T=T, T+F=F, F+T=F, F+F=F) and OR (T+T=T, T+F=T, F+T=T, F+F=F). Comparison operators revisited: < > = ≠ ≤ ≥. Two-condition sorting: given a list of 10 numbers, find all numbers that satisfy BOTH conditions simultaneously (e.g. >5 AND <15). How many numbers satisfy either condition using OR? Count and compare the two sets.
+LESSON STRUCTURE
+Step
+Activity
+HOOK – Trace the Code (10 min)
+1
+Distribute the programme trace worksheet face-down. Ask: 'Do NOT look yet.' Then flip over. Set a 2-minute silent reading timer. Learners read the programme code on the sheet without touching a computer.
+2
+Pairs write their prediction for Input 1 on a sticky note: 'If temperature is 30°C and Button A is not pressed, what shows on the LED?' Collect predictions. Read 3 aloud. Bridge: 'Let's see if our detective work was right — but first let's learn the new tools.'
+3
+Introduce AND and OR with a physical activity: 'Stand up IF you are wearing something blue AND you have a pencil.' Count who stands. 'Now stand up IF you are wearing something blue OR you have a pencil.' Count again. Ask: 'Why did more people stand for OR?' Guide to the key distinction.
+4
+Write on board: AND = stricter (both must be true). OR = broader (either is enough). Learners copy into vocabulary cards.
+DESIGN – Logic Flow Diagram (10 min)
+5
+Distribute logic flow diagram templates. Learners design their 3-decision system on paper FIRST: 'If ___ AND ___ → outcome A. Else if ___ OR ___ → outcome B. Else → outcome C.' Each decision diamond must be filled before laptops open.
+6
+Pairs complete the truth table on the back of the worksheet: AND column (4 rows) and OR column (4 rows). Facilitator checks: 'When is AND true? When is OR false?' Confirm understanding before moving to code.
+7
+Two-condition sorting exercise: Facilitator reads 10 numbers aloud (3, 7, 11, 4, 18, 6, 2, 14, 9, 20). Pairs circle numbers that satisfy both conditions on their worksheet: greater than 5 AND less than 15. Then circle numbers for OR: greater than 5 OR less than 15.
+DELIVER – Code Three Systems (30 min)
+8
+Distribute Micro:bits and laptops. Assign Driver and Navigator.
+9
+Task 1 – AND condition (10 min): Code 'forever': if temperature > 25 AND button A is pressed → show icon 'sun'; else → show icon 'moon'. Locate the AND block in the Logic category. Download and test: press Button A in a warm hand. Does the sun appear only when BOTH conditions are met?
+10
+Task 2 – OR condition (8 min): Code 'on button A pressed OR on shake': show icon 'star'; else → show icon 'small dot'. Test: shake the Micro:bit, then press Button A. Does the star appear for EITHER action?
+11
+Task 3 – Own 3-decision system (8 min): pairs code the system from their logic flow diagram. Must use at least 2 sensors and one Boolean operator. SWAP Driver and Navigator for this task.
+12
+Trace check (4 min): return to the trace worksheet. Pairs fill in 'Actual Output' for all 3 inputs by running the printed programme on their Micro:bit. Compare prediction vs. actual. Circle any differences and discuss why.
+DISCOVER – Debug and Explain (8 min)
+13
+Distribute the broken code worksheet. Pairs use the trace method to find 2 logic errors WITHOUT running the code. Write fixes on the worksheet. Then download and confirm the fix works.
+14
+Two pairs present their 3-decision system. They must use the logic flow diagram as a visual aid and say: 'The AND condition means both ___ AND ___ must be true. The OR condition means either ___ OR ___ is enough.'
+15
+Maths debrief: 'From your list of 10 numbers, how many satisfied BOTH conditions? How many satisfied at least ONE? What is the difference?' Pairs calculate and share.
+WRAP-UP – Save and Collect (2 min)
+16
+Rename project 'T2W2_[Name]_Logic'. Disconnect Micro:bit and return to kit box.
+17
+Collect trace worksheets, logic flow diagrams, and broken code worksheets. Trace worksheet is this week's formal artifact — check all 3 prediction/actual rows are completed.
+Assessment
+Formative (During)
+Observation: Does the AND condition programme only show the sun when BOTH temperature > 25 AND Button A are true? (functionality check)
+Does the OR condition programme correctly respond to EITHER button press OR shake? (functionality check)
+Logic flow diagram completed with all decision diamonds and outcomes filled in before coding began? (design check)
+Truth table completed correctly for both AND and OR? (worksheet check)
+Exit Assessment
+Facilitator presents 2 verbal scenarios: ① 'Temperature is 22°C and Button A is pressed. What does your AND programme show?' ② 'The Micro:bit is NOT shaken and Button A is NOT pressed. What does your OR programme show?' Learner answers and explains why. 2 points per learner — also record whether the trace worksheet predictions matched actual outputs.
+Differentiation
+Support: Provide a pre-built programme with the AND structure already in place; learner only selects the sensor values and icons. Replace the 4-row truth table with a 2-row version (T+T only, F+F only). Extension: Design a 4-decision system using AND, OR, and a nested condition together. Write a paragraph (min. 5 sentences) explaining all 4 outcomes in plain English as if writing instructions for a person who cannot see the code.
+Key Vocabulary
+AND · OR · Boolean operator · trace · condition · nested · multi-input · truth table · true · false · predict · comparison operator
+Safeguarding Note: Ensure the logic scenarios used in the lesson (temperature, button, shake) do not inadvertently model surveillance or monitoring of individuals. Framing must remain abstract and device-focused, not person-focused.
+Facilitator Name:
+_________________________________
+Date Delivered:
+_________________________________
+Signature:
+_________________________________
+```

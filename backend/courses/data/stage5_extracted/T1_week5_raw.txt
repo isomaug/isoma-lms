@@ -1,0 +1,63 @@
+Wire an LDR sensor to Arduino analogue pin A0 using a breadboard and 10kΩ resistor voltage divider circuit
+Write an Arduino sketch that reads and prints the LDR analogue value every 2 seconds using Serial.println()
+Record 10 sensor readings in a data table under varying light conditions (covered / normal / bright)
+Plot all 10 readings as a correctly labelled line graph on squared paper (x-axis: reading number; y-axis: sensor value)
+Calculate the mean and range of the 10 readings and identify the trend (increasing, decreasing, or no trend)
+Write a full scientific report with all 7 required sections: Title, Aim, Hypothesis, Equipment, Method, Results (data table + graph), Conclusion (minimum 100 words)
+4 laptops with Arduino IDE 2.x
+4 Arduino Uno boards + USB cables
+4 LDR sensors (one per pair)
+4 × 10kΩ resistors
+4 breadboards + jumper wire sets
+Squared paper (A4, 2 sheets per learner)
+Printed data table worksheet (A5 per learner) – 10-row table: Reading # | Light condition | Sensor value
+Printed scientific report template (A4 per learner) – 7 labelled sections with line-count guidance
+Rulers, pencils
+USB flash drives
+Facilitator device + projected screen
+Hold an LDR up to the class. Ask: "What is this? What do you think it does?" Allow guesses. Reveal: "This component changes its electrical resistance depending on how much light hits it. Cover it – resistance increases. Uncover it – resistance drops."
+Demonstration: facilitator connects LDR to Arduino, opens Serial Monitor. Learners watch the value change as the facilitator covers and uncovers the LDR with a hand. Ask: "What pattern do you see? What is the computer doing with this information?"
+Bridge to AI: "This is exactly how a phone's screen brightness adjusts automatically. The phone uses a light sensor – like this one – and a rule: 'if light level is low, increase brightness.' Today you build the data collection half of that system."
+Introduce the scientific report template. Read each section aloud. Learners write their Hypothesis now, before any data is collected: "I think that when more light hits the LDR, the sensor value will ___ because ___."
+Circuit building (15 min): facilitator projects the wiring diagram. Step-by-step: LDR one leg to 5V, other leg to A0 AND to one end of 10kΩ resistor. Other end of resistor to GND. Pairs build the circuit on breadboard. Facilitator checks each circuit before powering on.
+Sketch: open Arduino IDE. Write the sketch: in setup(), Serial.begin(9600). In loop(), int lightValue = analogRead(A0); Serial.println(lightValue); delay(2000);. Upload and open Serial Monitor.
+Verify: values appearing every 2 seconds. Ask: "What value appears when you cover the LDR with your hand? What value when you hold it near the window?"
+Data collection (20 min): learners record 10 readings in their data table worksheet. Vary the light condition for each reading: cover the LDR with a book, hold it near a lamp, use normal room light, use a torch from a phone. Record the condition and the sensor value.
+Calculation (10 min): calculate mean (sum all 10 values ÷ 10) and range (highest − lowest) by hand. Write these on the data table. Identify the trend.
+Rotate Driver/Navigator. New driver now leads the graph plotting phase.
+Line graph: on squared paper, draw x-axis (Reading Number, 1–10) and y-axis (Sensor Value, scale chosen to fit all readings). Plot all 10 points. Connect with a ruled line. Add a title and label both axes.
+Calculate and label on the graph: draw a horizontal dashed line at the mean value. Label it "Mean = ___".
+Scientific report: learners write all 7 sections on the report template. The Method section must be written as numbered steps. The Conclusion must be at least 100 words and include: what the data showed, whether the hypothesis was supported, one source of error, and one real-world application of this sensor.
+Facilitator circulates. Ask: "What trend did you find? How does this connect to how your phone screen adjusts its brightness?"
+Pair peer-review: swap report templates. Partner checks: Are all 7 sections present? Is the graph correctly labelled? Is the mean calculated correctly? Write one comment on the margin.
+2–3 pairs share their line graphs on the projected screen (hold up to camera or place on document camera). Explain: "Our mean was ___, our range was ___, and the trend was ___."
+Class discussion: "Did all groups get the same trend? Why might two groups in the same room get different values?" (Different positions relative to windows, different light conditions.)
+Facilitator connects to AI: "An AI that adjusts a phone screen brightness is doing what you did – collecting sensor data, finding a pattern, and applying a rule. You just built the data collection layer of that system."
+Facilitator restates English link: "Your scientific report follows a professional structure used by scientists worldwide. The same format will appear in your secondary school science classes."
+Facilitator restates Math link: "Mean gives us a representative value. Range tells us how spread out the data is. Both are tools for understanding what the data is really saying."
+Exit question (written): "Write one sentence: what did the data show about how the LDR responds to light?" Collect as formative evidence.
+Submit sketch and completed report template via USB flash drive.
+sensor · analogue · LDR · analogRead() · Serial Monitor · mean · range · trend · line graph · hypothesis · conclusion · voltage divider
+ISOMA EDUTECH LIMITED | Arduino · Python Lesson Plan | Stage 5  (Ages 10–12 · AI Engineers) | Lesson 5: Sensors, Data & Statistical Analysis – Reading the World
+Duration | 3 hours (Saturday) / 90 min × 2 days (Holiday) | Term / Week | Term 1 · Week 5
+Age Range | 10–12 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | Arduino Uno, USB cable, laptop with Arduino IDE 2.x, LDR (light-dependent resistor), 10kΩ resistor, breadboard, jumper wires, analogue pin A0 | Bloom's Level | L4 Analysing
+NCDC Ref | Uganda NCDC P5–P6 – Mathematics Strand: Data handling, mean, range, line graphs; English Strand: Scientific report writing; ICT Strand: Sensors and data input | Cambridge | Cambridge Primary Computing 0845 – Stage 5: Data collection; input devices; representing data
+DDD ILO | ILO 3.1 – Use Serial.println() and analogue I/O to collect sensor data; ILO 3.3 – Analyse foundational AI concepts by connecting sensor data to real-world pattern recognition | Big Idea | Sensors are the eyes and ears of a computer. Data becomes meaningful only when we record, graph, and interpret it.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | Scientific report writing with structured format: Title, Aim, Hypothesis, Equipment, Method (numbered steps), Results (data table + graph), Conclusion. Minimum 100 words in the Conclusion section. The Conclusion must follow the sentence structure: "Our experiment showed that… This supports/does not support our hypothesis because… If we repeated this experiment, we would… This data could be used in a real device to…" This mirrors formal science writing taught in P5–P6.
+Maths | Data handling: calculate mean = sum of all readings ÷ 10; range = maximum value − minimum value. Line graph construction: correct scale on y-axis, labelled axes, plotted points connected by a line. Trend identification: increasing (more light = higher value), decreasing, or no clear trend. Link to P5 maths: reading and interpreting line graphs; calculating averages from a data set.
+LESSON STRUCTURE
+HOOK – What Can a Computer Feel?  (20 min)
+GUIDED ACTIVITY – Wire the Circuit and Collect Data  (60 min)
+INDEPENDENT WORK – Graph, Calculate, and Write  (50 min)
+SHOWCASE & DEBRIEF  (30 min)
+ASSESSMENT
+Formative | (During) | Circuit wired correctly before powering on (facilitator physical check) | Serial Monitor shows sensor readings updating every 2 seconds (observed during guided phase) | Data table: 10 readings recorded with light condition noted (collected) | Mean and range calculated correctly by hand (checked during circulation)
+Exit Assessment | Working LDR sensor sketch reads and prints values to Serial Monitor (verified by facilitator) | Completed data table with 10 readings, mean, and range (submitted) | Correctly plotted and labelled line graph on squared paper (submitted) | Full scientific report with all 7 sections, minimum 100-word conclusion (submitted)
+Differentiation | Support: Pre-build the circuit and have the sketch uploaded. Learner focuses on data collection, graphing, and report writing only. Provide sentence starters for the Conclusion: "Our data showed that… This happened because… One thing that might have affected our results was…" | Extension: Modify the sketch to add an if/else condition: if lightValue < 300, digitalWrite(13, HIGH) (LED on as alarm), else digitalWrite(13, LOW). This creates an automatic light-activated alarm. Add a second column to the data table calculating the percentage change from the first reading.
+KEY VOCABULARY
+Safeguarding Note: Ensure learners handle electronic components carefully. LDRs and resistors are not harmful but breadboard pins should not be touched while the board is powered. Supervise all circuit builds before USB power is connected. No personal data should appear in any part of the scientific report.
+Facilitator Name: | _______________________ | Date Delivered: | _______________________ | Signature: | _______________________

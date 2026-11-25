@@ -1,0 +1,208 @@
+# Lesson 7: Creative Project Sprint – Design, Build & Iterate
+
+**Duration:** 60 minutes (split across Week 7 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 1 · Week 7
+**Age Range:** 8–10 years
+**Hardware:** BBC Micro:bit v2 + USB cables + shared laptops
+**Software:** Microsoft MakeCode (makecode.microbit.org)
+**Bloom's:** L6 Creating
+**DDD Phase:** DISCOVER – Learners design and build an original Micro:bit project that solves a real problem, supported by a written design brief
+**Key ILO:** ILO 2.1 & 2.2 & 2.4 – Combine programming skills (loops, conditions, inputs, outputs) to design and build an original Micro:bit project that responds to at least one input, supported by a completed design brief.
+**NCDC:** Uganda NCDC P3–P4 Curriculum: ICT Literacy Strand; Numeracy Strand: Patterns & Logic
+**Cambridge:** Cambridge Primary Computing 0845 – Stage 3: Designing original programmes; Evaluating and improving digital solutions; Presenting and explaining computing work
+
+**Big Idea:** Real engineers do not just code – they plan, build, test, and improve. A design brief is the written plan that guides the whole project. Today we are engineers.
+
+**Source plan:** `Stage3_Week7_Microbit_LessonPlan.docx`
+
+## Learning Objectives
+
+- Identify a real problem they have noticed (at school, at home, or in the community) that a Micro:bit could help solve
+- Complete a full 5-section design brief: Title, Problem Statement, Who It Is For, How It Works, What I Used
+- Plan the programme using pseudocode or a block diagram before coding
+- Build a working Micro:bit prototype that responds to at least one input (button, temperature, shake, or light sensor)
+- Explicitly name and demonstrate one mathematical concept used in the project (e.g. a measured threshold, a counted loop, a calculated average)
+- Peer-review a partner's project using a structured 3-question feedback form
+
+## Materials and Preparation
+
+- 4 BBC Micro:bit v2 kits + USB cables
+- 4 shared laptops with MakeCode open
+- Design brief template (A4 per learner) – 5 sections: Title / Problem Statement / Who Is It For? / How It Works / What I Used
+- Pseudocode / block diagram planning sheet (A4 per pair)
+- Peer review feedback form (A5 per learner) – 3 questions: What does this project do? What works well? What would you improve?
+- Sticky notes for iteration notes (bug log)
+- Facilitator device + projected screen
+- Vocabulary cards: 'design brief', 'prototype', 'iterate', 'user', 'problem', 'solution', 'pseudocode', 'bug log'
+
+## Cross-Curricular Links
+
+**English:** Design brief writing (structured writing): learners complete all 5 sections of the design brief in full sentences. Minimum 1 paragraph per section. Section prompts: Title (name your project), Problem Statement (what problem did you notice?), Who Is It For? (who will use this?), How It Works (describe the code in plain English), What I Used (list the inputs and outputs your programme uses). The written brief is a formal assessed piece.
+
+**Maths:** Applied mathematics: learner must explicitly state and demonstrate one mathematical concept their project uses. Examples: a temperature threshold (if temp > 30 → show sun), a loop counter that multiplies (if the loop runs 5 times and adds 4 each time, total = 20), or a data average from sensor readings. Learner writes a calculation or shows a graph that demonstrates the mathematical element of their project on the design brief.
+
+## Lesson Structure
+
+### HOOK – What Problem Can You Solve? (8 min)
+1. Show 3 quick examples of real Micro:bit projects on the projected screen (e.g. a step counter, a temperature alarm, a reaction-time game). Ask: 'What PROBLEM does each one solve? Who is it for?'
+2. Ask learners: 'What is something you have noticed at school or at home that a small computer could help with?' Give 60 seconds of silent thinking, then collect 4–5 ideas on the board.
+3. Introduce the design brief template. Explain: 'Engineers always write their plan before they build. The design brief is your contract – it tells you what you are making and why. Today, the brief is your guide.'
+### DESIGN – Write the Brief and Plan the Code (20 min)
+4. Each learner independently completes Sections 1–3 of the design brief (Title, Problem Statement, Who It Is For). Facilitator circulates: 'Is the problem specific? Who exactly will use it?'
+5. Pairs collaborate to complete Section 4 (How It Works) using pseudocode or a block diagram on the planning sheet. Each pair writes the logic in plain English before touching MakeCode: 'When ___ happens, the Micro:bit will ___.'
+6. Pairs identify and write the mathematical concept in Section 5. Facilitator asks: 'Where is there a number, a comparison, a calculation, or a pattern in your programme?'
+7. Facilitator does a quick design review: each pair explains their project idea in one sentence. Facilitator approves before coding begins. Redirect any ideas that are too complex or not achievable in the session.
+### DELIVER – Build and Test the Prototype (25 min)
+8. Distribute Micro:bits and laptops. Pairs begin coding from their pseudocode plan. Facilitator role: coach only – ask 'What have you tried?' before offering any hint. Do not write code for learners.
+9. Build Phase 1 (12 min): Code the core function – the programme must respond to at least ONE input event. Download and run first version. Does it work as planned? Note any bugs on sticky notes (bug log).
+10. Build Phase 2 (8 min): Add a second feature or improve the first. Fix bugs from the log. SWAP Driver and Navigator. New Driver explains each change before making it.
+11. Peer Review (5 min): Pairs swap Micro:bits. Partner runs the project and completes the 3-question peer review feedback form. Read feedback aloud to partner. Learner notes one change they will make based on feedback.
+### DISCOVER – Showcase and Prepare for Demo Day (5 min)
+12. Two pairs share their project and read one section of their design brief aloud. Class asks: 'What problem does it solve? How does the code know what to do?'
+13. Facilitator previews Week 8 Demo Day: 'Next session you will present your finished project in a 3-minute structured presentation: Problem → Solution → Demo → What I Learned → What I Would Improve. Practice saying that at home.'
+14. Each learner writes the mathematical concept from their project on a sticky note and sticks it to their design brief: 'My project uses ___ because ___.'
+### WRAP-UP – Save and Finalise Brief (2 min)
+15. Rename MakeCode project 'Week7_[Name]_Project'. Save MakeCode file. Disconnect Micro:bit.
+16. Collect completed design briefs and peer review forms. These are formal assessment pieces. Confirm all 5 sections are filled in. Learners take the bug log home as a reminder of what to refine for Demo Day.
+
+## Assessment
+
+- Formative (During)
+- Observation: Is the design brief complete with all 5 sections in full sentences? (written check)
+- Does the Micro:bit prototype respond to at least one input event? (functionality check)
+- Is one mathematical concept explicitly named and demonstrated? (design brief check)
+- Peer review form completed thoughtfully for partner? (peer review check)
+- Exit Assessment
+- Facilitator asks each learner: ① 'What problem does your project solve?' ② 'What input does your Micro:bit respond to?' ③ 'What is the mathematical concept in your project?' Learner answers from their design brief. 3 points per learner – recorded on assessment sheet before Demo Day.
+- Differentiation
+- Support: Provide a partially completed design brief template with sentence starters for each section. Limit the project scope to 2 blocks: one input trigger and one LED output. Allow the learner to use the Week 4 quiz programme as a starting point and adapt it. Extension: Add a third feature using a sensor not used before (e.g. light level or accelerometer). Include a data table of test results in the design brief showing measurements taken during testing. Write a reflection paragraph on what they would change if they had more time.
+
+## Key Vocabulary
+
+design brief · prototype · iterate · user · problem statement · solution · pseudocode · bug log · input · output · threshold · peer review Date Delivered: Signature:
+
+## Safeguarding
+
+Safeguarding Note: Project ideas must not involve monitoring other people without their knowledge or consent (e.g. a programme described as 'spying' on someone). Facilitator redirects any such ideas to a constructive alternative during the design approval step.
+
+## Full source extract (complete)
+
+```
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)
+Lesson 7: Creative Project Sprint – Design, Build & Iterate
+WEEK 7
+Duration
+60 minutes
+Term / Week
+Term 1 · Week 7
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L6 Creating
+DDD Phase
+DISCOVER – Learners design and build an original Micro:bit project that solves a real problem, supported by a written design brief
+NCDC Ref
+Uganda NCDC P3–P4 Curriculum: ICT Literacy Strand; Numeracy Strand: Patterns & Logic
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3: Designing original programmes; Evaluating and improving digital solutions; Presenting and explaining computing work
+Big Idea
+Real engineers do not just code – they plan, build, test, and improve. A design brief is the written plan that guides the whole project. Today we are engineers.
+Key ILO
+ILO 2.1 & 2.2 & 2.4 – Combine programming skills (loops, conditions, inputs, outputs) to design and build an original Micro:bit project that responds to at least one input, supported by a completed design brief.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Identify a real problem they have noticed (at school, at home, or in the community) that a Micro:bit could help solve
+2
+Complete a full 5-section design brief: Title, Problem Statement, Who It Is For, How It Works, What I Used
+3
+Plan the programme using pseudocode or a block diagram before coding
+4
+Build a working Micro:bit prototype that responds to at least one input (button, temperature, shake, or light sensor)
+5
+Explicitly name and demonstrate one mathematical concept used in the project (e.g. a measured threshold, a counted loop, a calculated average)
+6
+Peer-review a partner's project using a structured 3-question feedback form
+Materials & Preparation
+4 BBC Micro:bit v2 kits + USB cables
+4 shared laptops with MakeCode open
+Design brief template (A4 per learner) – 5 sections: Title / Problem Statement / Who Is It For? / How It Works / What I Used
+Pseudocode / block diagram planning sheet (A4 per pair)
+Peer review feedback form (A5 per learner) – 3 questions: What does this project do? What works well? What would you improve?
+Sticky notes for iteration notes (bug log)
+Facilitator device + projected screen
+Vocabulary cards: 'design brief', 'prototype', 'iterate', 'user', 'problem', 'solution', 'pseudocode', 'bug log'
+Cross-Curricular Links
+English Literacy
+Design brief writing (structured writing): learners complete all 5 sections of the design brief in full sentences. Minimum 1 paragraph per section. Section prompts: Title (name your project), Problem Statement (what problem did you notice?), Who Is It For? (who will use this?), How It Works (describe the code in plain English), What I Used (list the inputs and outputs your programme uses). The written brief is a formal assessed piece.
+Mathematics
+Applied mathematics: learner must explicitly state and demonstrate one mathematical concept their project uses. Examples: a temperature threshold (if temp > 30 → show sun), a loop counter that multiplies (if the loop runs 5 times and adds 4 each time, total = 20), or a data average from sensor readings. Learner writes a calculation or shows a graph that demonstrates the mathematical element of their project on the design brief.
+LESSON STRUCTURE
+Step
+Activity
+HOOK – What Problem Can You Solve? (8 min)
+1
+Show 3 quick examples of real Micro:bit projects on the projected screen (e.g. a step counter, a temperature alarm, a reaction-time game). Ask: 'What PROBLEM does each one solve? Who is it for?'
+2
+Ask learners: 'What is something you have noticed at school or at home that a small computer could help with?' Give 60 seconds of silent thinking, then collect 4–5 ideas on the board.
+3
+Introduce the design brief template. Explain: 'Engineers always write their plan before they build. The design brief is your contract – it tells you what you are making and why. Today, the brief is your guide.'
+DESIGN – Write the Brief and Plan the Code (20 min)
+4
+Each learner independently completes Sections 1–3 of the design brief (Title, Problem Statement, Who It Is For). Facilitator circulates: 'Is the problem specific? Who exactly will use it?'
+5
+Pairs collaborate to complete Section 4 (How It Works) using pseudocode or a block diagram on the planning sheet. Each pair writes the logic in plain English before touching MakeCode: 'When ___ happens, the Micro:bit will ___.'
+6
+Pairs identify and write the mathematical concept in Section 5. Facilitator asks: 'Where is there a number, a comparison, a calculation, or a pattern in your programme?'
+7
+Facilitator does a quick design review: each pair explains their project idea in one sentence. Facilitator approves before coding begins. Redirect any ideas that are too complex or not achievable in the session.
+DELIVER – Build and Test the Prototype (25 min)
+8
+Distribute Micro:bits and laptops. Pairs begin coding from their pseudocode plan. Facilitator role: coach only – ask 'What have you tried?' before offering any hint. Do not write code for learners.
+9
+Build Phase 1 (12 min): Code the core function – the programme must respond to at least ONE input event. Download and run first version. Does it work as planned? Note any bugs on sticky notes (bug log).
+10
+Build Phase 2 (8 min): Add a second feature or improve the first. Fix bugs from the log. SWAP Driver and Navigator. New Driver explains each change before making it.
+11
+Peer Review (5 min): Pairs swap Micro:bits. Partner runs the project and completes the 3-question peer review feedback form. Read feedback aloud to partner. Learner notes one change they will make based on feedback.
+DISCOVER – Showcase and Prepare for Demo Day (5 min)
+12
+Two pairs share their project and read one section of their design brief aloud. Class asks: 'What problem does it solve? How does the code know what to do?'
+13
+Facilitator previews Week 8 Demo Day: 'Next session you will present your finished project in a 3-minute structured presentation: Problem → Solution → Demo → What I Learned → What I Would Improve. Practice saying that at home.'
+14
+Each learner writes the mathematical concept from their project on a sticky note and sticks it to their design brief: 'My project uses ___ because ___.'
+WRAP-UP – Save and Finalise Brief (2 min)
+15
+Rename MakeCode project 'Week7_[Name]_Project'. Save MakeCode file. Disconnect Micro:bit.
+16
+Collect completed design briefs and peer review forms. These are formal assessment pieces. Confirm all 5 sections are filled in. Learners take the bug log home as a reminder of what to refine for Demo Day.
+Assessment
+Formative (During)
+Observation: Is the design brief complete with all 5 sections in full sentences? (written check)
+Does the Micro:bit prototype respond to at least one input event? (functionality check)
+Is one mathematical concept explicitly named and demonstrated? (design brief check)
+Peer review form completed thoughtfully for partner? (peer review check)
+Exit Assessment
+Facilitator asks each learner: ① 'What problem does your project solve?' ② 'What input does your Micro:bit respond to?' ③ 'What is the mathematical concept in your project?' Learner answers from their design brief. 3 points per learner – recorded on assessment sheet before Demo Day.
+Differentiation
+Support: Provide a partially completed design brief template with sentence starters for each section. Limit the project scope to 2 blocks: one input trigger and one LED output. Allow the learner to use the Week 4 quiz programme as a starting point and adapt it. Extension: Add a third feature using a sensor not used before (e.g. light level or accelerometer). Include a data table of test results in the design brief showing measurements taken during testing. Write a reflection paragraph on what they would change if they had more time.
+Key Vocabulary
+design brief · prototype · iterate · user · problem statement · solution · pseudocode · bug log · input · output · threshold · peer review
+Safeguarding Note: Project ideas must not involve monitoring other people without their knowledge or consent (e.g. a programme described as 'spying' on someone). Facilitator redirects any such ideas to a constructive alternative during the design approval step.
+Facilitator Name:
+_______________________
+Date Delivered:
+_______________________
+Signature:
+_______________________
+```

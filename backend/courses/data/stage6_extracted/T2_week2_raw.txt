@@ -1,0 +1,120 @@
+Arrays, For-Loop Iteration & Sensor Data Management
+TERM 1 PRIOR KNOWLEDGE — What Learners Bring
+LEARNING OBJECTIVES
+• Declare and initialise an integer array of size 10 in an Arduino sketch and populate it with LDR sensor readings using a for loop
+• Iterate through an array using a for loop to: (a) print all values, (b) calculate the sum, (c) compute the mean, (d) find the maximum and minimum value
+• Wire a TMP36 temperature sensor to analogue pin A1 alongside the existing LDR on A0 and read both simultaneously
+• Store 10 readings from each sensor in separate arrays and print a formatted two-column data table to the Serial Monitor
+• Write an analytical paragraph (minimum 80 words) comparing the two sensor datasets: trend, mean, range, and one inference about what the data suggests about the environment
+• Access a specific array element by index and explain in plain English why arrays are indexed from 0, not 1
+MATERIALS & PREPARATION
+• 4 shared laptops with Arduino IDE 2.x
+• Arduino Uno × 4, USB cables × 4, TMP36 × 4, LDR × 4, 10kΩ resistors × 4, breadboards × 4, jumper wires
+• Printed "Array Structure Diagram" — visual showing index positions 0–9 with boxes to fill in values (A4 per pair)
+• Printed "Two-Sensor Data Table" — pre-ruled table with columns: Reading #, LDR Value, Temperature (°C), columns for mean/range at the bottom (A4 per learner)
+• Printed "Analytical Writing Frame" — sentence starters for the comparison paragraph (A5 per learner)
+• Printed "TMP36 Circuit Diagram" — wiring reference (A5 per pair)
+• Rulers and pencils for annotating the array structure diagram
+• Facilitator projected screen
+CROSS-CURRICULAR LINKS
+LESSON STRUCTURE  (3 hours · Term 2 · Saturday)
+ASSESSMENT
+FACILITATOR RECORD
+ISOMA EDUTECH LIMITED  AI Engineers Programme · Stage 5–6 · Arduino · Term 2
+Term 2 · Lesson 2: Store the World — Arrays, Iteration & Multi-Sensor Data Management
+🌿  TERM 2 · STAGE 5–6 · AI ENGINEERS  |  Term 2 · Week 2
+Bloom's: L4 Analysing
+Duration
+3 hours (Term-time Saturday)
+Term / Week
+Term 2 · Week 2
+Age Range
+10–12 years
+Group Size
+8 learners (4 pairs — pair programming)
+Hardware
+Arduino Uno, USB cable, TMP36 temperature sensor, LDR (light-dependent resistor), 10kΩ resistor, breadboard, jumper wires
+Software / IDE
+Arduino IDE 2.x — Serial Monitor & Serial Plotter
+Bloom's Level
+L4 Analysing
+DDD Phase
+ANALYSE — Learners declare and populate integer arrays with real sensor readings, iterate through arrays to compute mean and identify the maximum and minimum, and compare two simultaneous sensor data streams
+NCDC Ref
+Uganda NCDC Curriculum P5/P6 — Literacy Strand: Organising information into structured lists; writing analytical sentences about data. Numeracy Strand: Arrays as ordered lists; index positions; mean of stored values; comparing two data sets
+Cambridge Ref
+Cambridge Primary Computing 0845 — Stage 6: Arrays and lists; Managing multiple data values; Analysing patterns in data sets
+🔁  TERM 1 PRIOR KNOWLEDGE — Learners are expected to arrive knowing:
+• Variables and data types — Term 1 Week 2 (int, float, String, bool)
+• For loops and while loops — Term 1 Week 3
+• LDR sensor wiring and analogRead() — Term 1 Week 5
+• Serial Monitor output with Serial.println() — Term 1 throughout
+• Mean and range calculation from 10 readings — Term 1 Week 5
+• Functions with return values — Term 2 Week 1 (this term)
+🎯  Intended Learning Outcome (ILO)
+💡  Big Idea
+ILO 3.1 (deepened) — Write sketches using arrays and for-loop iteration. ILO 3.3 (deepened) — Analyse multi-variable sensor data, identify patterns, and connect data management to real-world AI training datasets.
+An array is a labelled row of storage boxes. Instead of ten separate variables, you have ten positions in one named structure. This is how real data systems work — from weather stations to hospital monitors.
+📖  English Literacy Thread
+🔢  Mathematics Thread
+Organising information in structured lists — direct parallel between an array and a numbered list. Analytical writing: learners write a minimum 80-word paragraph comparing two sensor datasets using the writing frame: "The LDR values ranged from… In contrast, the temperature readings… The mean LDR value of [X] suggests that… When comparing both datasets, the most significant difference is… This could indicate that…" Formal analytical register — no informal language. This escalates from Term 1's descriptive scientific report to a genuinely comparative analytical text.
+Arrays as ordered lists with index positions (0 to n-1). For a 10-element array: sum = arr[0]+arr[1]+…+arr[9]; mean = sum/10; max found by iterating and updating a running maximum variable. Two datasets: compute mean and range for both. Compare: which has greater variability? Which has a higher mean? Percentage difference between the two means: ((meanA - meanB) / meanB) × 100. Connect: AI systems compare thousands of such arrays to detect patterns — this is the foundation of machine learning.
+Phase
+Time
+Activities & Facilitator Actions
+1. HOOK
+The Library Analogy
+20 min
+• Draw 10 labelled boxes on the board (0 through 9). Ask: "What is this?" Accept answers — guide to: "This is an array — a row of named storage positions."
+• Fill the boxes with today's temperature readings from last week's LDR activity (made-up plausible values). Ask: "How would I find the 3rd reading?" Answer: box number 2 (index 2). Why not 3? Discuss: computers count from 0.
+• Distribute the Array Structure Diagram. Pairs fill in: if int readings[10] = {450, 480, 510, 490, 460, 500, 520, 470, 495, 505}, what is readings[0]? readings[9]? readings[4]?
+• Show on projector: how the same exercise looks in Arduino code. Connect each box to its declaration.
+• Introduce the TMP36 sensor — different from the LDR. Show the pinout diagram. Ask: "What is the output of a TMP36?" (Voltage proportional to temperature.) "How do we convert that to degrees Celsius?" (Formula: (voltage − 0.5) × 100. Preview of guided activity.)
+2. GUIDED ACTIVITY
+Wire, Declare & Populate
+60 min
+• Step 1 (15 min): Wire TMP36 to A1 (alongside LDR already on A0). Facilitator demonstrates TMP36 pinout on projector: +Vs (5V), Vout (A1), GND. Pairs wire simultaneously.
+• Step 2 (15 min): Declare arrays. Facilitator live-codes: int ldrReadings[10]; float tempReadings[10]; int i; — then a for loop to populate both arrays with 10 readings, one every 2 seconds. Learners type along.
+• Step 3 (10 min): Add temperature conversion: float voltage = tempReadings[i] * (5.0/1023.0); float tempC = (voltage - 0.5) * 100; — explain each step. Learners annotate each line with a comment.
+• Step 4 (10 min): Add a second for loop to print both arrays as a formatted two-column table to Serial Monitor: Serial.print(ldrReadings[i]); Serial.print("\t"); Serial.println(tempC);
+• Step 5 (10 min): Add a third for loop to compute: sum, mean, maximum and minimum for both arrays. Print results with labels: Serial.println("LDR Mean: "); Serial.println(ldrMean);
+3. INDEPENDENT / PAIR WORK
+Analyse & Write
+50 min
+• Task 1 (10 min): Record all 10 readings from each sensor in the Two-Sensor Data Table. Calculate mean and range for both — by hand first, then verify against Serial Monitor output.
+• Task 2 (25 min): Write the Analytical Paragraph — minimum 80 words comparing both datasets using the writing frame. Must include: both means, both ranges, one trend observation, one inference about what the data tells us about the environment.
+• Task 3 (10 min): Array index challenge — facilitator calls out 5 questions: "What is in position 7 of your LDR array? What is the index of the maximum value? What would happen if you tried to access index 10 in a 10-element array?" Pairs write answers on paper.
+• Task 4 (Extension, 5 min): Write a function float arrayMean(int arr[], int size) { } that takes any integer array and its size and returns the mean. Call it for both arrays and print the results. This is a generic reusable function — connect to Term 2 Week 1.
+• Rotate Driver/Navigator between Tasks 1 and 2.
+4. SHOWCASE & DEBRIEF
+30 min
+• One pair projects their Serial Monitor output. Class reads: "What was the LDR mean? What was the temperature range?" Verify calculations together.
+• Analytical paragraph: one learner reads aloud. Class checks: are both means stated? Is there a genuine inference — not just description?
+• Facilitator asks: "Imagine your array has 1,000 readings instead of 10. Which parts of your code need to change?" Answer: only the array size declaration and loop limit. Everything else scales automatically. This is the power of arrays.
+• AI connection: "A machine learning training dataset is an array — or a collection of arrays. The more data in the array, the better the model. Your 10-reading array is a tiny training dataset."
+• Math close: percentage difference calculation on the board — which pair has the largest difference between LDR mean and temperature mean?
+• Collect Two-Sensor Data Table + Analytical Paragraph as this week's artifact.
+Component
+Description
+Evidence Required
+Formative
+(During)
+Sketch compiles, both arrays populate with 10 readings, two-column Serial Monitor table displays correctly, mean and range computed and printed for both sensors.
+Facilitator observation log. Serial Monitor output verified before pair moves to writing task.
+Term 2 Week 2
+Artifact
+Completed Two-Sensor Data Table (all 10 readings, mean and range for both) + Analytical Paragraph (min. 80 words, both datasets compared, genuine inference). Scored on 5-point rubric (DDD Part 8.3).
+Physical documents collected. Both components required.
+Differentiation
+Support: pre-populate the array declaration and first for loop — learners write the analysis loops only. Extension: generic arrayMean() function that works with any array size.
+Extension: function compiles and returns correct mean for both arrays when called.
+KEY VOCABULARY
+array · index · element · declare · initialise · iterate · analogRead() · TMP36 · voltage · temperature conversion · mean · range · maximum · minimum · two-column table · percentage difference
+⚠  Safeguarding Note
+TMP36 sensor must be connected with correct polarity — reverse polarity will damage the sensor and may cause it to heat rapidly. Facilitator checks TMP36 wiring BEFORE allowing learners to power the circuit. Never connect TMP36 directly to a 9V battery — Arduino 5V pin only.
+Facilitator Name:
+____________________________
+Date Delivered:
+____________________________
+Signature:
+____________________________

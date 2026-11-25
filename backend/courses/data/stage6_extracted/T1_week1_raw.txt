@@ -1,0 +1,108 @@
+Arduino IDE & Python Syntax
+LEARNING OBJECTIVES
+• Set up the Arduino IDE: install drivers, select board (Uno) and correct COM port
+• Upload the example Blink sketch and observe the LED blinking on pin 13
+• Identify and name the purpose of: setup(), loop(), pinMode(), digitalWrite(), delay()
+• Modify delay() values and predict and explain the effect on the LED
+• Add a plain-English comment to every line of the Blink sketch using // syntax
+MATERIALS & PREPARATION
+• 4 shared laptops with Arduino IDE 2.x pre-installed
+• Arduino Uno × 4, USB-A to USB-B cables × 4
+• LED × 4, 220Ω resistors × 4, half-size breadboards × 4, jumper wires
+• Printed "Blink Code Reading Sheet" - code with line-number boxes and blank comment column (A4 per pair)
+• Printed "LED Timeline Worksheet" - grid to plot ON/OFF over 5 seconds (A4 per learner)
+• Facilitator device + projected screen
+CROSS-CURRICULAR LINKS
+LESSON STRUCTURE  (3 hours · Term-time Saturday)
+ASSESSMENT
+FACILITATOR RECORD
+ISOMA EDUTECH LIMITED
+AI Engineers Programme · Stage 5–6 · Arduino
+Lesson 1: Hello Arduino - Read Code Like a Text
+Duration
+3 hours (Term-time Saturday)
+Term / Week
+Term 1 · Week 1
+Age Range
+10–12 years
+Group Size
+8 learners (4 pairs)
+Hardware
+Arduino Uno, USB cable, LED, 220Ω resistor, breadboard, jumper wires
+Software / IDE
+Arduino IDE 2.x (installed on shared laptops)
+Bloom's Level
+L3 Applying
+DDD Phase
+APPLY - Learners set up the IDE, upload Blink, read code line-by-line, write comments
+NCDC Ref
+Uganda NCDC Curriculum P5/P6 - Literacy Strand: Reading technical texts; Numeracy Strand: Units of measurement & conversion
+Cambridge
+Cambridge Primary Computing 0845 - Stage 6: Programming & algorithms; Understanding code structure
+Intended Learning Outcome (ILO)
+Big Idea
+• ILO 3.1 - Interpret and write text-based Arduino sketches in Python that correctly use setup(), loop(), variables, digital/analogue I/O, and Serial.println() to control hardware.
+• Code is structured text with purpose and meaning. Every line does a job - just like every sentence in a paragraph.
+English Literacy Thread
+Mathematics Thread
+• Reading code as structured text: identify the purpose of each line. Write code comments in full English sentences - "// This line makes the LED turn on for 1 second." Explicit instruction: comments are the author's voice explaining their writing to the reader.
+• delay(1000) = 1 second. delay(500) = 0.5 seconds. Learners convert: 2500ms = ? seconds; 750ms = ? seconds. Plot LED state (ON/OFF) over 5 seconds on a timeline. Introduction to units of time in computing.
+Phase
+Time
+Activities & Facilitator Actions
+1. HOOK What is a Microcontroller?
+20 min
+• Show a real Arduino Uno on the projected screen. Ask: "What is this? Where might you find one?"
+• Brief class discussion: phone, traffic lights, washing machines - computers inside machines.
+• Introduce today's big idea: "We will write instructions for this microcontroller, just like a recipe."
+• Hand out hardware to each pair. Learners hold the Uno and name parts: USB port, pins, chip, LED on pin 13.
+• Connect Uno to laptop via USB. Observe: does anything happen? (LED may flash during connection.)
+• Open Arduino IDE. Facilitator walks through the interface: editor, verify button, upload button, Serial Monitor.
+2. GUIDED ACTIVITY Blink & Read
+60 min
+• Step 1 (10 min): File → Examples → Basics → Blink. Facilitator opens on projector simultaneously.
+• Read the Blink code aloud together, line by line. Ask: "What does this line do? How do you know?"
+• Step 2 (10 min): Select board (Arduino Uno) and COM port. Upload sketch. Observe LED blinks.
+• Step 3 (20 min): Distribute "Blink Code Reading Sheet". Pairs read each line and write their comment in the blank column. Facilitator circulates - comments must be full sentences.
+• Step 4 (10 min): Pair challenge - change delay(1000) to delay(250). Predict first: "What will happen?" Upload and test. Were they right?
+• Step 5 (10 min): Math link - complete the LED Timeline Worksheet. Mark LED ON and OFF over 5 seconds with the original and modified delay values.
+3. INDEPENDENT / PAIR WORK Annotate & Modify
+50 min
+• Task 1: Each pair modifies the Blink sketch to blink in a pattern: ON 2s, OFF 0.5s, ON 0.5s, OFF 2s. Write the code first, then upload.
+• Task 2: Add a comment to EVERY line of their modified sketch. Comments in full sentences.
+• Task 3 (Math): On the LED Timeline Worksheet, convert all delay values: express in both milliseconds AND seconds.
+• Task 4 (Extension): Add a second LED on pin 12. Make the two LEDs alternate - one ON while the other is OFF.
+• Navigator role: reads the code aloud while Driver types. Rotate midway.
+• Facilitator prompt when pairs are stuck: "What does this line do? Read it to me in plain English."
+4. SHOWCASE & DEBRIEF
+30 min
+• 2 pairs demo their blinking pattern to the class. Explain: "What pattern did you make? What delay values did you use?"
+• Facilitator asks 3 random learners: "What is setup() for? What is loop() for? What does delay(1000) do?"
+• Peer feedback: audience gives one specific observation: "I noticed their LED blinked every [X] seconds."
+• Facilitator closes: write on board - Today's English link: Code comments are full sentences. Today's Math link: 1000ms = 1s.
+• Exit question (show of hands): "Who can tell me the difference between setup() and loop()?" Cold-call one learner.
+Component
+Description
+Evidence
+Formative (During)
+Observation: Can pair upload a sketch without facilitator help? Are all code lines commented in full English sentences?
+Facilitator observation log. Code Reading Sheet collected.
+Exit Assessment
+Learner holds up 1 finger for each:
+① LED blinks
+② All lines commented
+③ Delay values converted on Timeline Worksheet.
+Facilitator records count per learner (0–3).
+Differentiation
+Support: Pre-load Blink sketch, pre-select COM port. Extension: Two alternating LEDs + timing pattern of learner's own design.
+Submitted sketch file on USB flash drive OR screenshot.
+KEY VOCABULARY
+setup() · loop() · delay() · pinMode() · digitalWrite() · millisecond · compile · upload · comment · microcontroller · pin
+Safeguarding Note
+Ensure learners handle hardware carefully. No liquid near electronics. All USB connections checked by facilitator before upload.
+Facilitator Name:
+____________________________
+Date Delivered:
+____________________________
+Signature:
+____________________________

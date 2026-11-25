@@ -1,0 +1,54 @@
+Read a provided MakeCode block programme and predict what it will do before running it
+Answer 5 code comprehension questions (what it does, input, output, first action, possible error)
+Identify all numerical values in the code and state their units (milliseconds, pixels)
+Modify one value in the programme (e.g. change display number or delay time) and confirm the change works
+Explain to a partner why reading code carefully before changing it matters
+4 BBC Micro:bit v2 kits with USB cables
+Printed 'Read This Code' worksheet (A4 per pair) – screenshot of a completed MakeCode programme with labels
+Code comprehension question sheet (5 questions per learner): What does this do? What is the input? What is the output? What happens first? What could go wrong?
+Pencils and highlighters (one colour per pair)
+Facilitator device + projected screen
+Display a projected MakeCode programme on screen (pre-prepared: 'on start → show number 7 → pause 500ms → show number 14 → pause 500ms → forever'). Do NOT run it yet.
+Ask: "Without touching the device – what will this programme do? What numbers will appear? In what order?" Pairs discuss for 2 minutes.
+Take 3 predictions from pairs. Write them on the board. Tell them: "We will find out if you were right in 15 minutes."
+Bridge: "Reading code is exactly like reading a recipe – you must understand ALL steps before you start cooking."
+Distribute printed 'Read This Code' worksheet and comprehension question sheet.
+Pairs read the printed programme carefully. Use highlighters: circle all numbers in one colour, underline all actions in another.
+Each learner answers the 5 comprehension questions individually in writing. (What does this do? What is the input? What is the output? What happens first? What could go wrong?)
+Facilitator circulates – check answers are written in full sentences, not single words.
+Pairs open MakeCode and recreate the programme from the worksheet. Driver builds, Navigator reads from the printed sheet to guide.
+Step 1 (5 min): Download the programme. Run it. Was the prediction correct? Learners circle: YES / PARTLY / NO on their sheet and write one sentence explaining the difference.
+Step 2 (8 min): Maths task – change the pause from 500 ms to 1000 ms. Before downloading, ask: 'How long will the number now show? (1 second).' Re-download and confirm.
+Step 3 (7 min): Change the numbers displayed (e.g. 7 → 21, 14 → 42). Predict: 'What pattern are you creating?' Download and confirm.
+Step 4 (5 min): Swap roles. New Driver must read each block aloud before the Navigator is allowed to suggest any change.
+Facilitator runs the original programme on the projected screen. Compare with predictions written at the start. Who was right?
+Pairs share: 'One thing we understood before running / One thing that surprised us.'
+Maths check: facilitator asks 3 learners: '500 ms is how many seconds? 2000 ms? 1500 ms?' Learners respond orally.
+Teaser: "Next week we will make the Micro:bit count – using LOOPS that repeat automatically. No more writing the same block 10 times!"
+Learners save their project in MakeCode (name it: 'Week2_[InitialInitial]').
+Each learner ticks: ☑ Comprehension questions answered ☑ Modification made ☑ Prediction written.
+Collect kits and printed worksheets for facilitator records.
+ISOMA EDUTECH LIMITED Micro:bit (MakeCode) Lesson Plan Stage 4 (P4 · Cambridge Stage 4/Year 4) Lesson 2: Read & Code – Code Comprehension
+Duration | 60 minutes | Term / Week | Term 1 · Week 2
+Age Range | 8–10 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | BBC Micro:bit v2, USB cable, shared laptops | Bloom's | L3 Applying
+NCDC Ref | Uganda NCDC P4 – Literacy Strand: Reading Comprehension; Numeracy Strand: Number Values & Units | Cambridge | Cambridge Primary Computing 0845 – Stage 4: Reading and interpreting programmes; Predicting outcomes
+DDD Phase | DELIVER – Learners read existing code as structured text, predict outcomes, then modify and run | Big Idea | Reading code is like reading instructions – you must understand what is written before you change it. Good programmers read first, code second.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | Reading comprehension: read the programme as a text. Answer 5 structured questions about it. Debrief framing: 'Reading code is like reading instructions – you must understand before you change.' Learners write one sentence explaining what the code does. | Maths | Identify all numerical values in the code. What are the units? Change the delay from 500 ms to 1000 ms – what is that in seconds? Introduce unit conversion: 1000 ms = 1 second. Calculate: 2500 ms = ? seconds; 750 ms = ? seconds.
+LESSON STRUCTURE
+HOOK – Can You Read Code? (10 min)
+DESIGN – Read Before You Run (10 min)
+DELIVER – Download, Predict, Modify (25 min)
+DISCOVER – Debrief and Discuss (10 min)
+WRAP-UP – Save and Store (5 min)
+ASSESSMENT
+Formative (During) | Comprehension worksheet (5 questions) collected – facilitator checks before next session. Modified programme runs correctly with the intended change confirmed by observation.
+Exit Assessment | Learner must correctly answer: 'If I change a delay from 500 ms to 2000 ms, what is the new delay in seconds?' (Correct answer: 2 seconds). Recorded on group checklist.
+Differentiation | Support: Provide the programme already loaded in MakeCode; learner only reads and modifies, no building from scratch. Extension: Learner writes a second programme from scratch that shows 3 different numbers in sequence with varied pause times.
+KEY VOCABULARY
+input · output · block · pause · millisecond · prediction · comprehension · modify · download · run
+Safeguarding Note: Ensure printed worksheets do not contain any personal learner data. All code examples should use neutral numbers and icons only.
+Facilitator Name: _______________________ | Date Delivered: _______________________ | Signature: _______________________

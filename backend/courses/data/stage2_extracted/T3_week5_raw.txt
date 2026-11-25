@@ -1,0 +1,88 @@
+Explain the connection between IF-THEN conditional logic in Stack KIDI and the basis of machine learning: "a computer that responds differently based on input"
+Design an "adaptive response" feature for the collaborative project: a programme section that produces one of two or three different outputs based on the current score variable or tap count
+Implement the adaptive response as a conditional sequence — if score < 3 → one response; if score ≥ 3 → a different response
+Evaluate whether the adaptive response makes the programme feel more "intelligent" and explain why to a non-specialist in one sentence
+2 tablets per group — integrated collaborative project from Lesson 19
+AI Awareness Introduction Card (A5 per learner): a simple explanation of AI as conditional logic at scale — 5 sentences with a concrete everyday example from Uganda (mobile money fraud detection, M-Pesa security alerts)
+Adaptive Response Design Sheet (A4 per group): "When score < ___ → character does ___. When score ≥ ___ → character does ___." (two-branch conditional design). Plus: "What does this make the programme seem to KNOW?"
+Conditional logic trace worksheet (A5): a 5-step sequence with an IF-THEN branch. Learners trace through with 3 different input values and record what happens in each case
+Real-world AI connection cards (4 cards): M-Pesa fraud alert, Makerere AI crop disease detector, phone face unlock, Spotify song recommendation — each described as "IF-THEN at scale"
+Facilitator: "Has anyone used M-Pesa? Has it ever sent you an alert saying 'unusual activity detected'?" Hands up.
+"How did the phone KNOW it was unusual? It was NOT a human checking every transaction. It was a programme — a programme full of IF-THEN rules: IF the transaction is more than 3× the average amount AND it is from a new location THEN flag it. That is AI."
+Distribute AI Awareness Introduction Cards. Read together.
+Distribute Real-World AI Connection Cards. Groups have 2 minutes to read all 4 and discuss: "Is this really just IF-THEN logic? Or is there something more?"
+Bridge: "Today we add ONE adaptive response to our programme. One IF-THEN based on the score. It is a tiny step — but it is the same logic that powers the most advanced AI on earth."
+Groups complete the Adaptive Response Design Sheet.
+"When our score is BELOW ___, the character should ___ (e.g. grow slowly, play a gentle sound, show a sad face animation)."
+"When our score is AT OR ABOVE ___, the character should ___ (e.g. spin fast, play a fanfare, grow to maximum)."
+The threshold number must be meaningful: "At what score does the game FEEL different? At what score has the player earned the better response?"
+Facilitator approves: "Is the threshold specific? Are the two responses clearly different? Does this make the programme seem to KNOW something about the player's performance?"
+Open the collaborative integrated project from Lesson 19.
+Step 1 — Conditional logic trace (5 min): Complete the trace worksheet with the planned threshold value. "If score = 1 → which branch? If score = 3 → which branch? If score = 5 → which branch?" Confirm understanding before coding.
+Step 2 — Build Branch 1 (10 min): After the main game mechanic, add the conditional check: IF score < threshold → play Branch 1 response. Test with a score below threshold. Does Branch 1 fire? Record in trace worksheet.
+Step 3 — Build Branch 2 (8 min): Add ELSE (or second trigger): IF score ≥ threshold → play Branch 2 response. Test with a score at and above threshold. Does Branch 2 fire correctly?
+Step 4 — Full game run with adaptive response (5 min): Play the game from start to finish twice — once reaching the low-score response, once reaching the high-score response. Confirm both branches work. Record on the Adaptive Response Design Sheet: "Branch 1 tested: YES/NO. Branch 2 tested: YES/NO."
+Groups run both branches for the adjacent group. Adjacent group answers: "Does this programme seem to KNOW something about the player?"
+Class discussion: "We just made our programme seem intelligent. It responds differently based on performance. Is it actually intelligent? What is missing for it to be truly AI?"
+Key insight: "It is intelligent in a LIMITED way. It knows exactly two things: score < 3 or score ≥ 3. Real AI learns new thresholds from data instead of having one fixed number. But the principle is identical."
+Each learner writes: "AI is ___. Our adaptive response is like AI because ___."
+Save project as "AI ENHANCED — [Group Names]."
+Collect trace worksheets and design sheets.
+Preview: "Next lesson — presentation mastery. You will need to explain the AI feature to an audience who has never heard of programming. Practise your one-sentence AI explanation tonight."
+ISOMA EDUTECH LIMITED
+Stack KIDI Lesson Plan  ·  DDD Framework
+Stage 2  (P2 · Cambridge Stage 2 / Year 2)
+Lesson 21  ·  Term 3 · Week 5
+Advanced Feature Unlock — Adding AI Awareness to the Programme
+Duration
+60 minutes
+Term / Week
+Term 3 · Week 5
+Age Range
+7–8 years
+Group Size
+8 learners  (2 groups of 4)
+Hardware
+Tablets with Stack KIDI App
+Bloom's
+L4 Analyse · L5 Evaluate · L6 Create
+NCDC
+Uganda NCDC Thematic Curriculum P2 — Literacy: Understanding how digital tools can exhibit seemingly intelligent behaviours; Creative Arts: Adding an adaptive or responsive feature to a digital creation; Numeracy: Programming a response that changes based on a measured input
+Cambridge
+Cambridge Primary Computing 0845 — Stage 2: Understanding that programmes can be designed to respond differently based on input values; making connections between data-driven responses and the concept of artificial intelligence; designing and implementing a programme with a conditional response pathway
+DDD Phase
+DESIGN + DELIVER — Learners extend their collaborative project with an "intelligent" feature: a programme that responds DIFFERENTLY based on a changing input (a simple simulated sensor response), introducing the concept that AI is fundamentally pattern-based conditional logic at scale
+Big Idea
+AI is not magic — it is a very large, very fast collection of IF-THEN rules. The same logic you used to make a character respond to a tap is the same logic — at enormous scale — that drives voice assistants, recommendation engines, and medical diagnosis tools.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English
+Explaining a technical concept to a non-specialist: learners must practise the sentence "AI is ___ because ___" until it is both accurate and accessible. The target audience for this explanation is "a grandparent who has never used a smartphone." This requires stripping out jargon and using analogies. Vocabulary: artificial intelligence, conditional, response, input, adaptive, pattern, scale, decision, intelligent, analogy.
+Maths
+Branching logic as a number line: "Score < 3" means the score is in the set {0, 1, 2}. "Score ≥ 3" means {3, 4, 5, …}. Learners complete: "If the game has a maximum score of 5, how many values are in the first branch? ___ How many in the second? ___" Introduction to set theory and inequality notation.
+LESSON STRUCTURE
+HOOK — What IS Artificial Intelligence? (10 min)
+DESIGN — Adaptive Response Design Sheet (10 min)
+DELIVER — Implement the Adaptive Response (28 min)
+DISCOVER — The Intelligence Discussion (8 min)
+WRAP-UP (4 min)
+ASSESSMENT
+Formative (During)
+Conditional logic trace worksheet: all 3 test values correctly traced to the right branch
+Both branches built and independently tested
+Full game run with both adaptive responses confirmed working
+"AI is ___ because ___" sentence written and reviewed by facilitator
+Exit / Summative
+"Explain the adaptive response to me as if I am your grandmother who has never seen a computer programme." Learner must use an analogy (not technical vocabulary) to explain that the programme responds differently based on the score. Full marks = clear analogy that accurately describes conditional branching.
+Differentiation
+Support: Reduce to one adaptive response only (one branch fires when score ≥ threshold; otherwise nothing happens). Extension: Design a THREE-branch response: score < 2 → response A; score 2–4 → response B; score ≥ 5 → response C. Implement all three, test all three, and connect each branch to a different level of achievement ("OK", "Good", "Amazing").
+KEY VOCABULARY
+artificial intelligence   ·   conditional   ·   adaptive   ·   response   ·   branch   ·   threshold   ·   input   ·   pattern   ·   scale   ·   decision
+⚠  Safeguarding Note: Discussions about AI should be grounded in Ugandan and African contexts — avoid presenting AI as exclusively a Western technology. The Makerere AI Lab example (crop disease detection) is a powerful local reference. Ensure AI is presented neither as magical nor as threatening — frame it as a tool built by people, with the same limitations as the programmes learners themselves build.
+Facilitator Name:
+________________________
+Date Delivered:
+________________________
+Signature:
+________________________

@@ -1,0 +1,209 @@
+# Term 3 · Lesson 3: Colour as Language — RGB LEDs, PWM & System Architecture Diagrams
+
+**Duration:** 3 hours (Term-time Saturday) (split across Week 3 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 3 · Week 3
+**Age Range:** 10–12 years
+**Hardware:** Arduino Uno, USB cable, RGB LED (common cathode) × 2, 220Ω resistors × 6, TMP36 temperature sensor, LDR, 10kΩ resistor, breadboard, jumper wires
+**Software:** Arduino IDE 2.x — analogWrite(), Serial Monitor
+**Bloom's:** L5 Evaluating → L6 Creating
+**DDD Phase:** EVALUATE & CREATE — Learners wire and control an RGB LED using PWM on three channels, design a sensor-driven colour-output system, produce a System Architecture Diagram documenting all components and data flows, and evaluate the clarity of colour as a communication medium against a defined standard
+**NCDC:** Uganda NCDC Curriculum P5/P6 — Literacy Strand: System Architecture Diagram — a visual-plus-written technical document describing how all components of a system connect and communicate. Numeracy Strand: PWM duty cycle as a percentage (0–255 mapped to 0%–100%); colour mixing as additive RGB values; linear interpolation between two values
+
+**Source plan:** `Stage6_T3_Week3_RGB_LED_PWM_Colour.docx`
+
+## Learning Objectives
+
+- Wire a common-cathode RGB LED with three separate 220Ω resistors on PWM pins 9 (red), 10 (green), 11 (blue)
+- Use analogWrite(pin, 0–255) to control the brightness of each RGB channel independently and produce at least 6 distinct named colours
+- Write a function void setColour(int r, int g, int b) that accepts three channel values and applies them — call it from the state machine
+- Design a colour-coding scheme that encodes both temperature state AND light state as a combined RGB colour — documented in a Colour Encoding Table before implementation
+- Produce a System Architecture Diagram showing: TMP36 (A0) → temperature function → colour calculation → RGB LED; LDR (A1) → light function → colour calculation → RGB LED; Serial Monitor text output channel
+- Evaluate the colour-coding scheme against 3 usability criteria: distinguishability (can a person reliably tell the 4 colours apart?), intuitiveness (does the colour match the real-world concept?), and accessibility (would the system work for someone who is colour-blind?)
+
+## Materials and Preparation
+
+_See source._
+
+## Cross-Curricular Links
+
+## Lesson Structure
+
+### 1. HOOK
+1. Colour as Data
+2. Display 3 coloured circles on the projector: red, amber, green. Ask: "What does each colour mean?" (Traffic light: stop, caution, go.) "Without any words, you understood a message. How?" Connect: colour is a communication medium — humans process it pre-linguistically.
+3. Introduce the engineering challenge: "You have a dual-sensor system — temperature and light. You have one RGB LED. You need to design a colour scheme that communicates BOTH values simultaneously. Four possible states: COOL+DIM, COOL+BRIGHT, WARM+DIM, WARM+BRIGHT. Four distinct colours."
+4. Distribute Colour Encoding Table Template and RGB Mixing Reference. Pairs have 8 minutes to design their colour scheme — choose 4 distinct colours, one per state. Write the rationale for each choice.
+5. Distribute System Architecture Diagram Template. Pairs begin drawing the architecture — all components, all connections, all data flows — before any hardware is touched. Facilitator reviews: "Can I trace the path from the TMP36 to the RGB LED just by following the arrows? If not, what is missing?"
+6. PWM concept: write analogWrite(9, 0) and analogWrite(9, 255) on the board. Ask: "What is the duty cycle of each?" 0% and 100%. Then analogWrite(9, 128): "What duty cycle?" Approximately 50%. This is the mathematical foundation for colour control.
+### 2. GUIDED ACTIVITY
+7. Wire, Mix & Map
+8. Step 1 (15 min): Wire the RGB LED. Common cathode → GND. Red pin → 220Ω → pin 9. Green pin → 220Ω → pin 10. Blue pin → 220Ω → pin 11. Test each channel independently: analogWrite(9, 255); analogWrite(10, 0); analogWrite(11, 0); — should produce red. Repeat for green and blue.
+9. Step 2 (10 min): Write the void setColour(int r, int g, int b) function. Call it: setColour(255, 128, 0) — should produce orange. Learners compare output to their Colour Encoding Table and Mixing Reference card.
+10. Step 3 (20 min): Wire the dual sensors (TMP36 on A0, LDR on A1 with pull-down). Write the temperature and light reading functions from memory — this is now a recall task, not a guided step. Facilitator only assists if the recall fails after 5 minutes.
+11. Step 4 (15 min): Implement the state-based colour output — integrate the colour scheme from the Colour Encoding Table into the state machine. Each state calls setColour() with the planned R, G, B values. Add Serial Monitor output: print the state name and the RGB values applied.
+12. Upload and test. Cover/uncover LDR; warm TMP36. Does the colour change as designed?
+### 3. INDEPENDENT / PAIR WORK
+13. Evaluate Usability & Refine
+14. Task 1 (20 min): Complete the Usability Evaluation Framework — all 3 criteria (Distinguishability, Intuitiveness, Accessibility), 4-point scale each, written justification for every score. For Accessibility: pair asks themselves "If I could not distinguish red from green, would this system still communicate the correct state?" If not, propose a modified colour scheme that is colour-blind safe.
+15. Task 2 (15 min): Refine the colour scheme based on the usability evaluation — make at least one documented improvement. Record the change in the Engineering Change Log from Week 2 (pairs should now be maintaining this log across sessions as a running document). Re-test and record the new usability score.
+16. Task 3 (10 min): Complete the System Architecture Diagram — add the Key and verify that all arrows are bidirectional or directional as appropriate. Write one sentence describing each data flow: "The TMP36 on A0 outputs an analogue voltage that is read by analogRead() and converted to °C by the readTemperature() function."
+17. Task 4 (Extension, 5 min): Implement smooth colour interpolation — instead of jumping instantly to the target colour, use a for loop to gradually step from the current RGB values to the target values over 500ms. This requires storing the current R, G, B values as global variables.
+18. Rotate Driver/Navigator between Tasks 1 and 2.
+### 4. SHOWCASE & DEBRIEF
+19. 2 pairs demonstrate their colour-output systems. Class observes: "What state is this? How do you know?" Audience must identify the state from the colour alone — no verbal hint from the pair.
+20. Usability Evaluation share: one pair reads their Accessibility score and justification. Class evaluates: "Is the proposed colour-blind safe alternative actually distinguishable without colour? Does it use other cues — brightness, flashing rate?"
+21. System Architecture Diagram: post two diagrams under the projector. Class compares — which one can be followed without any verbal explanation? What elements does the clearer diagram have that the other lacks?
+22. Facilitator closes: "Your System Architecture Diagram is a professional document. If you handed it to an engineer who had never seen your system, could they build it from the diagram alone? That is the standard."
+23. Math close: write on board — map(temperature, 25, 40, 0, 255). "If temperature = 32°C, what is the red channel value?" Answer: map(32, 25, 40, 0, 255) = (32-25)/(40-25) × 255 = 7/15 × 255 ≈ 119. "What is the duty cycle percentage?" 119/255 × 100% ≈ 46.7%.
+24. Collect Colour Encoding Table, System Architecture Diagram, and Usability Evaluation Framework as this week's artifact.
+
+## Assessment
+
+- Evidence Required
+- Formative
+- (During)
+- RGB LED produces at least 4 visually distinct colours corresponding to 4 system states. setColour() function is modular and called from the state machine. System Architecture Diagram completed before coding begins — facilitator checks.
+- Facilitator observation log. Class observation test: audience identifies all 4 states from colour alone (pass/fail per state per pair).
+- Term 3 Week 3
+- Artifact
+- Colour Encoding Table (all 4 states, R/G/B values, rationale per colour) + System Architecture Diagram (all components, all data flows, Key written) + Usability Evaluation Framework (all 3 criteria scored, written justification, colour-blind assessment). Scored on 5-point DDD rubric (Part 8.3).
+- All three physical documents collected. System Architecture Diagram must be a pre-coding document — dated and signed by facilitator before code was written.
+- Differentiation
+- Support: provide Colour Encoding Table pre-completed with 4 colours — learners implement the code only and complete the Usability Evaluation. Extension: smooth colour interpolation using for loop with global RGB state variables.
+- Extension: smooth colour transition demonstrated live — no instantaneous jump between states.
+
+## Key Vocabulary
+
+RGB · PWM · analogWrite() · duty cycle · common cathode · colour mixing · additive · linear interpolation · map() · System Architecture Diagram · Key · usability · distinguishability · intuitiveness · accessibility · colour-blind · data flow · output channel ⚠  Safeguarding Note RGB LEDs with incorrect wiring (no resistors per channel, or common anode treated as common cathode) will burn out immediately. Facilitator checks all RGB LED wiring BEFORE upload — this is mandatory. Usability and accessibility discussion: when introducing colour-blindness, frame it factually and respectfully — approximately 8% of males have red-green colour vision deficiency. Do not ask learners to self-identify. The goal is engineering inclusion: designing systems that work for the broadest possible range of users. Date Delivered: Signature:
+
+## Full source extract (complete)
+
+```
+RGB LED Control, PWM Duty Cycle, Colour Mixing & System Architecture Documentation
+TERM 3 SYSTEMS ENGINEERING CONTEXT
+TERMS 1 & 2 PRIOR KNOWLEDGE — What Learners Bring
+LEARNING OBJECTIVES
+• Wire a common-cathode RGB LED with three separate 220Ω resistors on PWM pins 9 (red), 10 (green), 11 (blue)
+• Use analogWrite(pin, 0–255) to control the brightness of each RGB channel independently and produce at least 6 distinct named colours
+• Write a function void setColour(int r, int g, int b) that accepts three channel values and applies them — call it from the state machine
+• Design a colour-coding scheme that encodes both temperature state AND light state as a combined RGB colour — documented in a Colour Encoding Table before implementation
+• Produce a System Architecture Diagram showing: TMP36 (A0) → temperature function → colour calculation → RGB LED; LDR (A1) → light function → colour calculation → RGB LED; Serial Monitor text output channel
+• Evaluate the colour-coding scheme against 3 usability criteria: distinguishability (can a person reliably tell the 4 colours apart?), intuitiveness (does the colour match the real-world concept?), and accessibility (would the system work for someone who is colour-blind?)
+MATERIALS & PREPARATION
+• 4 shared laptops with Arduino IDE 2.x
+• Arduino Uno × 4, USB cables × 4, RGB LED (common cathode) × 8 (2 per pair), 220Ω resistors × 24 (6 per pair), TMP36 × 4, LDR × 4, 10kΩ resistors × 4, breadboards × 4, jumper wires
+• Printed "RGB Colour Mixing Reference" — 12 named colours with their R, G, B values (0–255) and a brief description (A5 per pair, laminated)
+• Printed "Colour Encoding Table Template" — rows: State Name, Temperature Condition, Light Condition, R value, G value, B value, Colour Name, Rationale for Choice (A4 per pair)
+• Printed "System Architecture Diagram Template" — blank diagram with boxes for: sensors, Arduino pins, calculation functions, output channels. Arrows drawn by learners (A4 landscape per pair)
+• Printed "Usability Evaluation Framework" — 3 criteria, 4-point scale each: Distinguishability, Intuitiveness, Accessibility. Space for written justification per criterion (A4 per learner)
+• Coloured pencils or markers for the System Architecture Diagram and Colour Encoding Table
+• Facilitator projected screen
+CROSS-CURRICULAR LINKS
+LESSON STRUCTURE  (3 hours · Term 3 · Saturday)
+ASSESSMENT
+FACILITATOR RECORD
+ISOMA EDUTECH LIMITED  AI Engineers Programme · Stage 5–6 · Arduino · Term 3
+Term 3 · Lesson 3: Colour as Language — RGB LEDs, PWM & System Architecture Diagrams
+🔷  TERM 3 · STAGE 5–6 · AI ENGINEERS  |  Term 3 · Week 3
+Bloom's: L5 Evaluating → L6 Creating
+Duration
+3 hours (Term-time Saturday)
+Term / Week
+Term 3 · Week 3
+Age Range
+10–12 years
+Group Size
+8 learners (4 pairs — pair programming)
+Hardware
+Arduino Uno, USB cable, RGB LED (common cathode) × 2, 220Ω resistors × 6, TMP36 temperature sensor, LDR, 10kΩ resistor, breadboard, jumper wires
+Software / IDE
+Arduino IDE 2.x — analogWrite(), Serial Monitor
+Bloom's Level
+L5 Evaluating → L6 Creating
+DDD Phase
+EVALUATE & CREATE — Learners wire and control an RGB LED using PWM on three channels, design a sensor-driven colour-output system, produce a System Architecture Diagram documenting all components and data flows, and evaluate the clarity of colour as a communication medium against a defined standard
+NCDC Ref
+Uganda NCDC Curriculum P5/P6 — Literacy Strand: System Architecture Diagram — a visual-plus-written technical document describing how all components of a system connect and communicate. Numeracy Strand: PWM duty cycle as a percentage (0–255 mapped to 0%–100%); colour mixing as additive RGB values; linear interpolation between two values
+Cambridge Ref
+Cambridge Primary Computing 0845 — Stage 6: Output and representation; Analogue output via PWM; Designing multi-component systems with documented architecture
+🎨  Week 3 Systems Context — Output Design & System Architecture
+Every system has inputs and outputs. Until now, outputs have been: LEDs (binary on/off), Serial Monitor text, buzzer tones, servo angles. This week adds a new output channel: colour — specifically, RGB colour mixing using Pulse Width Modulation (PWM).
+PWM is the technique Arduino uses to simulate analogue output on digital pins. By switching the pin ON and OFF thousands of times per second at a controlled duty cycle (percentage of time ON), the LED receives an average voltage that controls its brightness.
+The System Architecture Diagram is introduced this week as a mandatory Term 3 documentation standard. It is a drawing that shows every hardware component, every data flow (which sensor feeds which calculation), and every output channel. It must be completed before coding begins — it is the engineer's blueprint.
+Colour as a data output channel: rather than printing "Temperature: 29.5°C", the system glows orange. Rather than printing "Light: 820 (bright)", the system glows white. This is the design challenge: how do you encode two independent sensor values as a single, readable colour? Learners solve this as an engineering design problem.
+🔷  TERMS 1 & 2 PRIOR KNOWLEDGE — What Learners Bring to This Session:
+• State machines with enum and switch/case — Term 3 Week 1
+• EEPROM persistence and Engineering Change Log — Term 3 Week 2
+• TMP36 temperature sensor and LDR — Term 1 Week 5, Term 2 Weeks 2 & 4
+• Dual-sensor data collection and rolling mean — Term 2 Week 4
+• Modular functions with return values — Term 2 Week 1
+• Classification logic and threshold conditions — Term 2 Week 5
+• Technical report writing and self-assessment — Term 2 Week 6
+🎯  Intended Learning Outcome (ILO)
+💡  Big Idea
+ILO 3.1 (mastery level) — Write Arduino sketches using analogWrite() on three PWM channels to produce mixed-colour RGB output driven by real sensor data. ILO 3.4 (deepened) — Produce a System Architecture Diagram as part of the design brief, documenting all components, data flows, and output channels before coding begins.
+Information can be communicated in many ways — numbers on a screen, words in a report, or colour on a display. A well-designed system chooses its output medium deliberately. Today you use colour as a data channel — mixing red, green, and blue light to communicate temperature and light levels in a way that is instantly readable by a human.
+📖  English Literacy Thread
+🔢  Mathematics Thread
+System Architecture Diagram as a technical communication document: the diagram must include both visual elements (boxes, arrows, labels) and a written Key that explains every symbol used. A diagram without a Key is unusable by anyone who did not draw it — this is a fundamental technical communication principle. Usability Evaluation: three criteria on a 4-point scale, with a written justification for each score. Learners must justify AGAINST a standard ("A score of 3 for Distinguishability: the four colours are visually distinct in normal light but the WARM_BRIGHT and HOT_BRIGHT colours are difficult to distinguish at a distance of 2 metres. To reach 4, the colours would need to differ more in hue, not just brightness."). This is formal evaluative writing — Bloom's Level 5.
+PWM duty cycle: analogWrite(9, 128) sets pin 9 to 50% duty cycle (128/255 × 100% ≈ 50%). analogWrite(9, 64) = 25% duty cycle. Table: R=255, G=128, B=0 → orange; calculate the duty cycle percentage for each channel. Linear interpolation: if temperature is 25°C and max temperature is 40°C, the red channel value = map(temperature, 25, 40, 0, 255). This is a linear function: redValue = (temp - 25) / 15 × 255. Colour space arithmetic: mixing R=255 with G=255 gives yellow (R+G) — this is additive colour mixing, not subtractive (paint mixing). Learners calculate the RGB values for 4 named colours using the interpolation formula before implementing.
+Phase
+Time
+Activities & Facilitator Actions
+1. HOOK
+Colour as Data
+20 min
+• Display 3 coloured circles on the projector: red, amber, green. Ask: "What does each colour mean?" (Traffic light: stop, caution, go.) "Without any words, you understood a message. How?" Connect: colour is a communication medium — humans process it pre-linguistically.
+• Introduce the engineering challenge: "You have a dual-sensor system — temperature and light. You have one RGB LED. You need to design a colour scheme that communicates BOTH values simultaneously. Four possible states: COOL+DIM, COOL+BRIGHT, WARM+DIM, WARM+BRIGHT. Four distinct colours."
+• Distribute Colour Encoding Table Template and RGB Mixing Reference. Pairs have 8 minutes to design their colour scheme — choose 4 distinct colours, one per state. Write the rationale for each choice.
+• Distribute System Architecture Diagram Template. Pairs begin drawing the architecture — all components, all connections, all data flows — before any hardware is touched. Facilitator reviews: "Can I trace the path from the TMP36 to the RGB LED just by following the arrows? If not, what is missing?"
+• PWM concept: write analogWrite(9, 0) and analogWrite(9, 255) on the board. Ask: "What is the duty cycle of each?" 0% and 100%. Then analogWrite(9, 128): "What duty cycle?" Approximately 50%. This is the mathematical foundation for colour control.
+2. GUIDED ACTIVITY
+Wire, Mix & Map
+60 min
+• Step 1 (15 min): Wire the RGB LED. Common cathode → GND. Red pin → 220Ω → pin 9. Green pin → 220Ω → pin 10. Blue pin → 220Ω → pin 11. Test each channel independently: analogWrite(9, 255); analogWrite(10, 0); analogWrite(11, 0); — should produce red. Repeat for green and blue.
+• Step 2 (10 min): Write the void setColour(int r, int g, int b) function. Call it: setColour(255, 128, 0) — should produce orange. Learners compare output to their Colour Encoding Table and Mixing Reference card.
+• Step 3 (20 min): Wire the dual sensors (TMP36 on A0, LDR on A1 with pull-down). Write the temperature and light reading functions from memory — this is now a recall task, not a guided step. Facilitator only assists if the recall fails after 5 minutes.
+• Step 4 (15 min): Implement the state-based colour output — integrate the colour scheme from the Colour Encoding Table into the state machine. Each state calls setColour() with the planned R, G, B values. Add Serial Monitor output: print the state name and the RGB values applied.
+• Upload and test. Cover/uncover LDR; warm TMP36. Does the colour change as designed?
+3. INDEPENDENT / PAIR WORK
+Evaluate Usability & Refine
+50 min
+• Task 1 (20 min): Complete the Usability Evaluation Framework — all 3 criteria (Distinguishability, Intuitiveness, Accessibility), 4-point scale each, written justification for every score. For Accessibility: pair asks themselves "If I could not distinguish red from green, would this system still communicate the correct state?" If not, propose a modified colour scheme that is colour-blind safe.
+• Task 2 (15 min): Refine the colour scheme based on the usability evaluation — make at least one documented improvement. Record the change in the Engineering Change Log from Week 2 (pairs should now be maintaining this log across sessions as a running document). Re-test and record the new usability score.
+• Task 3 (10 min): Complete the System Architecture Diagram — add the Key and verify that all arrows are bidirectional or directional as appropriate. Write one sentence describing each data flow: "The TMP36 on A0 outputs an analogue voltage that is read by analogRead() and converted to °C by the readTemperature() function."
+• Task 4 (Extension, 5 min): Implement smooth colour interpolation — instead of jumping instantly to the target colour, use a for loop to gradually step from the current RGB values to the target values over 500ms. This requires storing the current R, G, B values as global variables.
+• Rotate Driver/Navigator between Tasks 1 and 2.
+4. SHOWCASE & DEBRIEF
+30 min
+• 2 pairs demonstrate their colour-output systems. Class observes: "What state is this? How do you know?" Audience must identify the state from the colour alone — no verbal hint from the pair.
+• Usability Evaluation share: one pair reads their Accessibility score and justification. Class evaluates: "Is the proposed colour-blind safe alternative actually distinguishable without colour? Does it use other cues — brightness, flashing rate?"
+• System Architecture Diagram: post two diagrams under the projector. Class compares — which one can be followed without any verbal explanation? What elements does the clearer diagram have that the other lacks?
+• Facilitator closes: "Your System Architecture Diagram is a professional document. If you handed it to an engineer who had never seen your system, could they build it from the diagram alone? That is the standard."
+• Math close: write on board — map(temperature, 25, 40, 0, 255). "If temperature = 32°C, what is the red channel value?" Answer: map(32, 25, 40, 0, 255) = (32-25)/(40-25) × 255 = 7/15 × 255 ≈ 119. "What is the duty cycle percentage?" 119/255 × 100% ≈ 46.7%.
+• Collect Colour Encoding Table, System Architecture Diagram, and Usability Evaluation Framework as this week's artifact.
+Component
+Description
+Evidence Required
+Formative
+(During)
+RGB LED produces at least 4 visually distinct colours corresponding to 4 system states. setColour() function is modular and called from the state machine. System Architecture Diagram completed before coding begins — facilitator checks.
+Facilitator observation log. Class observation test: audience identifies all 4 states from colour alone (pass/fail per state per pair).
+Term 3 Week 3
+Artifact
+Colour Encoding Table (all 4 states, R/G/B values, rationale per colour) + System Architecture Diagram (all components, all data flows, Key written) + Usability Evaluation Framework (all 3 criteria scored, written justification, colour-blind assessment). Scored on 5-point DDD rubric (Part 8.3).
+All three physical documents collected. System Architecture Diagram must be a pre-coding document — dated and signed by facilitator before code was written.
+Differentiation
+Support: provide Colour Encoding Table pre-completed with 4 colours — learners implement the code only and complete the Usability Evaluation. Extension: smooth colour interpolation using for loop with global RGB state variables.
+Extension: smooth colour transition demonstrated live — no instantaneous jump between states.
+KEY VOCABULARY
+RGB · PWM · analogWrite() · duty cycle · common cathode · colour mixing · additive · linear interpolation · map() · System Architecture Diagram · Key · usability · distinguishability · intuitiveness · accessibility · colour-blind · data flow · output channel
+⚠  Safeguarding Note
+RGB LEDs with incorrect wiring (no resistors per channel, or common anode treated as common cathode) will burn out immediately. Facilitator checks all RGB LED wiring BEFORE upload — this is mandatory. Usability and accessibility discussion: when introducing colour-blindness, frame it factually and respectfully — approximately 8% of males have red-green colour vision deficiency. Do not ask learners to self-identify. The goal is engineering inclusion: designing systems that work for the broadest possible range of users.
+Facilitator Name:
+____________________________
+Date Delivered:
+____________________________
+Signature:
+____________________________
+```

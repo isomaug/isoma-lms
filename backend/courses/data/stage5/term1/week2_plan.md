@@ -1,0 +1,157 @@
+# Lesson 2: Variables & Data Types – Naming What We Know
+
+**Duration:** 3 hours (Saturday) / 90 min × 2 days (Holiday) (split across Week 2 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 1 · Week 2
+**Age Range:** 10–12 years
+**Group Size:** 8 learners (pair programming, 4 pairs)
+**Hardware:** Arduino Uno, USB cable, laptop with Arduino IDE 2.x, LED on pin 13
+**Bloom's:** L3 Applying
+**DDD ILO:** ILO 3.1 – Interpret and write Arduino sketches in Python that correctly use variables, data types, and Serial.println() to control and communicate hardware state
+**NCDC:** Uganda NCDC P5–P6 – ICT Strand: Data and variables in programming; English Strand: Vocabulary and descriptive language; Mathematics Strand: Number types, decimals, and units of measurement
+**Cambridge:** Cambridge Primary Computing 0845 – Stage 5: Variables; data types; debugging simple programmes
+
+**Big Idea:** A variable is a named box that stores information. Choosing the right name – and the right type – is the first step in writing clear code.
+
+## Learning Objectives
+
+- Declare and initialise variables of three data types: int, float, and String in an Arduino sketch
+- Print each variable to the Serial Monitor using Serial.println()
+- Explain in plain English what each data type is best used for, with a real-world example
+- Write a "personal data card" sketch that prints learner details (first name, age, a made-up temperature) to the Serial Monitor
+- Identify and fix all 4 intentional errors in a provided "debug challenge" sketch
+- Write pseudocode in plain English before coding a sketch, with each pseudocode line mapping to one line of code
+
+## Materials and Preparation
+
+- 4 laptops with Arduino IDE 2.x open from last session
+- 4 Arduino Uno boards + USB cables
+- Printed "Debug Challenge" sketch (A4 per pair) – sketch with 4 intentional type and syntax errors marked with blank boxes
+- Pseudocode worksheet (A5 per learner) – two-column: "Plain English" | "Arduino Code"
+- Data type reference card (A5 per pair) – int, float, String, bool with examples
+- USB flash drives for sketch submission
+- Facilitator device + projected screen
+
+## Cross-Curricular Links
+
+**English:** Pseudocode as plain English: learners write the programme description in plain English sentences before they write a single line of code. Each English sentence becomes one line of code. Variable names as descriptive nouns: "temperature" not "t", "studentAge" not "x". Link to clear writing – a well-named variable is like a well-chosen word in a sentence.
+
+**Maths:** Number types: int for whole numbers (age, count), float for decimals (temperature in °C). Rounding: 36.7°C rounded to nearest whole number = 37. Unit labelling: temperature in °C is a float; age in years is an int. Discussion: what data type is best for a school grade out of 100?
+
+## Lesson Structure
+
+### HOOK – What Is in the Box? (20 min)
+1. Facilitator places 3 physical boxes (or labelled envelopes) on the table. Labels: "Age", "Temperature", "Name". Ask: "What kind of information is in each box? Could the same type of box hold all three?"
+2. Discussion: "In everyday life, different types of information need different containers. Code is the same." Introduce the word variable.
+3. Show the data type reference card. Read each type aloud. Ask learners to give an example for each: "Give me something in real life that would be stored as a float." (Fuel price, body temperature.)
+4. Bridge: "Today we will create our own named boxes in code and fill them with real information about ourselves."
+5. Remind learners: pair programming – rotate Driver/Navigator every major task. Introduce the pseudocode worksheet.
+6. Facilitator live-codes on the projected screen: declare int age = 12; float temperature = 36.5; String name = "Amara"; – pausing after each line to explain.
+
+### GUIDED ACTIVITY – Declare, Assign, Print (60 min)
+7. Learners follow on their own sketches. Add Serial.begin(9600) in setup(). Add Serial.println(age); Serial.println(temperature); Serial.println(name); in loop().
+8. Upload and open Serial Monitor (Tools → Serial Monitor, baud 9600). Observe output. Ask: "What happens if we change the value of age? Do we need to re-upload?"
+9. Pseudocode task (before the personal data card): each learner fills in the pseudocode worksheet. Left column: "Store my name as text", "Store my age as a whole number", "Store a room temperature as a decimal". Right column: left blank for now.
+10. Personal data card challenge: learners translate their pseudocode into a full Arduino sketch. Must include: String (first name only), int (age), float (a made-up temperature). Print each with a label: Serial.println("My name is: "); Serial.println(name);
+11. Pairs swap pseudocode worksheets and check: does each English sentence map to exactly one line of code?
+12. Rotate Driver/Navigator. New driver types the debug challenge solution.
+
+### INDEPENDENT WORK – Debug Challenge (50 min)
+13. Distribute the printed "Debug Challenge" sketch. Learners must find and fix all 4 intentional errors without uploading first. Errors include: wrong data type (float used for a name), missing semicolon, misspelled Serial.println, variable used before declaration.
+14. After finding all 4 errors on paper, pairs type the corrected version and upload to confirm it compiles and runs correctly.
+15. Pair discussion: "Why does the Arduino IDE show an error message when there is a bug? How is that like a teacher marking your work?"
+16. Extension – if finished early: write a sketch that declares a bool variable called isLEDOn and changes its value between true and false in loop(), printing each state to the Serial Monitor. Link the bool to digitalWrite() to actually control the LED.
+17. Facilitator circulates, checks participation, and provides verbal feedback. Ask: "Why did you choose int for that value and not float?"
+18. 2–3 pairs demonstrate their personal data card sketch: Serial Monitor must show their name, age, and temperature. Class verifies the output.
+
+### SHOWCASE & DEBRIEF (30 min)
+19. One pair presents their debug challenge solution: "We found error 1 here because… Error 2 was here because…"
+20. Facilitator restates the English link: "Choosing a good variable name is exactly like choosing a precise word when you write. Both make communication clearer."
+21. Facilitator restates the Math link: "We chose float for temperature because temperature can have a decimal part. We chose int for age because you cannot be 12.7 years old."
+22. Exit question (written on sticky note): "Name one data type and write one real-world example of something that variable would store." Collect sticky notes as formative evidence.
+23. Submit sketch via USB flash drive.
+
+## Assessment
+
+- Formative (During) | Pseudocode worksheet: does each English sentence map to one code line? (Facilitator checks during guided phase) | Serial Monitor output shows correct values for all 3 data types (observed during guided phase) | Debug challenge: all 4 errors identified on paper before upload (collected) | Sticky note exit question: correct data type named with a valid real-world example (collected)
+- Exit Assessment | Sketch correctly declares and prints 3 different data types (int, float, String) to Serial Monitor | All 4 bugs in the debug challenge identified and fixed – corrected sketch compiles and runs | Both assessments submitted to facilitator via USB flash drive
+- Differentiation | Support: Provide a partially completed personal data card sketch with blanks to fill in. Pre-fix 2 of the 4 debug errors and ask learners to find only the remaining 2. | Extension: Introduce the bool data type and link it to an LED: if isLEDOn is true, digitalWrite(13, HIGH); else digitalWrite(13, LOW). Add arithmetic: int doubleAge = age * 2; and print the result.
+
+## Key Vocabulary
+
+variable · data type · int · float · String · bool · declare · initialise · Serial Monitor · pseudocode · debug · compile error
+
+## Safeguarding
+
+Safeguarding Note: Learners use only their first name in the personal data card sketch. Do not allow full names, home addresses, phone numbers, or school names in any code. Remind learners: anything typed in a sketch can be seen by anyone who opens that file.
+
+## Full source extract (complete)
+
+### Detail body
+
+```
+Declare and initialise variables of three data types: int, float, and String in an Arduino sketch
+Print each variable to the Serial Monitor using Serial.println()
+Explain in plain English what each data type is best used for, with a real-world example
+Write a "personal data card" sketch that prints learner details (first name, age, a made-up temperature) to the Serial Monitor
+Identify and fix all 4 intentional errors in a provided "debug challenge" sketch
+Write pseudocode in plain English before coding a sketch, with each pseudocode line mapping to one line of code
+4 laptops with Arduino IDE 2.x open from last session
+4 Arduino Uno boards + USB cables
+Printed "Debug Challenge" sketch (A4 per pair) – sketch with 4 intentional type and syntax errors marked with blank boxes
+Pseudocode worksheet (A5 per learner) – two-column: "Plain English" | "Arduino Code"
+Data type reference card (A5 per pair) – int, float, String, bool with examples
+USB flash drives for sketch submission
+Facilitator device + projected screen
+Facilitator places 3 physical boxes (or labelled envelopes) on the table. Labels: "Age", "Temperature", "Name". Ask: "What kind of information is in each box? Could the same type of box hold all three?"
+Discussion: "In everyday life, different types of information need different containers. Code is the same." Introduce the word variable.
+Show the data type reference card. Read each type aloud. Ask learners to give an example for each: "Give me something in real life that would be stored as a float." (Fuel price, body temperature.)
+Bridge: "Today we will create our own named boxes in code and fill them with real information about ourselves."
+Remind learners: pair programming – rotate Driver/Navigator every major task. Introduce the pseudocode worksheet.
+Facilitator live-codes on the projected screen: declare int age = 12; float temperature = 36.5; String name = "Amara"; – pausing after each line to explain.
+Learners follow on their own sketches. Add Serial.begin(9600) in setup(). Add Serial.println(age); Serial.println(temperature); Serial.println(name); in loop().
+Upload and open Serial Monitor (Tools → Serial Monitor, baud 9600). Observe output. Ask: "What happens if we change the value of age? Do we need to re-upload?"
+Pseudocode task (before the personal data card): each learner fills in the pseudocode worksheet. Left column: "Store my name as text", "Store my age as a whole number", "Store a room temperature as a decimal". Right column: left blank for now.
+Personal data card challenge: learners translate their pseudocode into a full Arduino sketch. Must include: String (first name only), int (age), float (a made-up temperature). Print each with a label: Serial.println("My name is: "); Serial.println(name);
+Pairs swap pseudocode worksheets and check: does each English sentence map to exactly one line of code?
+Rotate Driver/Navigator. New driver types the debug challenge solution.
+Distribute the printed "Debug Challenge" sketch. Learners must find and fix all 4 intentional errors without uploading first. Errors include: wrong data type (float used for a name), missing semicolon, misspelled Serial.println, variable used before declaration.
+After finding all 4 errors on paper, pairs type the corrected version and upload to confirm it compiles and runs correctly.
+Pair discussion: "Why does the Arduino IDE show an error message when there is a bug? How is that like a teacher marking your work?"
+Extension – if finished early: write a sketch that declares a bool variable called isLEDOn and changes its value between true and false in loop(), printing each state to the Serial Monitor. Link the bool to digitalWrite() to actually control the LED.
+Facilitator circulates, checks participation, and provides verbal feedback. Ask: "Why did you choose int for that value and not float?"
+2–3 pairs demonstrate their personal data card sketch: Serial Monitor must show their name, age, and temperature. Class verifies the output.
+One pair presents their debug challenge solution: "We found error 1 here because… Error 2 was here because…"
+Facilitator restates the English link: "Choosing a good variable name is exactly like choosing a precise word when you write. Both make communication clearer."
+Facilitator restates the Math link: "We chose float for temperature because temperature can have a decimal part. We chose int for age because you cannot be 12.7 years old."
+Exit question (written on sticky note): "Name one data type and write one real-world example of something that variable would store." Collect sticky notes as formative evidence.
+Submit sketch via USB flash drive.
+variable · data type · int · float · String · bool · declare · initialise · Serial Monitor · pseudocode · debug · compile error
+```
+
+### Plan header and sections
+
+```
+ISOMA EDUTECH LIMITED | Arduino · Python Lesson Plan | Stage 5 (Ages 10–12 · AI Engineers) | Lesson 2: Variables & Data Types – Naming What We Know
+Duration | 3 hours (Saturday) / 90 min × 2 days (Holiday) | Term / Week | Term 1 · Week 2
+Age Range | 10–12 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | Arduino Uno, USB cable, laptop with Arduino IDE 2.x, LED on pin 13 | Bloom's Level | L3 Applying
+NCDC Ref | Uganda NCDC P5–P6 – ICT Strand: Data and variables in programming; English Strand: Vocabulary and descriptive language; Mathematics Strand: Number types, decimals, and units of measurement | Cambridge | Cambridge Primary Computing 0845 – Stage 5: Variables; data types; debugging simple programmes
+DDD ILO | ILO 3.1 – Interpret and write Arduino sketches in Python that correctly use variables, data types, and Serial.println() to control and communicate hardware state | Big Idea | A variable is a named box that stores information. Choosing the right name – and the right type – is the first step in writing clear code.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | Pseudocode as plain English: learners write the programme description in plain English sentences before they write a single line of code. Each English sentence becomes one line of code. Variable names as descriptive nouns: "temperature" not "t", "studentAge" not "x". Link to clear writing – a well-named variable is like a well-chosen word in a sentence.
+Maths | Number types: int for whole numbers (age, count), float for decimals (temperature in °C). Rounding: 36.7°C rounded to nearest whole number = 37. Unit labelling: temperature in °C is a float; age in years is an int. Discussion: what data type is best for a school grade out of 100?
+LESSON STRUCTURE
+HOOK – What Is in the Box? (20 min)
+GUIDED ACTIVITY – Declare, Assign, Print (60 min)
+INDEPENDENT WORK – Debug Challenge (50 min)
+SHOWCASE & DEBRIEF (30 min)
+ASSESSMENT
+Formative (During) | Pseudocode worksheet: does each English sentence map to one code line? (Facilitator checks during guided phase) | Serial Monitor output shows correct values for all 3 data types (observed during guided phase) | Debug challenge: all 4 errors identified on paper before upload (collected) | Sticky note exit question: correct data type named with a valid real-world example (collected)
+Exit Assessment | Sketch correctly declares and prints 3 different data types (int, float, String) to Serial Monitor | All 4 bugs in the debug challenge identified and fixed – corrected sketch compiles and runs | Both assessments submitted to facilitator via USB flash drive
+Differentiation | Support: Provide a partially completed personal data card sketch with blanks to fill in. Pre-fix 2 of the 4 debug errors and ask learners to find only the remaining 2. | Extension: Introduce the bool data type and link it to an LED: if isLEDOn is true, digitalWrite(13, HIGH); else digitalWrite(13, LOW). Add arithmetic: int doubleAge = age * 2; and print the result.
+KEY VOCABULARY
+Safeguarding Note: Learners use only their first name in the personal data card sketch. Do not allow full names, home addresses, phone numbers, or school names in any code. Remind learners: anything typed in a sketch can be seen by anyone who opens that file.
+Facilitator Name: | ____________________ | Date Delivered: | ____________________ | Signature: | ____________________
+```

@@ -1,0 +1,190 @@
+# Lesson 3: Debugging Live - Find It, Name It, Fix It
+
+**Duration:** 60 minutes (split across Week 3 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 1 · Week 3
+**Age Range:** 7–8 years
+**Hardware:** Tablets / Shared Devices with Stack KIDI App
+**Bloom's:** L3 Apply · L4 Analyse · L5 Evaluate
+
+**Big Idea:** Every programmer makes bugs. The skill is not avoiding bugs - it is finding and fixing them SYSTEMATICALLY. A good debugger reads the code like a detective.
+
+**Source plan:** `Stage2_Lesson2_Week3.docx`
+
+## Learning Objectives
+
+- Explain a debugging process using three steps: Identify → Locate → Fix
+- Find and correct two errors in a given Stack KIDI programme that does not behave as described
+- Distinguish between a logic error (wrong order) and a wrong-block error (wrong instruction type)
+- Document each bug found using a Bug Report Card: bug description, location, fix applied, result after fix
+
+## Materials and Preparation
+
+- 4 tablets with Stack KIDI - 3 pre-built buggy project files loaded (see Facilitator Notes below)
+
+## Cross-Curricular Links
+
+**English:** Editing analogy: debugging code is like proofreading a paragraph - you read carefully, find the error, and correct it without changing what is correct. Learners write one sentence for each bug: "The bug was ___ because ___. I fixed it by ___." Vocabulary: error, bug, debug, systematic, logic, identify, locate, fix.
+
+**Maths:** Logical reasoning: "If Step 2 is wrong, all steps AFTER Step 2 are also wrong." Chain of consequences - like carrying an error in column addition. Learners trace through a 5-step algorithm manually, identify at which step the output changes from expected.
+
+## Lesson Structure
+
+### HOOK - The Detective Introduction (8 min)
+1. Bug Report Cards (A5, 4 per learner) - columns: Bug # | What should happen | What actually happens | Where is the bug | My fix | Did the fix work?
+2. Printed debugging process poster: "STEP 1 - Read the goal. STEP 2 - Run the programme. STEP 3 - Find the difference. STEP 4 - Fix one thing at a time."
+3. Red sticky dots (to mark a bug on the screen/desk) and green sticky dots (to mark a confirmed fix)
+4. Magnifying glass prop (1 per group) - symbolic "detective tool"
+5. Facilitator Notes: instructions for building the 3 buggy projects before the session (see below)
+6. Hold up the magnifying glass. "Today you are CODE DETECTIVES. Your job: find the criminal hiding in the programme - the BUG."
+
+### DESIGN - Predict What Each Programme SHOULD Do (7 min)
+7. Show the debugging process poster. Read aloud together: Step 1 - Read the goal. Step 2 - Run. Step 3 - Find the difference. Step 4 - Fix ONE thing at a time.
+8. Physical warm-up: read aloud a 5-step "morning routine" algorithm with one step in the wrong place. Ask: "Which step is the bug? How do we fix it?"
+9. Introduce key vocabulary: LOGIC ERROR (right blocks, wrong order) vs. WRONG-BLOCK ERROR (incorrect instruction used). Give one example of each on the board.
+10. Distribute Bug Report Cards (3 per pair - one per buggy programme).
+11. Show the GOAL of each programme on the projected screen without showing the code:
+12. Programme 1 goal: "Character moves forward 3, turns right, moves forward 3, plays a sound."
+
+### DELIVER - Debug the Three Programmes (32 min)
+13. Programme 2 goal: "Character spins, moves backward, then turns left and moves forward 2."
+14. Programme 3 goal: "Character repeats: move forward 1, turn right - four times to make a square."
+15. Pairs read each goal and write in column 1 of the Bug Report Card: "What SHOULD happen."
+16. PROGRAMME 1 - Wrong-Block Error (10 min): Open Buggy Project 1 on the tablet. Run it. What actually happens? (Character does NOT turn right - it turns left instead.) Place a red dot on the incorrect block. Fill in Bug Report Card: location = "Turn block, position 2". Fix = change Turn Left to Turn Right. Run again. Put green dot if fixed. Record: "Did the fix work?"
+17. PROGRAMME 2 - Logic Error / Wrong Order (10 min): Open Buggy Project 2. Run it. What actually happens? (Character moves backward BEFORE spinning - goal says spin first.) Identify the logic error: blocks are in the wrong order. Fix = drag blocks to correct sequence. Re-run. Fill in Bug Report Card.
+
+### DISCOVER - Bug Report Debrief (9 min)
+18. PROGRAMME 3 - Loop Count Error (12 min): Open Buggy Project 3. Run it. What happens? (Character makes only 2 turns of the square instead of 4 - the repeat number is 2, should be 4.) Identify: the number inside the Repeat End block is wrong. Fix = change from 2 to 4. Run and verify the full square is drawn. Fill in Bug Report Card.
+19. Pairs who finish early: swap tablets with another pair and find the same bugs independently (without looking at their own Bug Report Cards).
+20. One pair per programme presents: reads out their Bug Report Card for that programme.
+21. Class checks: same bug? Same fix? Did anyone find a DIFFERENT bug in the same programme?
+22. Facilitate discussion: "Which type of bug was hardest to find - wrong block or wrong order? Why?"
+
+### WRAP-UP (4 min)
+23. Key insight: "In Programme 3, changing the number 2 to 4 is a SMALL change that makes a BIG difference. This is why we fix ONE thing at a time."
+24. Exit reflection: "A good debugger always ___." Learners complete the sentence individually.
+25. Collect Bug Report Cards - kept in learner folders as portfolio evidence.
+26. Facilitator records: which pairs correctly identified all three bugs (checkmark on class register).
+27. Preview: "Next lesson - we GIVE other people our code to debug. You will design a buggy programme for another pair to fix!"
+
+## Assessment
+
+- Formative (During)
+- Bug Report Card completed for all 3 programmes (6 columns each)
+- All 3 bugs correctly identified and described in plain English
+- Fix verified by running the corrected programme (green dot placed)
+- Distinction between logic error and wrong-block error explained verbally
+- Exit Assessment
+- Facilitator reads the sentence starter: "A good debugger always ___." Target answer should include: reads the goal / tests one change at a time / does not guess randomly. Record whether each learner demonstrates systematic thinking.
+- Differentiation
+- Support: Facilitator pre-highlights the buggy block with a light yellow sticky note so the learner focuses on identifying and fixing (rather than locating). Extension: Learner deliberately introduces a new bug into their own Lesson 2 programme, writes a Bug Report Card for it, then swaps with another pair to find and fix each other's intentional bug.
+
+## Key Vocabulary
+
+_See source._
+
+## Safeguarding
+
+Safeguarding Note: Ensure learners understand that making bugs is normal and not a failure. Use positive language: "Great detective work!" Avoid competitive framing that could make learners feel embarrassed about not finding a bug quickly.
+
+## Full source extract (complete)
+
+### Detail body
+
+```
+Explain a debugging process using three steps: Identify → Locate → Fix
+Find and correct two errors in a given Stack KIDI programme that does not behave as described
+Distinguish between a logic error (wrong order) and a wrong-block error (wrong instruction type)
+Document each bug found using a Bug Report Card: bug description, location, fix applied, result after fix
+4 tablets with Stack KIDI - 3 pre-built buggy project files loaded (see Facilitator Notes below)
+Bug Report Cards (A5, 4 per learner) - columns: Bug # | What should happen | What actually happens | Where is the bug | My fix | Did the fix work?
+Printed debugging process poster: "STEP 1 - Read the goal. STEP 2 - Run the programme. STEP 3 - Find the difference. STEP 4 - Fix one thing at a time."
+Red sticky dots (to mark a bug on the screen/desk) and green sticky dots (to mark a confirmed fix)
+Magnifying glass prop (1 per group) - symbolic "detective tool"
+Facilitator Notes: instructions for building the 3 buggy projects before the session (see below)
+Hold up the magnifying glass. "Today you are CODE DETECTIVES. Your job: find the criminal hiding in the programme - the BUG."
+Show the debugging process poster. Read aloud together: Step 1 - Read the goal. Step 2 - Run. Step 3 - Find the difference. Step 4 - Fix ONE thing at a time.
+Physical warm-up: read aloud a 5-step "morning routine" algorithm with one step in the wrong place. Ask: "Which step is the bug? How do we fix it?"
+Introduce key vocabulary: LOGIC ERROR (right blocks, wrong order) vs. WRONG-BLOCK ERROR (incorrect instruction used). Give one example of each on the board.
+Distribute Bug Report Cards (3 per pair - one per buggy programme).
+Show the GOAL of each programme on the projected screen without showing the code:
+Programme 1 goal: "Character moves forward 3, turns right, moves forward 3, plays a sound."
+Programme 2 goal: "Character spins, moves backward, then turns left and moves forward 2."
+Programme 3 goal: "Character repeats: move forward 1, turn right - four times to make a square."
+Pairs read each goal and write in column 1 of the Bug Report Card: "What SHOULD happen."
+PROGRAMME 1 - Wrong-Block Error (10 min): Open Buggy Project 1 on the tablet. Run it. What actually happens? (Character does NOT turn right - it turns left instead.) Place a red dot on the incorrect block. Fill in Bug Report Card: location = "Turn block, position 2". Fix = change Turn Left to Turn Right. Run again. Put green dot if fixed. Record: "Did the fix work?"
+PROGRAMME 2 - Logic Error / Wrong Order (10 min): Open Buggy Project 2. Run it. What actually happens? (Character moves backward BEFORE spinning - goal says spin first.) Identify the logic error: blocks are in the wrong order. Fix = drag blocks to correct sequence. Re-run. Fill in Bug Report Card.
+PROGRAMME 3 - Loop Count Error (12 min): Open Buggy Project 3. Run it. What happens? (Character makes only 2 turns of the square instead of 4 - the repeat number is 2, should be 4.) Identify: the number inside the Repeat End block is wrong. Fix = change from 2 to 4. Run and verify the full square is drawn. Fill in Bug Report Card.
+Pairs who finish early: swap tablets with another pair and find the same bugs independently (without looking at their own Bug Report Cards).
+One pair per programme presents: reads out their Bug Report Card for that programme.
+Class checks: same bug? Same fix? Did anyone find a DIFFERENT bug in the same programme?
+Facilitate discussion: "Which type of bug was hardest to find - wrong block or wrong order? Why?"
+Key insight: "In Programme 3, changing the number 2 to 4 is a SMALL change that makes a BIG difference. This is why we fix ONE thing at a time."
+Exit reflection: "A good debugger always ___." Learners complete the sentence individually.
+Collect Bug Report Cards - kept in learner folders as portfolio evidence.
+Facilitator records: which pairs correctly identified all three bugs (checkmark on class register).
+Preview: "Next lesson - we GIVE other people our code to debug. You will design a buggy programme for another pair to fix!"
+```
+
+### Plan header and sections
+
+```
+ISOMA EDUTECH LIMITED
+Stack KIDI Lesson Plan
+Stage 2 (P2 · Cambridge Stage 2 / Year 2)
+Lesson 3: Debugging Live - Find It, Name It, Fix It
+Duration
+60 minutes
+Term / Week
+Term 1 · Week 3
+Age Range
+7–8 years
+Group Size
+8 learners  (pair programming - 4 pairs)
+Hardware
+Tablets / Shared Devices with Stack KIDI App
+Bloom's
+L3 Apply · L4 Analyse · L5 Evaluate
+NCDC Ref
+Uganda NCDC Thematic Curriculum P2 - Literacy Strand: Identifying and correcting errors in written text; Numeracy Strand: Logical reasoning and checking answers
+Cambridge
+Cambridge Primary Computing 0845 - Stage 2: Debugging - identifying errors in algorithms and programmes; using a systematic approach to find and correct mistakes; understanding that an error in one step affects all following steps
+DDD Phase
+DELIVER + DISCOVER - Learners debug progressively harder buggy programmes and develop a systematic 3-step debugging process
+Big Idea
+Every programmer makes bugs. The skill is not avoiding bugs - it is finding and fixing them SYSTEMATICALLY. A good debugger reads the code like a detective.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+Facilitator Preparation Note:
+PRE-SESSION SETUP - Build 3 Buggy Projects in Stack KIDI before the session:
+Project 1: Goal = forward 3, turn right, forward 3, sound. Bug = Turn LEFT used instead of Turn RIGHT.
+Project 2: Goal = spin, move backward, turn left, forward 2. Bug = blocks in reverse order (move backward first).
+Project 3: Goal = repeat (forward 1 + turn right) 4 times to make square. Bug = Repeat End set to 2 instead of 4.
+Save each on a separate tablet or as separate projects on the same device.
+CROSS-CURRICULAR LINKS
+English
+Editing analogy: debugging code is like proofreading a paragraph - you read carefully, find the error, and correct it without changing what is correct. Learners write one sentence for each bug: "The bug was ___ because ___. I fixed it by ___." Vocabulary: error, bug, debug, systematic, logic, identify, locate, fix.
+Maths
+Logical reasoning: "If Step 2 is wrong, all steps AFTER Step 2 are also wrong." Chain of consequences - like carrying an error in column addition. Learners trace through a 5-step algorithm manually, identify at which step the output changes from expected.
+LESSON STRUCTURE
+HOOK - The Detective Introduction (8 min)
+DESIGN - Predict What Each Programme SHOULD Do (7 min)
+DELIVER - Debug the Three Programmes (32 min)
+DISCOVER - Bug Report Debrief (9 min)
+WRAP-UP (4 min)
+ASSESSMENT
+Formative (During)
+Bug Report Card completed for all 3 programmes (6 columns each)
+All 3 bugs correctly identified and described in plain English
+Fix verified by running the corrected programme (green dot placed)
+Distinction between logic error and wrong-block error explained verbally
+Exit Assessment
+Facilitator reads the sentence starter: "A good debugger always ___." Target answer should include: reads the goal / tests one change at a time / does not guess randomly. Record whether each learner demonstrates systematic thinking.
+Differentiation
+Support: Facilitator pre-highlights the buggy block with a light yellow sticky note so the learner focuses on identifying and fixing (rather than locating). Extension: Learner deliberately introduces a new bug into their own Lesson 2 programme, writes a Bug Report Card for it, then swaps with another pair to find and fix each other's intentional bug.
+KEY VOCABULARY
+debug   ·   bug   ·   logic error   ·   wrong-block error   ·   systematic   ·   identify   ·   locate   ·   fix   ·   test   ·   trace
+Safeguarding Note: Ensure learners understand that making bugs is normal and not a failure. Use positive language: "Great detective work!" Avoid competitive framing that could make learners feel embarrassed about not finding a bug quickly.
+Facilitator Name:   ________________________
+Date Delivered:   ________________________
+Signature:   ________________________
+```

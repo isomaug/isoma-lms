@@ -1,0 +1,120 @@
+# Lesson: Integration Testing & Demo Prep — test table and checklist
+
+**Duration:** 60 minutes × 2 (split across Week 7 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 3 · Week 7
+**Age Range:** 10–12 years
+**Hardware:** Arduino Uno + Term 3 sensors/actuators (servo, RGB, 7-segment, buzzer, EEPROM)
+
+**Source plan:** `curriculum progression fill (no DOCX for Term 3 Weeks 5–8)`
+
+## Learning Objectives
+
+- Finish the remaining outputs so servo, RGB, 7-segment, and buzzer all respond to the same state machine
+- Record a Test Results table with at least 6 test cases (pass/fail + notes)
+
+- Debug using a printed checklist: power, pins, thresholds, state transitions, Serial log
+- Prepare a 90-second demo script that names the problem, the sensors, and the outputs
+
+## Lesson Structure
+
+### Lesson 1 (start)
+
+# Week 7 - Lesson 1
+
+## Session length
+**60 minutes**
+
+## Today you will
+* Finish the remaining outputs so servo, RGB, 7-segment, and buzzer all respond to the same state machine
+* Record a Test Results table with at least 6 test cases (pass/fail + notes)
+
+## Let's begin
+1. Freeze the architecture — no new hardware today unless a wire is broken.
+2. Complete any missing `case` branches in your switch/case.
+3. Build a Test Results table: input condition → expected → actual → pass/fail.
+4. Run each test twice. Fix failing cases before adding new features.
+
+## Check your understanding
+* Which test failed first, and what did you change to fix it?
+
+## Key words
+* Test Results table
+* regression
+* integration
+
+### Lesson 2 (finish)
+
+# Week 7 - Lesson 2
+
+## Session length
+**60 minutes**
+
+## Finish the week
+* Debug using a printed checklist: power, pins, thresholds, state transitions, Serial log
+* Prepare a 90-second demo script that names the problem, the sensors, and the outputs
+
+## Continue
+1. Walk the debug checklist with your partner — tick each item.
+2. Capture one Serial screenshot or handwritten log of a full ALARM cycle.
+3. Write a 90-second demo script (who speaks, what you press, what the audience should notice).
+4. Rehearse once for another pair; note one improvement.
+
+## Check your understanding
+* Can you demo without looking at the code?
+
+## Key words
+* debug checklist
+* demo script
+* peer rehearsal
+
+## Full source extract (complete)
+
+```
+# Week 7 - Lesson 1
+
+## Session length
+**60 minutes**
+
+## Today you will
+* Finish the remaining outputs so servo, RGB, 7-segment, and buzzer all respond to the same state machine
+* Record a Test Results table with at least 6 test cases (pass/fail + notes)
+
+## Let's begin
+1. Freeze the architecture — no new hardware today unless a wire is broken.
+2. Complete any missing `case` branches in your switch/case.
+3. Build a Test Results table: input condition → expected → actual → pass/fail.
+4. Run each test twice. Fix failing cases before adding new features.
+
+## Check your understanding
+* Which test failed first, and what did you change to fix it?
+
+## Key words
+* Test Results table
+* regression
+* integration
+
+---
+
+# Week 7 - Lesson 2
+
+## Session length
+**60 minutes**
+
+## Finish the week
+* Debug using a printed checklist: power, pins, thresholds, state transitions, Serial log
+* Prepare a 90-second demo script that names the problem, the sensors, and the outputs
+
+## Continue
+1. Walk the debug checklist with your partner — tick each item.
+2. Capture one Serial screenshot or handwritten log of a full ALARM cycle.
+3. Write a 90-second demo script (who speaks, what you press, what the audience should notice).
+4. Rehearse once for another pair; note one improvement.
+
+## Check your understanding
+* Can you demo without looking at the code?
+
+## Key words
+* debug checklist
+* demo script
+* peer rehearsal
+```

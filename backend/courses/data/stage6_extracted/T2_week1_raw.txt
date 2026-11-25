@@ -1,0 +1,119 @@
+User-Defined Functions, Return Values & Code Decomposition
+TERM 1 PRIOR KNOWLEDGE — What Learners Bring
+LEARNING OBJECTIVES
+• Define and call a user-defined void function with at least one parameter that controls LED behaviour
+• Write a function with a return value (int or float) and use the returned value in a calculation printed to the Serial Monitor
+• Decompose a 3-LED traffic light sequence into three separate named functions: redLight(), amberLight(), greenLight()
+• Read a 20-line modular sketch and produce an annotated diagram showing: function names, parameters, return types, and call order
+• Evaluate two versions of the same programme (monolithic vs modular) and write a paragraph explaining which is preferable and why
+• Identify and fix a function that has a logic error caused by an incorrect return value
+MATERIALS & PREPARATION
+• 4 shared laptops with Arduino IDE 2.x
+• Arduino Uno × 4, USB cables × 4, LED × 12 (3 per pair: red, yellow, green), 220Ω resistors × 12, breadboards × 4, jumper wires
+• Printed "Monolithic vs Modular" comparison sheet — same traffic light programme written two ways, side by side (A4 per pair)
+• Printed "Function Anatomy Card" — labelled diagram: return type, name, parameter list, body, return statement (A5 per pair, laminated)
+• Printed "Code Decomposition Worksheet" — blank function diagram for learners to fill in (A4 per learner)
+• Printed "Evaluation Writing Frame" — sentence starters for the modular vs monolithic paragraph (A5 per learner)
+• Facilitator projected screen
+CROSS-CURRICULAR LINKS
+LESSON STRUCTURE  (3 hours · Term 2 · Saturday)
+ASSESSMENT
+FACILITATOR RECORD
+ISOMA EDUTECH LIMITED  AI Engineers Programme · Stage 5–6 · Arduino · Term 2
+Term 2 · Lesson 1: Build in Blocks — Functions with Return Values & Modular Code
+🌿  TERM 2 · STAGE 5–6 · AI ENGINEERS  |  Term 2 · Week 1
+Bloom's: L4 Analysing
+Duration
+3 hours (Term-time Saturday)
+Term / Week
+Term 2 · Week 1
+Age Range
+10–12 years
+Group Size
+8 learners (4 pairs — pair programming)
+Hardware
+Arduino Uno, USB cable, LED × 3 (red, yellow, green), 220Ω resistors × 3, breadboard, jumper wires
+Software / IDE
+Arduino IDE 2.x — Serial Monitor
+Bloom's Level
+L4 Analysing
+DDD Phase
+ANALYSE — Learners decompose a multi-LED traffic light system into named functions, write functions with return values, and evaluate why modular code is superior to a single monolithic sketch
+NCDC Ref
+Uganda NCDC Curriculum P5/P6 — Literacy Strand: Identifying the structure and purpose of paragraphs; paragraph as a unit of meaning — parallel to a function. Numeracy Strand: Function notation f(x); input-output relationships; evaluating expressions
+Cambridge Ref
+Cambridge Primary Computing 0845 — Stage 6: Modular programming; Functions and procedures; Decomposition as a problem-solving strategy
+🔁  TERM 1 PRIOR KNOWLEDGE — Learners are expected to arrive knowing:
+• setup() and loop() structure — learners can identify and explain both functions from Term 1 Week 1
+• void functions called from loop() — introduced in Term 1 Week 3 (countDown() extension task)
+• Variables and data types (int, float, bool) — Term 1 Week 2
+• For loops and while loops — Term 1 Week 3
+• If/else conditions — Term 1 Week 4
+• Serial.println() for output — used throughout Term 1
+🎯  Intended Learning Outcome (ILO)
+💡  Big Idea
+ILO 3.1 (deepened) — Interpret and write Arduino sketches using functions with parameters and return values. ILO 3.2 (deepened) — Apply user-defined functions to decompose a mathematical problem into reusable, testable units.
+A function is a named block of code that does one job. Just as a paragraph has one main idea, a function has one purpose. When your code is modular, it is easier to read, fix, and reuse — that is what professional engineers do.
+📖  English Literacy Thread
+🔢  Mathematics Thread
+Structural parallel: a function is to code what a paragraph is to writing — one unit with one clear purpose and a defined structure (opening, body, close). Learners read two versions of the same programme and write an evaluation paragraph using the writing frame: "The modular version is more effective because… In contrast, the monolithic version… A reader of the code would find… I conclude that…" This is formal evaluative writing — Bloom's Level 5 in English.
+Function notation f(x): a function takes an input (parameter) and produces an output (return value) — directly parallel to mathematical functions. Example: int square(int n) { return n * n; } — this is f(n) = n². Learners verify: square(4) = 16, square(7) = 49. Introduce: float celsiusToFahrenheit(float c) { return (c * 9.0 / 5.0) + 32; } — learners verify with known values. Link to function machines in primary maths.
+Phase
+Time
+Activities & Facilitator Actions
+1. HOOK
+The Paragraph Parallel
+20 min
+• Write on the board: a 6-line paragraph of text (well-structured) alongside a 6-line void setup() function (well-structured). Ask: "What do these have in common?"
+• Draw out: both have a clear purpose; both have a beginning and end; both can be reused (a paragraph can be quoted; a function can be called). Connect: "A function is a paragraph of code."
+• Distribute the Function Anatomy Card. Read through each part together: return type, name, parameter list, body, return statement.
+• Live demo on projector: write int square(int n) { return n * n; } — call it with square(5) and print result to Serial Monitor. Learners predict the output BEFORE running.
+• Ask: "What would square(10) give? square(0)?" Learners calculate mentally then verify. Connect: "You just evaluated a function — exactly like f(x) in maths."
+2. GUIDED ACTIVITY
+Traffic Light Decomposition
+60 min
+• Step 1 (10 min): Wire 3 LEDs — red on pin 8, yellow on pin 9, green on pin 10. Confirm they all light up using a simple test sketch. Facilitator demonstrates wiring on projector.
+• Step 2 (10 min): Distribute Monolithic vs Modular sheet. Read both versions together. Ask: "If the red light timing changed, how many lines would you edit in the monolithic version? In the modular version?" Collect answers.
+• Step 3 (20 min): Facilitator live-codes the modular traffic light: void redLight(int duration), void amberLight(int duration), void greenLight(int duration) — each function controls one LED for a given duration. Learners type simultaneously.
+• Step 4 (10 min): Upload and test. Traffic light cycles correctly? Adjust duration parameters live: redLight(3000) — "what does 3000 mean? Convert to seconds."
+• Step 5 (10 min): Add a function with return value: int totalCycleTime(int r, int a, int g) { return r + a + g; } — print the total cycle time in seconds to Serial Monitor.
+• Learners verify: if r=3000, a=1000, g=2000, total = 6000ms = 6 seconds.
+3. INDEPENDENT / PAIR WORK
+Decompose, Evaluate & Debug
+50 min
+• Task 1 (20 min): Complete the Code Decomposition Worksheet — draw a function diagram for each of the 3 traffic light functions and the totalCycleTime() function. Label: name, parameters, return type, what it does in one sentence.
+• Task 2 (15 min): Write the Evaluation Paragraph — using the writing frame, compare the monolithic and modular versions. Minimum 6 sentences. Must include: one concrete example of why modularity helps, one reference to the math/function notation parallel.
+• Task 3 (10 min): Debug challenge — provided sketch has a function that returns the wrong value because of an operator precedence error. Pairs trace through the function manually on paper, identify the bug, fix it, upload and verify.
+• Task 4 (Extension, 5 min): Write a new function float minutesToSeconds(float minutes) — returns the number of seconds. Call it and use the result in a delay(). Write a comment on every line.
+• Rotate Driver/Navigator between Tasks 1 and 2.
+4. SHOWCASE & DEBRIEF
+30 min
+• 2 pairs demonstrate their traffic light — facilitator changes a parameter value live: "I need the green phase to be 4 seconds. Which line do I change?" Pair answers immediately — this is the power of modular code.
+• One pair reads their evaluation paragraph aloud. Class evaluates: did it use a concrete example? Did it reference function notation?
+• Math close: write on board — int totalCycleTime(int r, int a, int g). Ask: "If I call this function 100 times with different values, how many lines of code do I need to write the calculation?" Answer: still 1 line inside the function. Connect: that is why functions reduce errors.
+• English close: "Evaluative writing explains WHY, not just WHAT. 'The modular version is better' is an opinion. 'The modular version is better because editing one function does not affect the others' is an argument."
+• Collect Code Decomposition Worksheets and Evaluation Paragraphs as this week's artifact.
+Component
+Description
+Evidence Required
+Formative
+(During)
+Traffic light sketch compiles, uploads, and cycles correctly using 3 separate named functions. totalCycleTime() returns the correct value printed to Serial Monitor.
+Facilitator observation log. Sketch verified before pair moves to worksheet tasks.
+Term 2 Week 1
+Artifact
+Code Decomposition Worksheet (all 4 functions diagrammed) + Evaluation Paragraph (min. 6 sentences, concrete example, math connection). Scored on 5-point artifact rubric (DDD Part 8.3).
+Physical documents collected. Both components required for a complete artifact submission.
+Differentiation
+Support: provide function headers pre-written — learners complete the body only. Extension: write a function that takes a string parameter and prints a formatted traffic light status report to Serial Monitor.
+Extension: function compiles and produces correctly formatted Serial Monitor output.
+KEY VOCABULARY
+function · parameter · argument · return value · return type · void · modular · decomposition · monolithic · call · function notation · f(x) · operator precedence
+⚠  Safeguarding Note
+Ensure all LED wiring uses resistors — red/yellow/green LEDs without resistors will burn out instantly and may startle learners. Facilitator checks all wiring before upload. Pair programming: Navigator must not be passive — they should be annotating the Code Decomposition Worksheet while the Driver types.
+Facilitator Name:
+____________________________
+Date Delivered:
+____________________________
+Signature:
+____________________________

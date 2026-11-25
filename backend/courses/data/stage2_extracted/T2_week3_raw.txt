@@ -1,0 +1,91 @@
+Apply decomposition to break a complex programme brief into at least 4 named sub-problems
+Build each sub-problem independently and test it before connecting it to the next
+Combine variables, Wait blocks, loops, messages, and size/speed effects in a single coherent programme
+Describe the role of each sub-problem in the overall programme using precise computing vocabulary
+4 tablets with Stack KIDI — existing projects
+Decomposition planning sheet (A4 per pair): large outer box = "The Full Programme". Inside: 4 smaller boxes = Sub-problem 1, 2, 3, 4. Each sub-problem box has: Goal / Blocks needed / Test condition
+Complex programme brief cards (4 different briefs, one per pair): each describes a 2-character, 2-page interactive programme using all 4 skill types from Term 2
+Sub-problem test checklist (A5): tick each sub-problem as it passes its test condition before moving to the next
+Block skill reference poster (A3): all skill types from Term 1 + Term 2 — Movement / Appearance / Control / Sound / Trigger / Messages / Variables / Wait
+Show an image (or describe): "A house has 4 teams working on it — the foundation team, the walls team, the roof team, and the finishing team. Can the roof team start before the walls are done?"
+Bridge: "Building a complex programme is exactly the same. Today we have 4 sub-problems — like 4 teams. We build and TEST each one before connecting them."
+Show the decomposition planning sheet. Walk through what each box means.
+Introduce the brief cards. Read one aloud. Ask: "What are the 4 natural parts of this programme?"
+Distribute brief cards and decomposition planning sheets.
+Step 1 (4 min): Read the brief. Identify the 4 natural sub-problems and write each in a box.
+Step 2 (4 min): For each sub-problem, write: which blocks are needed? What is the test condition (how will you know this sub-problem is working correctly)?
+Step 3 (4 min): Write the order of building — which sub-problem MUST be built first? (Usually: triggers and basic character setup first, then effects, then coordination.)
+Facilitator approves decomposition plan: "Can I see 4 clear, testable sub-problems?" Tick and proceed.
+Build only Sub-problem 1 first (7 min). When complete, run ONLY that portion. Does it pass its test condition? Tick the test checklist. Only then proceed to Sub-problem 2.
+Build Sub-problem 2 (7 min). Test. Tick. Proceed.
+Connect Sub-problem 1 + 2 (3 min): run both together. Does the combination work as intended? Fix any integration issue now.
+Build Sub-problem 3 (6 min). Test. Tick. Connect to 1+2. Run all three.
+Build Sub-problem 4 (5 min). Test. Tick. Connect all four. Run full programme.
+Bug at any stage? Debugger process applies: identify which sub-problem contains the bug (it is ALWAYS in the most recently added component — unless a previous test was skipped).
+Facilitator checkpoint at 20 min: "How many sub-problems have been tested and ticked?"
+Pairs report: how many sub-problems were fully completed? (0–4.) What blocked completion?
+Class discussion: "Was it easier to debug when you built sub-problem by sub-problem? Why?"
+Key insight: "A bug found when building sub-problem 3 is almost always IN sub-problem 3 — because sub-problems 1 and 2 were already tested. This is why we test each part before adding the next."
+Learners annotate their decomposition sheet: circle the sub-problem that was most challenging. Write one word: why.
+Save projects. Complete the test checklist.
+Collect decomposition sheets for portfolios.
+Preview: "Next lesson — Term 2 Week 4 project sprint. This time, you write your own brief AND decomposition plan. Completely independent."
+ISOMA EDUTECH LIMITED
+Stack KIDI Lesson Plan  ·  DDD Framework
+Stage 2  (P2 · Cambridge Stage 2 / Year 2)
+Lesson 11  ·  Term 2 · Week 3
+Complex Algorithms — Combining All Term 2 Skills
+Duration
+60 minutes
+Term / Week
+Term 2 · Week 3
+Age Range
+7–8 years
+Group Size
+8 learners  (pair programming — 4 pairs)
+Hardware
+Tablets with Stack KIDI App
+Bloom's
+L4 Analyse · L5 Evaluate · L6 Create
+NCDC
+Uganda NCDC Thematic Curriculum P2 — Numeracy: Multi-step problem solving; writing and following complex sequential instructions; Literacy: Planning and executing a multi-component creative task; Creative Arts: Designing an interactive digital performance
+Cambridge
+Cambridge Primary Computing 0845 — Stage 2: Designing and implementing complex algorithms using multiple block types; applying decomposition to break a multi-component programme into manageable sub-problems; systematic testing of a complex programme
+DDD Phase
+DESIGN + DELIVER — Learners apply decomposition to plan a complex multi-skill programme, then build and test it systematically component by component
+Big Idea
+Complex problems are just lots of simple problems linked together. Break the big problem into small pieces, solve each piece, then connect them. This is DECOMPOSITION — the most powerful thinking skill in computing.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+⚠  Facilitator Preparation Note:
+BRIEF CARD SUGGESTIONS — Brief A: "A robot enters from the left growing larger (Appear/Grow), waits 2 seconds, then a second robot enters from the right with a score counter. When both robots meet in the middle, a sound plays." Brief B: "A character dances (size loop), waits, then a second character appears and dances faster while the score increments for each tap." Adapt to the class's favourite story themes.
+CROSS-CURRICULAR LINKS
+English
+Decomposition as a writing strategy: "Before writing a long essay, you break it into: introduction, 3 paragraphs, conclusion. This is decomposition." Learners write a paragraph plan BEFORE the essay — same as the sub-problem plan before the programme. Vocabulary: decompose, sub-problem, component, systematic, integrate, connect, whole, part.
+Maths
+Problem structure: "The full programme = Sub-problem 1 + Sub-problem 2 + Sub-problem 3 + Sub-problem 4. If Sub-problem 1 has 4 blocks and Sub-problem 2 has 3 blocks, how many blocks minimum does the full programme have so far? (7.) What is the minimum for 4 sub-problems if each has at least 2 blocks?" (8.) Estimate and then count the actual total.
+LESSON STRUCTURE
+HOOK — The Building Site Analogy (8 min)
+DESIGN — Decomposition Planning (12 min)
+DELIVER — Build Sub-Problem by Sub-Problem (30 min)
+DISCOVER — Decomposition Debrief (7 min)
+WRAP-UP (3 min)
+ASSESSMENT
+Formative (During)
+Decomposition planning sheet approved: 4 sub-problems with test conditions written
+Sub-problem test checklist: number of ticks recorded at end of session
+Facilitator checkpoint at 20 min build: sub-problem progress noted
+Debugging location correctly identified as "most recently added sub-problem"
+Exit / Summative
+"If you find a bug when adding Sub-problem 3, where do you look first — and why?" Learner should say: Sub-problem 3, because Sub-problems 1 and 2 were already tested and passed. Correct reasoning = full mark.
+Differentiation
+Support: Reduce to 3 sub-problems; facilitator pre-builds Sub-problem 1 and learner builds 2 and 3. Extension: After completing all 4 sub-problems, write a 1-page "programme specification" — a formal description of what the programme does, what each sub-problem achieves, and what inputs and outputs exist.
+KEY VOCABULARY
+decomposition   ·   sub-problem   ·   systematic   ·   test condition   ·   integrate   ·   component   ·   checkpoint   ·   debug   ·   whole   ·   part
+⚠  Safeguarding Note: During collaborative building, ensure pair roles (driver/navigator) are respected and one learner does not dominate. If a pair conflict arises during a timed sprint, separate the pair temporarily and assign each learner an individual sub-problem to build.
+Facilitator Name:
+________________________
+Date Delivered:
+________________________
+Signature:
+________________________

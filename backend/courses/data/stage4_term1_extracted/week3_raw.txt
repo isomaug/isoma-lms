@@ -1,0 +1,54 @@
+Explain what a loop is and act out a loop activity physically before coding
+Write a step-by-step loop algorithm on paper and number each step
+Code a 'for' loop in MakeCode that counts from 1 to 10 on the LED display
+Code a 'while' loop that flashes the LED until a button is pressed
+Create a list of 5 numbers and use a loop to display each one
+State what 'iteration' means using their own words
+4 BBC Micro:bit v2 kits with USB cables
+Loop algorithm worksheet (A4 per learner) – blank numbered steps template
+Number pattern cards (sets of 10 cards numbered 1–10, 2–20 by 2s, 5–50 by 5s)
+Printed 'What Is a Loop?' reference card per pair
+Facilitator device + projected screen
+Facilitator stands up and says: "I will clap 5 times. Watch and count." Clap 5 times. "That was a loop – the same action repeated a set number of times."
+Physical loop game: learners stand in a circle. Facilitator calls a number (e.g. 3). Learners jump 3 times, sit down. Call another number. Repeat 3 rounds.
+Ask: "What if I said jump forever until I say STOP? That is a WHILE loop – it continues until a condition is met."
+Show number pattern cards. Ask: "What is the rule for this pattern? (count by 2s). How could a computer generate this automatically?"
+Distribute loop algorithm worksheets. Task: write instructions for 'count from 1 to 10 and show each number on the LED'. Number every step.
+Pairs swap worksheets and follow each other's instructions exactly – pointing to where the LED would show each number. Are the instructions clear and complete?
+Facilitator chooses one pair to read their algorithm aloud. Class identifies: 'What is the starting number? What is the ending number? What changes each step?'
+Key vocab check: 'The number of times a loop runs is called the number of ITERATIONS. Say it: i-ter-a-tions.'
+Step 1 – For Loop (8 min): Driver opens MakeCode. Use 'Loops' category → 'for index from 0 to 4 (5 times)' block. Inside: 'show number index+1' (or show number 1 to 10 step by step). Download and observe: do numbers 1–10 appear on the LED?
+Step 2 – While Loop (8 min): Add new event: 'while button A is not pressed → show icon (square) → pause 300ms → clear screen → pause 300ms'. Download. Does the LED flash until Button A is pressed?
+Step 3 – List/Array (5 min): Introduce 'arrays' in MakeCode using the Variables category. Create a list: [5, 10, 15, 20, 25]. Use a for loop to display each item. Download and confirm the sequence appears.
+Step 4 – Pattern Challenge (4 min): Use a loop to scroll a multiplication pattern (e.g. 3, 6, 9, 12, 15) on the LED. Navigator checks: is the pattern correct?
+Gallery: each pair shows their loop programme running. Class counts the iterations aloud.
+Facilitator asks 3 learners: "What is an iteration? (one run through the loop). What is the difference between a for loop and a while loop?"
+Maths check: "My loop runs 7 times and adds 3 each time. What is the final total?" Pairs calculate and write answer.
+Teaser: "Next week we give the Micro:bit the power to DECIDE – it will use logic and conditions to choose what to do based on information it reads."
+Learners save project as 'Week3_Loops_[InitialInitial]'.
+Tick worksheet: ☑ For loop works ☑ While loop works ☑ List displayed ☑ Pattern created.
+Return kits and worksheets. Collect algorithm papers for portfolio.
+ISOMA EDUTECH LIMITED Micro:bit (MakeCode) Lesson Plan Stage 4 (P4 · Cambridge Stage 4/Year 4) Lesson 3: Loops & Lists – Make It Repeat
+Duration | 60 minutes | Term / Week | Term 1 · Week 3
+Age Range | 8–10 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | BBC Micro:bit v2, USB cable, shared laptops | Bloom's | L3 Applying
+NCDC Ref | Uganda NCDC P4 – Literacy Strand: Sequenced Writing & Instructions; Numeracy Strand: Number Patterns, Skip Counting | Cambridge | Cambridge Primary Computing 0845 – Stage 4: Repetition in programmes; Using loops; Creating and following algorithms
+DDD Phase | DELIVER – Learners design loop algorithms on paper first, then code them using for and while loops in MakeCode | Big Idea | A loop is an instruction that repeats automatically. Computers are very good at doing the same thing many times – loops make that possible without writing the same block over and over.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS
+English | Sequence writing: write step-by-step instructions for a loop activity on paper. Number each step. Swap with partner to follow their instructions exactly – did the partner's instructions make sense? Discuss what happened when instructions were unclear. | Maths | Number patterns: loops generate sequences. Count in 2s, 5s, 10s using for loops. Identify the pattern rule. Maths challenge: if a loop runs 7 times and adds 3 each time starting from 0, what is the final value? (Answer: 21). Skip counting to 50.
+LESSON STRUCTURE
+HOOK – Act Out a Loop (10 min)
+DESIGN – Write Your Algorithm First (10 min)
+DELIVER – Code Loops in MakeCode (25 min)
+DISCOVER – Share and Define (10 min)
+WRAP-UP – Save and Tidy (5 min)
+ASSESSMENT | ASSESSMENT
+Formative (During) | Algorithm worksheet collected – does it have numbered steps, a start value, end value, and iteration action? Loop programme observed: does the for loop count correctly 1–10? Does the while loop stop on button press?
+Exit Assessment | Oral: each learner must explain what 'iteration' means in their own words. Facilitator records: Clear / Partially clear / Needs support. Programme with number pattern on LED submitted as evidence.
+Differentiation | Support: Provide a partially built for loop in MakeCode; learner only changes the range and the number displayed. Extension: Learner writes a loop that counts backwards from 10 to 1 and displays 'DONE' when it reaches 0.
+KEY VOCABULARY
+loop · for loop · while loop · iteration · list · array · pattern · sequence · condition · repeat
+Safeguarding Note: During the physical loop game, ensure no learner is excluded. If a learner has a physical restriction, they may clap instead of jump. Always use inclusive participation.
+Facilitator Name:   ____________________ | Date Delivered:   ____________________ | Signature:   _____________________

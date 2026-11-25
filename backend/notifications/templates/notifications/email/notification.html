@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>{{ notification.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {% if is_ekebulive %}
+  <link rel="preload" href="https://petergordonekebu.com/ekebulive-favicon.png" as="image">
+  {% else %}
+  <link rel="preload" href="https://petergordonekebu.com/ekebu-profile-pic.png" as="image">
+  {% endif %}
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap');
+    
+    html, body {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      width: 100% !important;
+      background-color: #f8fafc;
+      font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    * {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      box-sizing: border-box;
+      font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    table {
+      border-collapse: collapse !important;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    @media screen and (max-width: 600px) {
+      .email-wrapper { padding: 10px 6px !important; }
+      .card-body { padding: 20px 14px !important; }
+      .mobile-logo { width: 30px !important; height: 30px !important; }
+      .mobile-brand { font-size: 16px !important; }
+      .mobile-verified { width: 14px !important; height: 14px !important; font-size: 9px !important; line-height: 14px !important; }
+      .category-badge { font-size: 9px !important; padding: 2px 7px !important; letter-spacing: 0.3px !important; white-space: nowrap !important; }
+      .mobile-title { font-size: 17px !important; line-height: 1.3 !important; }
+      .mobile-text { font-size: 13.5px !important; line-height: 1.55 !important; }
+      .mobile-btn { display: block !important; width: 100% !important; text-align: center !important; }
+      .meta-table td { display: block !important; width: 100% !important; padding: 4px 0 !important; font-size: 12px !important; }
+    }
+    @media screen and (max-width: 380px) {
+      .email-wrapper { padding: 6px 4px !important; }
+      .card-body { padding: 16px 10px !important; }
+      .mobile-logo { width: 24px !important; height: 24px !important; }
+      .mobile-brand { font-size: 14px !important; letter-spacing: -0.3px !important; }
+      .mobile-verified { width: 12px !important; height: 12px !important; font-size: 8px !important; line-height: 12px !important; }
+      .category-badge { font-size: 7.5px !important; padding: 1.5px 5px !important; letter-spacing: 0.2px !important; white-space: nowrap !important; }
+      .mobile-title { font-size: 15px !important; line-height: 1.25 !important; }
+      .mobile-text { font-size: 12px !important; line-height: 1.45 !important; }
+      .meta-table td { font-size: 11px !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background: #f8fafc; color: #1e293b; font-family: 'Lexend', sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background: #f8fafc;">
+    <tr>
+      <td align="center" class="email-wrapper" style="padding: 24px 12px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width: 560px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
+          <!-- Top Accent Gradient Line -->
+          <tr>
+            {% if is_ekebulive %}
+            <td style="height: 4px; background: linear-gradient(90deg, #9333ea, #c084fc); font-size: 0; line-height: 0;">&nbsp;</td>
+            {% else %}
+            <td style="height: 4px; background: linear-gradient(90deg, #2563eb, #38bdf8); font-size: 0; line-height: 0;">&nbsp;</td>
+            {% endif %}
+          </tr>
+          <!-- Header -->
+          <tr>
+            <td style="padding: 18px 22px; border-bottom: 1px solid #f1f5f9;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="vertical-align: middle; text-align: left; white-space: nowrap;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="display: inline-table; vertical-align: middle;">
+                      <tr>
+                        <td style="vertical-align: middle; padding-right: 10px;">
+                          {% if is_ekebulive %}
+                          <img src="https://petergordonekebu.com/ekebulive-favicon.png" alt="EkebuLive" class="mobile-logo" width="34" height="34" style="width: 34px; height: 34px; border-radius: 50%; display: block; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,0.12);" />
+                          {% else %}
+                          <img src="https://petergordonekebu.com/ekebu-profile-pic.png" alt="Peter Gordon Ekebu" class="mobile-logo" width="34" height="34" style="width: 34px; height: 34px; border-radius: 50%; display: block; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,0.12);" />
+                          {% endif %}
+                        </td>
+                        <td style="vertical-align: middle; white-space: nowrap;">
+                          {% if is_ekebulive %}
+                          <span class="mobile-brand" style="font-size: 19px; font-weight: 800; color: #0f172a; letter-spacing: -0.4px; vertical-align: middle;">Ekebu<span style="color: #aa3bff;">Live</span></span>
+                          {% else %}
+                          <span class="mobile-brand" style="font-size: 19px; font-weight: 800; color: #0f172a; letter-spacing: -0.4px; vertical-align: middle;">Peter Gordon <span style="color: #2563eb;">Ekebu</span></span>
+                          {% endif %}
+                          <span class="mobile-verified" style="display: inline-block; vertical-align: middle; margin-left: 4px; background-color: #2563eb; color: #ffffff; border-radius: 50%; width: 15px; height: 15px; font-size: 9px; font-weight: 900; line-height: 15px; text-align: center;" title="Verified Sender">&#10003;</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  {% if notification.category and notification.category != 'system' %}
+                  <td align="right" style="vertical-align: middle; text-align: right; white-space: nowrap; padding-left: 6px;">
+                    {% if is_ekebulive %}
+                    <span class="category-badge" style="display: inline-block; padding: 3px 9px; background: #f3e8ff; color: #9333ea; font-size: 10px; font-weight: 700; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">{{ notification.category }}</span>
+                    {% else %}
+                    <span class="category-badge" style="display: inline-block; padding: 3px 9px; background: #eff6ff; color: #2563eb; font-size: 10px; font-weight: 700; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">{{ notification.category }}</span>
+                    {% endif %}
+                  </td>
+                  {% endif %}
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Content Body -->
+          <tr>
+            <td class="card-body" style="padding: 26px 22px;">
+              <h1 class="mobile-title" style="margin: 0 0 12px; color: #0f172a; font-size: 20px; font-weight: 700; line-height: 1.35; letter-spacing: -0.3px;">
+                {{ notification.title }}
+              </h1>
+              <p class="mobile-text" style="margin: 0; color: #334155; font-size: 14.5px; line-height: 1.6; word-break: break-word;">
+                {{ notification.message }}
+              </p>
+
+              {% if meeting %}
+              <div style="margin-top: 22px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+                <h3 style="margin: 0 0 12px; font-size: 15px; font-weight: 700; color: #0f172a;">{{ meeting.title }}</h3>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" class="meta-table" style="font-size: 13px; line-height: 1.5; color: #475569;">
+                  <tr>
+                    <td style="padding: 3px 0; width: 85px; color: #64748b;">Host:</td>
+                    <td style="padding: 3px 0; font-weight: 600; color: #1e293b;">{{ meeting.host_name }}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 3px 0; color: #64748b;">Date & Time:</td>
+                    <td style="padding: 3px 0; font-weight: 600; color: #1e293b;">{{ meeting.date }} at {{ meeting.time }} ({{ meeting.timezone }})</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 3px 0; color: #64748b;">Duration:</td>
+                    <td style="padding: 3px 0; font-weight: 600; color: #1e293b;">{{ meeting.duration }}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 3px 0; color: #64748b;">Venue:</td>
+                    <td style="padding: 3px 0; font-weight: 600; color: #1e293b;">{{ meeting.venue }}</td>
+                  </tr>
+                </table>
+                {% if meeting.agenda %}
+                <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed #cbd5e1; font-size: 13px; color: #334155;">
+                  <strong style="color: #0f172a;">Agenda:</strong> {{ meeting.agenda }}
+                </div>
+                {% endif %}
+              </div>
+              {% endif %}
+
+              {% if action_url %}
+              <div style="margin: 28px 0 8px; text-align: center;">
+                {% if is_ekebulive %}
+                <a href="{{ action_url }}" class="mobile-btn" style="display: inline-block; background: #aa3bff; color: #ffffff; text-decoration: none; padding: 13px 28px; border-radius: 10px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 14px rgba(170, 59, 255, 0.3);">View Details</a>
+                {% else %}
+                <a href="{{ action_url }}" class="mobile-btn" style="display: inline-block; background: #2563eb; color: #ffffff; text-decoration: none; padding: 13px 28px; border-radius: 10px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);">View Details</a>
+                {% endif %}
+              </div>
+              {% endif %}
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 16px 20px; text-align: center;">
+              {% if is_ekebulive %}
+              <p style="margin: 0; color: #64748b; font-size: 12px; line-height: 1.5;">
+                EkebuLive &bull; Real-time interactive meetings powered by EkebuAI &bull; <a href="https://www.ekebulive.com" style="color: #aa3bff; text-decoration: none;">ekebulive.com</a>
+              </p>
+              {% else %}
+              <p style="margin: 0; color: #64748b; font-size: 12px; line-height: 1.5;">
+                Peter Gordon Ekebu &bull; Learning Platform &amp; Educational Services &bull; <a href="https://petergordonekebu.com" style="color: #2563eb; text-decoration: none;">petergordonekebu.com</a>
+              </p>
+              {% endif %}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

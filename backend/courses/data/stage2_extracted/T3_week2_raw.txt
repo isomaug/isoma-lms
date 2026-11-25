@@ -1,0 +1,89 @@
+Build a complete sub-system from the Lesson 17 Sub-system Design Strip, achieving all 2 sub-system-specific success criteria
+Test the sub-system in isolation before attempting integration
+Integrate Sub-system A and Sub-system B onto a single tablet, connecting them via the defined interface
+Identify and document any integration error (an error that only appears when both parts are combined) and apply the debugging process to fix it
+4 tablets - 2 used per group of 4 (Pair A builds on Tablet 1, Pair B builds on Tablet 2)
+Collaborative Project Briefs from Lesson 17 (facilitator returns)
+Sub-system Test Checklist (A5 per pair): 2 rows for sub-system-specific criteria + 1 row for "Can this be integrated? Does it END at the correct trigger point?"
+Integration Log (A5 per group): records each step of the integration process and any integration-specific bugs found
+Integration protocol card (A5 per group): step-by-step instructions - ① Pair A exports or copies their project to the integration tablet ② Pair B adds their component ③ Run the interface connection ④ Test the full integrated programme
+Regression test card (A5): "Does Sub-system A still work after integration? YES / NO - if NO, regression bug found."
+"Two engineering teams build a bridge - one from each side of the river. They use the same specification for the centre joint. When the two halves meet, do they fit?" Show an image of a bridge under construction.
+"If the specification was exact - perfect fit. If one team measured slightly differently - the bridge does not connect."
+"Your interface specification from last lesson is the centre joint measurement. Today we find out if it was exact enough."
+Groups review their Collaborative Project Briefs. Re-read the Interface Design Card. Each pair confirms: "Do we understand exactly what our sub-system must send or receive?"
+Pairs separate to their own tablets. BOTH pairs build simultaneously - this is the parallel work phase.
+Each pair follows their Sub-system Design Strip from Lesson 17. Build task by task. Test each task before proceeding (green flag check as in Lesson 14).
+CRITICAL: at the END of Sub-system A, the final block must be the SEND MESSAGE block (or page-change trigger) that was defined in the Interface Design Card.
+CRITICAL: at the START of Sub-system B, the first trigger must be the RECEIVE MESSAGE (or page trigger) that was defined in the Interface Design Card.
+Facilitator checkpoint at 14 minutes: each pair reports progress. Both pairs must have at least their core mechanic working before integration begins.
+Complete Sub-system Test Checklist: both sub-system criteria met? Interface endpoint correctly implemented? "Can this be integrated?" - only proceed to integration if YES.
+Pairs come together with both tablets. Follow the Integration Protocol Card step by step.
+Step 1 (3 min): Pair A's sub-system is the primary file. Pair B transfers their characters and pages onto the same tablet (manual re-build of key elements if direct transfer is not possible on the device).
+Step 2 (4 min): Connect the interface. Check: Sub-system A ends with the agreed message or page transition. Sub-system B begins with the matching receive trigger.
+Step 3 (4 min): Run the full integrated programme. Complete the Integration Log: "What we expected → what actually happened → any bugs found."
+Step 4 - Regression test (3 min): Run ONLY Sub-system A (disconnect Sub-system B temporarily). Does Sub-system A still work exactly as before? If not - regression bug introduced during integration. Document and fix.
+Step 5 (2 min): Run full programme again. Confirm both integration success criteria are met.
+Groups share integration experience: "Did the interface specification work exactly? What had to be adjusted during integration?"
+Class discussion: "Was the integration harder or easier than you expected? What was the main reason for any difficulty?"
+Key teaching: "Integration bugs are the most common bug in real software. The most common cause: one team built to a slightly different understanding of the specification. This is why the interface must be EXACT before building starts."
+Groups update their Interface Design Cards with any corrections made during integration.
+Save integrated project as "INTEGRATED PROJECT - [Group Names]."
+Complete Integration Log final row: "Integration status: Fully connected / Partially connected / Not yet connected."
+Preview: "Next lesson - we polish the integrated project and build the title screen and final sequence together as a group of 4."
+ISOMA EDUTECH LIMITED
+Stack KIDI Lesson Plan  ·  DDD Framework
+Stage 2  (P2 · Cambridge Stage 2 / Year 2)
+Lesson 18  ·  Term 3 · Week 2
+Build Your Sub-System - Independent Build, Shared Integration
+Duration
+60 minutes
+Term / Week
+Term 3 · Week 2
+Age Range
+7–8 years
+Group Size
+8 learners  (2 groups of 4 - each pair builds on its own tablet)
+Hardware
+Tablets with Stack KIDI App (2 tablets per group of 4)
+Bloom's
+L4 Analyse · L5 Evaluate · L6 Create
+NCDC
+Uganda NCDC Thematic Curriculum P2 - Numeracy: Parallel work processes; managing independent builds that must meet shared specifications; Literacy: Technical communication - explaining your sub-system to another person who must integrate it
+Cambridge
+Cambridge Primary Computing 0845 - Stage 2: Independent implementation from a sub-system specification; testing a component before integration; integrating two independently built sub-systems; debugging integration errors (errors that only appear when both parts are combined)
+DDD Phase
+DELIVER - Each pair builds their sub-system independently on their own tablet, tests it against its sub-system criteria, then integrates both sub-systems onto a single tablet for the combined test
+Big Idea
+In professional software development, each team builds its part without waiting for the others - because the interface was defined first. When both parts are done, they are combined. If the interface was specified correctly, the integration is smooth. If not, integration reveals the mistakes.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+Facilitator Preparation Note:
+DEVICE MANAGEMENT: This lesson requires 2 tablets per group of 4. If only 4 tablets are available, one group works at a time while the other group does written documentation. Rotate groups every 20 minutes. If sub-system transfer between tablets is difficult (some Stack KIDI versions do not support easy export), the "integration" can be a manual rebuild of Sub-system B's elements onto Sub-system A's tablet - this actually reinforces understanding of the integration process.
+CROSS-CURRICULAR LINKS
+English
+Technical communication: after building, each pair must explain their sub-system to the other pair in exactly 90 seconds before integration begins. "Our sub-system does ___. It starts when ___. It ends by sending ___. The test condition is ___." This is the verbal equivalent of a technical handover document. Vocabulary: integration, regression, handover, protocol, export, component, standalone, combined.
+Maths
+Block count tracking: each pair counts the total blocks in their sub-system. After integration, count the total blocks in the combined programme. Combined total should approximately equal Sub-system A blocks + Sub-system B blocks. If fewer blocks than expected - something was lost during integration. This is the integration test.
+LESSON STRUCTURE
+HOOK - The Bridge Analogy (6 min)
+DELIVER - Independent Sub-System Build (28 min)
+DELIVER - Integration (16 min)
+DISCOVER - Integration Debrief (6 min)
+WRAP-UP (4 min)
+ASSESSMENT
+Formative (During)
+Sub-system Test Checklist: both sub-system criteria met before integration
+Integration Log: completed with expected vs actual outcomes documented
+Regression test passed: Sub-system A still works after integration
+Both integration success criteria met (from Collaborative Project Brief)
+Exit / Summative
+"What is an integration bug? Can you describe one specific integration issue you encountered or heard about today?" Full marks: precise description linking the bug to the interface specification mismatch.
+Differentiation
+Support: If integration is too complex, each pair presents their sub-system independently on their own tablet. The "integration" is demonstrated by running Tablet 1 (Sub-system A) then handing Tablet 2 to the same person (Sub-system B). This approximates integration without the technical challenge. Extension: Write a post-integration report (1 page): Specification vs reality, integration steps taken, bugs found and fixed, lessons learned for the next collaborative project.
+KEY VOCABULARY
+integration   ·   sub-system   ·   interface   ·   regression   ·   standalone   ·   parallel   ·   protocol   ·   handover   ·   combine   ·   specification
+Safeguarding Note: During physical device sharing and transfer, ensure learners handle devices carefully. Establish a clear handover procedure: one learner at a time holds the device. No device should be passed across the table unsupported.
+Facilitator Name:   ______________________
+Date Delivered:   ______________________
+Signature:   ______________________

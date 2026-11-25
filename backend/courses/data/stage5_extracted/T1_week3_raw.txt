@@ -1,0 +1,241 @@
+Install Arduino IDE 2.x, select the correct board (Uno) and COM port, and upload the example Blink sketch successfully
+Identify and explain the purpose of setup(), loop(), pinMode(), digitalWrite(), and delay() in a provided sketch
+Add a plain-English comment to every line of the Blink sketch using the // syntax
+Modify the delay() values and predict, then observe, how the LED behaviour changes
+Convert millisecond values to seconds and explain the relationship aloud to a partner
+4 laptops with Arduino IDE 2.x pre-installed (or installation package ready)
+4 Arduino Uno boards + USB cables
+LEDs already wired on pin 13 (or built-in LED used)
+Printed "Blink Code Reading Sheet" (A4 per pair) – Blink code with blank comment column
+Milliseconds-to-seconds conversion worksheet (A5 per learner)
+USB flash drives for sketch submission
+Facilitator device + projected screen or large TV
+"One Star, One Wish" feedback cards (pre-printed)
+Display the Blink sketch on the projected screen with no explanation. Ask: "What do you notice? What do you think this does? Have you seen text like this before?"
+Learners discuss in pairs for 2 minutes. Take 3 responses. Write key words (setup, loop, delay) on the board.
+Facilitator reads the code aloud line-by-line using a full English sentence for each line. "This line tells the Arduino to set pin 13 as an output." Learners follow on their printed reading sheet.
+Bridge: "Today you will upload this code, read every line, and add your own explanation to it. You are going to be code translators."
+Introduce the DDD Big Idea: "Code is structured text. Every line you can read, you can also write."
+Distribute laptops and Arduino kits. Pairs connect Arduino via USB. Facilitator demonstrates: Open Arduino IDE → Tools → Board → Arduino Uno → Tools → Port → select correct COM port.
+Learners follow step-by-step. Facilitator circulates. Common issue checkpoint: "Can you see your Arduino board name in the bottom bar?"
+Open File → Examples → 01.Basics → Blink. Facilitator projects and points out: setup() block, loop() block, each function call.
+Upload the sketch (→ arrow button). Observe: LED blinks on pin 13. Pairs confirm: "My LED is blinking." If not, debug together: check port, check board.
+Annotation task: Using the printed reading sheet, learners write a plain-English comment for each of the 10 lines of the Blink sketch. Must be full sentences. Facilitator checks 2 pairs during this time.
+Challenge – Modify and Predict: Change delay(1000) to delay(200). Before uploading, each learner writes their prediction on the sheet: "I think the LED will ___." Upload. Was the prediction correct?
+Change delay(1000) to delay(3000). Repeat predict-then-test cycle. Learners write: "When I increased the delay, ___."
+Pairs complete the milliseconds-to-seconds conversion worksheet. Swap and peer-mark.
+Rotate Driver/Navigator roles. New driver takes control of the keyboard.
+Task: Each pair creates their own version of Blink with a custom blink pattern (e.g., 3 fast blinks, pause, 2 slow blinks). Every line must have a // comment.
+Pair challenge: Write a new sketch from scratch (not copy-paste) using only: pinMode(), digitalWrite(HIGH), digitalWrite(LOW), delay(). Facilitator prompts with questions only – no direct answers.
+LED timeline: on squared paper, learners draw a 10-second timeline showing when their LED is ON and OFF based on their delay values. Label each segment with the ms value.
+Facilitator circulates, takes participation notes, provides verbal formative feedback. Ask: "What does this line do? Why did you choose that delay value?"
+2–3 pairs demonstrate their custom blink pattern to the class. As their LED blinks, they read aloud their code comments line by line.
+Class observes: "Can you see the connection between the delay numbers and how fast it blinks?"
+Facilitator restates the English link: "Today you wrote technical comments – that is a real writing skill used by professional software engineers."
+Facilitator restates the Math link: "You converted milliseconds to seconds – that is unit conversion you already know from science and maths."
+Exit question: "Name one function you used today and explain in one sentence what it does." Learners respond orally to their partner.
+Save and submit sketches to facilitator via USB flash drive.
+sketch · setup() · loop() · pinMode() · digitalWrite() · delay() · compile · upload · comment · milliseconds · syntax
+Declare and initialise variables of three data types: int, float, and String in an Arduino sketch
+Print each variable to the Serial Monitor using Serial.println()
+Explain in plain English what each data type is best used for, with a real-world example
+Write a "personal data card" sketch that prints learner details (first name, age, a made-up temperature) to the Serial Monitor
+Identify and fix all 4 intentional errors in a provided "debug challenge" sketch
+Write pseudocode in plain English before coding a sketch, with each pseudocode line mapping to one line of code
+4 laptops with Arduino IDE 2.x open from last session
+4 Arduino Uno boards + USB cables
+Printed "Debug Challenge" sketch (A4 per pair) – sketch with 4 intentional type and syntax errors marked with blank boxes
+Pseudocode worksheet (A5 per learner) – two-column: "Plain English" | "Arduino Code"
+Data type reference card (A5 per pair) – int, float, String, bool with examples
+USB flash drives for sketch submission
+Facilitator device + projected screen
+Facilitator places 3 physical boxes (or labelled envelopes) on the table. Labels: "Age", "Temperature", "Name". Ask: "What kind of information is in each box? Could the same type of box hold all three?"
+Discussion: "In everyday life, different types of information need different containers. Code is the same." Introduce the word variable.
+Show the data type reference card. Read each type aloud. Ask learners to give an example for each: "Give me something in real life that would be stored as a float." (Fuel price, body temperature.)
+Bridge: "Today we will create our own named boxes in code and fill them with real information about ourselves."
+Remind learners: pair programming – rotate Driver/Navigator every major task. Introduce the pseudocode worksheet.
+Facilitator live-codes on the projected screen: declare int age = 12; float temperature = 36.5; String name = "Amara"; – pausing after each line to explain.
+Learners follow on their own sketches. Add Serial.begin(9600) in setup(). Add Serial.println(age); Serial.println(temperature); Serial.println(name); in loop().
+Upload and open Serial Monitor (Tools → Serial Monitor, baud 9600). Observe output. Ask: "What happens if we change the value of age? Do we need to re-upload?"
+Pseudocode task (before the personal data card): each learner fills in the pseudocode worksheet. Left column: "Store my name as text", "Store my age as a whole number", "Store a room temperature as a decimal". Right column: left blank for now.
+Personal data card challenge: learners translate their pseudocode into a full Arduino sketch. Must include: String (first name only), int (age), float (a made-up temperature). Print each with a label: Serial.println("My name is: "); Serial.println(name);
+Pairs swap pseudocode worksheets and check: does each English sentence map to exactly one line of code?
+Rotate Driver/Navigator. New driver types the debug challenge solution.
+Distribute the printed "Debug Challenge" sketch. Learners must find and fix all 4 intentional errors without uploading first. Errors include: wrong data type (float used for a name), missing semicolon, misspelled Serial.println, variable used before declaration.
+After finding all 4 errors on paper, pairs type the corrected version and upload to confirm it compiles and runs correctly.
+Pair discussion: "Why does the Arduino IDE show an error message when there is a bug? How is that like a teacher marking your work?"
+Extension – if finished early: write a sketch that declares a bool variable called isLEDOn and changes its value between true and false in loop(), printing each state to the Serial Monitor. Link the bool to digitalWrite() to actually control the LED.
+Facilitator circulates, checks participation, and provides verbal feedback. Ask: "Why did you choose int for that value and not float?"
+2–3 pairs demonstrate their personal data card sketch: Serial Monitor must show their name, age, and temperature. Class verifies the output.
+One pair presents their debug challenge solution: "We found error 1 here because… Error 2 was here because…"
+Facilitator restates the English link: "Choosing a good variable name is exactly like choosing a precise word when you write. Both make communication clearer."
+Facilitator restates the Math link: "We chose float for temperature because temperature can have a decimal part. We chose int for age because you cannot be 12.7 years old."
+Exit question (written on sticky note): "Name one data type and write one real-world example of something that variable would store." Collect sticky notes as formative evidence.
+Submit sketch via USB flash drive.
+variable · data type · int · float · String · bool · declare · initialise · Serial Monitor · pseudocode · debug · compile error
+Write a for loop in Arduino Python syntax that counts from 1 to 10 and prints each number to the Serial Monitor
+Write a for loop that generates and prints the 7× times table (or any chosen multiplier) to the Serial Monitor
+Write a while loop that runs until a counter variable reaches 100
+Print the arithmetic sequence 3, 6, 9, 12, …, 60 using a for loop with correct step value
+Write a user-defined void function and call it from loop()
+Explain the connection between a for loop and an arithmetic sequence verbally to a partner
+4 laptops with Arduino IDE 2.x
+4 Arduino Uno boards + USB cables
+Printed "Loop Tracing Sheet" (A4 per pair) – for loop with blank table: iteration number | variable value | output
+Printed numbered list worksheet (A5 per learner) – to write sequential English instructions paralleling the for loop
+Times table result sheet (for peer-checking Serial Monitor output)
+USB flash drives
+Facilitator device + projected screen
+Physical activity: facilitator counts to 10, learners clap on each number. "What rule did I follow?" (Add 1 each time.) "What if I said: add 3 each time?" Learners clap on 3, 6, 9, 12, 15…
+Bridge: "A for loop does exactly this – it follows a rule and repeats until it reaches a target. Today we write the code that does what you just did with your hands."
+Recap: draw a for loop diagram on the board. Three parts: START (i = 1), CONDITION (i <= 10), STEP (i++). Label each part. Learners copy the diagram.
+Show the numbered list worksheet. "Before we code, we write the loop as numbered steps in plain English." Facilitator models one example on the board.
+Pair programming roles: remind learners – rotate Driver/Navigator at each new task.
+Challenge 1 – Count 1 to 10: Learners write a for loop that prints 1, 2, 3, … 10 to the Serial Monitor. Before coding, fill in the loop tracing sheet (iteration number | variable value | output). Upload and verify output matches the tracing sheet.
+Challenge 2 – Times Table Generator: Code a for loop that prints the 7× times table (or a chosen multiplier). Format: "7 x 1 = 7", "7 x 2 = 14", … using Serial.print() and Serial.println(). Peer-check against the printed times table result sheet.
+Rotate Driver/Navigator.
+Challenge 3 – Arithmetic Sequence 3, 6, 9, …, 60: Write the for loop with correct start, condition, and step. Learners answer on the tracing sheet: first term? common difference? number of terms? sum of first 5 terms?
+While loop: write a while loop that starts with int counter = 0; and runs while counter < 100;, adding 1 each time and printing the value. Upload. Observe: how many lines appear in the Serial Monitor?
+Numbered list task: learners write the English version of their times table loop as a numbered instruction list (parallel structure activity). Swap with partner to follow their instructions manually.
+User-defined function task: write void countDown() { for(int i=10; i>=1; i--) { Serial.println(i); delay(500); } }. Call it from loop(). Upload and verify countdown appears in Serial Monitor.
+Blink challenge: write a for loop inside loop() that makes the LED blink faster with each iteration – delay starts at 500ms and reduces by 50ms each time. What happens when delay reaches 0? Predict, then test.
+Extension – summation function: write void sumToN(int n) that uses a for loop to calculate and print the sum of 1 + 2 + 3 + … + n. Call it with sumToN(10) and sumToN(20). Verify answers with hand calculation.
+Facilitator circulates, checks loop syntax, asks: "What is the common difference in your sequence? Show me on the tracing sheet."
+2–3 pairs demonstrate their times table generator on the projected Serial Monitor. Class checks against the printed times table sheet.
+Verbal explanation task: one learner from each presenting pair must say: "This is like the [X] times table because each time the loop runs, it adds [X]. That makes it an arithmetic sequence with a common difference of [X]."
+Facilitator restates English link: "You wrote a numbered instruction list that was identical to your for loop – that is how professional programmers write pseudocode and documentation."
+Facilitator restates Math link: "A for loop with a step of 7 generates the 7 times table. Code and maths use the same rule: start + (common difference × how many times)."
+Exit question (oral): "Explain to your partner: why is a for loop like an arithmetic sequence?" Facilitator listens to 3 pairs and notes responses.
+Submit sketches via USB flash drive.
+for loop · while loop · iteration · counter · increment · step · arithmetic sequence · common difference · function · void · Serial Monitor · Serial.println()
+Write if/else and if/else if/else chains in Arduino Python that make at least 3 distinct decisions based on a variable value
+Explain a 10-line conditional code block in plain English prose, describing all possible outcomes
+Perform the bubble sort algorithm on 8 number cards manually, counting the number of comparison steps
+Translate the bubble sort logic into pseudocode, then into an Arduino sketch that sorts a hardcoded array of 5 integers
+Print the sorted array to the Serial Monitor and verify the result
+Identify and fix logic errors (not syntax errors) in a provided buggy sorting sketch
+4 laptops with Arduino IDE 2.x
+4 Arduino Uno boards + USB cables
+8 number cards per pair (large, printable – numbers 15, 42, 7, 31, 88, 3, 56, 19)
+Printed "Code Comprehension Exercise" (A4 per pair) – 10-line if/else code block with comprehension questions
+Bubble sort trace table (A4 per pair) – grid showing array state after each pass
+Pseudocode-to-code worksheet (A5 per learner)
+USB flash drives
+Facilitator device + projected screen
+Give each pair 8 number cards face-down. "Turn them over and sort them from smallest to largest. Ready? Go." Time them. "How did you decide which one to move first? What was your rule?"
+Discuss: every learner used a rule (compare two numbers, swap if needed, repeat). "That rule you just followed is called the bubble sort algorithm. Today you will teach a computer to follow the same rule."
+Facilitator introduces comparison operators on the board: <, >, <=, >=, ==, !=. Quick-fire round: "Is 7 < 15? Is 42 >= 42? Is 3 != 3?" Learners answer as a class.
+Bridge: "Before we sort arrays, we practise making decisions with if/else. A decision is just: compare two things, choose what to do." Show a simple if/else on the board.
+Distribute the Code Comprehension Exercise. Learners read silently for 2 minutes before any questions are asked.
+Code Comprehension Exercise: in pairs, answer the 5 questions on the printed sheet. "What is the input variable? How many possible outcomes are there? What output appears when the input is 15? When the input is 35? What is missing from this code?" Facilitator collects sheets at the end of this activity.
+Code the 3-decision sketch: facilitator live-codes a menu system. int choice = 2; – if choice == 1, print "Red LED on" and set LED HIGH; else if choice == 2, print "Fast blink"; else print "LED off". Upload and test. Then change the value of choice and re-upload to test each branch.
+Learners write their own 3-decision sketch: use a variable int score; – if score >= 80 print "Distinction"; else if score >= 55 print "Pass"; else print "Not yet". Test with 3 different score values.
+Rotate Driver/Navigator.
+Unplugged bubble sort: pairs sort 8 number cards using the bubble sort algorithm step by step. After each comparison, fill in the trace table. Count the total number of swap operations. Record on the bubble sort trace table sheet.
+Pseudocode bridge: learners write the bubble sort in pseudocode on the pseudocode-to-code worksheet: "Compare the first and second item. If the first is larger, swap them. Move to the next pair. Repeat for each pass until no swaps are needed."
+Translate pseudocode into an Arduino sketch. Hardcoded array: int numbers[5] = {42, 7, 31, 3, 19};. Use nested for loops to implement bubble sort. Print the sorted array to Serial Monitor.
+Verify: does the Serial Monitor show 3, 7, 19, 31, 42? Compare with the manually sorted result from the card activity.
+Debug challenge: facilitator provides a sketch with 2 logic errors (comparison operators reversed, loop bound off by one). Learners trace through line by line to find both errors without running the code first.
+After finding errors on paper, type corrections and upload to confirm the fix.
+Extension: modify the sort to descending order (largest first). How many lines of code change? Print both the unsorted and sorted arrays with labels.
+Facilitator circulates, checks that all 3 if/else decisions work correctly, asks: "How many comparisons did your bubble sort make? Is that the worst case or best case for 5 numbers?"
+2–3 pairs present their bubble sort result: show the Serial Monitor output (unsorted then sorted). Explain: "Our array started as [42, 7, 31, 3, 19]. After bubble sort it became [3, 7, 19, 31, 42]. We made ___ comparisons in total."
+One pair presents their Code Comprehension paragraph: read their plain English explanation of the if/else code block aloud. Class gives 1 Star + 1 Wish feedback.
+Facilitator draws the connection to AI: "This lesson is the foundation of how AI makes decisions. An AI that says 'this email is spam' is doing a very long if/else chain trained on data. Today you built a rule-based decision system."
+Facilitator restates English link: "You read code like a text and wrote a comprehension paragraph about it. That is exactly what we do with any complex document – understand it, then explain it."
+Facilitator restates Math link: "Bubble sort uses comparison operators and counts steps. For 5 numbers, worst case is 10 comparisons. This is linked to the formula n(n–1)/2 – maths you will meet in secondary school."
+Exit question (written): "In your own words, what is a sorting algorithm? Write two sentences." Collect as exit evidence.
+Submit sketch via USB flash drive.
+if · else if · else · condition · comparison operator · Boolean · array · index · bubble sort · algorithm · swap · ascending · descending · logic error · trace
+ISOMA EDUTECH LIMITED | Arduino · Python Lesson Plan | Stage 5 (Ages 10–12 · AI Engineers) | Lesson 1: Hello Arduino – Setting Up the IDE & Reading Code
+Duration | 3 hours (Saturday) / 90 min × 2 days (Holiday) | Term / Week | Term 1 · Week 1
+Age Range | 10–12 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | Arduino Uno, USB cable, laptop with Arduino IDE 2.x, LED on pin 13 | Bloom's Level | L3 Applying
+NCDC Ref | Uganda NCDC P5–P6 – ICT Strand: Introduction to programming; English Strand: Reading structured text; Mathematics Strand: Number operations and units | Cambridge | Cambridge Primary Computing 0845 – Stage 5: Programming; understanding code structure; debugging
+DDD ILO | ILO 3.1 – Interpret and write Arduino sketches in Python that correctly use setup(), loop(), variables, digital/analogue I/O, and Serial.println() to control hardware | Big Idea | Code is structured text with a purpose. Every line you can read, you can also write.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | Reading code as structured text: facilitator explicitly models how to read each line aloud as a sentence. Learners write plain-English comments (full sentences) for every line. "// This line makes the LED turn on for 1 second." Code annotation is treated as technical writing.
+Maths | Unit conversion: delay(1000) = 1 second; delay(500) = 0.5 seconds. Learners complete a conversion worksheet: 2500ms = ? seconds; 750ms = ? seconds. Learners plot the LED ON/OFF state over a 5-second timeline on a number line.
+LESSON STRUCTURE
+HOOK – What Does Code Look Like? (20 min)
+GUIDED ACTIVITY – IDE Setup and First Upload (60 min)
+INDEPENDENT WORK – Annotate and Customise (50 min)
+SHOWCASE & DEBRIEF (30 min)
+ASSESSMENT
+Formative (During) | Observation checklist: Board selected + COM port correct? (Yes / Partially / Not yet) | LED blinking after upload? (Yes / No – supported) | Comments written in full sentences? (Facilitator spot-checks 2 pairs during guided phase) | Conversion worksheet completed? (Collected at end of session)
+Exit Assessment | Modified Blink sketch with correct delay changes compiles and runs on the Arduino (checked by facilitator) | Every line of the Blink sketch has a learner-written // comment in plain English (assessed on submission) | Submitted to facilitator via USB flash drive (required for artifact record)
+Differentiation | Support: Pre-load Arduino IDE with Blink already open. Provide a sentence starter sheet for comments: "This line tells the Arduino to…" Use the built-in LED so no wiring is needed. | Extension: Write a function void fastBlink() that blinks 5 times quickly and call it from loop(). Add Serial.begin(9600) and Serial.println("Blinking now!") to the serial monitor.
+KEY VOCABULARY
+Safeguarding Note: Ensure learners do not type personal information (full names, phone numbers, school names) into code comments or Serial.println() strings. Use only first names or fictional labels. Supervise USB flash drive use – no personal files should be shared.
+Facilitator Name: | _______________________ | Date Delivered: | _______________________ | Signature: | _______________________
+ISOMA EDUTECH LIMITED | Arduino · Python Lesson Plan | Stage 5 (Ages 10–12 · AI Engineers) | Lesson 2: Variables & Data Types – Naming What We Know
+Duration | 3 hours (Saturday) / 90 min × 2 days (Holiday) | Term / Week | Term 1 · Week 2
+Age Range | 10–12 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | Arduino Uno, USB cable, laptop with Arduino IDE 2.x, LED on pin 13 | Bloom's Level | L3 Applying
+NCDC Ref | Uganda NCDC P5–P6 – ICT Strand: Data and variables in programming; English Strand: Vocabulary and descriptive language; Mathematics Strand: Number types, decimals, and units of measurement | Cambridge | Cambridge Primary Computing 0845 – Stage 5: Variables; data types; debugging simple programmes
+DDD ILO | ILO 3.1 – Interpret and write Arduino sketches in Python that correctly use variables, data types, and Serial.println() to control and communicate hardware state | Big Idea | A variable is a named box that stores information. Choosing the right name – and the right type – is the first step in writing clear code.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | Pseudocode as plain English: learners write the programme description in plain English sentences before they write a single line of code. Each English sentence becomes one line of code. Variable names as descriptive nouns: "temperature" not "t", "studentAge" not "x". Link to clear writing – a well-named variable is like a well-chosen word in a sentence.
+Maths | Number types: int for whole numbers (age, count), float for decimals (temperature in °C). Rounding: 36.7°C rounded to nearest whole number = 37. Unit labelling: temperature in °C is a float; age in years is an int. Discussion: what data type is best for a school grade out of 100?
+LESSON STRUCTURE
+HOOK – What Is in the Box? (20 min)
+GUIDED ACTIVITY – Declare, Assign, Print (60 min)
+INDEPENDENT WORK – Debug Challenge (50 min)
+SHOWCASE & DEBRIEF (30 min)
+ASSESSMENT
+Formative (During) | Pseudocode worksheet: does each English sentence map to one code line? (Facilitator checks during guided phase) | Serial Monitor output shows correct values for all 3 data types (observed during guided phase) | Debug challenge: all 4 errors identified on paper before upload (collected) | Sticky note exit question: correct data type named with a valid real-world example (collected)
+Exit Assessment | Sketch correctly declares and prints 3 different data types (int, float, String) to Serial Monitor | All 4 bugs in the debug challenge identified and fixed – corrected sketch compiles and runs | Both assessments submitted to facilitator via USB flash drive
+Differentiation | Support: Provide a partially completed personal data card sketch with blanks to fill in. Pre-fix 2 of the 4 debug errors and ask learners to find only the remaining 2. | Extension: Introduce the bool data type and link it to an LED: if isLEDOn is true, digitalWrite(13, HIGH); else digitalWrite(13, LOW). Add arithmetic: int doubleAge = age * 2; and print the result.
+KEY VOCABULARY
+Safeguarding Note: Learners use only their first name in the personal data card sketch. Do not allow full names, home addresses, phone numbers, or school names in any code. Remind learners: anything typed in a sketch can be seen by anyone who opens that file.
+Facilitator Name: | _______________________ | Date Delivered: | _______________________ | Signature: | _______________________
+ISOMA EDUTECH LIMITED | Arduino · Python Lesson Plan | Stage 5 (Ages 10–12 · AI Engineers) | Lesson 3: Loops & Arithmetic Sequences – Code That Counts
+Duration | 3 hours (Saturday) / 90 min × 2 days (Holiday) | Term / Week | Term 1 · Week 3
+Age Range | 10–12 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | Arduino Uno, USB cable, laptop with Arduino IDE 2.x, LED on pin 13 | Bloom's Level | L3 Applying
+NCDC Ref | Uganda NCDC P5–P6 – Mathematics Strand: Number sequences, times tables, multiplication; English Strand: Sequenced writing and oral explanation; ICT Strand: Repetition in programming | Cambridge | Cambridge Primary Computing 0845 – Stage 5: Repetition (for loops, while loops); functions; tracing programme execution
+DDD ILO | ILO 3.2 – Apply variables, for loops, while loops, and user-defined functions to solve a mathematical problem computationally, demonstrating the connection between code structure and arithmetic sequence | Big Idea | A loop is a shortcut for repetition. The times table you know is an arithmetic sequence – and a for loop is the machine that generates it.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | Narrative sequencing parallel with code order: learners write a numbered list of English instructions that mirrors their for loop step-by-step. "Step 1: Start with i = 1. Step 2: Multiply i by 7. Step 3: Print the result. Step 4: Add 1 to i. Step 5: If i is still less than or equal to 10, go back to Step 2." Learners explain code steps aloud to their partner before uploading – "talking through code" is practised as an oral literacy skill.
+Maths | Arithmetic sequences: first term, common difference, nth term. The for loop for(int i=3; i<=60; i+=3) generates the sequence 3, 6, 9, 12, … 60. Questions: What is the first term? What is the common difference? How many terms are there? What is the sum of the first 5 terms? Times tables as multiplication sequences: 7×1, 7×2, … 7×10 is an arithmetic sequence with first term 7 and common difference 7.
+LESSON STRUCTURE
+HOOK – The Robot That Counts (20 min)
+GUIDED ACTIVITY – Three Loop Challenges (60 min)
+INDEPENDENT WORK – Functions and Blink Challenge (50 min)
+SHOWCASE & DEBRIEF (30 min)
+ASSESSMENT
+Formative (During) | Loop tracing sheet: correct values for iteration, variable, and output before uploading (collected) | Serial Monitor output matches expected times table (checked during guided phase) | Numbered English instruction list mirrors for loop structure (checked by facilitator) | Verbal explanation: learner connects for loop to arithmetic sequence correctly (facilitator observation note)
+Exit Assessment | Sketch outputs a correctly formatted times table to Serial Monitor (verified by facilitator) | Arithmetic sequence 3, 6, 9, …, 60 printed correctly with correct loop syntax | Learner explains verbally: "This is like the [X] times table because…" (observed and noted) | Sketch submitted via USB flash drive
+Differentiation | Support: Provide the for loop template with blanks: for(int i = ___; i <= ___; i += ___). Fill in for the 2× and 5× tables first, then choose their own. Give a partially filled loop tracing sheet. | Extension: Write a void multiplicationTable(int n) function that takes any multiplier and prints the full table. Call it three times with different values. Calculate and print the sum of each table using a running total variable.
+KEY VOCABULARY
+Safeguarding Note: Ensure learners do not use personal data (names, ages, school details) in loop output strings. Use generic labels ("Student", "Value") or fictional data only. Remind learners: code written today may be seen by peers during the showcase.
+Facilitator Name: | _______________________ | Date Delivered: | _______________________ | Signature: | _______________________
+ISOMA EDUTECH LIMITED | Arduino · Python Lesson Plan | Stage 5 (Ages 10–12 · AI Engineers) | Lesson 4: Logic, Conditions & Sorting Algorithms – Making Decisions in Code
+Duration | 3 hours (Saturday) / 90 min × 2 days (Holiday) | Term / Week | Term 1 · Week 4
+Age Range | 10–12 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | Arduino Uno, USB cable, laptop with Arduino IDE 2.x, LED on pin 13, push button on pin 2 (optional) | Bloom's Level | L3 Applying / L4 Analysing
+NCDC Ref | Uganda NCDC P5–P6 – Mathematics Strand: Comparison operators, logical reasoning, sorting; English Strand: Reading comprehension of complex text; ICT Strand: Conditionals and decision-making in programmes | Cambridge | Cambridge Primary Computing 0845 – Stage 5: Selection (if/else); logical operators; algorithms (sorting); reading and tracing code
+DDD ILO | ILO 3.2 – Apply variables, for loops, and user-defined functions to solve a mathematical problem computationally, including sorting; ILO 3.3 – Analyse foundational AI concepts including rule-based decision-making by connecting these to examples in coded projects | Big Idea | A computer cannot think – but it can follow rules perfectly. If/else conditions are the rules we write. Sorting algorithms are those rules applied to data.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | Reading comprehension of complex code: learners receive a 10-line if/else code block and answer comprehension questions: "What does this do? What is the input? What are all possible outputs? What happens if the condition is false?" Then they write a plain English paragraph explaining every code path. This is treated explicitly as a reading comprehension exercise using code as the text.
+Maths | Comparison operators in context: <, >, <=, >=, ==, !=. Bubble sort as an algorithm: show the array state after each pass. How many comparisons are needed to sort 5 numbers in the worst case? (n−1 + n−2 + … + 1 = n(n−1)/2.) Learners calculate: for 5 numbers, worst case = 10 comparisons. Boolean logic: true/false outcomes of each comparison. Sorting numbers in ascending order – link to P5 maths ordering of integers.
+LESSON STRUCTURE
+HOOK – The Sorting Game (20 min)
+GUIDED ACTIVITY – Conditionals and Comprehension (60 min)
+INDEPENDENT WORK – Bubble Sort in Code (50 min)
+SHOWCASE & DEBRIEF (30 min)
+ASSESSMENT
+Formative (During) | Code Comprehension Exercise: 5 questions answered correctly (collected at end of guided phase) | Bubble sort trace table: correct array state after each pass (collected) | Pseudocode-to-code worksheet: each pseudocode line maps to a code line (checked by facilitator) | Exit written response: sorting algorithm explained in two clear sentences (collected)
+Exit Assessment | Arduino programme makes 3 distinct if/else decisions correctly based on variable input (verified by facilitator) | Bubble sort sketch outputs correctly sorted array to Serial Monitor (verified by facilitator) | Code comprehension paragraph explains all code paths in clear English prose (assessed on submission) | All materials submitted via USB flash drive
+Differentiation | Support: Provide the bubble sort outer loop and inner loop shell with blanks: for(int i=0; i<___; i++) { for(int j=0; j<___; j++) { if(numbers[j] > numbers[j+1]) { /* swap here */ } } }. For conditionals, provide the if/else structure with blanks for the condition only. | Extension: Write a function void bubbleSort(int arr[], int size) that sorts any integer array passed to it. Call it on two different arrays. Calculate and print the exact number of comparisons made using a counter variable. Compare to the worst-case formula n(n–1)/2.
+KEY VOCABULARY
+Safeguarding Note: Number cards and array values must be fictional numbers only. Do not use ages, phone numbers, or personal data as values in the sorting array. Ensure learners understand that sharing code files containing personal information (even in comments) can expose private data.
+Facilitator Name: | _______________________ | Date Delivered: | _______________________ | Signature: | _______________________

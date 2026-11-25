@@ -1,0 +1,82 @@
+Work in a group of 4 to produce a collaborative project brief with clearly assigned responsibilities for each pair
+Design two sub-systems (one per pair) that are independently buildable AND can be integrated
+Define the interface between the two sub-systems: what message, page, or shared variable connects them
+Document the collaboration process: who decided what, how disagreements were resolved, and what the final agreement is
+4 tablets - NOT used today (design session)
+Collaborative Project Brief (A3 per group of 4): Title / Concept (2 sentences) / Sub-system A design (by Pair 1) / Sub-system B design (by Pair 2) / Interface specification (how A and B connect) / Integrated success criteria (4 items for the whole project) / Workload split (who builds what)
+Interface design card (A5 per group): "Sub-system A sends ___ to Sub-system B when ___. Sub-system B responds by ___." (Learners fill in the blanks - this is the contract between the two pairs)
+Negotiation record (A5 per group): 3 rows - Decision made / Who agreed / How disagreement was resolved
+Sub-system design strip (A5 per pair, 2 per group): each pair's independent mini-plan - blocks, states, sounds - that they will build in the build week
+Term 3 Complexity poster (A3 on wall): shows the progression of programme complexity from Week 1 Term 1 (1 character, 2 blocks) to Week 1 Term 3 (team project, 4 sub-systems)
+Welcome learners to Term 3. Display the Term 3 Complexity poster. "Look at where you started. Look at where you are now. This term - you build as a TEAM."
+Show two Stack KIDI projects on two separate tablets. "These are two separate projects. Can they be one programme?" Show the challenge: they need to connect - Sub-system A sends a message that triggers Sub-system B on a different page.
+"This is what software teams do every day. Each team member builds their part independently. Then the parts are connected. The hardest part is not the building - it is making sure the parts FIT together."
+Groups of 4 form: Pair 1 and Pair 2 from adjacent desks combine. Each group introduces themselves formally: "We are the ___ development team."
+CONCEPT (5 min): Group of 4 agrees on a concept in 5 minutes. One sentence each: "I think the project should be ___." Vote. Record the winning concept on the brief. This is non-negotiable once decided - no changing after the 5-minute window.
+SUB-SYSTEM ASSIGNMENT (5 min): Decide which pair builds Sub-system A and which builds Sub-system B. Write the assignment on the brief. Sign next to your assignment.
+INDIVIDUAL PAIR DESIGN (15 min): Each pair works independently on their Sub-system Design Strip. They plan their programme in full - blocks, states, sounds, triggers - as if it were a solo project. The other pair does the same simultaneously.
+INTERFACE DEFINITION (8 min): Groups reconvene. Each pair explains their sub-system to the other pair. Together, complete the Interface Design Card: "When Sub-system A ends, it sends ___ message. Sub-system B receives this and ___."
+INTEGRATION CRITERIA (5 min): Write 4 integrated success criteria - 2 that can be tested on Sub-system A alone, 2 that require BOTH sub-systems to work together.
+NEGOTIATION RECORD (4 min): Complete 3 rows of the Negotiation Record honestly. Facilitator checks: "Did every person in the group contribute to at least one decision?"
+Each group presents their Interface Design Card to the class in 45 seconds: "Sub-system A does ___. Sub-system B does ___. They connect via ___."
+Class checks: "Is the interface specific enough? Could these be built separately and still connect? Is there any ambiguity?"
+Groups update their Interface Design Card based on any clarification questions raised.
+Facilitator approves the Collaborative Project Brief with initials. No approval = must be revised overnight.
+File Collaborative Project Briefs safely - returned at the start of Lesson 18.
+Each learner writes: "My responsibility in the team project is ___. The interface between my sub-system and my partner pair's is ___."
+Preview: "Next lesson - you build your sub-system independently. You do not need to wait for the other pair. Build, test, and then integrate."
+ISOMA EDUTECH LIMITED
+Stack KIDI Lesson Plan  ·  DDD Framework
+Stage 2  (P2 · Cambridge Stage 2 / Year 2)
+Lesson 17  ·  Term 3 · Week 1
+Collaborative Design - Four Minds, One Masterpiece
+Duration
+60 minutes
+Term / Week
+Term 3 · Week 1
+Age Range
+7–8 years
+Group Size
+8 learners  (2 groups of 4 - pairs combine into groups)
+Hardware
+Tablets with Stack KIDI App
+Bloom's
+L4 Analyse · L5 Evaluate · L6 Create
+NCDC
+Uganda NCDC Thematic Curriculum P2 - Literacy: Collaborative planning and negotiation; presenting a shared design to a group; Creative Arts: Co-designing a complex interactive digital product; Numeracy: Distributing workload across a team using time allocation
+Cambridge
+Cambridge Primary Computing 0845 - Stage 2: Collaborative programme design; assigning sub-systems to team members; understanding how independently built components are integrated; applying all taught concepts in a team-designed programme
+DDD Phase
+DESIGN - Two pairs combine into a group of 4 to collaboratively design a complex interactive experience. Each pair is responsible for designing one complete sub-system that will be integrated with the other pair's sub-system
+Big Idea
+Real software is built by teams. Each person or team builds one part. Then the parts are connected. The most important skill in team programming is designing the INTERFACE between parts - so that they connect cleanly.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+Facilitator Preparation Note:
+GROUP FORMATION TIP: Pair the strongest and most independent pair with the pair that benefits most from their modelling - this creates productive cross-skill collaboration. Avoid pairing two very quiet pairs or two very dominant pairs. Brief groups before the session: "In this team, every person has equal speaking rights. No one person makes all the decisions."
+CROSS-CURRICULAR LINKS
+English
+Collaborative language and negotiation: "I suggest ___ because ___." "I agree with ___ but I think ___." "What if we ___?" Learners must use at least one of these structures during the design session. The Negotiation Record requires writing: "We disagreed about ___ and resolved it by ___." Vocabulary: collaborate, negotiate, interface, sub-system, integrate, assign, responsibility, agree, resolve.
+Maths
+Workload distribution: the total programme will have 4 sub-problems. If each pair builds 2 sub-problems, each pair has a 50% workload share. But if Sub-system A is more complex (6 blocks) than Sub-system B (3 blocks), is the workload still equal? Pairs calculate total estimated build time and check whether the split is fair.
+LESSON STRUCTURE
+HOOK - Term 3 Welcome and The Integration Challenge (8 min)
+DESIGN - Collaborative Project Brief (42 min)
+DISCOVER - Interface Test (6 min)
+WRAP-UP (4 min)
+ASSESSMENT
+Formative (During)
+Collaborative Project Brief: all sections completed and approved
+Interface Design Card: interface defined specifically enough to build to (facilitator check)
+Negotiation Record: 3 decisions documented, all group members contributed
+Individual Sub-system Design Strips: both completed independently and reviewed together
+Exit / Summative
+"What is the interface between your sub-system and your partner pair's? Describe it in one sentence using the words 'sends' and 'triggers'." Learner must name the message or trigger that connects the two sub-systems.
+Differentiation
+Support: Reduce the interface to the simplest possible form - Sub-system A on Page 1, Sub-system B on Page 2. The "interface" is simply a page transition. No complex message needed. Extension: Design a third integration point - a SHARED VARIABLE that both sub-systems can read and update. Plan how this shared variable (e.g. a score) changes in both sub-systems and how it is displayed.
+KEY VOCABULARY
+collaborate   ·   sub-system   ·   interface   ·   integrate   ·   assign   ·   responsibility   ·   negotiate   ·   agree   ·   connect   ·   team
+Safeguarding Note: Group formation: ensure groups are formed thoughtfully. Pair children with different strengths rather than same-ability pairing. Monitor any group dynamics where one learner dominates the design process and intervene to ensure all voices are heard.
+Facilitator Name:   _______________________
+Date Delivered:   ______________________
+Signature:   ______________________

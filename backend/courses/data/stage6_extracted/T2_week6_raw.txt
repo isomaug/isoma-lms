@@ -1,0 +1,120 @@
+Multi-Source Data Analysis, Graphical Representation & Technical Report Writing
+TERM 2 PRIOR KNOWLEDGE — What Learners Bring to This Session
+LEARNING OBJECTIVES
+• Collect 20 simultaneous readings from TMP36 (temperature) and LDR (light) over a 5-minute period, recorded in a structured dual-column data table
+• Plot both datasets as separate annotated line graphs on the same sheet — same x-axis (reading number 1–20), separate y-axes scaled appropriately, both labelled with title, units, and gridlines
+• Calculate for both datasets: mean, range, and percentage change from reading 1 to reading 20
+• Identify and annotate on each graph: the peak value, the trough value, and any visible trend segment (rising, falling, stable)
+• Write a Technical Analysis Report of minimum 200 words, structured in three sections: (1) Data Summary (what was collected and how), (2) Comparative Analysis (differences and similarities between the two datasets with numerical evidence), (3) Interpretation and AI Connection (what the data suggests about the environment, and how this data could serve as training input for a machine learning model)
+• Evaluate own report against the DDD Part 8.3 Stage 5–6 5-point rubric and self-assign a score with a written justification
+MATERIALS & PREPARATION
+• 4 shared laptops with Arduino IDE 2.x
+• Arduino Uno × 4, USB cables × 4, TMP36 × 4, LDR × 4, 10kΩ resistors × 4, breadboards × 4, jumper wires
+• Printed "Dual Data Table" — pre-ruled 20-row table: Reading #, Time (s), LDR Value, Temp (°C), two blank columns for learner-calculated statistics (A4 per learner)
+• Printed "Graph Sheet" — A4 landscape, pre-drawn x-axis (1–20), two y-axis scales (one left, one right) for learner to label and scale (A4 per learner)
+• Printed "Technical Analysis Report Template" — three headed sections with minimum word counts and mandatory elements per section (A4 per learner)
+• Printed "Self-Assessment Rubric Card" — the DDD Part 8.3 Stage 5–6 rubric (5-point scale, full descriptors) reproduced for learner use (A5 per learner)
+• Rulers, pencils, coloured pens (two colours — one per dataset)
+• Facilitator projected screen with Serial Plotter live
+CROSS-CURRICULAR LINKS
+LESSON STRUCTURE  (3 hours · Term 2 · Saturday)
+ASSESSMENT
+FACILITATOR RECORD
+ISOMA EDUTECH LIMITED  AI Engineers Programme · Stage 5–6 · Arduino · Term 2
+Term 2 · Lesson 6: Tell the Story of Your Data — Visualisation, Analysis & Technical Communication
+🌿  TERM 2 · STAGE 5–6 · AI ENGINEERS  |  Term 2 · Week 6
+Bloom's: L5 Evaluating → L6 Creating
+Duration
+3 hours (Term-time Saturday)
+Term / Week
+Term 2 · Week 6
+Age Range
+10–12 years
+Group Size
+8 learners (4 pairs — pair programming)
+Hardware
+Arduino Uno, USB cable, TMP36 temperature sensor, LDR, breadboard, jumper wires
+Software / IDE
+Arduino IDE 2.x — Serial Monitor & Serial Plotter
+Bloom's Level
+L5 Evaluating → L6 Creating
+DDD Phase
+CREATE — Learners collect simultaneous dual-sensor data over a sustained period, produce two annotated hand-drawn line graphs, compute comparative statistics, and write a full technical analysis report synthesising all findings into a structured argument
+NCDC Ref
+Uganda NCDC Curriculum P5/P6 — Literacy Strand: Technical report writing — synthesising multiple data sources into a single coherent analytical document with a structured argument. Numeracy Strand: Multi-dataset comparison; percentage change; correlation; line graph annotation; interpreting trend across time
+Cambridge Ref
+Cambridge Primary Computing 0845 — Stage 6: Collecting, organising and analysing data; Presenting computing work to an audience; Communicating findings from data
+🔁  TERM 2 PRIOR KNOWLEDGE — What Learners Are Expected to Bring to This Session:
+• Scientific report writing (7-section structure, hypothesis, conclusion) — Term 1 Week 5
+• Dual-sensor data collection into arrays — Term 2 Week 2
+• Mean, range, trend identification — Term 1 Week 5 and Term 2 Week 2
+• Analytical paragraph writing (compare two datasets) — Term 2 Week 2
+• Technical Design Log and evaluation writing — Term 2 Week 4
+• Rule-based classification and AI critique — Term 2 Week 5
+• Serial Monitor formatted output — used throughout Term 2
+🎯  Intended Learning Outcome (ILO)
+💡  Big Idea
+ILO 3.3 (summative) — Analyse foundational AI concepts including pattern recognition and data classification, connecting these to coded projects. ILO 3.4 (preview: full version Week 7) — Produce written design documentation that integrates technical accuracy, English literacy, and mathematical evidence.
+Data without interpretation is just numbers. The engineer's job is to turn numbers into understanding — by visualising patterns, computing what the numbers mean, and writing clearly enough that someone who was not there can understand exactly what happened and why.
+📖  English Literacy Thread
+🔢  Mathematics Thread
+Technical Analysis Report: this is the most demanding piece of writing in the Term 2 curriculum — three sections, each with a distinct register and purpose. Section 1 (Data Summary) is descriptive and procedural — what happened, in order. Section 2 (Comparative Analysis) is analytical — it requires both datasets to be present in every sentence, with numerical evidence. Section 3 (Interpretation) is evaluative and creative — it connects the data to a real-world application. Self-assessment: learners read the DDD rubric, assign themselves a score, and write a justification. This requires metalinguistic awareness — knowing what good writing looks like and being able to apply that standard to their own work.
+Percentage change: ((final − initial) / initial) × 100. For LDR: if reading 1 = 450 and reading 20 = 620, change = ((620−450)/450) × 100 = 37.8% increase. Same calculation for temperature. Comparative statistics on the same axis: annotate the midpoint of each dataset's range. Correlation check: when LDR increases (more light), does temperature also increase? Does a positive correlation exist between the two sensors? Introduce correlation informally: "When one goes up and the other also goes up, we call that a positive correlation — this is how AI finds patterns in multi-variable data."
+Phase
+Time
+Activities & Facilitator Actions
+1. HOOK
+Two Sensors, One Story
+20 min
+• Open Serial Plotter on projector with both sensors running. Cover/uncover LDR while warming TMP36 simultaneously. Ask: "Do the two lines move together? Or independently?" Observe and discuss.
+• Introduce today's goal: "You will collect 20 readings from both sensors simultaneously, plot them, analyse them, and write a report that argues what the data means."
+• Show the Report Template. Read through the three sections together. Emphasise Section 3: "An AI connection is not optional — it is a mandatory part of this report."
+• Distribute Self-Assessment Rubric Card. Pairs read it together. Ask: "What does a '5 — Excellent' report look like? What is the difference between a 3 and a 4?" Discuss. Learners set a target score for themselves before writing.
+• Quick statistics recap: one learner explains mean to the class; another explains range; a third explains percentage change. Facilitator corrects any misconceptions before data collection begins.
+2. GUIDED ACTIVITY
+Collect, Table & Plot
+60 min
+• Step 1 (10 min): Wire circuit — TMP36 on A0, LDR on A1 (with 10kΩ pull-down). Learners wire independently. Facilitator checks all connections before upload.
+• Step 2 (10 min): Open existing dual-sensor sketch from Term 2 Week 2 (or re-code from memory — good formative check). Modify: collect exactly 20 readings at 15-second intervals. Print both sensor values on each line: Serial.print(tempC); Serial.print(","); Serial.println(ldrValue);
+• Step 3 (20 min): Data collection — pairs run the sketch for 5 minutes. During collection, deliberately vary light conditions at readings 8, 12, and 17 (cover/uncover LDR) to create an interesting dataset with visible trend changes. Record all 20 readings in the Dual Data Table.
+• Step 4 (20 min): Plot both datasets in two colours on the Graph Sheet. Label every axis: title, units, scale. Annotate: mark the peak value, trough value, and one trend segment on each graph. Draw the midpoint line for each dataset's range.
+3. INDEPENDENT / PAIR WORK
+Calculate, Write & Self-Assess
+50 min
+• Task 1 (10 min): Calculate all statistics — mean (both), range (both), percentage change reading 1→20 (both). Write results in the statistics columns of the Dual Data Table.
+• Task 2 (30 min): Write the Technical Analysis Report — all 3 sections, minimum 200 words total. Facilitator circulates: check that Section 2 contains numerical evidence in every sentence. Prompt: "You said 'the LDR values were higher' — by how much? Give the numbers." Section 3 must name a specific AI application that would benefit from this type of dual-sensor data (e.g. adaptive lighting control, smart greenhouse, environmental monitor).
+• Task 3 (10 min): Self-Assessment — read own report against the DDD rubric card. Assign a score (1–5). Write 2 sentences justifying the score: "I gave myself [X] because… To reach a [X+1], I would need to…"
+• Extension: calculate the Pearson correlation informally — count the number of readings where both values increased simultaneously (positive co-movement), divided by 20. Express as a percentage. Is there a positive correlation between temperature and light in this dataset?
+• Rotate Driver/Navigator between Tasks 2 and 3.
+4. SHOWCASE & DEBRIEF
+30 min
+• 2 pairs share their graphs under the projector. Class reads: "What was the peak LDR value? What caused that?" Pair identifies the reading and the physical action that caused it.
+• Report swap: pairs exchange reports for 3 minutes and read Section 3 of a partner's report. Does it name a specific AI application? Does it explain HOW the data would be used? Peer verbal feedback: one sentence.
+• Self-assessment debrief: facilitator asks 3 learners: "What score did you give yourself? What would you need to change to score higher?" Do not reveal facilitator's score — let the discussion happen first.
+• Facilitator then reveals own scoring of the shared reports. Compare with self-assessments. Discuss: "Was your self-assessment accurate? Why is accurate self-assessment a professional skill?"
+• Connection to Term 2 Demo Day (Week 8): "Your Term 2 project will need a data analysis section — this report is the rehearsal for that. Every graph and statistic you include in your Demo Day presentation should look like this."
+• Collect Dual Data Table, Graph Sheet, Technical Analysis Report, and Self-Assessment as this week's artifact.
+Component
+Description
+Evidence Required
+Formative
+(During)
+Dual-sensor sketch collects 20 readings. Both graphs plotted and annotated with peak, trough, and trend segment. All statistics calculated correctly (facilitator checks before writing begins).
+Facilitator checks Data Table statistics before report writing starts. Graph annotation observed.
+Term 2 Week 6
+Artifact
+Dual Data Table (20 readings, all statistics) + annotated Graph Sheet (both datasets, all labels) + Technical Analysis Report (200+ words, 3 sections, numerical evidence in Section 2, named AI application in Section 3) + Self-Assessment score with 2-sentence justification. Scored by facilitator on 5-point DDD rubric.
+All four components collected. Self-assessment score recorded alongside facilitator score for comparison and feedback.
+Differentiation
+Support: reduce report to 120 words; pre-draw graph axes with scale. Extension: informal Pearson correlation percentage; Section 3 includes a pseudocode rule-based classifier that would use this data.
+Extension: correlation calculation attached to artifact. Pseudocode classifier written on reverse of report template.
+KEY VOCABULARY
+correlation · trend · percentage change · annotation · peak · trough · midpoint · comparative analysis · data summary · interpretation · multi-source · self-assessment · metalinguistic · positive correlation · AI training data
+⚠  Safeguarding Note
+Self-assessment can be emotionally challenging — some learners may give themselves a very low score due to lack of confidence, others may over-inflate. Facilitator must review self-assessments privately and offer individual verbal feedback where the gap between self and facilitator score is large (more than 2 points). Never read a learner's self-assigned score aloud to the class. The goal is calibration, not comparison.
+Facilitator Name:
+____________________________
+Date Delivered:
+____________________________
+Signature:
+____________________________

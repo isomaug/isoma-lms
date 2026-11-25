@@ -1,0 +1,213 @@
+# Lesson 16: Term Two Demo Day – RoboCreator Showcase & Portfolio Review
+
+**Duration:** 60 minutes (split across Week 8 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 2 · Week 8
+**Age Range:** 8–10 years
+**Hardware:** BBC Micro:bit v2 + USB cables + shared laptops
+**Software:** Microsoft MakeCode (makecode.microbit.org)
+**Bloom's:** L3–L6 Applying → Creating (full arc demonstrated)
+**DDD Phase:** DISCOVER – Learners present, demonstrate, and reflect on their Term Two project in a structured showcase; facilitator applies the DDD Part 8.5 rubric and updates cumulative assessment records
+**NCDC:** Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic & Data
+**Cambridge:** Cambridge Primary Computing 0845 – Stage 3: Presenting and evaluating digital work; Communicating findings and design decisions clearly; Reflecting on learning journey and next steps
+
+**Big Idea:** This is not just a presentation — it is a portfolio review. Every piece of work from Term Two tells a story of growth. Today you present your best project, explain your thinking, and reflect on how far you have come since Week 1 of Term One.
+
+**Source plan:** `Stage3_Term2_Week8_Microbit_LessonPlan.docx`
+
+## Learning Objectives
+
+- Deliver a structured 3-minute oral presentation following the format: Problem → Solution → Live Demo → Mathematical Element → What I Learned → What I Would Improve
+- Demonstrate the Term Two project live with no facilitator assistance — the programme must run and respond to at least one input during the presentation
+- Explain at least one Term Two skill used in the project (variable, Boolean AND/OR, dual sensor, 5-scene narrative, or JavaScript annotation) in plain English
+- Present the mathematical element from the design brief — state the calculation or graph and explain what it demonstrates about the project
+- Complete a structured peer feedback rubric (DDD Part 8.5 adapted) for at least one other presenter — scored on all 5 criteria
+- Receive and respond to at least one clarifying question from the audience about the project or design decisions
+
+## Materials and Preparation
+
+- 4 BBC Micro:bit v2 kits + USB cables (all charged and tested before session begins)
+- 4 shared laptops (available for final fixes — first 12 minutes only, then closed)
+- Term Two design briefs and test logs returned to learners (collected at T2 Week 7)
+- Presentation structure card (A5 per learner): Problem / Solution / Live Demo / Mathematical Element / What I Learned / What I Would Improve
+- Peer feedback rubric (A4 per learner) – DDD Part 8.5 Stage 3–4 rubric: 5 criteria (Functionality, Coding, English/Written Brief, Maths, Presentation), scored 1–4 with descriptor per level
+- Facilitator assessment rubric (DDD Part 8.5 official — one per learner, pre-printed)
+- Facilitator cumulative assessment record sheet (one per learner — all Term One and Term Two artifact and participation scores to date)
+- RoboCreator Term Two Certificates of Achievement (pre-printed for all passing learners; participation acknowledgement for all others)
+- Display board or wall space for portfolio display of selected artifacts
+
+## Cross-Curricular Links
+
+**English:** Structured oral presentation — the DDD's primary English summative evidence for Stage 3–4 (Part 8.2: '3-minute structured presentation: intro → demo → conclusion; scored on structure, vocabulary accuracy, ability to explain a coding concept in plain language, and confidence'). Term Two requirement: the presentation must include a reference to the written design brief — learner reads one sentence from Section 2 (Problem Statement) and one from Section 4 (How It Works). Audience members must prepare and ask at least one genuine question — practising active listening and analytical questioning as explicit English skills (DDD Part 2.4 cross-curricular framework).
+
+**Maths:** Mathematical element presentation — required per DDD Part 8.5 criterion 4: 'Data, graph, or logical structure demonstrated in project.' Term Two requirement: the mathematical element must be from the design brief Section 5 and must be shown visually (calculation written on paper held up, or graph on screen). Learner states: what the number or graph represents, how it was calculated, and what it means for the project. Audience may ask a mathematical question — learner is expected to answer. Facilitator notes whether the mathematical element is correct, clearly explained, and genuinely connected to the project (all three required for a score of 3 or 4 on the rubric).
+
+## Lesson Structure
+
+1. PREP – Final Polish and Rehearsal (12 min)
+2. Learners have exactly 12 minutes to make final fixes — facilitator sets a visible timer. Announce clearly: 'At 12 minutes, all laptops close. Whatever you have is what you present.' This is non-negotiable and mirrors real-world presentation discipline.
+3. Learners review the presentation structure card and rehearse silently. Facilitator circulates: 'Have you prepared what to say for the Mathematical Element section? Do you know which Term Two skill you will explain?'
+4. Pairs do a 90-second mock presentation to each other — presenter runs through all 6 sections, partner times and checks the structure card. Partner gives one specific improvement: 'You skipped the Mathematical Element — you need to add that.'
+5. All laptops closed at the 12-minute mark. Micro:bits checked: programme downloaded, LED displaying initial state. Facilitator confirms all 8 learners are ready before beginning.
+### DELIVER – Term Two Demo Day Presentations (32 min)
+6. Presentation order drawn randomly. Each learner presents individually — 3 minutes maximum. Partner may hold the design brief or operate a second Micro:bit if the project uses radio, but may NOT speak.
+7. Each presentation follows the 6-section structure card. Facilitator times with a visible countdown. Facilitator completes the DDD Part 8.5 rubric for each presenter during the presentation — do not interrupt to ask questions until after the presentation ends.
+8. After each presentation: (a) one audience member asks a prepared question — presenter answers. (b) Audience members complete their peer feedback rubric for that presenter (45 seconds). (c) Facilitator gives one verbal strength in public and holds any developmental feedback for private written comments.
+9. Repeat for all 8 presenters. Facilitator records rubric scores on the cumulative assessment record sheet — these scores combine with all prior artifact and participation scores per the DDD Part 8.2 weighting (Demo Day Project 35%, Oral Presentation 10%, Peer Feedback 5%).
+10. After all presentations: facilitator tabulates cumulative scores on the assessment record. Learners who have reached ≥55% weighted total across the full programme qualify for the RoboCreator Certificate (DDD Part 9). Learners below threshold are offered one resubmission opportunity within 2 weeks per DDD Part 9.2.
+### DISCOVER – Portfolio Reflection and Celebration (12 min)
+11. Display selected artifacts from Term Two on the portfolio wall: integration grids, annotated JavaScript worksheets, dual-line graphs, story plans, and design briefs. Ask learners to walk the display for 2 minutes silently and put a sticky dot next to one artifact (not their own) that they found impressive.
+12. Whole-group reflection: facilitator asks 4 questions — one answer per learner around the group: ① 'What is one thing you built in Term Two that you could not have built in Term One?' ② 'What was the hardest moment and how did you work through it?' ③ 'What skill from Stage 3 will you use most in Stage 4?' ④ 'If you started the programme again tomorrow, what would you do differently?'
+13. Certificate ceremony: facilitator calls each learner by name. Learners who pass receive the RoboCreator Term Two Certificate of Achievement. All learners receive a written participation acknowledgement signed by the facilitator. No scores are announced publicly — only the certificate outcome. Learners below threshold are spoken to privately after the group session.
+14. Group photo opportunity — only with prior written parental consent on file per DDD Part 10.4. Programme completion records updated for all learners who have now completed both Term One and Term Two.
+### WRAP-UP – Return Equipment and Assessment Records (4 min)
+15. All Micro:bits returned to kit boxes. USB cables coiled and stored. All laptops returned to charging station and closed.
+16. Facilitator collects: peer feedback rubrics (all 8), facilitator rubric sheets (all 8), and any remaining artifact documents. All documents signed and dated.
+17. Facilitator completes and signs the cumulative Assessment Record Sheet for every learner before leaving the session — DDD Part 10.3 requirement: 'No certificate may be signed without a completed, signed Assessment Record Sheet on file for that learner.'
+18. Flag to Programme Director: any learner scoring below 2/4 on two or more consecutive Term Two artifacts must be reported immediately per DDD Part 10.3, not deferred to the next programme cycle.
+
+## Assessment
+
+- Formative (During)
+- Facilitator readiness check at 12-minute mark: Micro:bit downloaded and functional, design brief in hand, presentation structure card reviewed? (pre-presentation readiness)
+- All 6 presentation sections delivered within 3 minutes? (structure check per DDD Part 8.5 Criterion 5)
+- Peer feedback rubric completed for at least one classmate with scores across all 5 criteria? (peer rubric quality check)
+- Exit Assessment
+- Formal summative assessment — DDD Part 8.5 Stage 3–4 Demo Day Rubric, 5 criteria scored 1–4: ① Functionality (programme runs without facilitator help) ② Coding (loops, conditions, sensor input used correctly and intentionally) ③ English / Written Brief (design brief complete and clearly written) ④ Maths (data, graph, or logical structure demonstrated) ⑤ Presentation (structured intro → demo → conclusion, confident delivery, correct vocabulary). Weighted per DDD Part 8.2: Demo Day Project 35% + Oral Presentation 10% + Peer Feedback 5% = 50% of total Term Two score. Certificate awarded at ≥55% cumulative weighted total across all assessment components.
+- Differentiation
+- Support: Learner may read directly from the design brief for all 6 sections of the presentation — no memorisation required. Partner may advance slides or hold the Micro:bit. If the live demo fails, learner may describe what it does — partial functionality credit is awarded per the DDD Part 8.5 descriptor ('Runs partially; core feature works' = score of 2). Extension: Learner presents without notes for any section, answers 2 audience questions (not just 1), and offers a specific and technically accurate description of how they would expand the project in Stage 4 — demonstrating forward-looking evaluative thinking at Bloom's L5.
+
+## Key Vocabulary
+
+Demo Day · presentation · prototype · rubric · criterion · evaluation · portfolio · reflection · certificate · RoboCreator · cumulative · weighted score · resubmission · assessment record Date Delivered: Signature:
+
+## Safeguarding
+
+Safeguarding Note: Certificate outcomes and rubric scores are never announced publicly — only the certificate award is acknowledged in the group. All developmental feedback is delivered privately in writing. Group photographs require written parental consent on file prior to the session — no exceptions. Learners who do not meet the pass threshold are informed privately and in writing with a clear resubmission plan. Facilitators are mandatory reporters: any safeguarding concern observed during the session must be reported to the Programme Director the same day per DDD Part 10.4.
+
+## Full source extract (complete)
+
+```
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)  |  Term Two
+Lesson 16: Term Two Demo Day – RoboCreator Showcase & Portfolio Review
+T2 · W8
+(Week 16)
+Duration
+60 minutes
+Term / Week
+Term 2 · Week 8
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L3–L6 Applying → Creating (full arc demonstrated)
+DDD Phase
+DISCOVER – Learners present, demonstrate, and reflect on their Term Two project in a structured showcase; facilitator applies the DDD Part 8.5 rubric and updates cumulative assessment records
+NCDC Ref
+Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic & Data
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3: Presenting and evaluating digital work; Communicating findings and design decisions clearly; Reflecting on learning journey and next steps
+Term Two Focus
+The Term Two Demo Day mirrors the DDD Week 8 structure (Part 7.2) and applies the full Stage 3–4 assessment rubric (Part 8.5). Unlike Term One's Demo Day, this presentation includes a JavaScript element, a test log, and a self-evaluation — evidence of the higher cognitive demands reached in Term Two.
+Key ILO(s)
+ILOs 2.1–2.4 (all demonstrated): live functional Micro:bit programme; explanation of coding concepts including at least one Term Two skill; complete design brief and test log; one mathematical element presented with evidence; structured oral presentation with self-reflection.
+Big Idea
+This is not just a presentation — it is a portfolio review. Every piece of work from Term Two tells a story of growth. Today you present your best project, explain your thinking, and reflect on how far you have come since Week 1 of Term One.
+Term One / Two Link
+Directly mirrors DDD Part 7.2 Week 8 (Demo Day – RoboCreator Showcase) and applies DDD Part 8.2 Stage 3–4 assessment components: Participation 15%, Weekly Artifacts 30%, Demo Day Project 35%, Oral Presentation 10%, Peer Feedback Rubric 5%. Term Two Demo Day scores are recorded separately and can be used to support resubmission per DDD Part 9.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Deliver a structured 3-minute oral presentation following the format: Problem → Solution → Live Demo → Mathematical Element → What I Learned → What I Would Improve
+2
+Demonstrate the Term Two project live with no facilitator assistance — the programme must run and respond to at least one input during the presentation
+3
+Explain at least one Term Two skill used in the project (variable, Boolean AND/OR, dual sensor, 5-scene narrative, or JavaScript annotation) in plain English
+4
+Present the mathematical element from the design brief — state the calculation or graph and explain what it demonstrates about the project
+5
+Complete a structured peer feedback rubric (DDD Part 8.5 adapted) for at least one other presenter — scored on all 5 criteria
+6
+Receive and respond to at least one clarifying question from the audience about the project or design decisions
+Materials & Preparation
+4 BBC Micro:bit v2 kits + USB cables (all charged and tested before session begins)
+4 shared laptops (available for final fixes — first 12 minutes only, then closed)
+Term Two design briefs and test logs returned to learners (collected at T2 Week 7)
+Presentation structure card (A5 per learner): Problem / Solution / Live Demo / Mathematical Element / What I Learned / What I Would Improve
+Peer feedback rubric (A4 per learner) – DDD Part 8.5 Stage 3–4 rubric: 5 criteria (Functionality, Coding, English/Written Brief, Maths, Presentation), scored 1–4 with descriptor per level
+Facilitator assessment rubric (DDD Part 8.5 official — one per learner, pre-printed)
+Facilitator cumulative assessment record sheet (one per learner — all Term One and Term Two artifact and participation scores to date)
+RoboCreator Term Two Certificates of Achievement (pre-printed for all passing learners; participation acknowledgement for all others)
+Display board or wall space for portfolio display of selected artifacts
+Cross-Curricular Links
+English Literacy
+Structured oral presentation — the DDD's primary English summative evidence for Stage 3–4 (Part 8.2: '3-minute structured presentation: intro → demo → conclusion; scored on structure, vocabulary accuracy, ability to explain a coding concept in plain language, and confidence'). Term Two requirement: the presentation must include a reference to the written design brief — learner reads one sentence from Section 2 (Problem Statement) and one from Section 4 (How It Works). Audience members must prepare and ask at least one genuine question — practising active listening and analytical questioning as explicit English skills (DDD Part 2.4 cross-curricular framework).
+Mathematics
+Mathematical element presentation — required per DDD Part 8.5 criterion 4: 'Data, graph, or logical structure demonstrated in project.' Term Two requirement: the mathematical element must be from the design brief Section 5 and must be shown visually (calculation written on paper held up, or graph on screen). Learner states: what the number or graph represents, how it was calculated, and what it means for the project. Audience may ask a mathematical question — learner is expected to answer. Facilitator notes whether the mathematical element is correct, clearly explained, and genuinely connected to the project (all three required for a score of 3 or 4 on the rubric).
+LESSON STRUCTURE
+Step
+Activity
+PREP – Final Polish and Rehearsal (12 min)
+1
+Learners have exactly 12 minutes to make final fixes — facilitator sets a visible timer. Announce clearly: 'At 12 minutes, all laptops close. Whatever you have is what you present.' This is non-negotiable and mirrors real-world presentation discipline.
+2
+Learners review the presentation structure card and rehearse silently. Facilitator circulates: 'Have you prepared what to say for the Mathematical Element section? Do you know which Term Two skill you will explain?'
+3
+Pairs do a 90-second mock presentation to each other — presenter runs through all 6 sections, partner times and checks the structure card. Partner gives one specific improvement: 'You skipped the Mathematical Element — you need to add that.'
+4
+All laptops closed at the 12-minute mark. Micro:bits checked: programme downloaded, LED displaying initial state. Facilitator confirms all 8 learners are ready before beginning.
+DELIVER – Term Two Demo Day Presentations (32 min)
+5
+Presentation order drawn randomly. Each learner presents individually — 3 minutes maximum. Partner may hold the design brief or operate a second Micro:bit if the project uses radio, but may NOT speak.
+6
+Each presentation follows the 6-section structure card. Facilitator times with a visible countdown. Facilitator completes the DDD Part 8.5 rubric for each presenter during the presentation — do not interrupt to ask questions until after the presentation ends.
+7
+After each presentation: (a) one audience member asks a prepared question — presenter answers. (b) Audience members complete their peer feedback rubric for that presenter (45 seconds). (c) Facilitator gives one verbal strength in public and holds any developmental feedback for private written comments.
+8
+Repeat for all 8 presenters. Facilitator records rubric scores on the cumulative assessment record sheet — these scores combine with all prior artifact and participation scores per the DDD Part 8.2 weighting (Demo Day Project 35%, Oral Presentation 10%, Peer Feedback 5%).
+9
+After all presentations: facilitator tabulates cumulative scores on the assessment record. Learners who have reached ≥55% weighted total across the full programme qualify for the RoboCreator Certificate (DDD Part 9). Learners below threshold are offered one resubmission opportunity within 2 weeks per DDD Part 9.2.
+DISCOVER – Portfolio Reflection and Celebration (12 min)
+10
+Display selected artifacts from Term Two on the portfolio wall: integration grids, annotated JavaScript worksheets, dual-line graphs, story plans, and design briefs. Ask learners to walk the display for 2 minutes silently and put a sticky dot next to one artifact (not their own) that they found impressive.
+11
+Whole-group reflection: facilitator asks 4 questions — one answer per learner around the group: ① 'What is one thing you built in Term Two that you could not have built in Term One?' ② 'What was the hardest moment and how did you work through it?' ③ 'What skill from Stage 3 will you use most in Stage 4?' ④ 'If you started the programme again tomorrow, what would you do differently?'
+12
+Certificate ceremony: facilitator calls each learner by name. Learners who pass receive the RoboCreator Term Two Certificate of Achievement. All learners receive a written participation acknowledgement signed by the facilitator. No scores are announced publicly — only the certificate outcome. Learners below threshold are spoken to privately after the group session.
+13
+Group photo opportunity — only with prior written parental consent on file per DDD Part 10.4. Programme completion records updated for all learners who have now completed both Term One and Term Two.
+WRAP-UP – Return Equipment and Assessment Records (4 min)
+14
+All Micro:bits returned to kit boxes. USB cables coiled and stored. All laptops returned to charging station and closed.
+15
+Facilitator collects: peer feedback rubrics (all 8), facilitator rubric sheets (all 8), and any remaining artifact documents. All documents signed and dated.
+16
+Facilitator completes and signs the cumulative Assessment Record Sheet for every learner before leaving the session — DDD Part 10.3 requirement: 'No certificate may be signed without a completed, signed Assessment Record Sheet on file for that learner.'
+17
+Flag to Programme Director: any learner scoring below 2/4 on two or more consecutive Term Two artifacts must be reported immediately per DDD Part 10.3, not deferred to the next programme cycle.
+Assessment
+Formative (During)
+Facilitator readiness check at 12-minute mark: Micro:bit downloaded and functional, design brief in hand, presentation structure card reviewed? (pre-presentation readiness)
+All 6 presentation sections delivered within 3 minutes? (structure check per DDD Part 8.5 Criterion 5)
+Peer feedback rubric completed for at least one classmate with scores across all 5 criteria? (peer rubric quality check)
+Exit Assessment
+Formal summative assessment — DDD Part 8.5 Stage 3–4 Demo Day Rubric, 5 criteria scored 1–4: ① Functionality (programme runs without facilitator help) ② Coding (loops, conditions, sensor input used correctly and intentionally) ③ English / Written Brief (design brief complete and clearly written) ④ Maths (data, graph, or logical structure demonstrated) ⑤ Presentation (structured intro → demo → conclusion, confident delivery, correct vocabulary). Weighted per DDD Part 8.2: Demo Day Project 35% + Oral Presentation 10% + Peer Feedback 5% = 50% of total Term Two score. Certificate awarded at ≥55% cumulative weighted total across all assessment components.
+Differentiation
+Support: Learner may read directly from the design brief for all 6 sections of the presentation — no memorisation required. Partner may advance slides or hold the Micro:bit. If the live demo fails, learner may describe what it does — partial functionality credit is awarded per the DDD Part 8.5 descriptor ('Runs partially; core feature works' = score of 2). Extension: Learner presents without notes for any section, answers 2 audience questions (not just 1), and offers a specific and technically accurate description of how they would expand the project in Stage 4 — demonstrating forward-looking evaluative thinking at Bloom's L5.
+Key Vocabulary
+Demo Day · presentation · prototype · rubric · criterion · evaluation · portfolio · reflection · certificate · RoboCreator · cumulative · weighted score · resubmission · assessment record
+Safeguarding Note: Certificate outcomes and rubric scores are never announced publicly — only the certificate award is acknowledged in the group. All developmental feedback is delivered privately in writing. Group photographs require written parental consent on file prior to the session — no exceptions. Learners who do not meet the pass threshold are informed privately and in writing with a clear resubmission plan. Facilitators are mandatory reporters: any safeguarding concern observed during the session must be reported to the Programme Director the same day per DDD Part 10.4.
+Facilitator Name:
+___________________________
+Date Delivered:
+___________________________
+Signature:
+___________________________
+```

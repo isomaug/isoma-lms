@@ -1,0 +1,148 @@
+# Lesson: System Architecture & Integrated Build — design brief to stubs
+
+**Duration:** 60 minutes × 2 (split across Week 6 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 3 · Week 6
+**Age Range:** 10–12 years
+**Hardware:** Arduino Uno + Term 3 sensors/actuators (servo, RGB, 7-segment, buzzer, EEPROM)
+
+**Source plan:** `curriculum progression fill (no DOCX for Term 3 Weeks 5–8)`
+
+## Learning Objectives
+
+- Draw a System Architecture Diagram that connects: sensors → state machine → servo + RGB + 7-segment + buzzer
+- Write a one-page design brief listing inputs, outputs, and 5 numbered requirements
+
+- Start coding the integrated system from the approved brief — one feature at a time
+- Keep EEPROM persistence so the last safe state returns after reset
+
+## Lesson Structure
+
+### Lesson 1 (start)
+
+# Week 6 - Lesson 1
+
+## Session length
+**60 minutes**
+
+## Today you will
+* Draw a System Architecture Diagram that connects: sensors → state machine → servo + RGB + 7-segment + buzzer
+* Write a one-page design brief listing inputs, outputs, and 5 numbered requirements
+
+## Let's begin
+1. List every part you have already used in Term 3 Weeks 1–5.
+2. On squared paper, draw boxes for Input / Brain / Output and arrows between them.
+3. Write 5 requirements (e.g. "Show temperature digit", "Alarm when dark", "Remember last state in EEPROM").
+4. Your teacher approves the diagram before you open the IDE.
+
+## Check your understanding
+* Can a classmate follow your diagram without you explaining?
+
+## Key words
+* System Architecture Diagram
+* design brief
+* requirements
+
+### Lesson 2 (finish)
+
+# Week 6 - Lesson 2
+
+## Session length
+**60 minutes**
+
+## Finish the week
+* Start coding the integrated system from the approved brief — one feature at a time
+* Keep EEPROM persistence so the last safe state returns after reset
+
+## Continue
+1. Create empty functions for each requirement (stubs that only Serial.println their name).
+2. Implement the easiest output first (e.g. RGB or digit), then wire it into the switch/case.
+3. Re-add `EEPROM.read` / `EEPROM.write` from Week 2 for the current state.
+4. Commit a working checkpoint: upload, reset the board, confirm the state returns.
+
+## Check your understanding
+* After a reset, does the system wake in the last saved state without crashing?
+
+## Key words
+* stub function
+* checkpoint
+* EEPROM persistence
+
+## Function pattern
+
+```cpp
+void updateOutputs() {
+  // call displayDigit / setColour / servo write here
+}
+
+void loop() {
+  readSensors();
+  updateState();
+  updateOutputs();
+}
+```
+
+## Full source extract (complete)
+
+```
+# Week 6 - Lesson 1
+
+## Session length
+**60 minutes**
+
+## Today you will
+* Draw a System Architecture Diagram that connects: sensors → state machine → servo + RGB + 7-segment + buzzer
+* Write a one-page design brief listing inputs, outputs, and 5 numbered requirements
+
+## Let's begin
+1. List every part you have already used in Term 3 Weeks 1–5.
+2. On squared paper, draw boxes for Input / Brain / Output and arrows between them.
+3. Write 5 requirements (e.g. "Show temperature digit", "Alarm when dark", "Remember last state in EEPROM").
+4. Your teacher approves the diagram before you open the IDE.
+
+## Check your understanding
+* Can a classmate follow your diagram without you explaining?
+
+## Key words
+* System Architecture Diagram
+* design brief
+* requirements
+
+---
+
+# Week 6 - Lesson 2
+
+## Session length
+**60 minutes**
+
+## Finish the week
+* Start coding the integrated system from the approved brief — one feature at a time
+* Keep EEPROM persistence so the last safe state returns after reset
+
+## Continue
+1. Create empty functions for each requirement (stubs that only Serial.println their name).
+2. Implement the easiest output first (e.g. RGB or digit), then wire it into the switch/case.
+3. Re-add `EEPROM.read` / `EEPROM.write` from Week 2 for the current state.
+4. Commit a working checkpoint: upload, reset the board, confirm the state returns.
+
+## Check your understanding
+* After a reset, does the system wake in the last saved state without crashing?
+
+## Key words
+* stub function
+* checkpoint
+* EEPROM persistence
+
+## Function pattern
+
+```cpp
+void updateOutputs() {
+  // call displayDigit / setColour / servo write here
+}
+
+void loop() {
+  readSensors();
+  updateState();
+  updateOutputs();
+}
+```
+```

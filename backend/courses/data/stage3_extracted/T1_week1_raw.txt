@@ -1,0 +1,122 @@
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)
+Lesson 1: Hello Micro:bit – Meet Your Device!
+WEEK 1
+Duration
+60 minutes
+Term / Week
+Term 1 · Week 1
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L2 Understanding
+DDD Phase
+DESIGN – Learners explore the Micro:bit hardware and design their first LED display
+NCDC Ref
+Uganda NCDC P3–P4 Curriculum: ICT Literacy Strand; Numeracy Strand: Patterns & Logic
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3: Using technology; Understanding how computers work; Simple input/output
+Big Idea
+Every computer needs an input and produces an output. The Micro:bit's LED matrix is a tiny screen we can programme letter by letter.
+Key ILO
+ILO 2.1 – Write and read block-based Micro:bit programmes in MakeCode, including correct use of on start, forever, and input events.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Unbox and set up a BBC Micro:bit v2 and connect it to a laptop via USB
+2
+Identify and name at least 4 hardware features of the Micro:bit (LED matrix, buttons A & B, USB port, edge connector)
+3
+Open Microsoft MakeCode in a browser and navigate to the coding workspace
+4
+Programme the Micro:bit to scroll their name on the LED display using the 'on start' block
+5
+Programme Button A to show a happy face and Button B to show a sad face
+6
+Define the words 'input' and 'output' in their own words and give one example of each from today's session
+Materials & Preparation
+4 BBC Micro:bit v2 kits (Micro:bit + USB cable)
+4 shared laptops with browser access to makecode.microbit.org
+Printed 'Micro:bit Parts Map' sheet (A4 per pair) – labelled diagram
+Vocabulary card set: algorithm, input, output, variable, debug (one set per pair)
+Blank 5×5 LED grid worksheets (A5, 2 per learner)
+Facilitator device + projected screen / large TV
+'One Star, One Wish' feedback cards (pre-printed)
+Sticky label name badges
+Cross-Curricular Links
+English Literacy
+Vocabulary in context: input, output, algorithm, debug. Learners read definitions on word cards and match each word to an example from today's session. Sentence frame: 'When I press Button ___, the Micro:bit ___.'
+Mathematics
+Explore the 5×5 LED grid. Count the 25 pixels. Map grid positions using x–y coordinates (0–4). Challenge: 'How many pixels light up for the letter A?' Learners count and record.
+LESSON STRUCTURE
+Step
+Activity
+HOOK – What Is This Device? (10 min)
+1
+Show a projected image of a Micro:bit. Ask: 'What do you think this is? What might it do?' Accept all answers.
+2
+Pass one Micro:bit around the class (without USB connected). Learners feel the buttons, count the LEDs, and spot the USB port using their Parts Map sheet.
+3
+Vocabulary reveal: Facilitator reads aloud the 4 key words (input, output, algorithm, debug) and gives one example. Learners repeat and hold up the matching word card.
+4
+Bridge: 'Today we are going to make this tiny computer say YOUR name. Let's go!'
+DESIGN – Plan My LED Display (10 min)
+5
+Give each learner two 5×5 LED grid worksheets. Task: 'Draw YOUR initial letter on the first grid by colouring in the squares.'
+6
+Pairs share their designs. Ask: 'How many squares did you colour? Are there any squares that were the same for both of you?'
+7
+Facilitator introduces the MakeCode blocks panel on the projected screen. Point to: 'on start', 'forever', 'show string', 'show icon'. Learners locate these on the interface map.
+8
+Facilitator writes the session goal on the board: 'By the end, our Micro:bit will scroll our name and react to button presses.'
+DELIVER – Programme the Micro:bit (30 min)
+9
+Distribute laptops + Micro:bits. Pairs open MakeCode. Assign Driver and Navigator roles – explain: Driver types/clicks, Navigator reads the interface map and checks.
+10
+Step 1 (8 min): In the 'on start' block, find 'show string' and type the learner's first name. Download and run. Observe: does the name scroll across the LEDs?
+11
+Step 2 (8 min): Drag a 'on button A pressed' block. Inside, add 'show icon – happy face'. Download and run. Press Button A and check.
+12
+Step 3 (8 min): Drag a 'on button B pressed' block. Inside, add 'show icon – sad face'. Download and run. Press Button B and check.
+13
+Step 4 (6 min): SWAP Driver and Navigator. New Driver modifies the Button A icon to show a different icon of their choice. Re-download and run.
+DISCOVER – Share and Reflect (8 min)
+14
+Gallery share: each pair holds up their Micro:bit and presses Button A and B to show the group their icons. One sentence: 'Our Micro:bit shows ___ when we press Button A.'
+15
+Facilitator asks 3 learners: 'What is the INPUT in your programme? What is the OUTPUT?'
+16
+Reflection: thumbs up (understood input/output), flat hand (partly), thumbs down (still confused). Facilitator notes who needs support.
+17
+Teaser: 'Next week, we will READ existing code and PREDICT what it does – like reading a story!'
+WRAP-UP – Save and Pack Down (2 min)
+18
+Facilitator demonstrates: click the project name field in MakeCode and rename to 'Week1_[Name]'. Learners do the same.
+19
+Disconnect Micro:bit from USB carefully. Return to kit box. Close laptop lids.
+Assessment
+Formative (During)
+Observation checklist: Can learner identify 4 Micro:bit parts? (Yes / Partially / Not yet)
+Can learner explain 'input' and 'output' using the session as an example? (oral check)
+Name scrolling on LED display and button icons working? (screen observation)
+Exit Assessment
+Learner holds up 1 finger for each task completed: ① Micro:bit connected ② Name scrolls on LED ③ Button A shows icon ④ Button B shows different icon ⑤ Can define 'input'. Facilitator records count per learner.
+Differentiation
+Support: Pre-open MakeCode and have 'show string' block already placed. Provide a printed word-by-word guide. Extension: Programme button A+B pressed together to show a custom icon learner draws on the grid worksheet first.
+Key Vocabulary
+Micro:bit · LED matrix · input · output · algorithm · MakeCode · block · programme · on start · debug
+Safeguarding Note: Do not allow learners to type personal surnames, phone numbers, or addresses as the scrolling text. First names or invented names only.
+Facilitator Name:
+___________________________
+Date Delivered:
+___________________________
+Signature:
+___________________________

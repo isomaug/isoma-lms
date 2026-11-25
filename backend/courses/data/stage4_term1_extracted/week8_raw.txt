@@ -1,0 +1,52 @@
+Make final improvements to the Week 7 project based on peer review feedback received
+Deliver a structured 3-minute oral presentation covering all 5 sections: Problem → Solution → Demo → What I Learned → What I Would Improve
+Demonstrate the live Micro:bit programme running without facilitator assistance
+State and explain at least one numerical or mathematical element of the project to the audience
+Complete a peer feedback rubric for at least one other presenter
+Receive the RoboCreator Certificate upon meeting the pass threshold (≥ 55% overall weighted score)
+4 BBC Micro:bit v2 kits with USB cables (fully charged and projects pre-loaded from Week 7)
+Presentation structure card per learner – 5 sections with sentence starters: Problem / Solution / Demo / What I Learned / What I Would Improve
+Facilitator assessment rubric (printed, DDD Part 8.5) – one per learner for scoring
+Peer feedback rubric cards (A5, pre-printed) – one per audience member per presenter
+RoboCreator Certificates (pre-printed, signed by Lead Facilitator and Programme Director)
+Facilitator device + projected screen or TV
+Optional: small celebration items (stickers, badges) for all participants
+Distribute presentation structure cards. Pairs have 10 minutes of silent preparation time: review the design brief, check the programme is working, and practise the 5-section presentation using the sentence starters.
+Facilitator circulates: check each project is running correctly. If a critical bug is found, the facilitator may ask a guided question ('What does this block do?') but must not fix the code for the learner.
+2-minute rehearsal: each learner quietly practises their opening ('The problem I noticed was…') and their maths statement ('One mathematical element in my project is…').
+Technical check: plug in all Micro:bits and confirm programmes are downloaded and running before presentations begin.
+Presentation order: each pair presents individually (not together). Partner may hold the Micro:bit during the demo but must not speak. Each presenter: maximum 3 minutes + 1 minute for audience questions.
+Structure enforced: facilitator uses a finger count to signal which section the learner should be on (1=Problem, 2=Solution, 3=Demo, 4=Learned, 5=Improve). Gently prompt if a learner skips a section.
+Demo moment: when the learner reaches the Demo section, they run the programme live. Audience watches silently. After the demo, the learner explains one maths element using a number, calculation, or data point.
+Audience: while one learner presents, all other learners complete the peer feedback rubric for that presenter. Feedback must be written – not just ticks. At least one written sentence per rubric.
+Facilitator leads a group reflection: 'What is one coding concept every project used this term? What is one maths concept that appeared in more than one project?'
+Facilitator scores each learner's presentation against the DDD Part 8.5 rubric privately. Scores are not announced publicly.
+Peer feedback rubrics are returned to each presenter. Learners read their feedback and write one sentence: 'Based on feedback, if I built Version 2, I would…'
+Celebrate: acknowledge every learner's participation. Highlight specific effort (not just results): 'I noticed how carefully [learner] read their design brief before coding every single week.'
+Facilitator announces: 'Every learner who has engaged actively, completed their artifacts, and presented today has demonstrated what it means to be a RoboCreator.'
+Certificates are presented individually. Each learner receives their RoboCreator Certificate (and Programme Completion Record if this was their final stage).
+Photo opportunity (with parental/guardian consent forms verified before the session).
+Close: 'This is not the end. Stage 5–6 is waiting – where you will move from block code to text-based programming with Arduino. The skills you built here – reading code, designing before building, using sensors, presenting your work – all of those go with you.'
+ISOMA EDUTECH LIMITED Micro:bit (MakeCode) Lesson Plan – Stage 4 (P4 · Cambridge Stage 4 / Year 4) Lesson 8: Demo Day – RoboCreator Showcase
+Duration | 60 minutes | Term / Week | Term 1 · Week 8
+Age Range | 8–10 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | BBC Micro:bit v2, USB cables, shared laptops (all kits fully charged and tested before session) | Bloom's | L3–L6 Applying / Analysing / Evaluating / Creating
+NCDC Ref | Uganda NCDC P4 – Literacy Strand: Oral Presentation (structured speech, full sentences, audience engagement); Numeracy Strand: Quantify project outcomes with measurements, data, or calculations | Cambridge | Cambridge Primary Computing 0845 – Stage 4: Presenting and evaluating digital work; Discussing the impact of technology; Communicating outcomes clearly
+DDD Phase | DISCOVER – Demo Day summative assessment: final fixes, structured 3-minute presentations, peer feedback, facilitator scoring, and certificate award | Big Idea | A great engineer does not just build something – they explain it, show it working, reflect on what they learned, and say what they would improve. Presenting your work clearly is a skill just as important as coding it.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS
+English | Structured oral presentation: 3 minutes minimum. Must include all 5 sections in order. Minimum 5 full sentences per section. Sentence starters on cue cards: 'The problem I noticed was…', 'My solution works by…', 'As you can see from the demo…', 'The most important thing I learned was…', 'If I had more time, I would…'. Facilitator scores clarity, vocabulary, and audience engagement (DDD Part 8.5 rubric). | Maths | Quantify the project: the learner must state and explain one numerical or mathematical element. Examples: 'My temperature alarm triggers at 30°C, which is 5°C above room temperature of 25°C'; 'My counter loops 10 times, which means it counts in tens to 100'; 'My story has 3 scenes totalling 15 seconds – Scene 1 is 4/15 of the total duration.' The figure must be stated, explained, and connected to the code.
+LESSON STRUCTURE
+FINAL FIXES – Prepare and Rehearse (15 min)
+PRESENTATIONS – RoboCreator Showcase (30 min)
+DEBRIEF – Reflect and Celebrate (10 min)
+CERTIFICATE CEREMONY – RoboCreator Awards (5 min)
+ASSESSMENT | ASSESSMENT
+Summative – Demo Day Project (35%) | Assessed against DDD Part 8.5 rubric: (a) Functionality – programme runs without facilitator help; (b) Coding depth – uses loops, conditions, and at least one sensor; (c) English connection – narrative or structured writing used; (d) Maths connection – one numerical element stated and explained. Scored on 4-point scale per criterion.
+Summative – Oral Presentation (25%) | Scored by facilitator: (a) Presentation covers all 5 sections; (b) Minimum 5 sentences per section; (c) Correct vocabulary used; (d) Audience engagement maintained; (e) Maths element stated with a figure. Peer feedback rubric also collected and filed.
+Differentiation | Support: learner may use their design brief as a reading script during the presentation – this is permitted. Extension: Learner submits a one-page 'Version 2 Proposal' stating three improvements they would make and the technical methods they would use, referencing Bloom's Level 5 (Evaluating).
+KEY VOCABULARY
+presentation · demo · audience · certificate · evaluate · reflect · iteration · prototype · RoboCreator · showcase
+Safeguarding Note: Presentations are a low-anxiety environment. No scores are announced publicly. If a learner becomes anxious before presenting, allow them to present to the facilitator privately first, then present to the group. Certificates are awarded to all learners who meet the pass threshold – never withheld publicly on the day. Learners who do not yet meet the threshold are informed privately and offered one resubmission opportunity within 2 weeks.
+Facilitator Name:    ____________________ | Date Delivered:    ____________________ | Signature:    ____________________

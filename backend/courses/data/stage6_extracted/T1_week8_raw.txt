@@ -1,0 +1,110 @@
+Stage 5–6 Summative Assessment & Certificate Presentation
+LEARNING OBJECTIVES
+• Deliver a 5-minute formal presentation to a panel (facilitator + invited assessor) following the structure: Problem → Solution → Live Demo → Evidence → Reflection
+• Demonstrate a live, working Arduino prototype that responds to input and produces correct output during the presentation
+• Explain at least one coding concept used (loop, condition, variable, function) in plain English to a non-technical audience
+• Present at least one quantified mathematical outcome — a measurement, calculation, or data point from the project — displayed on a graph or in a data table
+• Read a written introduction and conclusion from prepared notes
+• Answer a minimum of 2 questions from the panel about the project design, coding decisions, or mathematical elements
+MATERIALS & PREPARATION
+• Each learner's completed project: Arduino Uno + circuit + fully tested sketch loaded
+• Each learner's completed Design Brief (Week 7 artifact — must be submitted before presenting)
+• Printed "Demo Day Assessment Rubric" × 2 per learner — one for facilitator, one for invited assessor (from DDD Part 8.6)
+• Printed "Peer Feedback Rubric" × 8 — each audience member completes one per presenter (from DDD Part 8.6)
+• Printed "AI Engineer Certificate" × 8 — to be signed and awarded at the end of the session
+• Presentation order list (prepared by facilitator beforehand — randomised)
+• Timer visible to presenter and panel
+• Optional: small refreshments to mark the celebration — this is a milestone achievement
+CROSS-CURRICULAR LINKS
+LESSON STRUCTURE  (3 hours · Term-time Saturday)
+ASSESSMENT
+FACILITATOR RECORD
+ISOMA EDUTECH LIMITED  AI Engineers Programme · Stage 5–6 · Arduino
+Lesson 8: Demo Day — AI Engineer Showcase
+Duration
+3 hours (Term-time Saturday)
+Term / Week
+Term 1 · Week 8
+Age Range
+10–12 years
+Group Size
+8 learners (4 pairs — pair programming)
+Hardware
+Learner's own project hardware (from Week 7). Arduino Uno, USB cable, and all built circuit components
+Software / IDE
+Arduino IDE 2.x — project sketch loaded and tested before session begins
+Bloom's Level
+L3–L6 Applying → Creating (Full range — summative)
+DDD Phase
+EVALUATE & CREATE — Learners deliver a 5-minute formal presentation to a panel, demonstrate their live project, answer questions, and receive their AI Engineer Certificate
+NCDC Ref
+Uganda NCDC Curriculum P5/P6 — Literacy Strand: Formal oral presentation with structured argument; Numeracy Strand: Quantifying project outcomes with measurements, data, and calculations
+Cambridge Ref
+Cambridge Primary Computing 0845 — Stage 6: Presenting and evaluating computing work; Reflecting on the design and development process
+Intended Learning Outcome (ILO)
+Big Idea
+ILO 3.4 (summative) — Design, build, test, iterate, and present an original Arduino project integrating coding, English literacy, and Mathematics, supported by a written design brief and a 5-minute formal presentation.
+Engineers do not just build — they communicate. A project that works but cannot be explained is not yet complete. Today you present your full journey: the problem, the solution, the evidence, and what you would do next.
+English Literacy Thread
+Mathematics Thread
+Formal oral presentation with a structured argument: Problem → Solution → Live Demo → Evidence → Reflection. Learners prepare a written introduction (3–4 sentences) and written conclusion (3–4 sentences) to read from notes — this is not a script for the whole presentation, but an anchor for the opening and closing. Vocabulary expectation: learners must use at least 4 computing vocabulary terms correctly during the presentation. Panel questions assess communication clarity — can the learner explain a technical concept in plain English to someone who is not a coder?
+Quantify project outcomes with at least one of: (1) a sensor measurement with mean and range calculated (from Week 5 data skills); (2) an arithmetic sequence produced by the project's loop, with first term and common difference identified; (3) a geometry or measurement calculation used in the physical build. The mathematical evidence must be displayed visually during the presentation — on a hand-drawn graph, a data table, or written on a card held up during the demo. "Show the number. Say what it means."
+Phase
+Time
+Activities & Facilitator Actions
+1. PREPARATION Final Polish & Set-Up
+30 min
+• Learners arrive with projects already built and tested at home or in a pre-session setup window.
+• First 20 min: each pair connects hardware, uploads sketch, and runs a final test. Facilitator circulates — any last-minute bugs must be resolved before presentations begin. No new features — bug fixes only.
+• Final 10 min: learners review their Design Brief, check they can answer: "What problem does it solve? What coding concept did you use? What is the math connection?" Practise the opening sentence aloud to partner.
+• Facilitator confirms presentation order. Remind panel of rubric criteria. Invited assessor receives a copy of the assessment rubric and a 2-minute briefing on the marking criteria.
+• Set room: presenter position at the front, panel seated facing the presenter, audience (other learners) in a semicircle. One laptop visible for Serial Monitor output if relevant.
+2. PRESENTATIONS Formal Demo Day
+70 min
+• Each learner presents individually for 5 minutes. Partner supports hardware during the live demo portion but does not speak.
+• Presentation structure (enforced): (1) Introduction — read from notes: name, project title, problem addressed. (2) Solution — explain how the project works in plain English. (3) Live Demo — run the project. Narrate what is happening. (4) Evidence — show the mathematical element: graph, data table, or calculation. (5) Reflection — what was hard? What would you improve?
+• Panel questions (2 minutes after each presentation): facilitator asks 1 question; invited assessor asks 1 question. Questions are drawn from: "Why did you choose this component?", "Explain what this line of code does.", "What does your data tell you?", "How did you decide on this design?"
+• Audience: each learner in the audience completes one Peer Feedback Rubric for the presenter. Forms collected after each presentation.
+• Facilitator and assessor score independently on the Demo Day Assessment Rubric during the presentation. Moderate if scores differ by more than 10%.
+• Between presentations: 2-minute transition time. Next presenter sets up hardware.
+3. SCORING & CERTIFICATE AWARD
+30 min
+• Facilitator and assessor moderate scores privately. Calculate weighted total score using DDD Part 9 formula.
+• All learners who meet the pass threshold (≥55% weighted total across all 6 assessment components, Weeks 1–8) receive the AI Engineer Certificate.
+• Learners who score 85%+ are noted for the Isoma Edutech Honour Roll and encouraged to mentor peers in the next cohort.
+• Near Pass (45–54%): learner is offered one resubmission of the Demo Day project within 2 weeks. Facilitator explains this privately — not in front of peers.
+• Certificate Presentation: each learner is called individually, thanked for their effort, and presented with their certificate. Photo opportunity (with consent).
+• Close: facilitator reads out 2–3 highlights from across the presentations — specific achievements, not comparisons between learners. "This cohort demonstrated… I was particularly impressed by the way [concept] was applied across multiple projects."
+4. CELEBRATION & CLOSING REFLECTION
+30 min
+• Learner reflection (individual, written): "Complete these 3 sentences: The most important thing I learned in this programme was… The skill I am most proud of is… One thing I want to learn next is…"
+• Gallery moment: all projects displayed simultaneously. Learners walk around and leave one sticky note on a project they admired — must be specific: "I liked how you used a for loop to…" not just "good job".
+• Facilitator shares next stage pathway: Stage 5–6 completers who earn the AI Engineer Certificate are eligible to enrol in the next cohort as Peer Mentors.
+• Programme Director (if present) addresses the cohort.
+• Facilitator completes Assessment Record Sheets for all learners. No certificate may be signed without a completed, signed record on file.
+• All Design Briefs, peer review rubrics, and Score Sheets filed in learner portfolios. Retained for moderation.
+Component
+Description
+Evidence Required
+Demo Day Project (30%)
+Prototype functionality (10%): runs correctly, responds to input, correct output. Code quality (10%): variables, loops, functions, comments. Integration (10%): explicit English AND Math connection demonstrated.
+Panel scores on Demo Day Assessment Rubric — DDD Part 8.6. Both assessors score independently.
+Presentation (20%)
+5-minute formal presentation: problem framing (5%), solution + live demo (5%), evidence + data (5%), reflection + next steps (5%). Panel of 2: facilitator + invited assessor.
+Rubric scores from both panel members. Moderated if >10% difference.
+Written Design Brief (10%)
+All 7 sections complete (4%): completeness. Clarity of written English (3%). Accuracy of mathematical element (3%). Submitted before presenting — not accepted after.
+Design Brief document filed. Scored by facilitator on 10-point sub-rubric.
+Peer Review (5%)
+Quality and constructiveness of written peer feedback provided to a classmate. Scored on specificity, evidence-based comments, and constructive tone. Not graded on what score was given.
+Peer Feedback Rubric forms collected for all 8 learners.
+KEY VOCABULARY
+demonstration · evidence · reflection · iteration · panel · structured argument · prototype · quantify · certificate · moderation · weighted score · portfolio
+Safeguarding Note
+Scores are never announced publicly. All individual feedback is given privately. Learners who do not pass are informed with care and offered a resubmission pathway — this is communicated to parents/guardians by the facilitator, not in front of peers. Photos and video require written parental consent collected at programme enrolment.
+Facilitator Name:
+_____________________
+Date Delivered:
+__________________
+Signature:
+___________________

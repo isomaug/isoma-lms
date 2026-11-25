@@ -1,0 +1,179 @@
+# Lesson 8
+
+**Duration:** 60 minutes (split across Week 8 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 1 · Week 8
+**Age Range:** 7–8 years
+**Hardware:** Tablets with Stack KIDI App
+**Bloom's:** L3 Apply · L4 Analyse · L5 Evaluate · L6 Create
+
+**Big Idea:** Explaining your code to someone who has never seen it before is one of the best ways to understand it yourself. The best programmers can explain their work clearly, simply, and with pride.
+
+**Source plan:** `Stage2_Lesson8_Week8.docx`
+
+## Learning Objectives
+
+- Deliver a 90-second structured presentation to a guest audience, explaining algorithm, loop, and message used
+- Demonstrate the project running live and narrate each character's programme as it runs
+- Use at least 5 computing vocabulary terms correctly during the presentation
+- Complete a peer evaluation form for one other pair's project, providing evidence-based feedback
+
+## Materials and Preparation
+
+- 4 tablets with Stack KIDI — pairs' Lesson 7 projects fully loaded and tested
+
+## Cross-Curricular Links
+
+**English:** Public speaking: 90-second structure, subject vocabulary, narrating a live demonstration. Learners rehearse twice before guests arrive. Evaluative language on peer form: "I could see… because…", "This showed… skill because…", "One suggestion: ___." Vocabulary used in certificates: accomplished, demonstrated, achieved.
+
+**Maths:** Quantitative reporting: "My project has ___ blocks. I used ___ types of block. My self-assessment score was ___ / 8 (___ %). The loop in my project repeats ___ times making ___ total actions." Learners report at least two numbers during their presentation.
+
+## Lesson Structure
+
+### PREPARATION — Rehearsal and Station Setup (15 min)
+1. Presentation structure cards (A5 per pair): 90-second structure: ① Story title + characters (15s) ② Press Green Flag — narrate Page 1 (30s) ③ Explain algorithm + loop used (20s) ④ Show message coordination (15s) ⑤ "I am proudest of ___" (10s)
+2. Demo Day rubric (A4 per pair, scored by facilitator) — 5 criteria: Vocabulary / Algorithm explained / Loop demonstrated / Message demonstrated / Confidence and Clarity (each 0–3)
+3. Peer Evaluation Form (A5) — "The project I evaluated was ___. One thing that worked really well: ___. The computing skill I could see most clearly: ___. One suggestion: ___."
+4. Stage 2 Computing Passport (A5 booklet, 1 per learner) — skills for Term 1: Algorithm / Bug / Loop / Multi-character / Messages / Project Brief
+5. Term 1 Certificate (pre-printed, A5, 1 per learner)
+6. Final project check: run Lesson 7 project. Any single critical bug — fix now (5 minutes max). If project is broken, fall back to Lesson 6 multi-character project.
+
+### DELIVER — Demo Day Presentations (28 min)
+7. Distribute presentation structure cards. Each pair reads through the 5 steps and fills in their own content (title, character names, loop details, message colour).
+8. Rehearsal round 1: present to own partner only — 90 seconds timed. Partner checks: ① Did you use 5 vocab words? ② Did you explain the loop? ③ Did you show the message?
+9. Rehearsal round 2: present to the adjacent pair — full audience experience. Adjacent pair gives one piece of feedback from the peer evaluation form.
+10. Set up stations: tablet + project brief + storyboard + presentation structure card visible on desk.
+11. Welcome guests. Facilitator explains the programme in 2 minutes: "These learners have spent Term 1 learning to think like programmers — designing algorithms, fixing bugs, and building interactive stories."
+12. Rotation begins: guests visit stations in groups of 2. Each pair presents their 90-second showcase to every visiting group.
+
+### DISCOVER — Reflection, Awards, Passport Stamping (13 min)
+13. Facilitator moves between stations completing the rubric for each pair while listening.
+14. When not presenting, pairs complete a Peer Evaluation Form for one other pair they visited.
+15. Final 5 minutes of rotation: pairs can ask guests one question — "What was the most surprising thing you learned about coding today?" Record the answer.
+16. Guests seated. Facilitator reads out top scores and quotes best vocabulary usage heard during presentations.
+17. Computing Passport: facilitator reads each Term 1 skill. Learners hold up the passport — facilitator stamps/ticks skills demonstrated today.
+18. Reflection: "Term 1 started with learning what an algorithm is. Today you explained algorithms to adults. What is the biggest change in how you think about computers?" Open discussion.
+
+### WRAP-UP (4 min)
+19. Certificate presentation: each learner is called by name. Certificate awarded with one personal acknowledgement from the facilitator.
+20. Guest question answered as a class: "What surprised them most?" Discuss.
+21. Collect peer evaluation forms, rubrics, and project briefs for portfolios.
+22. Save projects — label: "Stage 2 Term 1 Final Project — [Pair Names]."
+23. Collect tablets. Return to charging station.
+24. Facilitator note: review rubric scores and Computing Passports tonight. Identify any learner requiring additional support or extension in Term 2.
+
+## Assessment
+
+- Formative (During)
+- Demo Day rubric scored by facilitator: 5 criteria × 3 = 15 maximum. Score ≥10 = ready for Stage 2 Term 2
+- At least 5 computing vocabulary terms used correctly (tally on rubric)
+- Loop AND message both demonstrated live in front of guest audience
+- Peer Evaluation Form completed with evidence-based feedback
+- Computing Passport: minimum 5 of 6 Term 1 skills ticked
+- Exit / Summative
+- Computing Passport completion. Facilitator records: total skills ticked per learner. Any learner below 4/6 receives a targeted support plan for Term 2. Any learner at 6/6 receives an "Enrichment Challenge" card for home.
+- Differentiation
+- Support: Learner is paired with a stronger presenter who leads the guest interaction; learner demonstrates the Green Flag press and names the characters. Extension: Learner prepares and delivers a 30-second "What is an algorithm?" explanation as an opening address to all guests before station rotations begin.
+
+## Key Vocabulary
+
+_See source._
+
+## Full source extract (complete)
+
+### Detail body
+
+```
+Deliver a 90-second structured presentation to a guest audience, explaining algorithm, loop, and message used
+Demonstrate the project running live and narrate each character's programme as it runs
+Use at least 5 computing vocabulary terms correctly during the presentation
+Complete a peer evaluation form for one other pair's project, providing evidence-based feedback
+4 tablets with Stack KIDI — pairs' Lesson 7 projects fully loaded and tested
+Presentation structure cards (A5 per pair): 90-second structure: ① Story title + characters (15s) ② Press Green Flag — narrate Page 1 (30s) ③ Explain algorithm + loop used (20s) ④ Show message coordination (15s) ⑤ "I am proudest of ___" (10s)
+Demo Day rubric (A4 per pair, scored by facilitator) — 5 criteria: Vocabulary / Algorithm explained / Loop demonstrated / Message demonstrated / Confidence and Clarity (each 0–3)
+Peer Evaluation Form (A5) — "The project I evaluated was ___. One thing that worked really well: ___. The computing skill I could see most clearly: ___. One suggestion: ___."
+Stage 2 Computing Passport (A5 booklet, 1 per learner) — skills for Term 1: Algorithm / Bug / Loop / Multi-character / Messages / Project Brief
+Term 1 Certificate (pre-printed, A5, 1 per learner)
+Final project check: run Lesson 7 project. Any single critical bug — fix now (5 minutes max). If project is broken, fall back to Lesson 6 multi-character project.
+Distribute presentation structure cards. Each pair reads through the 5 steps and fills in their own content (title, character names, loop details, message colour).
+Rehearsal round 1: present to own partner only — 90 seconds timed. Partner checks: ① Did you use 5 vocab words? ② Did you explain the loop? ③ Did you show the message?
+Rehearsal round 2: present to the adjacent pair — full audience experience. Adjacent pair gives one piece of feedback from the peer evaluation form.
+Set up stations: tablet + project brief + storyboard + presentation structure card visible on desk.
+Welcome guests. Facilitator explains the programme in 2 minutes: "These learners have spent Term 1 learning to think like programmers — designing algorithms, fixing bugs, and building interactive stories."
+Rotation begins: guests visit stations in groups of 2. Each pair presents their 90-second showcase to every visiting group.
+Facilitator moves between stations completing the rubric for each pair while listening.
+When not presenting, pairs complete a Peer Evaluation Form for one other pair they visited.
+Final 5 minutes of rotation: pairs can ask guests one question — "What was the most surprising thing you learned about coding today?" Record the answer.
+Guests seated. Facilitator reads out top scores and quotes best vocabulary usage heard during presentations.
+Computing Passport: facilitator reads each Term 1 skill. Learners hold up the passport — facilitator stamps/ticks skills demonstrated today.
+Reflection: "Term 1 started with learning what an algorithm is. Today you explained algorithms to adults. What is the biggest change in how you think about computers?" Open discussion.
+Certificate presentation: each learner is called by name. Certificate awarded with one personal acknowledgement from the facilitator.
+Guest question answered as a class: "What surprised them most?" Discuss.
+Collect peer evaluation forms, rubrics, and project briefs for portfolios.
+Save projects — label: "Stage 2 Term 1 Final Project — [Pair Names]."
+Collect tablets. Return to charging station.
+Facilitator note: review rubric scores and Computing Passports tonight. Identify any learner requiring additional support or extension in Term 2.
+```
+
+### Plan header and sections
+
+```
+ISOMA EDUTECH LIMITED
+Stack KIDI Lesson Plan  ·  DDD Framework
+Stage 2  (P2 · Cambridge Stage 2 / Year 2)
+Lesson 8
+Term 1 Demo Day — The Algorithm Showcase
+Duration
+60 minutes
+Term / Week
+Term 1 · Week 8  ★ DEMO DAY ★
+Age Range
+7–8 years
+Group Size
+8 learners + invited guests
+Hardware
+Tablets with Stack KIDI App
+Bloom's
+L3 Apply · L4 Analyse · L5 Evaluate · L6 Create
+NCDC
+Uganda NCDC Thematic Curriculum P2 — Literacy: Formal spoken presentation; explaining a process to an audience; using subject-specific vocabulary accurately; Numeracy: Reporting data — block counts, success scores, accuracy percentages
+Cambridge
+Cambridge Primary Computing 0845 — Stage 2: Presenting a complete programme to a non-specialist audience; evaluating own work using a rubric; explaining algorithmic thinking, loops, debugging, and messages to an outside audience
+DDD Phase
+DISCOVER — Learners present their complete Term 1 projects, explain their algorithmic thinking, and receive structured external feedback
+Big Idea
+Explaining your code to someone who has never seen it before is one of the best ways to understand it yourself. The best programmers can explain their work clearly, simply, and with pride.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+Facilitator Preparation Note:
+PREPARATION (day before): Test all projects — save a backup to a second device. Print and collate: certificates, rubrics, peer forms, passports, presentation cards. Arrange room into 4 clear stations with chairs for guests. Brief any supporting adults on their role: observe, fill feedback cards, do not assist learners during presentations.
+CROSS-CURRICULAR LINKS
+English
+Public speaking: 90-second structure, subject vocabulary, narrating a live demonstration. Learners rehearse twice before guests arrive. Evaluative language on peer form: "I could see… because…", "This showed… skill because…", "One suggestion: ___." Vocabulary used in certificates: accomplished, demonstrated, achieved.
+Maths
+Quantitative reporting: "My project has ___ blocks. I used ___ types of block. My self-assessment score was ___ / 8 (___ %). The loop in my project repeats ___ times making ___ total actions." Learners report at least two numbers during their presentation.
+LESSON STRUCTURE
+PREPARATION — Rehearsal and Station Setup (15 min)
+DELIVER — Demo Day Presentations (28 min)
+DISCOVER — Reflection, Awards, Passport Stamping (13 min)
+WRAP-UP (4 min)
+ASSESSMENT
+Formative (During)
+Demo Day rubric scored by facilitator: 5 criteria × 3 = 15 maximum. Score ≥10 = ready for Stage 2 Term 2
+At least 5 computing vocabulary terms used correctly (tally on rubric)
+Loop AND message both demonstrated live in front of guest audience
+Peer Evaluation Form completed with evidence-based feedback
+Computing Passport: minimum 5 of 6 Term 1 skills ticked
+Exit / Summative
+Computing Passport completion. Facilitator records: total skills ticked per learner. Any learner below 4/6 receives a targeted support plan for Term 2. Any learner at 6/6 receives an "Enrichment Challenge" card for home.
+Differentiation
+Support: Learner is paired with a stronger presenter who leads the guest interaction; learner demonstrates the Green Flag press and names the characters. Extension: Learner prepares and delivers a 30-second "What is an algorithm?" explanation as an opening address to all guests before station rotations begin.
+KEY VOCABULARY
+algorithm   ·   loop   ·   message   ·   debug   ·   sequence   ·   trigger   ·   programme   ·   evaluate   ·   criterion   ·   present
+⚠  Safeguarding Note: Obtain consent for any guest photography. Do not record learners' voices or images without signed parental/guardian consent. Guest adults must be vetted by the school safeguarding policy.
+Facilitator Name:
+________________________
+Date Delivered:
+________________________
+Signature:
+________________________
+```

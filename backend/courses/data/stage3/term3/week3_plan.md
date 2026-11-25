@@ -1,0 +1,226 @@
+# Lesson 19: Accelerometer & Motion – The Micro:bit That Knows How It Moves
+
+**Duration:** 60 minutes (split across Week 3 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 3 · Week 3
+**Age Range:** 8–10 years
+**Hardware:** BBC Micro:bit v2 + USB cables + shared laptops
+**Software:** Microsoft MakeCode (makecode.microbit.org)
+**Bloom's:** L3–L4 Applying / Analysing
+**DDD Phase:** DELIVER – Learners use the Micro:bit v2 accelerometer sensor for the first time, collect motion data under three conditions, plot a three-dataset comparative graph, and extend ILO 2.3 to its fullest depth
+**NCDC:** Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic, Data & Problem Solving
+**Cambridge:** Cambridge Primary Computing 0845 – Stage 3/4: Using sensors to detect physical inputs; Collecting and comparing data from multiple conditions; Interpreting patterns in sensor data
+
+**Big Idea:** The accelerometer measures how strongly the Micro:bit is moving — in any direction. Holding it still gives one reading. Tilting it gives another. Shaking it gives a third. Three conditions. Three datasets. One graph. Then we compare — and we write about what the data tells us.
+
+**Source plan:** `Stage3_Term3_Week3_Microbit_LessonPlan.docx`
+
+## Learning Objectives
+
+- Identify the accelerometer as a sensor that measures the strength and direction of movement, and locate it on the Micro:bit v2 hardware diagram
+- Programme the Micro:bit to display a live accelerometer strength reading ('acceleration strength' block in MakeCode) every 3 seconds using a forever loop with a pause
+- Collect Dataset A: 6 accelerometer strength readings while holding the Micro:bit completely still on a flat surface
+- Collect Dataset B: 6 accelerometer strength readings while slowly tilting the Micro:bit to 45 degrees and back
+- Collect Dataset C: 6 accelerometer strength readings while gently shaking the Micro:bit up and down
+- Plot all three datasets on one comparative line graph using three different colours; label axes, title, and legend correctly
+- Calculate mean and range for each dataset; write a 7-sentence comparative analysis addressing: what each dataset showed, key differences between datasets, what the data means physically, and one limitation of the experiment
+
+## Materials and Preparation
+
+- 4 BBC Micro:bit v2 kits + USB cables
+- 4 shared laptops with MakeCode open
+- Triple data table worksheet (A4 per learner) — three 6-row tables: Dataset A (Still) | Dataset B (Tilting) | Dataset C (Shaking)
+- Triple line graph worksheet (A4 per learner) — pre-drawn axes: y-axis 0–2000 (acceleration strength in mg), x-axis 1–6 (reading number); space for legend with 3 colour entries
+- Three coloured pencils per learner (3 different colours)
+- Rulers for graph plotting
+- Comparative analysis writing frame (A5 per learner) — 7 sentence starters (2 per dataset + 1 comparison + 1 limitation)
+- Vocabulary cards: 'accelerometer', 'acceleration', 'strength', 'mg (milli-g)', 'condition', 'dataset', 'comparative', 'mean', 'range', 'trend', 'limitation'
+- Facilitator device + projected screen
+
+## Cross-Curricular Links
+
+**English:** Scientific comparative analysis — 7 sentences using the structured writing frame. Starters: ① 'Dataset A (still) showed…' ② 'The readings in Dataset A were ___ because…' ③ 'Dataset B (tilting) showed…' ④ 'Dataset C (shaking) showed values that were ___ compared to Datasets A and B because…' ⑤ 'The main difference between all three datasets was…' ⑥ 'This suggests that the accelerometer measures…' ⑦ 'One limitation of this experiment is… which means the results might…'. Vocabulary in use: learners must include the words 'accelerometer', 'condition', 'trend', and 'limitation' in their analysis, demonstrating active vocabulary acquisition from the DDD's English literacy thread.
+
+**Maths:** Three-dataset comparative statistics: calculate mean = sum ÷ 6 and range = max − min for each of the three datasets. Complete a summary statistics table: Dataset | Mean | Range | Highest reading | Lowest reading. Compare: which dataset has the highest mean? By how much does it exceed the lowest mean? (Subtraction.) What fraction of Dataset C's mean is Dataset A's mean? (Division.) Which dataset has the greatest range? What does a large range tell us about the consistency of that condition? Graph reading: after plotting, use the graph to answer 3 questions: 'At which reading number was the gap between Dataset A and Dataset C greatest? At which reading number were Datasets B and C closest? What is the difference between the mean of Dataset C and the mean of Dataset A?' Connects directly to DDD Part 2.4 mathematics: 'Data handling, line graphs, calculating mean.'
+
+## Lesson Structure
+
+### HOOK – Can a Computer Feel Movement? (10 min)
+1. Hold up the Micro:bit and ask: 'This device has a sensor that can feel HOW MUCH it is moving. If I hold it still — what do you think the reading is? If I shake it hard — what do you predict?' Collect 3 predictions. Write them on the board.
+2. Show the live accelerometer reading on the projected Micro:bit simulator: hold the mouse over the accelerometer input and move it. Ask: 'What happens to the number when movement increases?' Guide to: the number gets larger.
+3. Introduce the unit: 'The accelerometer reads in mg — milli-g. One g is the force of gravity pulling you to the ground. When the Micro:bit is completely still, the accelerometer reads approximately 1000 mg — that is gravity. When you shake it, you add extra force on top of gravity.'
+4. Connect to real life: 'Where do you see accelerometers used in real life?' (Phones that rotate the screen, step counters, earthquake sensors, car airbags.) 'Today we become scientists — we collect data under three conditions and compare what the accelerometer tells us.'
+### DESIGN – Prepare for the Investigation (10 min)
+5. Distribute triple data table worksheets. Pairs label all three tables before coding: Dataset A heading: 'Still (flat surface)'. Dataset B heading: 'Tilting (45° and back)'. Dataset C heading: 'Shaking (up and down)'. Label columns: Reading No. | Strength (mg) | Notes.
+6. Write a hypothesis for each dataset on the table. Facilitator prompt: 'Which dataset do you predict will have the highest mean? The greatest range? Why?' Pairs discuss and write predictions.
+7. Facilitator models the MakeCode accelerometer programme: forever → show number acceleration strength → pause 3000ms → clear screen. Learners identify: 'Which block reads the accelerometer? What does strength mean here?' Confirm: strength = the total force including all directions combined.
+8. Pairs label the legend on their graph worksheet using their three chosen pencil colours before laptops are distributed. Check: every graph has a title, axis labels, and a 3-colour legend.
+### DELIVER – Code, Collect Three Datasets, and Plot (30 min)
+9. Distribute Micro:bits and laptops. Assign Driver and Navigator.
+10. Step 1 – Build the programme (5 min): code forever → show number acceleration strength → pause 3000ms → clear screen. Download and run. Confirm readings appear. Ask: 'What is the reading right now, held still?' Confirm it is approximately 1000 mg.
+11. Step 2 – Collect Dataset A: Still (7 min): Micro:bit placed flat on the desk, undisturbed. Each time a reading flashes, Navigator reads it aloud, Driver records in Dataset A. 6 readings. Both learners record independently.
+12. Step 3 – Collect Dataset B: Tilting (7 min): Driver slowly tilts the Micro:bit to approximately 45 degrees and returns to flat, once per reading cycle. 6 readings recorded in Dataset B.
+13. Step 4 – Collect Dataset C: Shaking (6 min): SWAP Driver and Navigator. New Driver gently shakes the Micro:bit up and down during each reading interval — consistently but not violently. 6 readings recorded in Dataset C.
+14. Step 5 – Plot the triple graph (5 min): using three coloured pencils, plot Dataset A (Colour 1), Dataset B (Colour 2), Dataset C (Colour 3) on the graph worksheet. Connect each set of points with its colour. Confirm the legend is filled in.
+### DISCOVER – Calculate, Write, and Compare (8 min)
+15. Pairs calculate mean and range for all three datasets. Complete the summary statistics table at the bottom of the data worksheet. Facilitator asks: 'Which dataset has the greatest range? What does that tell us about consistency?'
+16. Each learner independently writes the 7-sentence comparative analysis using the writing frame. Facilitator circulates: 'Sentence 7 asks about a limitation — what is one thing about this experiment that might make the results unreliable? Think about how we collected the data.'
+17. Two pairs share their graphs on the projected screen. Class reads data from the graph together: 'At which reading was the gap between A and C greatest? How closely did Dataset B follow Dataset C?' Compare predictions (hypotheses) to actual results.
+### WRAP-UP – Save and Collect (2 min)
+18. Rename MakeCode project 'T3W3_[Name]_Accel'. Disconnect Micro:bit.
+19. Collect triple data tables, triple line graphs, and comparative analysis frames — all three are formally assessed artifacts this week. Facilitator checks: all 18 data entries filled, three coloured lines on graph with legend, 7 sentences written with correct vocabulary.
+
+## Assessment
+
+- Formative (During)
+- Observation: Does the Micro:bit display live accelerometer strength readings correctly every 3 seconds? (functionality check)
+- Are all three data tables complete with 6 readings each, correct headings, and notes? (data collection check)
+- Triple line graph plotted with three coloured lines, title, labelled axes, and completed legend? (graph check)
+- Mean and range calculated correctly for all three datasets and recorded in summary statistics table? (maths check)
+- Exit Assessment
+- Facilitator holds up one pair's triple graph and asks each learner: ① 'Which condition produced the highest mean — A, B, or C?' ② 'What was the range for Dataset C?' ③ 'Read me Sentence 6 from your analysis — what does the accelerometer measure?' 3 points per learner. Facilitator records on assessment log alongside the graph and analysis artifact grade.
+- Differentiation
+- Support: Reduce to two datasets (A and C — Still and Shaking; skip Tilting). Plot both on the same graph using two coloured lines. Reduce the analysis to 5 sentences. Allow learner to use a calculator for mean calculation. Extension: Collect a fourth dataset (Dataset D — walking slowly while holding the Micro:bit) and add a fourth line to the graph in a fourth colour. Calculate the median of each dataset in addition to the mean (requires sorting the 6 readings in order first). Write a paragraph comparing mean vs. median: which gives a better picture of typical movement for each condition and why?
+
+## Key Vocabulary
+
+accelerometer · acceleration · strength · mg · milli-g · gravity · condition · dataset · mean · range · trend · comparative · legend · limitation · prediction · hypothesis Date Delivered: Signature:
+
+## Safeguarding
+
+Safeguarding Note: Learners must not shake the Micro:bit violently — gentle, controlled movement only to avoid damaging the device or the USB connection. Remind learners that the Micro:bit must remain connected to the laptop via USB throughout data collection — running cable across desks must be managed carefully to avoid tripping. All data collected is anonymous classroom environmental data only.
+
+## Full source extract (complete)
+
+```
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)  |  Term Three
+Lesson 19: Accelerometer & Motion – The Micro:bit That Knows How It Moves
+T3 · W3
+(Week 19)
+Duration
+60 minutes
+Term / Week
+Term 3 · Week 3
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L3–L4 Applying / Analysing
+DDD Phase
+DELIVER – Learners use the Micro:bit v2 accelerometer sensor for the first time, collect motion data under three conditions, plot a three-dataset comparative graph, and extend ILO 2.3 to its fullest depth
+NCDC Ref
+Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic, Data & Problem Solving
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3/4: Using sensors to detect physical inputs; Collecting and comparing data from multiple conditions; Interpreting patterns in sensor data
+Term Three Focus
+The DDD Part 3.2 hardware list explicitly names the Micro:bit v2 accelerometer. It has not been used in Terms One or Two. Term Three introduces it as a third sensor type (after temperature and light), extending ILO 2.3 from single-sensor and dual-sensor analysis to a three-condition comparative investigation — the most sophisticated data work in Stage 3.
+Key ILO(s)
+ILO 2.3 (at ceiling) – Use the Micro:bit accelerometer to collect motion strength data under three conditions, record in three separate data tables, plot all three datasets on one comparative line graph with a legend, calculate mean and range for each dataset, and write a 7-sentence comparative analysis identifying trends and differences between all three conditions.
+Big Idea
+The accelerometer measures how strongly the Micro:bit is moving — in any direction. Holding it still gives one reading. Tilting it gives another. Shaking it gives a third. Three conditions. Three datasets. One graph. Then we compare — and we write about what the data tells us.
+Prior Learning Link
+T1 Week 5 introduced temperature sensor data logging with 6 readings and one line graph. T2 Week 3 extended to light sensor with two datasets and a comparative graph. Term Three Week 3 introduces the accelerometer and adds a third dataset — the most complex data investigation of Stage 3.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Identify the accelerometer as a sensor that measures the strength and direction of movement, and locate it on the Micro:bit v2 hardware diagram
+2
+Programme the Micro:bit to display a live accelerometer strength reading ('acceleration strength' block in MakeCode) every 3 seconds using a forever loop with a pause
+3
+Collect Dataset A: 6 accelerometer strength readings while holding the Micro:bit completely still on a flat surface
+4
+Collect Dataset B: 6 accelerometer strength readings while slowly tilting the Micro:bit to 45 degrees and back
+5
+Collect Dataset C: 6 accelerometer strength readings while gently shaking the Micro:bit up and down
+6
+Plot all three datasets on one comparative line graph using three different colours; label axes, title, and legend correctly
+7
+Calculate mean and range for each dataset; write a 7-sentence comparative analysis addressing: what each dataset showed, key differences between datasets, what the data means physically, and one limitation of the experiment
+Materials & Preparation
+4 BBC Micro:bit v2 kits + USB cables
+4 shared laptops with MakeCode open
+Triple data table worksheet (A4 per learner) — three 6-row tables: Dataset A (Still) | Dataset B (Tilting) | Dataset C (Shaking)
+Triple line graph worksheet (A4 per learner) — pre-drawn axes: y-axis 0–2000 (acceleration strength in mg), x-axis 1–6 (reading number); space for legend with 3 colour entries
+Three coloured pencils per learner (3 different colours)
+Rulers for graph plotting
+Comparative analysis writing frame (A5 per learner) — 7 sentence starters (2 per dataset + 1 comparison + 1 limitation)
+Vocabulary cards: 'accelerometer', 'acceleration', 'strength', 'mg (milli-g)', 'condition', 'dataset', 'comparative', 'mean', 'range', 'trend', 'limitation'
+Facilitator device + projected screen
+Cross-Curricular Links
+English Literacy
+Scientific comparative analysis — 7 sentences using the structured writing frame. Starters: ① 'Dataset A (still) showed…' ② 'The readings in Dataset A were ___ because…' ③ 'Dataset B (tilting) showed…' ④ 'Dataset C (shaking) showed values that were ___ compared to Datasets A and B because…' ⑤ 'The main difference between all three datasets was…' ⑥ 'This suggests that the accelerometer measures…' ⑦ 'One limitation of this experiment is… which means the results might…'. Vocabulary in use: learners must include the words 'accelerometer', 'condition', 'trend', and 'limitation' in their analysis, demonstrating active vocabulary acquisition from the DDD's English literacy thread.
+Mathematics
+Three-dataset comparative statistics: calculate mean = sum ÷ 6 and range = max − min for each of the three datasets. Complete a summary statistics table: Dataset | Mean | Range | Highest reading | Lowest reading. Compare: which dataset has the highest mean? By how much does it exceed the lowest mean? (Subtraction.) What fraction of Dataset C's mean is Dataset A's mean? (Division.) Which dataset has the greatest range? What does a large range tell us about the consistency of that condition? Graph reading: after plotting, use the graph to answer 3 questions: 'At which reading number was the gap between Dataset A and Dataset C greatest? At which reading number were Datasets B and C closest? What is the difference between the mean of Dataset C and the mean of Dataset A?' Connects directly to DDD Part 2.4 mathematics: 'Data handling, line graphs, calculating mean.'
+LESSON STRUCTURE
+Step
+Activity
+HOOK – Can a Computer Feel Movement? (10 min)
+1
+Hold up the Micro:bit and ask: 'This device has a sensor that can feel HOW MUCH it is moving. If I hold it still — what do you think the reading is? If I shake it hard — what do you predict?' Collect 3 predictions. Write them on the board.
+2
+Show the live accelerometer reading on the projected Micro:bit simulator: hold the mouse over the accelerometer input and move it. Ask: 'What happens to the number when movement increases?' Guide to: the number gets larger.
+3
+Introduce the unit: 'The accelerometer reads in mg — milli-g. One g is the force of gravity pulling you to the ground. When the Micro:bit is completely still, the accelerometer reads approximately 1000 mg — that is gravity. When you shake it, you add extra force on top of gravity.'
+4
+Connect to real life: 'Where do you see accelerometers used in real life?' (Phones that rotate the screen, step counters, earthquake sensors, car airbags.) 'Today we become scientists — we collect data under three conditions and compare what the accelerometer tells us.'
+DESIGN – Prepare for the Investigation (10 min)
+5
+Distribute triple data table worksheets. Pairs label all three tables before coding: Dataset A heading: 'Still (flat surface)'. Dataset B heading: 'Tilting (45° and back)'. Dataset C heading: 'Shaking (up and down)'. Label columns: Reading No. | Strength (mg) | Notes.
+6
+Write a hypothesis for each dataset on the table. Facilitator prompt: 'Which dataset do you predict will have the highest mean? The greatest range? Why?' Pairs discuss and write predictions.
+7
+Facilitator models the MakeCode accelerometer programme: forever → show number acceleration strength → pause 3000ms → clear screen. Learners identify: 'Which block reads the accelerometer? What does strength mean here?' Confirm: strength = the total force including all directions combined.
+8
+Pairs label the legend on their graph worksheet using their three chosen pencil colours before laptops are distributed. Check: every graph has a title, axis labels, and a 3-colour legend.
+DELIVER – Code, Collect Three Datasets, and Plot (30 min)
+9
+Distribute Micro:bits and laptops. Assign Driver and Navigator.
+10
+Step 1 – Build the programme (5 min): code forever → show number acceleration strength → pause 3000ms → clear screen. Download and run. Confirm readings appear. Ask: 'What is the reading right now, held still?' Confirm it is approximately 1000 mg.
+11
+Step 2 – Collect Dataset A: Still (7 min): Micro:bit placed flat on the desk, undisturbed. Each time a reading flashes, Navigator reads it aloud, Driver records in Dataset A. 6 readings. Both learners record independently.
+12
+Step 3 – Collect Dataset B: Tilting (7 min): Driver slowly tilts the Micro:bit to approximately 45 degrees and returns to flat, once per reading cycle. 6 readings recorded in Dataset B.
+13
+Step 4 – Collect Dataset C: Shaking (6 min): SWAP Driver and Navigator. New Driver gently shakes the Micro:bit up and down during each reading interval — consistently but not violently. 6 readings recorded in Dataset C.
+14
+Step 5 – Plot the triple graph (5 min): using three coloured pencils, plot Dataset A (Colour 1), Dataset B (Colour 2), Dataset C (Colour 3) on the graph worksheet. Connect each set of points with its colour. Confirm the legend is filled in.
+DISCOVER – Calculate, Write, and Compare (8 min)
+15
+Pairs calculate mean and range for all three datasets. Complete the summary statistics table at the bottom of the data worksheet. Facilitator asks: 'Which dataset has the greatest range? What does that tell us about consistency?'
+16
+Each learner independently writes the 7-sentence comparative analysis using the writing frame. Facilitator circulates: 'Sentence 7 asks about a limitation — what is one thing about this experiment that might make the results unreliable? Think about how we collected the data.'
+17
+Two pairs share their graphs on the projected screen. Class reads data from the graph together: 'At which reading was the gap between A and C greatest? How closely did Dataset B follow Dataset C?' Compare predictions (hypotheses) to actual results.
+WRAP-UP – Save and Collect (2 min)
+18
+Rename MakeCode project 'T3W3_[Name]_Accel'. Disconnect Micro:bit.
+19
+Collect triple data tables, triple line graphs, and comparative analysis frames — all three are formally assessed artifacts this week. Facilitator checks: all 18 data entries filled, three coloured lines on graph with legend, 7 sentences written with correct vocabulary.
+Assessment
+Formative (During)
+Observation: Does the Micro:bit display live accelerometer strength readings correctly every 3 seconds? (functionality check)
+Are all three data tables complete with 6 readings each, correct headings, and notes? (data collection check)
+Triple line graph plotted with three coloured lines, title, labelled axes, and completed legend? (graph check)
+Mean and range calculated correctly for all three datasets and recorded in summary statistics table? (maths check)
+Exit Assessment
+Facilitator holds up one pair's triple graph and asks each learner: ① 'Which condition produced the highest mean — A, B, or C?' ② 'What was the range for Dataset C?' ③ 'Read me Sentence 6 from your analysis — what does the accelerometer measure?' 3 points per learner. Facilitator records on assessment log alongside the graph and analysis artifact grade.
+Differentiation
+Support: Reduce to two datasets (A and C — Still and Shaking; skip Tilting). Plot both on the same graph using two coloured lines. Reduce the analysis to 5 sentences. Allow learner to use a calculator for mean calculation. Extension: Collect a fourth dataset (Dataset D — walking slowly while holding the Micro:bit) and add a fourth line to the graph in a fourth colour. Calculate the median of each dataset in addition to the mean (requires sorting the 6 readings in order first). Write a paragraph comparing mean vs. median: which gives a better picture of typical movement for each condition and why?
+Key Vocabulary
+accelerometer · acceleration · strength · mg · milli-g · gravity · condition · dataset · mean · range · trend · comparative · legend · limitation · prediction · hypothesis
+Safeguarding Note: Learners must not shake the Micro:bit violently — gentle, controlled movement only to avoid damaging the device or the USB connection. Remind learners that the Micro:bit must remain connected to the laptop via USB throughout data collection — running cable across desks must be managed carefully to avoid tripping. All data collected is anonymous classroom environmental data only.
+Facilitator Name:
+_________________________________
+Date Delivered:
+_________________________________
+Signature:
+_________________________________
+```

@@ -1,0 +1,54 @@
+Write a 3-scene story plan on paper using narrative structure: Setting (Scene 1), Conflict/Problem (Scene 2), Resolution (Scene 3)
+Identify what LED animation represents each scene and which button press triggers the next scene
+Code each scene as an if/else block in MakeCode, triggered by Button A (next scene) and Button B (restart story)
+Test the full 3-scene story, confirm all transitions work, and revise any errors
+Calculate the total animation duration (sum of scene durations) and express Scene 1 as a fraction of the total
+Present the story to the group using the written plan, explaining what each scene shows on the LED
+4 BBC Micro:bit v2 kits with USB cables
+Story plan template (A4 per learner) – three boxes: Scene 1 / Scene 2 / Scene 3, each with: Story text, LED animation description, Duration (seconds), Button trigger
+LED icon reference card per pair – showing all available MakeCode icons (heart, duck, house, snake, arrow, etc.)
+Peer review 'One Star, One Wish' cards (pre-printed, one per learner)
+Facilitator device + projected screen
+Facilitator shows a Micro:bit pre-loaded with a 3-scene animation (heart → snake → house). Run it twice. Ask: 'What story could this be telling? What happens in each scene?'
+Bridge: 'Every story has a structure: something happens (Setting), then a problem appears (Conflict), then it gets solved (Resolution). Your animation will use the same structure.'
+Show examples of narrative starters: 'One morning a small bird was singing peacefully… Suddenly a storm arrived… Finally the sun returned.' Learners identify: which line is Setting / Conflict / Resolution?
+Maths hook: 'If Scene 1 lasts 4 seconds and Scene 2 lasts 6 seconds – what fraction of the first two scenes is Scene 1?' (Answer: 4/10 = 2/5). Confirm together.
+Distribute story plan templates and LED icon reference cards. Each learner writes their 3-scene story. Rule: write the story text BEFORE choosing the LED icons. The story drives the code – not the other way around.
+For each scene: choose an LED icon that represents it; choose a duration (3–8 seconds); note which button triggers the next scene.
+Maths: calculate total story duration (Scene 1 + Scene 2 + Scene 3). Express Scene 1 as a fraction of the total. Write on the plan.
+Pairs peer-review each other's plans: 'Does Scene 1 set the scene? Is there a clear problem in Scene 2? Is it resolved in Scene 3?' Give one suggestion for improvement before coding starts.
+Step 1 – Scene Variable (5 min): Driver opens MakeCode. Create a variable called 'scene' (set to 0 in 'on start'). This will track which scene is active.
+Step 2 – Scene Logic (10 min): Build: 'on button A pressed → change scene by 1 → if scene = 1 → show icon [Scene 1 icon] → pause [duration]ms → if scene = 2 → show icon [Scene 2 icon] → pause [duration]ms → if scene = 3 → show icon [Scene 3 icon] → pause [duration]ms'. Download and test.
+Step 3 – Restart Button (5 min): Add 'on button B pressed → set scene to 0 → clear screen'. This lets the story restart from the beginning. Download and test the full story flow.
+Step 4 – Revision (5 min): Swap Driver/Navigator. Navigator runs the story and checks: Does each scene appear? Do the transitions work? Does Button B restart? Identify any bugs and fix them.
+Gallery: each pair runs their story animation. The learner who wrote the plan reads each scene aloud using their story text while the animation plays.
+Audience completes 'One Star, One Wish' peer review cards: Star = what worked well; Wish = one suggestion for improvement.
+Facilitator asks 3 learners: 'What is the total duration of your animation? What fraction is Scene 1? What does Button B do?'
+Revise: learners read their peer review card and write one improvement in pencil on their story plan. If time allows, implement the improvement in MakeCode.
+Save project as 'Week6_Story_[InitialInitial]'.
+Tick: ☑ Story plan (3 scenes written) ☑ All 3 scenes animate ☑ Button A transitions ☑ Button B restarts ☑ Fraction calculated ☑ Peer review card completed.
+Collect story plan (written plan is the assessed artifact) and peer review cards.
+ISOMA EDUTECH LIMITED Micro:bit (MakeCode) Lesson Plan – Stage 4 (P4 · Cambridge Stage 4 / Year 4) Lesson 6: LED Story Animation – Code Your 3-Scene Story
+Duration | 60 minutes | Term / Week | Term 1 · Week 6
+Age Range | 8–10 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | BBC Micro:bit v2, USB cables, shared laptops | Bloom's | L5–L6 Evaluating / Creating
+NCDC Ref | Uganda NCDC P4 – Literacy Strand: Narrative Writing (Setting, Conflict, Resolution); Numeracy Strand: Timing, Fractions, Sequence Numbers | Cambridge | Cambridge Primary Computing 0845 – Stage 4: Creating programmes with sequence and selection; Designing algorithms; Presenting digital content
+DDD Phase | DESIGN then DELIVER – Learners write a 3-scene story plan on paper as the algorithm, then code each scene as an if/else block triggered by button presses | Big Idea | An algorithm is a plan written before you code. A story has a beginning, a problem, and a resolution – just like a programme has a start, a decision, and an outcome. Today your story IS your algorithm.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS
+English | Narrative writing: write a 3-scene story plan using setting (Scene 1), conflict/problem (Scene 2), resolution (Scene 3). Each scene box includes the story text (minimum 1 sentence per scene). The written plan is assessed, not just the code – revision after peer review is required. Learners present their story orally using the plan. | Maths | Timing and fractions: assign a duration in seconds to each scene (e.g. Scene 1: 4 sec, Scene 2: 6 sec, Scene 3: 5 sec). Calculate total animation duration (sum). Express Scene 1 as a fraction of the total (e.g. 4/15). Sequence scene numbers in order. If Scene 2 is twice as long as Scene 1, what is Scene 2's duration?
+LESSON STRUCTURE
+HOOK – Stories and Programmes (10 min)
+DESIGN – Write Your Story Plan First (10 min)
+DELIVER – Code Your Story (25 min)
+DISCOVER – Present and Peer Review (10 min)
+WRAP-UP – Save and Collect (5 min)
+ASSESSMENT | ASSESSMENT
+Formative (During) | Story plan check before coding begins – does it have story text for all 3 scenes, LED icon chosen, duration, button trigger? Animation run observed: do all 3 scenes appear in order? Does Button B restart correctly?
+Exit Assessment | Written and revised story plan submitted (assessed artifact – 4-point rubric, DDD Part 8.3). Animation runs through all 3 scenes without facilitator assistance. Learner presents using plan orally to facilitator. Total duration and Scene 1 fraction must be written on the plan.
+Differentiation | Support: provide a pre-built 2-scene template in MakeCode; learner only writes Scene 3 and adds the third if/else block. Extension: Learner adds a 4th scene triggered by Button A+B pressed simultaneously, and calculates each scene as a percentage of total duration.
+KEY VOCABULARY
+scene · narrative · setting · conflict · resolution · variable · animation · transition · fraction · duration · algorithm
+Safeguarding Note: Story content must be school-appropriate. Facilitate a brief 'content check' before coding begins – if a learner's story involves violence, scary imagery, or anything inappropriate, gently redirect to an alternative theme. Peer review must remain constructive; no mocking of story ideas.
+Facilitator Name:   ____________________ | Date Delivered:    ____________________ | Signature:   _____________________

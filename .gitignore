@@ -16,3 +16,5 @@ backend/var/
 .DS_Store
 frontend/node_modules/
 backend/.venv/
+backend/media/
+backend/db.sqlite3

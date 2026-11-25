@@ -1,31 +1,32 @@
-# Isoma UG LMS (`learn.isomaug.com` & `*.isomaug.com`) — Architecture & System Design Specification
+# Isoma UG (`isomaug.com`) - Platform, Open Academy & School ERP Architecture
 
-## 1. System Topology & Dual-Engine Overview
+## 1. System Topology & 3-Tier Multi-Tenant Hierarchy
 
-Isoma UG LMS is architected with a unified dual-engine topology that seamlessly supports two operating paradigms on a shared backend infrastructure (under the `isomaug.com` ecosystem alongside `isomaug.com` and `cloud.isomaug.com`):
+Isoma UG operates as a **3-tier multi-tenant platform** on a shared backend infrastructure:
 
-1. **The Public Open Academy (Independent Learning Marketplace)**:
-   - Operates on **`learn.isomaug.com`** (served by `src/pages/public/` inside Isoma LMS).
-   - Open to individual learners worldwide without requiring school or institutional affiliation.
-   - Users browse, purchase, and enroll in professional courses, masterclasses, tech bootcamps, and certifications.
-   - Features self-paced learning, interactive quizzes, coding environments, assignment submissions, and automated certificate generation.
+1. **Tier 1 - Root Super Account & Control Plane (`isomaug.com`)**:
+   - The central platform hub where all client/institution accounts are created, provisioned, and billed.
+   - **Even `learn.isomaug.com` (Isoma's Public Open Academy) is a Client/Tenant of `isomaug.com`**, alongside every external school or institution.
+   - Handles organisation account creation, subdomain/custom-domain allocation, subscription plans, and Super-Admin oversight.
 
-2. **The Institutional School ERP & LMS (Private Tenant Workspaces)**:
-   - Operates on dedicated subdomains (e.g., `stmarys.isomaug.com` — excluding reserved platform subdomains such as `learn`, `cloud`, `billing`, `www`, and `cname`) or **fully custom white-labeled school domains** (e.g., `portal.stmarys.ac.ug`, `lms.greenhill.edu`, `learn.kingscollege.com`).
-   - Private, isolated ecosystem for enrolled students, teachers, parents, and administrative staff.
-   - Nursery tiers manage "Learning Areas & Milestones", Primary and Secondary tiers manage "Subjects" and termly schemes of work, while Higher Education tiers manage "Course Units" and semester credit hours.
-   - Dynamic Curriculum & Country Scoping ensures an institution only sees modules, subjects, and schemes belonging to their selected curriculum, while benefiting from a universal shared library of report card templates, certificate designers, and STEM resources.
-   - Includes Offline LAN School Box edge caching for zero-data campus learning.
+2. **Tier 2 - Client / Tenant Workspaces (`learn.isomaug.com`, `*.isomaug.com`, or Custom Domains)**:
+   - **Open Academy Tenant (`learn.isomaug.com`)**: Isoma's flagship public learning client - open course catalog, self-paced learning, quizzes, past papers, coding labs, and verified certificates.
+   - **Institutional School Tenants (`stmarys.isomaug.com`, `portal.stmarys.ac.ug`, `lms.greenhill.edu`, `learn.kingscollege.com`)**: Private, isolated school ecosystems.
+   - **Tenant Onboarding** runs directly on the tenant's own domain (branding, country & curriculum selection, academic calendar, custom domain DNS verification, and initial staff/student setup).
+
+3. **Tier 3 - Dedicated Role-Based Portals Inside Each Tenant**:
+   - Every authenticated user inside a tenant is routed to their role-specific portal: **Principal/Admin**, **Teacher/Instructor**, **Student/Learner**, **Parent/Guardian**, **Bursar/Accountant**, **Nurse/Sickbay**, **Security Guard/Gate**, and **Librarian**.
 
 ```
                                ┌─────────────────────────────────────────────────────────────┐
-                               │                       ANY HOST / DOMAIN                     │
-                               │ learn.isomaug.com | *.isomaug.com | portal.schoolname.ac.ug │
+                               │          TIER 1: ROOT SUPER ACCOUNT (isomaug.com)           │
+                               │   Account Creation · Client Provisioning · Global Billing   │
                                └──────────────────────────────┬──────────────────────────────┘
                                                               │
                                ┌──────────────────────────────▼──────────────────────────────┐
                                │         Edge Router & Custom Domain TLS Manager             │
                                │       (Cloudflare for SaaS / Caddy On-Demand TLS)           │
+                               │  isomaug.com | learn.isomaug.com | *.isomaug.com | custom   │
                                └──────────────────────────────┬──────────────────────────────┘
                                                               │
                                ┌──────────────────────────────▼──────────────────────────────┐
@@ -38,14 +39,15 @@ Isoma UG LMS is architected with a unified dual-engine topology that seamlessly 
                      │                                                                                 │
                      ▼                                                                                 ▼
        ┌───────────────────────────┐                                                     ┌───────────────────────────┐
-       │    Public Open Academy    │                                                     │    Institutional ERP/LMS  │
+       │   CLIENT #1: OPEN ACADEMY │                                                     │  CLIENT #N: SCHOOL TENANT │
        │    (learn.isomaug.com)    │                                                     │ (Subdomain or Custom Dom) │
-       │  - Public Course Catalog  │                                                     │  - Country & Curriculum   │
-       │  - Direct Student Checkout│                                                     │  - Nursery / Primary / Sec│
-       │  - Self-Paced Learning    │                                                     │  - 18 Operations Modules  │
-       │  - Verified Certificates  │                                                     │  - Report Cards & Badges  │
-       │  - Offline Edge LAN Sync  │                                                     │  - WhatsApp Bot & Canteen │
-       └───────────────────────────┘                                                     └───────────────────────────┘
+       │  - Public Course Catalog  │                                                     │  - Tenant Onboarding      │
+       │  - Direct Student Checkout│                                                     │  - Country & Curriculum   │
+       │  - Self-Paced Learning    │                                                     │  - 8 Role Portals:        │
+       │  - Verified Certificates  │                                                     │    Admin·Teacher·Student  │
+       │  - Cohorts & Past Papers  │                                                     │    Parent·Bursar·Nurse    │
+       └───────────────────────────┘                                                     │    Security·Librarian     │
+                                                                                         └───────────────────────────┘
 ```
 
 ---

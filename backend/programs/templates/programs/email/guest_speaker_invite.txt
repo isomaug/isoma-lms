@@ -1,0 +1,28 @@
+Dear {{ guest_first_name }},
+
+I am inviting you to be a guest speaker on EkebuLive.
+
+EkebuLive is a live video platform for useful conversations — meetings, classes, and public sessions people can join from a link, without needing an account. We are running a weekly series called EkebuLive Information Sessions: one practical topic, one guest, and a live audience, every Saturday from 5:00–6:00 PM East Africa Time.
+
+The conversation is about 45–60 minutes. You would share from your experience, answer a few prepared questions plus audience questions, and leave people with one action they can take that week. We host and keep time. You do not need to prepare a slide deck.
+
+I would like you for:
+
+- Week {{ week_number }} — {{ topic }}
+- {{ date_label }}, {{ time_range }}
+- Online on EkebuLive (join link sent after you confirm)
+
+If that date works, reply with the name you want us to use on the session, and a one-line bio. If that Saturday is busy, tell me which other week you can do.
+
+What we ask of a guest:
+- Join 15 minutes early for a short camera and mic check.
+- Speak to the week’s question in plain language (not a lecture).
+- Give one practical takeaway before we close.
+- Confirm whether we may record and use short clips.
+
+Thank you. I hope you can join us.
+
+{{ host_name }}
+EkebuLive
+{{ site_url }}
+{% if host_email %}{{ host_email }}{% endif %}

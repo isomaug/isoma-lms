@@ -1,0 +1,88 @@
+Write an independent project brief including a decomposition of at least 4 sub-problems with individual test conditions
+Build an interactive 2-page programme using at least 5 skill types from Term 1 and Term 2 combined
+Independently debug at least one issue using the 3-step process without facilitator assistance
+Present the completed programme in 2 minutes, explaining the algorithm, the decomposition approach, and the hardest bug fixed
+4 tablets with Stack KIDI — clean new projects
+Independent Project Brief and Decomposition Sheet (A4 per pair, combined): Title | Story/Interaction concept | Decomposition (4 sub-problems with test conditions) | Skills used checklist (10 skills from Terms 1+2) | 3 self-written success criteria | Self-evaluation section
+Project timer card (projected): DESIGN = 12 min / BUILD = 35 min / PRESENT + EVALUATE = 13 min
+Presentation structure card (A5): 2-minute structure: ① Title and concept (20s) ② Run the programme live (45s) ③ Explain your algorithm and one skill used (25s) ④ Describe the hardest bug you fixed (20s) ⑤ Self-evaluation score out of 6 (10s)
+Peer evaluation form (A5): ① The skill most clearly demonstrated: ___ ② One vocabulary word heard: ___ ③ One suggestion: ___
+Term 2 Skills Passport (A5): stamp sheet for Variables, Wait, Decomposition, Complex Algorithm, Independent Brief, Presentation
+Distribute combined brief and decomposition sheets. Timer starts: 12 minutes.
+Write: title, 1-sentence concept, and the audience this performance is designed for.
+Decompose into 4 sub-problems. For each: name the sub-problem, list the blocks, write the test condition.
+Tick the skills checklist — target minimum 5 of 10 skills.
+Write 3 success criteria (specific and testable — same rules as Lesson 12 Stage 1).
+Facilitator approval at the 12-minute mark. Any pair without an approved brief must simplify to 2 sub-problems before coding starts — no exceptions.
+Build sub-problem by sub-problem. Test each before connecting (as practised in Lesson 11).
+Facilitator checkpoint at 15 minutes: "How many sub-problems tested and ticked?" Any pair behind receives a 2-minute facilitator support session — after which they are on their own.
+At 25 minutes: review progress. If 4 sub-problems complete — begin polishing (add backgrounds, sounds, tighten timing). If fewer than 3 complete — continue building only the most critical sub-problems.
+Bug encountered: apply 3-step debug independently. If the bug takes more than 5 minutes: document it in the evaluation section ("Known issue: ___. Cause: ___. Attempted fix: ___. Result: still present / resolved.") and move on.
+BUILD TIMER stops at 35 minutes. Save project immediately.
+Distribute presentation structure cards. 2 minutes of silent preparation (learners re-read their structure card and the brief).
+Presentation round: pairs present to adjacent pairs. Strictly 2 minutes each. Audience completes peer evaluation form.
+Self-evaluation: score 3 criteria (0/1/2 per criterion). Calculate total and percentage.
+Read peer evaluation form received. Identify: did the audience correctly identify the most important skill? Did they pick up one vocabulary word?
+Facilitator asks one learner per pair: "What was the hardest sub-problem — and what did you learn from it?"
+Complete Term 2 Skills Passport stamps.
+Collect all briefs, evaluation forms, and peer forms for portfolios.
+Preview: "Weeks 5–8 of Term 2 — we build a complete interactive game that uses everything from BOTH terms. Prepare to be challenged!"
+ISOMA EDUTECH LIMITED
+Stack KIDI Lesson Plan  ·  DDD Framework
+Stage 2  (P2 · Cambridge Stage 2 / Year 2)
+Lesson 12  ·  Term 2 · Week 4
+Term 2 Mini-Project — The Interactive Performance
+Duration
+60 minutes
+Term / Week
+Term 2 · Week 4
+Age Range
+7–8 years
+Group Size
+8 learners  (pair programming — 4 pairs)
+Hardware
+Tablets with Stack KIDI App
+Bloom's
+L4 Analyse · L5 Evaluate · L6 Create
+NCDC
+Uganda NCDC Thematic Curriculum P2 — Literacy: Designing and producing a complete interactive digital text for an audience; Creative Arts: Designing an interactive digital performance; Numeracy: Independent application of multi-variable reasoning and planning
+Cambridge
+Cambridge Primary Computing 0845 — Stage 2: Independent creation of a complex programme using all skills from the term; self-directed debugging; evaluating a finished programme against learner-written success criteria; presenting computational thinking to an external audience
+DDD Phase
+DESIGN + DELIVER + DISCOVER — Full independent DDD cycle: learners write their own brief, decompose it, build it, evaluate it, and present to peers
+Big Idea
+The highest skill in programming is not knowing the most blocks — it is designing a programme that works, planning it carefully, and evaluating it honestly. Today you do all three independently.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+⚠  Facilitator Preparation Note:
+PREPARATION — Prepare the timer card display (project it on screen throughout the session). Print briefs, evaluation forms, peer forms, and passports the day before. Review Lesson 11 decomposition sheets to identify pairs who struggled — offer those pairs a pre-simplified brief card at the start of the session if their independent brief is unlikely to be completable in 12 minutes.
+CROSS-CURRICULAR LINKS
+English
+The 2-minute presentation requires: clear spoken English, subject vocabulary, logical structure, and the ability to explain a complex process simply. Learners rehearse once before presenting. Presentation evaluation language: "The algorithm works by ___. The hardest bug was ___ because ___ . I fixed it by ___." Vocabulary: interactive, performance, present, algorithm, justify, reflect.
+Maths
+Skills count: learners count how many of the 10 listed skills appear in their programme. Calculate percentage: skills used ÷ 10 × 100 = ___%. Self-evaluation score: 3 criteria × 2 marks each = 6 maximum. Convert to percentage. Compare self-score percentage to skills percentage — do they correlate?
+LESSON STRUCTURE
+DESIGN SPRINT — Independent Brief and Decomposition (12 min)
+BUILD SPRINT — Code the Interactive Performance (35 min)
+PRESENT AND EVALUATE (13 min)
+WRAP-UP (0 min — included in phase above)
+ASSESSMENT
+Formative (During)
+Independent brief and decomposition approved: 4 sub-problems with test conditions, 5+ skills ticked
+Facilitator checkpoint at 15 min: sub-problem progress noted per pair
+At least 1 independent debug documented in evaluation section
+Self-evaluation score completed and compared to peer evaluation
+Term 2 Skills Passport: minimum 5 of 6 stamps for Term 2 readiness
+Exit / Summative
+Facilitator reviews self-evaluation grids. Ask each pair one follow-up question based on their self-score. Pairs who scored themselves 6/6 but have an incomplete programme: "What criterion do you think was not fully met? What is the evidence?" Target honest self-reflection over optimistic scoring.
+Differentiation
+Support: Reduce to 2 sub-problems, 3 skills, 2 success criteria. Facilitator assists with brief writing. Extension: Write a short "programmer's commentary" for the project — 5–8 sentences describing: the concept, the algorithm design, one technical challenge, the solution, and what you would build next if this were a real app.
+KEY VOCABULARY
+interactive   ·   performance   ·   present   ·   sub-problem   ·   algorithm   ·   evaluate   ·   criterion   ·   independent   ·   decompose   ·   reflect
+⚠  Safeguarding Note: Presentations involve learners speaking about their own work. Be alert to learners who are reluctant to present publicly — offer the alternative of presenting only to the facilitator. Never force a learner to present if they are visibly distressed.
+Facilitator Name:
+________________________
+Date Delivered:
+________________________
+Signature:
+________________________

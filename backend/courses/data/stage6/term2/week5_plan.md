@@ -1,0 +1,198 @@
+# Term 2 · Lesson 5: Code That Thinks - Building a Rule-Based AI Classifier with Arduino
+
+**Duration:** 3 hours (Term-time Saturday) (split across Week 5 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 2 · Week 5
+**Age Range:** 10–12 years
+**Hardware:** Arduino Uno, USB cable, TMP36 temperature sensor, LDR, buzzer, LED × 3 (red/yellow/green), 220Ω resistors × 3, 10kΩ resistor, breadboard, jumper wires
+**Software:** Arduino IDE 2.x - Serial Monitor
+**Bloom's:** L5 Evaluating
+**DDD Phase:** EVALUATE - Learners implement a two-input rule-based classifier in Arduino code, map it as a decision tree on paper, evaluate its accuracy against test cases, and critique its limitations as an AI model
+**NCDC:** Uganda NCDC Curriculum P5/P6 - Literacy Strand: Evaluating arguments and evidence; writing a structured analytical critique. Numeracy Strand: Decision trees as branching logic; probability of classification outcomes; compound inequalities
+
+**Big Idea:** ILO 3.3 (summative depth) - Analyse foundational AI concepts including pattern recognition, data classification, and rule-based decision-making, connecting these to their own coded projects. ILO 3.1 (deepened) - Write modular Arduino sketches using compound sensor logic and Serial-formatted output.
+
+**Source plan:** `Stage6_T2_Week5_AI_Classifier.docx`
+
+## Learning Objectives
+
+- Define the terms: rule-based system, classifier, decision tree, training rule, input feature, output class - and give a concrete hardware example of each
+- Map a dual-input classification problem (temperature + light) onto a hand-drawn decision tree with at least 4 leaf nodes (output classes)
+- Translate the decision tree directly into a modular Arduino sketch using nested if/else and named classification functions
+- Test the classifier against a minimum of 6 deliberately constructed test cases and record predicted vs actual output in a test results table
+- Calculate the accuracy of the classifier: (correct classifications ÷ total tests) × 100%
+- Write a structured critique (minimum 100 words) evaluating two limitations of the rule-based approach and proposing one improvement that would move it closer to a true machine learning model
+
+## Materials and Preparation
+
+_See source._
+
+## Cross-Curricular Links
+
+## Lesson Structure
+
+### 1. HOOK The Spam Filter
+1. Ask: "How does your email know what is spam?" Collect 4–5 answers. Guide to: it checks features of the email against rules. Example rule: if sender is unknown AND subject contains "FREE MONEY" → classify as SPAM.
+2. Draw a simple 2-node decision tree on the board: one root node (Is temp > 30°C?), two branches (YES → HOT class; NO → second node: Is light < 300? → YES: DARK class; NO: NORMAL class).
+3. Ask: "How many classes can this tree produce?" (3). "What if we add one more level?" (up to 4). "What if we had 3 inputs?" (up to 8). Introduce: 2ⁿ = number of classes for n binary inputs.
+4. Distribute Classification Truth Table. Pairs complete the 4 cells for a 2-input binary classifier: HIGH TEMP + LOW LIGHT = ?, HIGH TEMP + HIGH LIGHT = ?, LOW TEMP + LOW LIGHT = ?, LOW TEMP + HIGH LIGHT = ?. They choose class names.
+5. Distribute Decision Tree Template. Pairs draw their full decision tree - root node → branches → leaf nodes - before touching any code.
+### 2. GUIDED ACTIVITY Build the Classifier
+6. Step 1 (10 min): Wire the complete dual-sensor circuit - TMP36 on A0, LDR on A1, 3 LEDs on pins 8/9/10, buzzer on pin 11. Learners complete wiring independently. Facilitator checks.
+7. Step 2 (15 min): Facilitator live-codes the modular structure: String classifyEnvironment(float temp, int light) - a function that takes both sensor readings and returns a String class label. Learners type simultaneously.
+8. Step 3 (20 min): Learners implement the nested if/else logic inside classifyEnvironment() based on their own decision tree - not the facilitator's version. Each pair may produce a different classifier. Facilitator circulates: "Show me where this branch is in your decision tree."
+9. Step 4 (10 min): Add the output function: void announceClass(String cls) - uses LEDs and buzzer to signal each class differently. HOT_DARK → red LED + buzzer; HOT_BRIGHT → red LED only; COOL_DARK → yellow LED; COOL_BRIGHT → green LED.
+10. Step 5 (5 min): Upload and run. Cover/uncover LDR; warm TMP36 with finger. Does each class trigger the correct output? First informal test.
+### 3. INDEPENDENT / PAIR WORK Test, Measure & Critique
+11. Task 1 (20 min): Structured testing - complete all 6 rows of the Classifier Test Results Table. For each test: (a) set the physical conditions deliberately (warm the sensor with a finger, cover the LDR with a hand, etc.), (b) record the input values from Serial Monitor, (c) record the expected and actual class, (d) mark Pass/Fail.
+12. Task 2 (5 min): Calculate classifier accuracy: (passed tests ÷ 6) × 100%. Write on the test table. If accuracy < 67%, the classifier has a design fault - identify which test case fails and which branch is incorrect.
+13. Task 3 (20 min): Write the Structured Critique - minimum 100 words using the AI Critique Writing Frame. Must address: (1) one structural limitation of rule-based classification (e.g. thresholds are manually set, not learned from data), (2) why this matters in a real application, (3) one proposed improvement (e.g. using machine learning to learn thresholds from training data), (4) one limitation of that improvement.
+14. Task 4 (Extension, 5 min): Add a third input - the button (pressed = person present; not pressed = no person). Extend the classifier to 3 inputs and redraw the decision tree. How many possible classes now?
+15. Rotate Driver/Navigator between Tasks 1 and 3.
+### 4. SHOWCASE & DEBRIEF
+16. 2 pairs demonstrate their classifier live - class watches and calls out the expected class before it triggers. "Warm sensor, bright light - what class should this be?" Then observe if the output matches.
+17. Accuracy comparison: which pair achieved the highest accuracy? What design decision led to that? What threshold values did they use?
+18. One pair reads their Structured Critique aloud. Class evaluates: Is the limitation structural (not just a bug)? Is the proposed improvement realistic? Is the counter-limitation fair?
+19. AI connection (escalated from T1 W6): "In Term 1 you described AI. Today you BUILT a rule-based AI system and EVALUATED its limitations. That is the difference between understanding AI and doing AI engineering."
+20. Math close: draw a 3-input tree on the board. How many leaf nodes? 2³ = 8. "If each classification takes 0.5 seconds to compute, how long to classify all possible input combinations?" (4 seconds.) "What about 10 inputs?" (2¹⁰ = 1024 combinations × 0.5s = 512 seconds.) This is why machine learning replaces rule-based systems for complex problems.
+21. Collect Decision Tree, Test Results Table, and Structured Critique as this week's artifact.
+
+## Assessment
+
+- Evidence Required
+- Formative (During)
+- Classifier sketch compiles and correctly outputs distinct LED/buzzer signals for each class. All 6 test cases recorded. Decision tree on paper matches the code structure.
+- Facilitator observation log. Test table and decision tree verified as matching before critique is written.
+- Term 2 Week 5 Artifact
+- Decision Tree diagram (hand-drawn, all nodes labelled) + Classifier Test Results Table (6 rows, accuracy calculated) + Structured Critique (min. 100 words, 4-part structure). Scored on 5-point rubric (DDD Part 8.3).
+- All three physical documents collected and stapled together.
+- Differentiation
+- Support: provide a pre-written decision tree diagram - learners translate to code and complete testing only. Extension: 3-input classifier with button; Venn diagram of sensor condition sets; accuracy recalculated.
+- Extension: 3-input decision tree redrawn and attached to artifact submission.
+
+## Key Vocabulary
+
+rule-based system · classifier · decision tree · input feature · output class · leaf node · accuracy · threshold · compound inequality · AND · OR · training data · machine learning · limitation · critique Date Delivered: Signature:
+
+## Safeguarding
+
+When discussing AI in real-world applications (facial recognition, medical diagnosis, social scoring), ensure the discussion remains conceptual and does not reference specific learners. The critique activity requires intellectual honesty - learners should evaluate limitations of their own system, not a classmate's. Facilitate with care if a learner becomes frustrated when their classifier fails a test case - reframe: "A failing test is information, not a failure of effort."
+
+## Full source extract (complete)
+
+```
+Rule-Based Classification Systems, Decision Trees & AI in Hardware
+TERM 2 PRIOR KNOWLEDGE - What Learners Bring to This Session
+LEARNING OBJECTIVES
+• Define the terms: rule-based system, classifier, decision tree, training rule, input feature, output class - and give a concrete hardware example of each
+• Map a dual-input classification problem (temperature + light) onto a hand-drawn decision tree with at least 4 leaf nodes (output classes)
+• Translate the decision tree directly into a modular Arduino sketch using nested if/else and named classification functions
+• Test the classifier against a minimum of 6 deliberately constructed test cases and record predicted vs actual output in a test results table
+• Calculate the accuracy of the classifier: (correct classifications ÷ total tests) × 100%
+• Write a structured critique (minimum 100 words) evaluating two limitations of the rule-based approach and proposing one improvement that would move it closer to a true machine learning model
+MATERIALS & PREPARATION
+• 4 shared laptops with Arduino IDE 2.x
+• Arduino Uno × 4, USB cables × 4, TMP36 × 4, LDR × 4, buzzer × 4, LED × 12 (3 per pair), resistors, breadboards, jumper wires
+• Printed "Decision Tree Template" - blank branching diagram with root node, 2 levels of branches, and 4 leaf nodes (A4 per pair, landscape)
+• Printed "Classifier Test Results Table" - columns: Test #, Input 1 (Temp °C), Input 2 (Light), Expected Class, Actual Output, Pass/Fail (A4 per learner)
+• Printed "AI Critique Writing Frame" - sentence starters for the structured critique: "One limitation of this approach is… This matters because… An alternative that would address this is… However, this alternative also has the limitation that…" (A5 per learner)
+• Printed "Classification Truth Table" - 4-class truth table showing all combinations of high/low for 2 inputs (A5 per pair)
+• Facilitator projected screen
+CROSS-CURRICULAR LINKS
+LESSON STRUCTURE  (3 hours · Term 2 · Saturday)
+ASSESSMENT
+FACILITATOR RECORD
+ISOMA EDUTECH LIMITED  AI Engineers Programme · Stage 5–6 · Arduino · Term 2
+Term 2 · Lesson 5: Code That Thinks - Building a Rule-Based AI Classifier with Arduino
+TERM 2 · STAGE 5–6 · AI ENGINEERS  |  Term 2 · Week 5
+Bloom's: L5 Evaluating
+Duration
+3 hours (Term-time Saturday)
+Term / Week
+Term 2 · Week 5
+Age Range
+10–12 years
+Group Size
+8 learners (4 pairs - pair programming)
+Hardware
+Arduino Uno, USB cable, TMP36 temperature sensor, LDR, buzzer, LED × 3 (red/yellow/green), 220Ω resistors × 3, 10kΩ resistor, breadboard, jumper wires
+Software / IDE
+Arduino IDE 2.x - Serial Monitor
+Bloom's Level
+L5 Evaluating
+DDD Phase
+EVALUATE - Learners implement a two-input rule-based classifier in Arduino code, map it as a decision tree on paper, evaluate its accuracy against test cases, and critique its limitations as an AI model
+NCDC Ref
+Uganda NCDC Curriculum P5/P6 - Literacy Strand: Evaluating arguments and evidence; writing a structured analytical critique. Numeracy Strand: Decision trees as branching logic; probability of classification outcomes; compound inequalities
+Cambridge Ref
+Cambridge Primary Computing 0845 - Stage 6: Rule-based systems; Classification algorithms; Connecting computing to AI concepts; Evaluating the effectiveness of a programme
+TERM 2 PRIOR KNOWLEDGE - What Learners Are Expected to Bring to This Session:
+• Rule-based decision-making and AI concepts - Term 1 Week 6 (class discussion and article summary)
+• Compound conditions (AND/OR) and threshold logic - Term 2 Week 4 (dual-sensor alert system)
+• TMP36 wiring and temperature conversion - Term 2 Week 2
+• LDR sensor and analogRead() - Term 1 Week 5 and Term 2 Week 2
+• Modular functions with return values - Term 2 Week 1
+• Rolling mean arrays - Term 2 Week 4
+• Serial Monitor formatted output - Term 2 Week 3
+Intended Learning Outcome (ILO)
+Big Idea
+ILO 3.3 (summative depth) - Analyse foundational AI concepts including pattern recognition, data classification, and rule-based decision-making, connecting these to their own coded projects. ILO 3.1 (deepened) - Write modular Arduino sketches using compound sensor logic and Serial-formatted output.
+The simplest form of artificial intelligence is a rule-based system - a set of if/else decisions that classify inputs into categories. Every spam filter, every medical triage checklist, every traffic sensor started here. Today you build one.
+English Literacy Thread
+Mathematics Thread
+Structured analytical critique: learners evaluate their own system against a defined standard - this is Bloom's Level 5. The critique must follow a four-part structure: Limitation → Why it matters → Proposed improvement → Counter-limitation of the improvement. This mirrors formal critical writing: thesis → evidence → counter-argument → synthesis. Explicit instruction: "A limitation is not the same as a bug. A limitation is a structural constraint that cannot be fixed just by changing one line - it requires a different approach." This distinction between debugging (fixing errors) and critique (evaluating design) is a key engineering literacy skill.
+Decision trees as branching logic: each node is an inequality condition (temp > 30°C). A 2-level tree with 2 binary splits produces 4 leaf nodes - this is 2² = 4 output classes. Accuracy calculation: correct ÷ total × 100%. If 5 of 6 test cases are classified correctly, accuracy = 83.3%. Compound inequalities: (temp > 30) AND (light < 300) - translate to set notation: T ∩ L where T = {readings > 30} and L = {readings < 300}. Venn diagram optional extension: draw the intersection of the two sensor condition sets.
+Phase
+Time
+Activities & Facilitator Actions
+1. HOOK The Spam Filter
+20 min
+• Ask: "How does your email know what is spam?" Collect 4–5 answers. Guide to: it checks features of the email against rules. Example rule: if sender is unknown AND subject contains "FREE MONEY" → classify as SPAM.
+• Draw a simple 2-node decision tree on the board: one root node (Is temp > 30°C?), two branches (YES → HOT class; NO → second node: Is light < 300? → YES: DARK class; NO: NORMAL class).
+• Ask: "How many classes can this tree produce?" (3). "What if we add one more level?" (up to 4). "What if we had 3 inputs?" (up to 8). Introduce: 2ⁿ = number of classes for n binary inputs.
+• Distribute Classification Truth Table. Pairs complete the 4 cells for a 2-input binary classifier: HIGH TEMP + LOW LIGHT = ?, HIGH TEMP + HIGH LIGHT = ?, LOW TEMP + LOW LIGHT = ?, LOW TEMP + HIGH LIGHT = ?. They choose class names.
+• Distribute Decision Tree Template. Pairs draw their full decision tree - root node → branches → leaf nodes - before touching any code.
+2. GUIDED ACTIVITY Build the Classifier
+60 min
+• Step 1 (10 min): Wire the complete dual-sensor circuit - TMP36 on A0, LDR on A1, 3 LEDs on pins 8/9/10, buzzer on pin 11. Learners complete wiring independently. Facilitator checks.
+• Step 2 (15 min): Facilitator live-codes the modular structure: String classifyEnvironment(float temp, int light) - a function that takes both sensor readings and returns a String class label. Learners type simultaneously.
+• Step 3 (20 min): Learners implement the nested if/else logic inside classifyEnvironment() based on their own decision tree - not the facilitator's version. Each pair may produce a different classifier. Facilitator circulates: "Show me where this branch is in your decision tree."
+• Step 4 (10 min): Add the output function: void announceClass(String cls) - uses LEDs and buzzer to signal each class differently. HOT_DARK → red LED + buzzer; HOT_BRIGHT → red LED only; COOL_DARK → yellow LED; COOL_BRIGHT → green LED.
+• Step 5 (5 min): Upload and run. Cover/uncover LDR; warm TMP36 with finger. Does each class trigger the correct output? First informal test.
+3. INDEPENDENT / PAIR WORK Test, Measure & Critique
+50 min
+• Task 1 (20 min): Structured testing - complete all 6 rows of the Classifier Test Results Table. For each test: (a) set the physical conditions deliberately (warm the sensor with a finger, cover the LDR with a hand, etc.), (b) record the input values from Serial Monitor, (c) record the expected and actual class, (d) mark Pass/Fail.
+• Task 2 (5 min): Calculate classifier accuracy: (passed tests ÷ 6) × 100%. Write on the test table. If accuracy < 67%, the classifier has a design fault - identify which test case fails and which branch is incorrect.
+• Task 3 (20 min): Write the Structured Critique - minimum 100 words using the AI Critique Writing Frame. Must address: (1) one structural limitation of rule-based classification (e.g. thresholds are manually set, not learned from data), (2) why this matters in a real application, (3) one proposed improvement (e.g. using machine learning to learn thresholds from training data), (4) one limitation of that improvement.
+• Task 4 (Extension, 5 min): Add a third input - the button (pressed = person present; not pressed = no person). Extend the classifier to 3 inputs and redraw the decision tree. How many possible classes now?
+• Rotate Driver/Navigator between Tasks 1 and 3.
+4. SHOWCASE & DEBRIEF
+30 min
+• 2 pairs demonstrate their classifier live - class watches and calls out the expected class before it triggers. "Warm sensor, bright light - what class should this be?" Then observe if the output matches.
+• Accuracy comparison: which pair achieved the highest accuracy? What design decision led to that? What threshold values did they use?
+• One pair reads their Structured Critique aloud. Class evaluates: Is the limitation structural (not just a bug)? Is the proposed improvement realistic? Is the counter-limitation fair?
+• AI connection (escalated from T1 W6): "In Term 1 you described AI. Today you BUILT a rule-based AI system and EVALUATED its limitations. That is the difference between understanding AI and doing AI engineering."
+• Math close: draw a 3-input tree on the board. How many leaf nodes? 2³ = 8. "If each classification takes 0.5 seconds to compute, how long to classify all possible input combinations?" (4 seconds.) "What about 10 inputs?" (2¹⁰ = 1024 combinations × 0.5s = 512 seconds.) This is why machine learning replaces rule-based systems for complex problems.
+• Collect Decision Tree, Test Results Table, and Structured Critique as this week's artifact.
+Component
+Description
+Evidence Required
+Formative (During)
+Classifier sketch compiles and correctly outputs distinct LED/buzzer signals for each class. All 6 test cases recorded. Decision tree on paper matches the code structure.
+Facilitator observation log. Test table and decision tree verified as matching before critique is written.
+Term 2 Week 5 Artifact
+Decision Tree diagram (hand-drawn, all nodes labelled) + Classifier Test Results Table (6 rows, accuracy calculated) + Structured Critique (min. 100 words, 4-part structure). Scored on 5-point rubric (DDD Part 8.3).
+All three physical documents collected and stapled together.
+Differentiation
+Support: provide a pre-written decision tree diagram - learners translate to code and complete testing only. Extension: 3-input classifier with button; Venn diagram of sensor condition sets; accuracy recalculated.
+Extension: 3-input decision tree redrawn and attached to artifact submission.
+KEY VOCABULARY
+rule-based system · classifier · decision tree · input feature · output class · leaf node · accuracy · threshold · compound inequality · AND · OR · training data · machine learning · limitation · critique
+Safeguarding Note
+When discussing AI in real-world applications (facial recognition, medical diagnosis, social scoring), ensure the discussion remains conceptual and does not reference specific learners. The critique activity requires intellectual honesty - learners should evaluate limitations of their own system, not a classmate's. Facilitate with care if a learner becomes frustrated when their classifier fails a test case - reframe: "A failing test is information, not a failure of effort."
+Facilitator Name:
+_______________________
+Date Delivered:
+________________________
+Signature:
+________________________
+```

@@ -1,0 +1,158 @@
+# Lesson 6: Introduction to AI & Pattern Recognition – Teaching Machines to See
+
+**Duration:** 3 hours (Saturday) / 90 min × 2 days (Holiday) (split across Week 6 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 1 · Week 6
+**Age Range:** 10–12 years
+**Group Size:** 8 learners (pair programming, 4 pairs)
+**Hardware:** Arduino Uno, USB cable, laptop with Arduino IDE 2.x, LDR from Week 5 (optional for demo), 20 picture sort cards (printed)
+**Bloom's:** L4 Analysing
+**DDD ILO:** ILO 3.3 – Analyse foundational AI concepts including pattern recognition, data classification, and rule-based decision-making, by connecting these to examples in their own coded projects
+**NCDC:** Uganda NCDC P5–P6 – English Strand: Reading comprehension, summarising non-fiction text; Mathematics Strand: Classification, probability, fractions and percentages; ICT Strand: Introduction to artificial intelligence
+**Cambridge:** Cambridge Primary Computing 0845 – Stage 5: Introduction to artificial intelligence; data and patterns; ethical considerations in computing
+
+**Big Idea:** AI does not think. It finds patterns in data and follows rules – the same patterns and rules you are already writing in Arduino. The difference is scale.
+
+## Learning Objectives
+
+- Define artificial intelligence, pattern recognition, training data, classification, and prediction in their own words
+- Sort 20 picture cards into categories by applying a set of classification rules and compare the process to what an AI does
+- Read a provided article about one real-world AI application and write a summary of at least 150 words including: what the AI does, how it was trained, one benefit, and one concern
+
+## Materials and Preparation
+
+_See source lesson plan._
+
+## Cross-Curricular Links
+
+**English:** Reading comprehension of a non-fiction AI article: learners read independently, then write a structured summary of minimum 150 words. The summary must contain all 4 required elements. This mirrors the non-fiction reading comprehension skills developed in P5–P6 English. Oral contribution: each learner is expected to make at least one reasoned spoken contribution to the class discussion. "I think AI is fair/unfair because…" contributions are logged by the facilitator as participation evidence.
+
+**Maths:** Classification activity mathematics: learners sort 20 picture cards into 5 categories. After sorting, calculate: how many cards are in Category A? Probability that a randomly chosen card belongs to Category A = number in Category A ÷ 20. Express as a fraction (e.g. 6/20 = 3/10) and as a percentage (30%). Extend: if 3 rules apply simultaneously, how many cards satisfy all 3 rules? This introduces compound classification – the mathematical foundation of AI filtering.
+
+## Lesson Structure
+
+### HOOK – You Are Already Doing AI  (20 min)
+1. Connect their LDR sensor project from Week 5 to AI concepts: explain how the sensor data could train a simple rule-based AI model
+2. Participate meaningfully in a class discussion about AI fairness and make a reasoned contribution documented by the facilitator
+3. Calculate the probability that a randomly chosen picture card belongs to Category A, expressing it as a fraction and a percentage
+4. 4 laptops (for research reference if internet available, or printed article if not)
+5. Printed AI article (A4, one per pair) – facilitator selects an age-appropriate article about AI in daily life (e.g. phone face unlock, spam filter, autocomplete); Isoma Edutech provides this
+6. 20 picture sort cards per pair (printed A5, cut) – mix of 5 categories: animals, vehicles, food, tools, buildings
+7. Printed AI summary template (A4 per learner) – 4 labelled sections: What it does | How it was trained | One benefit | One concern
+8. Classification rule card (A5 per pair) – 3 sorting rules to apply simultaneously to the picture cards
+9. Printed discussion log sheet (A4 per facilitator) – for recording meaningful contributions per learner
+
+### GUIDED ACTIVITY – Read, Classify, Connect  (60 min)
+10. Facilitator device + projected screen
+11. USB flash drives
+12. No introduction – open with an action. Give each pair the 20 picture cards face-down. "Turn them over. Sort them into groups. You have 90 seconds. Go."
+13. After sorting, ask: "What rule did you use? Could someone else follow your rule and get the same result?" Take 3 different responses.
+14. Reveal: "What you just did – classifying items by finding patterns and applying rules – is exactly what a machine learning AI does. The difference is the AI does it millions of times per second, on millions of items."
+15. Show examples on projected screen: phone face unlock ("it learned your face from 1000 photos"), spam filter ("it learned what spam looks like from millions of emails"), autocomplete ("it learned what words follow other words from billions of sentences"). Ask: "What is the pattern in all of these?" (They all learned from examples.)
+16. Distribute the AI article. Learners read silently for 5 minutes before discussion begins.
+17. Article reading and annotation (15 min): learners read the provided AI article. As they read, they underline: one sentence about what the AI does (blue), one sentence about training data (red), one sentence about a benefit or concern (green). Pairs discuss: "Did you find all three?"
+
+### INDEPENDENT WORK – Summary Writing and Discussion Preparation  (50 min)
+18. Classification rule challenge (15 min): give each pair the classification rule card with 3 simultaneous rules (e.g. Rule 1: must be living; Rule 2: must be able to move independently; Rule 3: must be found in Uganda). Pairs re-sort all 20 cards applying all 3 rules at once. Count: how many cards satisfy all 3 rules? Calculate the probability as a fraction and percentage.
+19. Connect to Week 5 sensor project (15 min): facilitator poses the question: "Your LDR sensor from last week collected light data. Imagine you recorded 1000 readings under different light conditions and labelled each one: 'daytime', 'evening', or 'night'. What would an AI do with that data?" Pair discussion. Share responses.
+20. Introduce the 4 vocabulary terms formally: pattern recognition, training data, classification, prediction. Learners write their own definition for each in the margin of the article – not copied, in their own words.
+21. Rotate Driver/Navigator. Begin AI summary writing on the summary template.
+22. AI article summary: learners write independently on the summary template. Minimum 150 words total. Must include all 4 sections: what the AI does, how it was trained, one benefit, one concern. No copying from the article – paraphrase and explain.
+23. Pair peer-review: swap templates. Partner checks: are all 4 sections present? Is the word count approximately met? Is there any copied sentence (if so, circle it and ask them to rewrite it in their own words).
+24. Discussion preparation: each learner writes two discussion contribution sentences on a sticky note – one they agree with, one they are unsure about: "I think AI is fair because…" and "One thing that worries me about AI is…"
+25. Optional Arduino link: if the LDR is available, write a 10-line sketch that classifies the light reading: if lightValue > 600 print "Bright – daytime"; else if lightValue > 300 print "Medium – evening"; else print "Low – night". This is a rule-based AI classifier.
+
+### SHOWCASE & DEBRIEF – Class Discussion  (30 min)
+26. Facilitator circulates, checks summary writing, notes discussion preparation quality on participation log.
+27. Structured class discussion (15 min): facilitator poses each question and gives every learner the opportunity to contribute. "Where do you see AI in Uganda today?" "Is AI fair? Can it make mistakes?" "Where could AI help in Uganda that it does not yet?" Facilitator logs meaningful contributions on the discussion log sheet.
+28. 2–3 learners share their summary conclusions aloud (read from their template). Class gives 1 Star (something strong in the summary) + 1 Wish (one improvement).
+29. Facilitator restates the AI–Arduino connection: "The LDR classifier you wrote – if light > 600, print Bright – is a rule-based AI system. Real AI uses the same logic, but it learns the numbers (like 600) from data instead of us writing them by hand."
+30. Facilitator restates English link: "Reading a non-fiction article and writing a structured summary is a skill you will use in every subject. Today we practised it with a computing article."
+31. Facilitator restates Math link: "Probability, fractions, and percentages are how we measure how likely an AI is to make a correct classification. The maths you already know is inside every AI system."
+32. Exit question (written sticky note): "Write one sentence: what is the difference between AI and a regular programme?" Collect. Target answer: AI learns from data; a regular programme follows rules written by a human.
+33. Submit AI summary template via USB flash drive.
+
+## Assessment
+
+- Formative | (During) | Article annotation: 3 colour-coded sentences correctly identified (facilitator spot-check) | Classification probability calculation: correct fraction and percentage for Category A cards (checked during guided phase) | Own-words vocabulary definitions in article margin (checked during circulation) | Meaningful discussion contribution logged by facilitator on participation log (required for artifact record)
+- Exit Assessment | AI summary (minimum 150 words, all 4 sections present) submitted on template (assessed against 5-point artifact rubric) | Sticky note exit response: correct distinction between AI and a regular programme (collected) | Participation log entry: at least 1 documented meaningful contribution to class discussion (facilitator record)
+- Differentiation | Support: Provide a partially completed summary template with sentence starters for each section: "The AI in this article works by…", "It was trained using…", "One benefit is that…", "One concern is that…". For the classification activity, apply only 1 rule at a time before combining. | Extension: Write the LDR light-level classifier sketch (3 if/else conditions mapping sensor values to labels). Then write a 200-word reflection: "How is this sketch similar to a real AI system? How is it different? What would need to change to make it learn from data instead of following hardcoded rules?"
+
+## Key Vocabulary
+
+artificial intelligence · machine learning · pattern recognition · training data · classification · prediction · algorithm · rule-based system · probability · fraction · percentage
+
+## Safeguarding
+
+Safeguarding Note: The AI article and discussion may raise questions about facial recognition, surveillance, or social media algorithms. Facilitate discussion in an age-appropriate, balanced way. Do not allow learners to share personal opinions about named companies or individuals. Remind learners: AI systems have been shown to make mistakes, particularly with people from underrepresented groups – this is a real ethical issue, not a conspiracy theory.
+
+## Full source extract (complete)
+
+### Detail body
+
+```
+Define artificial intelligence, pattern recognition, training data, classification, and prediction in their own words
+Sort 20 picture cards into categories by applying a set of classification rules and compare the process to what an AI does
+Read a provided article about one real-world AI application and write a summary of at least 150 words including: what the AI does, how it was trained, one benefit, and one concern
+Connect their LDR sensor project from Week 5 to AI concepts: explain how the sensor data could train a simple rule-based AI model
+Participate meaningfully in a class discussion about AI fairness and make a reasoned contribution documented by the facilitator
+Calculate the probability that a randomly chosen picture card belongs to Category A, expressing it as a fraction and a percentage
+4 laptops (for research reference if internet available, or printed article if not)
+Printed AI article (A4, one per pair) – facilitator selects an age-appropriate article about AI in daily life (e.g. phone face unlock, spam filter, autocomplete); Isoma Edutech provides this
+20 picture sort cards per pair (printed A5, cut) – mix of 5 categories: animals, vehicles, food, tools, buildings
+Printed AI summary template (A4 per learner) – 4 labelled sections: What it does | How it was trained | One benefit | One concern
+Classification rule card (A5 per pair) – 3 sorting rules to apply simultaneously to the picture cards
+Printed discussion log sheet (A4 per facilitator) – for recording meaningful contributions per learner
+Facilitator device + projected screen
+USB flash drives
+No introduction – open with an action. Give each pair the 20 picture cards face-down. "Turn them over. Sort them into groups. You have 90 seconds. Go."
+After sorting, ask: "What rule did you use? Could someone else follow your rule and get the same result?" Take 3 different responses.
+Reveal: "What you just did – classifying items by finding patterns and applying rules – is exactly what a machine learning AI does. The difference is the AI does it millions of times per second, on millions of items."
+Show examples on projected screen: phone face unlock ("it learned your face from 1000 photos"), spam filter ("it learned what spam looks like from millions of emails"), autocomplete ("it learned what words follow other words from billions of sentences"). Ask: "What is the pattern in all of these?" (They all learned from examples.)
+Distribute the AI article. Learners read silently for 5 minutes before discussion begins.
+Article reading and annotation (15 min): learners read the provided AI article. As they read, they underline: one sentence about what the AI does (blue), one sentence about training data (red), one sentence about a benefit or concern (green). Pairs discuss: "Did you find all three?"
+Classification rule challenge (15 min): give each pair the classification rule card with 3 simultaneous rules (e.g. Rule 1: must be living; Rule 2: must be able to move independently; Rule 3: must be found in Uganda). Pairs re-sort all 20 cards applying all 3 rules at once. Count: how many cards satisfy all 3 rules? Calculate the probability as a fraction and percentage.
+Connect to Week 5 sensor project (15 min): facilitator poses the question: "Your LDR sensor from last week collected light data. Imagine you recorded 1000 readings under different light conditions and labelled each one: 'daytime', 'evening', or 'night'. What would an AI do with that data?" Pair discussion. Share responses.
+Introduce the 4 vocabulary terms formally: pattern recognition, training data, classification, prediction. Learners write their own definition for each in the margin of the article – not copied, in their own words.
+Rotate Driver/Navigator. Begin AI summary writing on the summary template.
+AI article summary: learners write independently on the summary template. Minimum 150 words total. Must include all 4 sections: what the AI does, how it was trained, one benefit, one concern. No copying from the article – paraphrase and explain.
+Pair peer-review: swap templates. Partner checks: are all 4 sections present? Is the word count approximately met? Is there any copied sentence (if so, circle it and ask them to rewrite it in their own words).
+Discussion preparation: each learner writes two discussion contribution sentences on a sticky note – one they agree with, one they are unsure about: "I think AI is fair because…" and "One thing that worries me about AI is…"
+Optional Arduino link: if the LDR is available, write a 10-line sketch that classifies the light reading: if lightValue > 600 print "Bright – daytime"; else if lightValue > 300 print "Medium – evening"; else print "Low – night". This is a rule-based AI classifier.
+Facilitator circulates, checks summary writing, notes discussion preparation quality on participation log.
+Structured class discussion (15 min): facilitator poses each question and gives every learner the opportunity to contribute. "Where do you see AI in Uganda today?" "Is AI fair? Can it make mistakes?" "Where could AI help in Uganda that it does not yet?" Facilitator logs meaningful contributions on the discussion log sheet.
+2–3 learners share their summary conclusions aloud (read from their template). Class gives 1 Star (something strong in the summary) + 1 Wish (one improvement).
+Facilitator restates the AI–Arduino connection: "The LDR classifier you wrote – if light > 600, print Bright – is a rule-based AI system. Real AI uses the same logic, but it learns the numbers (like 600) from data instead of us writing them by hand."
+Facilitator restates English link: "Reading a non-fiction article and writing a structured summary is a skill you will use in every subject. Today we practised it with a computing article."
+Facilitator restates Math link: "Probability, fractions, and percentages are how we measure how likely an AI is to make a correct classification. The maths you already know is inside every AI system."
+Exit question (written sticky note): "Write one sentence: what is the difference between AI and a regular programme?" Collect. Target answer: AI learns from data; a regular programme follows rules written by a human.
+Submit AI summary template via USB flash drive.
+artificial intelligence · machine learning · pattern recognition · training data · classification · prediction · algorithm · rule-based system · probability · fraction · percentage
+```
+
+### Plan header and sections
+
+```
+ISOMA EDUTECH LIMITED | Arduino · Python Lesson Plan | Stage 5  (Ages 10–12 · AI Engineers) | Lesson 6: Introduction to AI & Pattern Recognition – Teaching Machines to See
+Duration | 3 hours (Saturday) / 90 min × 2 days (Holiday) | Term / Week | Term 1 · Week 6
+Age Range | 10–12 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | Arduino Uno, USB cable, laptop with Arduino IDE 2.x, LDR from Week 5 (optional for demo), 20 picture sort cards (printed) | Bloom's Level | L4 Analysing
+NCDC Ref | Uganda NCDC P5–P6 – English Strand: Reading comprehension, summarising non-fiction text; Mathematics Strand: Classification, probability, fractions and percentages; ICT Strand: Introduction to artificial intelligence | Cambridge | Cambridge Primary Computing 0845 – Stage 5: Introduction to artificial intelligence; data and patterns; ethical considerations in computing
+DDD ILO | ILO 3.3 – Analyse foundational AI concepts including pattern recognition, data classification, and rule-based decision-making, by connecting these to examples in their own coded projects | Big Idea | AI does not think. It finds patterns in data and follows rules – the same patterns and rules you are already writing in Arduino. The difference is scale.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | Reading comprehension of a non-fiction AI article: learners read independently, then write a structured summary of minimum 150 words. The summary must contain all 4 required elements. This mirrors the non-fiction reading comprehension skills developed in P5–P6 English. Oral contribution: each learner is expected to make at least one reasoned spoken contribution to the class discussion. "I think AI is fair/unfair because…" contributions are logged by the facilitator as participation evidence.
+Maths | Classification activity mathematics: learners sort 20 picture cards into 5 categories. After sorting, calculate: how many cards are in Category A? Probability that a randomly chosen card belongs to Category A = number in Category A ÷ 20. Express as a fraction (e.g. 6/20 = 3/10) and as a percentage (30%). Extend: if 3 rules apply simultaneously, how many cards satisfy all 3 rules? This introduces compound classification – the mathematical foundation of AI filtering.
+LESSON STRUCTURE
+HOOK – You Are Already Doing AI  (20 min)
+GUIDED ACTIVITY – Read, Classify, Connect  (60 min)
+INDEPENDENT WORK – Summary Writing and Discussion Preparation  (50 min)
+SHOWCASE & DEBRIEF – Class Discussion  (30 min)
+ASSESSMENT
+Formative | (During) | Article annotation: 3 colour-coded sentences correctly identified (facilitator spot-check) | Classification probability calculation: correct fraction and percentage for Category A cards (checked during guided phase) | Own-words vocabulary definitions in article margin (checked during circulation) | Meaningful discussion contribution logged by facilitator on participation log (required for artifact record)
+Exit Assessment | AI summary (minimum 150 words, all 4 sections present) submitted on template (assessed against 5-point artifact rubric) | Sticky note exit response: correct distinction between AI and a regular programme (collected) | Participation log entry: at least 1 documented meaningful contribution to class discussion (facilitator record)
+Differentiation | Support: Provide a partially completed summary template with sentence starters for each section: "The AI in this article works by…", "It was trained using…", "One benefit is that…", "One concern is that…". For the classification activity, apply only 1 rule at a time before combining. | Extension: Write the LDR light-level classifier sketch (3 if/else conditions mapping sensor values to labels). Then write a 200-word reflection: "How is this sketch similar to a real AI system? How is it different? What would need to change to make it learn from data instead of following hardcoded rules?"
+KEY VOCABULARY
+Safeguarding Note: The AI article and discussion may raise questions about facial recognition, surveillance, or social media algorithms. Facilitate discussion in an age-appropriate, balanced way. Do not allow learners to share personal opinions about named companies or individuals. Remind learners: AI systems have been shown to make mistakes, particularly with people from underrepresented groups – this is a real ethical issue, not a conspiracy theory.
+Facilitator Name: | _______________________ | Date Delivered: | _______________________ | Signature: | _______________________
+```

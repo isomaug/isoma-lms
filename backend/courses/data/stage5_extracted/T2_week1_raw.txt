@@ -1,0 +1,61 @@
+Write a multi-function Arduino sketch that decomposes a problem into at least 3 named void functions, each called from loop()
+Write a function that accepts a parameter (e.g. void blinkTimes(int n)) and a function that returns a value (e.g. int readButton())
+Read a 25-line provided sketch and produce a written architecture map: list every function, its purpose, its inputs, and its outputs
+Annotate the entire provided sketch with plain-English // comments at every function declaration and every significant line
+Debug a provided sketch that has 3 architectural errors (functions called before declaration, wrong return type, missing parameter) and fix all 3
+Explain the concept of decomposition in plain English and connect it to how an essay is divided into paragraphs
+4 laptops with Arduino IDE 2.x
+4 Arduino Uno boards + USB cables, LEDs, push buttons, 220Ω resistors, breadboard, jumper wires
+Printed "Architecture Map Worksheet" (A4 per pair) — three-column table: Function Name | Purpose | Inputs → Outputs
+Printed "25-Line Sketch for Annotation" (A4 per pair) — a multi-function sketch with wide right margin for comments
+Printed "Debug Challenge" (A4 per pair) — 20-line sketch with 3 intentional architectural errors marked with □
+Printed "Term Two Entry Review" quiz (A5 per learner) — 5 quick questions recapping Term One key concepts
+USB flash drives
+Facilitator device + projected screen
+Distribute the Term Two Entry Review quiz. Learners complete individually in silence (5 min). Questions recap: (1) Name 3 Arduino data types. (2) Write the syntax for a for loop from 1 to 10. (3) What does Serial.println() do? (4) Name one comparison operator. (5) What is an if/else condition used for? Pairs swap and peer-mark (facilitator reads answers aloud).
+Quick-fire class recap: facilitator points to a Term One concept on the board and asks a learner to explain it in one sentence. Rotate through 6 concepts: variable, loop, condition, function, sensor, array.
+Introduce Term Two framing: "Everything you learned in Term One was a single tool. This term, we combine those tools to build bigger things. Today we learn how to organise those tools properly — that is called code architecture."
+Show two versions of the same programme on the projected screen: Version A — all code in loop(), no functions, 40 lines. Version B — same behaviour, decomposed into 4 functions, each 5–8 lines. Ask: "Which is easier to read? Which would be easier to fix if something broke? Which is the better code?"
+Facilitator live-codes on the projected screen — pause at each new concept. Start with a review function: void blinkOnce() { digitalWrite(13, HIGH); delay(500); digitalWrite(13, LOW); delay(500); }. Call it from loop(). Learners follow on their own sketches.
+Add a parameter: modify to void blinkTimes(int n) { for(int i = 0; i < n; i++) { blinkOnce(); } }. Call with blinkTimes(3) and blinkTimes(7). Ask: "What changes when we change the number? What stays the same?" Link to mathematics: "n is the input, the LED behaviour is the output. This is a function in the mathematical sense."
+Return values: write int readButton() { return digitalRead(2); }. Use in loop(): if(readButton() == HIGH) { blinkTimes(5); }. Explain: "This function goes out, gets a value, and brings it back. Like a messenger — it does one job and returns with the answer."
+Architecture map task: distribute the printed 25-line sketch. Pairs read the entire sketch and fill in the architecture map worksheet: every function listed, its purpose in one plain-English sentence, its inputs (parameters), and its outputs (return value or side effect).
+Annotation task: using the wide right margin of the printed sketch, annotate every function declaration and every significant line with a plain-English comment. Must be complete sentences.
+Rotate Driver/Navigator. New driver now leads the debug challenge.
+Debug challenge: distribute the printed debug sketch. Pairs identify all 3 architectural errors on paper first (without uploading). Errors include: function called before it is declared, function declared with wrong return type (void instead of int), function call missing a required parameter. Write the fix for each error in the margin.
+After finding all 3 on paper, type the corrected version in Arduino IDE and upload to confirm it compiles and runs. If any error remains, trace line by line.
+Composition challenge: write a new sketch from scratch with at least 3 named functions addressing a real scenario. Suggested scenarios (pair chooses one): a door alarm (button pressed = blink + delay pattern); a Morse code sender (blink short and long); a traffic light sequence (3 LEDs or 3 delays representing red/yellow/green). Each function must have a clear, single job. No function should be longer than 10 lines.
+Facilitator circulates. Prompt: "Can you explain what each function does in one sentence? If not, it might be doing too many things." Observe participation and note on participation log.
+Extension: write a function int countButtonPresses(int seconds) that counts how many times the button is pressed within a given number of seconds and returns that count. Print the result to Serial Monitor.
+2–3 pairs demonstrate their composition challenge sketch. As the LED demonstrates the behaviour, the learner reads aloud the function names: "First the setup() runs. Then loop() calls trafficRed() for 5 seconds, then trafficYellow() for 2 seconds, then trafficGreen() for 5 seconds."
+Facilitator asks each presenting pair: "If I asked you to change the duration of the red light only, which exact line would you change? How long would it take you to find it?" Demonstrate that well-structured code answers this question instantly.
+Connect decomposition to English: "A well-organised essay and a well-organised programme follow the same rule: one idea or one job per section. Your introduction does not contain your conclusion. Your blinkTimes() function does not read the button."
+Connect to mathematics: "We defined int doubleValue(int x) { return x * 2; }. In mathematics, that is written f(x) = 2x. The equals sign and the return statement are the same idea expressed in two different languages."
+Exit question (written on architecture map reverse): "Describe decomposition in two sentences using an everyday example that is NOT a computer programme." Collect as formative evidence.
+Submit annotated sketch, architecture map, and debug challenge via USB flash drive.
+decomposition · function · parameter · return value · architecture · void · call · declare · modular
+· int · annotation · side effect
+ISOMA EDUTECH LIMITED | Arduino · Python Lesson Plan | Stage 5  (Ages 10–12 · AI Engineers) | Lesson T2–1: Advanced Arduino Syntax, Multi-Function Sketches & Code Architecture
+Duration | 3 hours (Saturday) / 90 min × 2 days (Holiday) | Term / Week | Term 2 · Week 1
+Age Range | 10–12 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | Arduino Uno, USB cable, laptop with Arduino IDE 2.x, LED on pin 13, push button on pin 2, 220Ω resistor, breadboard, jumper wires | Bloom's Level | L3 Applying → L4 Analysing
+NCDC Ref | Uganda NCDC P5–P6 – ICT Strand: Structured programming, modular code design; English Strand: Technical writing, annotating structured text; Mathematics Strand: Functions as input-output machines, modular arithmetic | Cambridge | Cambridge Primary Computing 0845 – Stage 5: Decomposition; functions and procedures; reading and tracing complex programmes; code quality
+DDD ILO | ILO 3.1 – Write Arduino sketches that correctly use setup(), loop(), variables, digital I/O, and Serial.println(); extend to multi-function architecture with user-defined functions, parameters, and return values | Big Idea | Good code is not just code that works — it is code that can be read, understood, and changed by someone else. Architecture is the difference between a programme and a solution.
+Term Two Context: Term One established the foundations: Blink, variables, loops, conditions, sensors, AI concepts, and a first project. Term Two builds on every one of those skills. Week 1 revisits code structure — but now learners write multi-function sketches, use parameters and return values, and begin thinking about how real programmes are organised. The bar is higher; the expectation is greater independence.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | Decomposition as essay structure: facilitator explicitly draws the parallel between organising a programme into functions and organising an essay into paragraphs. Each function has a single job — like each paragraph has a single main idea. The architecture map requires learners to write a purpose statement for each function in plain English (a full sentence). The annotation task is treated as a technical writing exercise: comments must be complete sentences in the correct tense ("This function makes the LED blink n times.").
+Maths | Functions as mathematical input-output machines: blinkTimes(int n) is a function f(n) — given n, produce a result. Return values make this explicit: int doubleValue(int x) { return x * 2; } is f(x) = 2x written in code. Modular arithmetic connection: if a loop runs inside a function every 500ms, how many times does it run in 1 minute? (60000ms ÷ 500ms = 120 iterations.) Link to P6 mathematics: expressing a relationship between two quantities.
+LESSON STRUCTURE
+WARM-UP & REVIEW — Term One Recap  (20 min)
+GUIDED ACTIVITY — Functions with Parameters and Return Values  (60 min)
+INDEPENDENT WORK — Debug and Compose  (50 min)
+SHOWCASE & DEBRIEF  (30 min)
+ASSESSMENT
+Formative (During) | Term Two Entry Review quiz: peer-marked, results noted by facilitator as baseline for Term Two (collected) | Architecture map: all functions named with correct plain-English purpose statements (checked during guided phase) | Debug challenge: all 3 architectural errors identified on paper before upload (collected) | Exit written response: decomposition explained using a non-computing analogy (collected)
+Exit Assessment | Multi-function sketch: at least 3 named functions, one with a parameter, one with a return value — compiles and runs (verified by facilitator) | Architecture map fully completed for the provided 25-line sketch (assessed on submission) | Debug challenge: all 3 errors corrected, sketch compiles without errors (verified) | All materials submitted via USB flash drive
+Differentiation | Support: Provide a function template with blanks: void blinkTimes(int ___) { for(int i=0; i < ___; i++) { ___ } }. For the architecture map, pre-fill the function names and ask learners to write the purpose only. Pre-fix 1 of the 3 debug errors. | Extension: Write a generic void runSequence(int pins[], int durations[], int length) function that accepts an array of pin numbers and an array of durations and runs them in order. Call it with two different sequences. Calculate: if the total sequence takes T seconds, how many full sequences run in 1 hour?
+KEY VOCABULARY
+Safeguarding Note: Learners should not include personal information in function names, variable names, or Serial.println() strings. Remind learners that code files shared via USB may be seen by others. Any real-world scenario chosen for the composition challenge (e.g. a door alarm) must be framed as a general engineering concept, not as a surveillance or monitoring tool.
+Facilitator Name: | _______________________ | Date Delivered: | _______________________ | Signature: | _______________________

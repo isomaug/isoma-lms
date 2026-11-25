@@ -1,0 +1,121 @@
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)
+Lesson 8: Demo Day – RoboCreator Showcase & Certification
+WEEK 8
+Duration
+60 minutes
+Term / Week
+Term 1 · Week 8
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L3–L6 Applying → Creating
+DDD Phase
+DISCOVER – Learners present, demonstrate, and reflect on their completed Micro:bit project in a structured showcase
+NCDC Ref
+Uganda NCDC P3–P4 Curriculum: ICT Literacy Strand; Numeracy Strand: Patterns & Logic
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3: Presenting and evaluating digital work; Communicating findings clearly; Reflecting on what has been learned
+Big Idea
+Presenting your work is as important as building it. Engineers explain what problem they solved, how they solved it, and what they would do differently next time. Today you are the expert.
+Key ILO
+ILO 2.1 – 2.4 (all): Demonstrate a self-written, functional Micro:bit programme; explain the coding concepts used; present a written story plan or design brief; identify one mathematical element of the project.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Deliver a structured 3-minute presentation using the format: Problem → Solution → Demo → What I Learned → What I Would Improve
+2
+Demonstrate the working Micro:bit project live during the presentation with no facilitator assistance
+3
+Explain at least one coding concept used (loop, condition, input event, or sensor) in plain English to the audience
+4
+Identify and explain one mathematical element of the project (threshold, calculation, data, or pattern)
+5
+Complete a peer feedback rubric for at least one other presenter
+6
+Receive and respond to at least one question from the audience about the project
+Materials & Preparation
+4 BBC Micro:bit v2 kits + USB cables (charged and tested before session)
+4 shared laptops (for any last-minute fixes – first 15 min only)
+All design briefs and storyboards from Weeks 6 and 7 (returned to learners)
+Presentation structure card (A5 per learner): Problem / Solution / Demo / What I Learned / What I Would Improve
+Peer feedback rubric (A4 per learner) – scored 1–4 per criterion: Clarity, Demo worked, Coding concept explained, Maths element explained
+Facilitator assessment rubric (see DDD Part 8.5 – Stage 3–4 Demo Day Rubric)
+RoboCreator Certificates (pre-printed, ready to award on pass)
+Facilitator device + projected screen (for displaying each presenter's MakeCode project if desired)
+'Celebration' sign or display for the room
+Cross-Curricular Links
+English Literacy
+Structured oral presentation: minimum 5 full sentences per section of the presentation structure. Learners must use: an introduction sentence ('My project is called…'), a problem statement ('I noticed that…'), a technical explanation ('The Micro:bit uses a ___ block to…'), a reflection ('I found it difficult/easy to… because…'), and a conclusion ('If I had more time, I would…'). Audience members must listen actively and prepare one question to ask the presenter.
+Mathematics
+Quantitative explanation: each presenter must state and explain one numerical or mathematical element of their project. This could be: a threshold value used in an if/else condition and why that number was chosen; a loop count and what multiplication it represents; a mean temperature from their Week 5 data and what it shows; or a duration calculation from their Week 6 story animation. Facilitator prompts if needed: 'Is there a number in your code? What does it mean?'
+LESSON STRUCTURE
+Step
+Activity
+PREP – Final Fixes and Rehearsal (15 min)
+1
+Learners have 15 minutes ONLY to make final fixes. Facilitator sets a visible timer. Remind: 'After 15 minutes, all laptops close. The code you have is the code you present.'
+2
+Each learner silently reads through their presentation structure card and rehearses their 3-minute talk to themselves. Facilitator circulates: 'What will you say for the Demo section? What maths element will you explain?'
+3
+Pairs do a 60-second mock run of their presentation with each other. Partner checks: 'Did they mention the problem? Did they show the demo? Did they explain one coding concept?'
+4
+Close all laptops. Micro:bits are connected and tested – confirm project is downloaded and running before presentations begin.
+DELIVER – Presentations (30 min)
+5
+Presentation order: facilitator draws names randomly. Each learner presents individually for 3 minutes. Partner supports during the demo (holds the Micro:bit or reads from the design brief) but does NOT speak.
+6
+Presenter 1: Problem → Solution → Demo (Micro:bit runs LIVE) → What I Learned → What I Would Improve. Facilitator times with visible timer.
+7
+After each presentation: audience completes the peer feedback rubric (30 seconds). One audience member asks one prepared question. Presenter answers.
+8
+Repeat for all 8 learners. Facilitator completes the official assessment rubric for each presenter using the DDD Part 8.5 scoring criteria during each presentation.
+9
+Facilitator gives brief verbal feedback after each presentation: 1 specific strength + 1 specific area for growth. Always private if the score is low – do not compare learners publicly.
+DISCOVER – Reflection and Celebration (10 min)
+10
+Whole-group reflection: Facilitator asks 3 open questions – 'What is one thing you are most proud of from the last 8 weeks?', 'What was the hardest moment and how did you get through it?', 'What would you build next?'
+11
+Facilitator highlights one learning moment from each learner by name: acknowledge growth, persistence, and creativity. Do not rank or compare.
+12
+Certificate ceremony: Facilitator calls each learner's name. Learners who meet the pass threshold (≥55% weighted score per DDD Part 9) receive their RoboCreator Certificate. Learners who need resubmission are informed privately and given a written resubmission brief.
+13
+Group photo opportunity (only with prior written parental consent on file). Celebrate with applause.
+WRAP-UP – Return Equipment and Record Keeping (5 min)
+14
+All Micro:bits returned to kit boxes. USB cables coiled and stored. Laptops closed and returned to charging station.
+15
+Facilitator collects all assessment materials: peer feedback rubrics, design briefs, storyboards, data tables, and assessment record sheets. Confirm all documents are signed and dated.
+16
+Remind learners and note for records: all artifacts must be retained until end of programme for moderation. Facilitator completes and signs the Assessment Record Sheet for each learner before leaving the session.
+Assessment
+Formative (During)
+Facilitator observation during prep phase: is the Micro:bit project downloaded and functional before presentations begin? (readiness check)
+Presentation structure followed: Problem / Solution / Demo / What I Learned / What I Would Improve? (rubric check)
+Live demo works without facilitator assistance? (functionality check)
+Exit Assessment
+Official Demo Day Assessment Rubric (DDD Part 8.5): scored across 4 criteria –
+① Live Demo (project functions, 4-pt scale)
+② Coding Concept Explained (clarity and accuracy, 4-pt scale)
+③ Mathematical Element Explained (correct and specific, 4-pt scale)
+④ Presentation Structure (all 5 sections delivered, 4-pt scale).
+Weighted with prior assessment components per DDD Part 9 to determine final stage score. RoboCreator Certificate awarded at ≥55%.
+Differentiation
+Support: Allow learner to use the presentation structure card as a reading script during the presentation. Partner may prompt with the next section heading if the learner pauses. Provide an adapted rubric with simpler language for the peer feedback form. Extension: Learner presents without notes, takes 2 audience questions, and offers a specific improvement they would make to the code if they had one more session – showing evaluative thinking at Bloom's Level 5.
+Key Vocabulary
+presentation · demo · evaluation · reflection · certificate · rubric · iteration · design brief · prototype · RoboCreator · audience · feedback
+Safeguarding Note: Group photos require written parental consent on file prior to the session. Any learner without consent must not appear in photos. Certificates are presented individually and respectfully. Learners who do not pass are informed privately – never in front of the group. Facilitator must report any safeguarding concerns observed during the session to the Programme Director the same day.
+Facilitator Name:
+_____________________
+Date Delivered:
+______________________
+Signature:
+_____________________

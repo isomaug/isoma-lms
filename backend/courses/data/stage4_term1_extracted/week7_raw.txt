@@ -1,0 +1,54 @@
+Write a complete 5-section design brief: Title, Problem Statement, Who It Is For, How It Works, Maths/English Connection
+Build a working Micro:bit programme that responds to at least one input (button, sensor, or gesture) and produces at least one output (LED, sound)
+Test the programme and identify at least one thing to improve (document this in the design brief under 'What I Would Change')
+Iterate: make at least one improvement to the programme based on testing
+Complete a peer review form for a partner's project using the 3-question feedback format
+Explain the mathematical concept used in the project (e.g. counting, pattern, measurement, data) with a calculation or example
+4 BBC Micro:bit v2 kits with USB cables
+Design brief template (A4 per learner) – 5 sections: Title / Problem Statement / Who Is It For? / How It Works (step-by-step) / Maths or English Connection Used
+Peer review form (A4 per learner) – 3 questions: What does the project do? What works well? One suggestion to improve?
+Project inspiration cards (optional) – 6 ideas: Step counter, Temperature alarm, Quiz machine, Mood display, Countdown timer, Pattern generator
+Facilitator device + projected screen
+Facilitator shows 3 quick demos from previous weeks on projected screen: temperature alarm (Week 4), loop counter (Week 3), LED story (Week 6). Ask: 'Which of these solves a real problem? Could you combine ideas?'
+Show project inspiration cards. Pairs have 2 minutes to choose or design their own project idea. Rule: it must solve a problem you have actually noticed – no imaginary problems.
+Class quick-share: each pair names their project in one sentence using the format: 'Our project is [name]. It solves the problem of [problem] by [solution].'
+Facilitator confirms: every project must have at least one INPUT (button/sensor/gesture), at least one OUTPUT (LED/sound), and at least one MATHS connection.
+Distribute design brief templates. Pairs write their full design brief together. Rule: the brief is written before any coding begins. Facilitator circulates to check all 5 sections are being completed in full sentences.
+Section 1 – Title: give the project a clear, descriptive name (not just 'My Project').
+Section 2 – Problem Statement: in 2–3 sentences, describe the problem. Who experiences it? When? Where?
+Section 3 – Who It Is For: describe the user. Age, situation, why they need this.
+Section 4 – How It Works: numbered step-by-step description of what the programme does (inputs → processing → output).
+Section 5 – Maths/English Connection: state which concept is used and write a calculation or example that proves it.
+Step 1 – Build (15 min): Driver opens MakeCode and begins coding. Navigator reads from the design brief's 'How It Works' section to guide. The brief is the specification – code must match it.
+Step 2 – Test (5 min): Download the programme. Run it 3 times. Does it do what the design brief says? If not, note what is different.
+Step 3 – Iterate (5 min): Identify the biggest problem found during testing. Fix it. Download again. Confirm the fix works. Write 'What I Would Change' in the design brief (add this section at the bottom).
+Pairs swap laptops/Micro:bits. Each pair spends 3 minutes running the partner's programme and completing the peer review form using the 3-question format.
+Return devices. Each learner reads the peer review received. Identify one suggestion to implement before Demo Day (Week 8).
+Teaser: 'Next week is DEMO DAY – RoboCreator Showcase. You will have 30 minutes to make final improvements, then deliver a structured 3-minute presentation: Problem → Solution → Demo → What I Learned → What I Would Improve. Certificates are awarded on the day!'
+Save project as 'Week7_Project_[InitialInitial]'.
+Tick: ☑ Design brief (all 5 sections) ☑ Programme works (input + output) ☑ Iteration made ☑ Peer review form completed.
+Collect design briefs for assessment. Keep Micro:bit programmes saved for Demo Day next week.
+ISOMA EDUTECH LIMITED Micro:bit (MakeCode) Lesson Plan – Stage 4 (P4 · Cambridge Stage 4 / Year 4) Lesson 7: Creative Project Sprint – Design, Build & Test
+Duration | 60 minutes | Term / Week | Term 1 · Week 7
+Age Range | 8–10 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | BBC Micro:bit v2 (all sensors: temperature, light, accelerometer, buttons), USB cables, shared laptops | Bloom's | L5–L6 Evaluating / Creating
+NCDC Ref | Uganda NCDC P4 – Literacy Strand: Structured Writing (Design Brief); Numeracy Strand: Measurement, Patterns, Statistical Concepts in context | Cambridge | Cambridge Primary Computing 0845 – Stage 4: Designing and creating programmes; Testing and improving; Communicating design intent
+DDD Phase | DESIGN → DELIVER → DISCOVER – Full project sprint: written design brief (Day 1 / first half), build and test (Day 2 / second half), peer review and iterate | Big Idea | Real engineers do not jump straight into building. They write a plan, build it, test it, find what is wrong, and improve it. This process is called iteration – and today you will go through all of it.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS
+English | Design brief (structured writing): write a full 5-section design brief. Minimum 1 paragraph per section (4+ sentences). Each section has a specific purpose: Problem Statement explains the real-world need; Who It Is For identifies the audience; How It Works gives step-by-step instructions. Peer review uses structured sentence frames: 'The project does…', 'One thing that works well is…', 'One suggestion I have is…' | Maths | The project must include at least one explicit mathematical concept: a sensor reading with statistical analysis (mean, range), a sequence or pattern implemented in code, a loop that counts or computes, or a measurement/geometry concept used in the physical design. Learner must write a calculation or show a graph that demonstrates the maths connection in the design brief.
+LESSON STRUCTURE
+HOOK – What Problem Will You Solve? (10 min)
+DESIGN – Write Your Design Brief (15 min)
+DELIVER – Build and Test (25 min)
+DISCOVER – Peer Review and Refine (5 min)
+WRAP-UP – Save and Pack (5 min)
+ASSESSMENT | ASSESSMENT
+Formative (During) | Design brief review: are all 5 sections present with at least 1 paragraph each? Is the maths connection explicitly stated with a calculation? Programme observed: does it respond to at least one input and produce at least one output?
+Exit Assessment | Completed design brief (all 5 sections) submitted as Week 7 assessed artifact (4-point rubric, DDD Part 8.3). Working prototype confirmed. Peer review form completed for partner. Maths connection must include a written calculation or example.
+Differentiation | Support: provide a pre-filled design brief template with prompts; learner only writes the content, not the structure. Extension: Learner writes a second round of improvements based on peer feedback and documents both test rounds in the brief, comparing before and after.
+KEY VOCABULARY
+design brief · prototype · iterate · test · input · output · problem statement · user · specification · peer review
+Safeguarding Note: Project ideas must be school-appropriate and must not involve monitoring, tracking, or gathering personal data about other people. If a learner proposes a project that could be used to surveil others (e.g. 'a device to check if someone is in their room'), redirect to a positive use case. All peer review must be constructive – remind learners that criticism is about the project, not the person.
+Facilitator Name:   ____________________ | Date Delivered:   ____________________ | Signature:   ____________________

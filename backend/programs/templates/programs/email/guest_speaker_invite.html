@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+  <title>EkebuLive Information Sessions invitation</title>
+  <style>
+    body, table, td, p, a, li, blockquote {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    table, td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+    @media only screen and (max-width: 480px) {
+      .email-wrapper {
+        padding: 8px 4px !important;
+      }
+      .email-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 8px !important;
+      }
+      .content-padding {
+        padding: 18px 14px !important;
+      }
+      .header-padding {
+        padding: 16px 14px !important;
+      }
+      .session-card {
+        padding: 14px 12px !important;
+      }
+      .mobile-text {
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background:#F5F3F8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2B2930;word-break:break-word;-webkit-font-smoothing:antialiased;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#F5F3F8;margin:0;padding:24px 8px;width:100% !important;" class="email-wrapper">
+    <tr>
+      <td align="center" style="padding:0;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:580px;background:#FFFFFF;border:1px solid #E7E3EB;border-radius:12px;overflow:hidden;box-shadow:0 4px 18px rgba(22,23,29,0.04);margin:0 auto;" class="email-container">
+          <!-- Top Gradient Accent Band -->
+          <tr>
+            <td style="height:4px;background:linear-gradient(90deg, #AA3BFF 0%, #10B981 100%);font-size:4px;line-height:4px;">&nbsp;</td>
+          </tr>
+          <!-- Header -->
+          <tr>
+            <td style="background:#16171D;padding:20px 24px;" class="header-padding">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td valign="middle">
+                    <p style="margin:0;font-size:16px;font-weight:800;letter-spacing:0.02em;color:#FFFFFF;display:inline-block;">EkebuLive</p>
+                  </td>
+                  <td align="right" valign="middle">
+                    <span style="display:inline-block;padding:3px 10px;border-radius:9999px;background:rgba(170,59,255,0.22);border:1px solid rgba(170,59,255,0.45);color:#E2D1FC;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">
+                      Information Sessions
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Main Body -->
+          <tr>
+            <td style="padding:26px 24px;" class="content-padding">
+              <p style="margin:0 0 16px;font-size:16px;line-height:1.55;color:#16171D;" class="mobile-text">
+                Dear <strong>{{ guest_first_name }}</strong>,
+              </p>
+              <p style="margin:0 0 16px;font-size:15px;line-height:1.55;color:#2B2930;" class="mobile-text">
+                I am inviting you to be a guest speaker on EkebuLive.
+              </p>
+              <p style="margin:0 0 16px;font-size:15px;line-height:1.55;color:#2B2930;" class="mobile-text">
+                EkebuLive is a live video platform for useful conversations — meetings, classes, and public sessions people can join from a link, without needing an account. We are running a weekly series called <strong>EkebuLive Information Sessions</strong>: one practical topic, one guest, and a live audience, every Saturday from <strong>5:00–6:00 PM East Africa Time</strong>.
+              </p>
+              <p style="margin:0 0 20px;font-size:15px;line-height:1.55;color:#2B2930;" class="mobile-text">
+                The conversation is about 45–60 minutes. You would share from your experience, answer a few prepared questions plus audience questions, and leave people with one action they can take that week. We host and keep time. You do not need to prepare a slide deck.
+              </p>
+
+              <!-- Session Details Card with EkebuLive Purple Border Accent -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 22px;background:#FAF8FC;border-left:4px solid #AA3BFF;border-top:1px solid #EAE6F0;border-right:1px solid #EAE6F0;border-bottom:1px solid #EAE6F0;border-radius:8px;">
+                <tr>
+                  <td style="padding:16px 18px;" class="session-card">
+                    <p style="margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:#AA3BFF;font-weight:800;">
+                      Your Session Details
+                    </p>
+                    <p style="margin:0 0 8px;font-size:15px;line-height:1.45;color:#16171D;font-weight:700;">
+                      Week {{ week_number }} · {{ topic }}
+                    </p>
+                    <p style="margin:0 0 6px;font-size:14px;line-height:1.45;color:#2B2930;">
+                      📅 {{ date_label }}
+                    </p>
+                    <p style="margin:0 0 6px;font-size:14px;line-height:1.45;color:#2B2930;">
+                      ⏰ {{ time_range }}
+                    </p>
+                    <p style="margin:0;font-size:13px;line-height:1.45;color:#6B6872;">
+                      🌐 Online on EkebuLive (join link sent after you confirm)
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin:0 0 18px;font-size:15px;line-height:1.55;color:#2B2930;" class="mobile-text">
+                If that date works, reply with the name you want us to use on the session, and a one-line bio. If that Saturday is busy, tell me which other week you can do.
+              </p>
+
+              <!-- What We Ask -->
+              <p style="margin:0 0 10px;font-size:14px;font-weight:700;color:#16171D;text-transform:uppercase;letter-spacing:0.03em;">
+                What we ask of a guest
+              </p>
+              <ul style="margin:0 0 22px;padding-left:18px;font-size:14px;line-height:1.6;color:#2B2930;">
+                <li style="margin-bottom:6px;">Join 15 minutes early for a short camera and mic check.</li>
+                <li style="margin-bottom:6px;">Speak to the week’s question in plain language (not a lecture).</li>
+                <li style="margin-bottom:6px;">Give one practical takeaway before we close.</li>
+                <li>Confirm whether we may record and use short clips.</li>
+              </ul>
+
+              <p style="margin:0 0 18px;font-size:15px;line-height:1.55;color:#2B2930;" class="mobile-text">
+                Thank you. I hope you can join us.
+              </p>
+
+              <!-- Signature -->
+              <div style="border-top:1px solid #EFEBF3;padding-top:16px;margin-top:10px;">
+                <p style="margin:0 0 2px;font-size:15px;font-weight:700;color:#16171D;">{{ host_name }}</p>
+                <p style="margin:0 0 4px;font-size:13px;color:#6B6872;">EkebuLive</p>
+                <p style="margin:0;font-size:13px;">
+                  <a href="{{ site_url }}" style="color:#AA3BFF;text-decoration:none;font-weight:600;">{{ site_url }}</a>
+                  {% if host_email %}
+                    <br /><span style="color:#8E8A98;font-size:12px;">{{ host_email }}</span>
+                  {% endif %}
+                </p>
+              </div>
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="padding:16px 24px;border-top:1px solid #E7E3EB;background:#F9F8FB;" class="content-padding">
+              <p style="margin:0;font-size:12px;line-height:1.45;color:#787580;text-align:center;">
+                EkebuLive Information Sessions · Useful, practical conversations, live.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

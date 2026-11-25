@@ -1,0 +1,218 @@
+# Lesson 9: Variables & Radio – Making Two Micro:bits Talk
+
+**Duration:** 60 minutes (split across Week 1 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 2 · Week 1
+**Age Range:** 8–10 years
+**Hardware:** BBC Micro:bit v2 + USB cables + shared laptops
+**Software:** Microsoft MakeCode (makecode.microbit.org)
+**Bloom's:** L3–L4 Applying / Analysing
+**DDD Phase:** DESIGN → DELIVER – Learners extend ILO 2.1 by introducing variables and the Micro:bit radio module to send and receive data between two devices
+**NCDC:** Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic & Data
+**Cambridge:** Cambridge Primary Computing 0845 – Stage 3: Using variables to store and change data; Sending and receiving data; Understanding how networks share information
+
+**Big Idea:** A variable is like a labelled box that holds a value. The Micro:bit radio lets two devices share that value wirelessly — like sending a note across the room without getting up.
+
+**Source plan:** `Stage3_Term2_Week1_Microbit_LessonPlan.docx`
+
+## Learning Objectives
+
+- Define 'variable' in their own words and give one example of where variables are used in everyday life
+- Create and set a numeric variable in MakeCode ('score', 'count', or a name they choose) and display its value on the LED matrix
+- Modify the variable's value using Button A (increment by 1) and Button B (decrement by 1), displaying the updated value each time
+- Set the radio group to a shared number and use 'radio send number' to transmit the variable's current value to a partner's Micro:bit
+- Use 'on radio received' on the partner Micro:bit to display the received value on the LED matrix
+- Explain in plain English: 'What is a variable?', 'What does radio send do?', and 'What does radio receive do?' — one sentence each
+
+## Materials and Preparation
+
+- 4 BBC Micro:bit v2 kits + USB cables (all 4 Micro:bits needed — 2 per pair for radio activity)
+- 4 shared laptops with MakeCode open
+- Variable concept card (A5 per learner) – diagram: labelled box → name / value
+- Radio programme planning sheet (A4 per pair) – 2 columns: Sender programme | Receiver programme
+- Vocabulary cards: 'variable', 'value', 'radio', 'send', 'receive', 'radio group', 'increment', 'decrement'
+- Facilitator device + projected screen
+- 'One Star, One Wish' feedback cards
+- Sticky notes for exit ticket (one per learner)
+
+## Cross-Curricular Links
+
+**English:** Vocabulary in context: 'variable', 'value', 'increment', 'decrement', 'send', 'receive'. Learners write one sentence for each word using the session as the context. Sentence frame: 'A variable is like a ___ because ___.' Oral explanation task: learner must explain the radio programme to a partner who 'has never seen a Micro:bit' — practising clear, audience-aware communication as in the DDD's oral presentation strand.
+
+**Maths:** Integers and change: variable starts at 0; Button A adds 1 (increment); Button B subtracts 1 (decrement). Track the value after 5 button presses on a number line drawn on paper. Introduction to signed integers: what happens when the variable goes below 0? Is −3 greater or less than 0? Comparison: if Pair A's Micro:bit sends 7 and Pair B's sends 12, what is the difference? Which is greater?
+
+## Lesson Structure
+
+### HOOK – What Is a Variable? (10 min)
+1. Hold up a labelled box (or draw one on the board). Label it 'score'. Write '0' inside. Ask: 'If I press Button A, the score goes up by 1. What is score now?' Change to 1. Repeat twice. 'What am I doing each time? What is the BOX called?' Guide to: a variable.
+2. Show the variable concept card. Learners read the two fields aloud: name (what the box is called) and value (what is inside it right now). Ask: 'Where do you see variables in real life?' (score in a game, temperature on a thermometer, money in a wallet).
+3. Show on the projected MakeCode screen: a 'set score to 0' block and a 'change score by 1' block inside an 'on button A pressed' event. Ask: 'Which block creates the variable? Which block changes it?'
+4. Bridge: 'Today we will make a variable that TWO Micro:bits can share — wirelessly. One Micro:bit sends the number; the other one catches it and shows it.'
+### DESIGN – Plan the Programme (10 min)
+5. Distribute the radio programme planning sheet. Pairs plan BOTH sides before coding: Sender side — what variable? What events change it? What block sends it? Receiver side — what block catches the incoming number? What does the LED show?
+6. Pairs write the plan in plain English in each column. Facilitator checks: 'Do both sides have a radio group number? Is it the SAME number for both?' Confirm all pairs have the same group (e.g. group 1) before laptops are distributed.
+7. Vocabulary check: each pair holds up their vocabulary cards for 'radio group', 'send', 'receive'. Facilitator confirms understanding before coding begins.
+### DELIVER – Code Both Sides (30 min)
+8. Distribute 2 Micro:bits and 1 laptop per pair. Assign Driver (codes) and Navigator (holds the planning sheet and checks each block).
+9. Part 1 – Variable programme (10 min): on start → set score to 0. On button A pressed → change score by 1 → show number score. On button B pressed → change score by −1 → show number score. Download to Micro:bit 1. Test: does button A increase and button B decrease the displayed number?
+10. Part 2 – Add radio send (8 min): inside each button event, AFTER updating the variable, add 'radio send number score'. Set radio group to 1. Re-download to Micro:bit 1.
+11. Part 3 – Receiver programme (8 min): new project on same laptop. On radio received (receivedNumber) → show number receivedNumber. Set radio group to 1. Download to Micro:bit 2.
+12. Part 4 – Test the link (4 min): both Micro:bits connected. Press Button A on Micro:bit 1 — does the number appear on Micro:bit 2? SWAP Driver and Navigator. New Driver explains each block aloud before any change is made.
+### DISCOVER – Investigate and Reflect (8 min)
+13. Challenge: 'Change the radio send to send a STRING (a word) instead of a number. What block do you need? What changes on the receiver side?' Pairs investigate in MakeCode for 3 minutes.
+14. Two pairs share their radio results with the class. Each explains: 'Our variable was called ___. Micro:bit 1 sent ___ and Micro:bit 2 showed ___.'
+15. Maths debrief: Facilitator asks — 'Start at 0. Press A five times and B twice. What is the value now?' Learners calculate: 5 − 2 = 3. 'What if you pressed B once more?' Answer: 2. Record on the number-line worksheet.
+16. Vocabulary consolidation: learners write three sentences on their sticky-note exit ticket — one for 'variable', one for 'radio send', one for 'radio receive'.
+### WRAP-UP – Save and Reflect (2 min)
+17. Rename both MakeCode projects: 'T2W1_[Name]_Sender' and 'T2W1_[Name]_Receiver'. Disconnect both Micro:bits and return to kit box.
+18. Collect exit-ticket sticky notes and planning sheets. Facilitator records which pairs demonstrated a working radio link on the assessment record sheet.
+
+## Assessment
+
+- Formative (During)
+- Observation: Does the variable change correctly on button presses and display on the LED? (functionality check — Micro:bit 1)
+- Does Micro:bit 2 display the received number when Micro:bit 1 sends it? (radio link functionality check)
+- Can learner define 'variable' and 'radio group' in one sentence each? (oral check)
+- Planning sheet completed with both sender and receiver programmes written in plain English before coding? (worksheet check)
+- Exit Assessment
+- Sticky-note exit ticket: 3 sentences — ① 'A variable is…' ② 'Radio send means…' ③ 'Radio receive means…'. Collected by facilitator. Assessment criteria: each sentence must use the word in context correctly, not just repeat the definition from the card. 3 points per learner.
+- Differentiation
+- Support: Pre-build the variable and button blocks so learner only needs to add the radio send and radio group blocks. Provide a colour-coded planning sheet where Sender blocks are blue and Receiver blocks are green. Extension: Programme a two-player reaction game — Micro:bit 1 sends a random number when shaken; Micro:bit 2 displays it and the player must press Button A if the number is greater than 5, or Button B if not. Add a win/lose icon based on the response.
+
+## Key Vocabulary
+
+variable · value · set · change by · increment · decrement · radio · radio group · radio send · radio receive · receivedNumber · integer Date Delivered: Signature:
+
+## Safeguarding
+
+Safeguarding Note: Radio programmes broadcast to all Micro:bits on the same group number. Ensure learners do not send personal names, surnames, or identifying data via the radio block. Use only numbers or agreed neutral words (e.g. 'hello', 'go') in radio transmissions during the session.
+
+## Full source extract (complete)
+
+```
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)  |  Term Two
+Lesson 9: Variables & Radio – Making Two Micro:bits Talk
+T2 · W1
+(Week 9)
+Duration
+60 minutes
+Term / Week
+Term 2 · Week 1
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L3–L4 Applying / Analysing
+DDD Phase
+DESIGN → DELIVER – Learners extend ILO 2.1 by introducing variables and the Micro:bit radio module to send and receive data between two devices
+NCDC Ref
+Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic & Data
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3: Using variables to store and change data; Sending and receiving data; Understanding how networks share information
+Term Two Focus
+Term Two deepens ILO 2.1 (block-based programming) by introducing variables as named data stores and the radio block group as a new input/output channel, building towards multi-device communication programmes.
+Key ILO(s)
+ILO 2.1 (deepened) – Write and read block-based Micro:bit programmes using variables, radio send, and radio receive blocks; explain how data moves between two devices.
+Big Idea
+A variable is like a labelled box that holds a value. The Micro:bit radio lets two devices share that value wirelessly — like sending a note across the room without getting up.
+Term One Link
+Term One Weeks 1–2 established on-start, forever, and button-event blocks. This lesson adds variables and radio blocks as extensions of the same MakeCode environment learners already know.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Define 'variable' in their own words and give one example of where variables are used in everyday life
+2
+Create and set a numeric variable in MakeCode ('score', 'count', or a name they choose) and display its value on the LED matrix
+3
+Modify the variable's value using Button A (increment by 1) and Button B (decrement by 1), displaying the updated value each time
+4
+Set the radio group to a shared number and use 'radio send number' to transmit the variable's current value to a partner's Micro:bit
+5
+Use 'on radio received' on the partner Micro:bit to display the received value on the LED matrix
+6
+Explain in plain English: 'What is a variable?', 'What does radio send do?', and 'What does radio receive do?' — one sentence each
+Materials & Preparation
+4 BBC Micro:bit v2 kits + USB cables (all 4 Micro:bits needed — 2 per pair for radio activity)
+4 shared laptops with MakeCode open
+Variable concept card (A5 per learner) – diagram: labelled box → name / value
+Radio programme planning sheet (A4 per pair) – 2 columns: Sender programme | Receiver programme
+Vocabulary cards: 'variable', 'value', 'radio', 'send', 'receive', 'radio group', 'increment', 'decrement'
+Facilitator device + projected screen
+'One Star, One Wish' feedback cards
+Sticky notes for exit ticket (one per learner)
+Cross-Curricular Links
+English Literacy
+Vocabulary in context: 'variable', 'value', 'increment', 'decrement', 'send', 'receive'. Learners write one sentence for each word using the session as the context. Sentence frame: 'A variable is like a ___ because ___.' Oral explanation task: learner must explain the radio programme to a partner who 'has never seen a Micro:bit' — practising clear, audience-aware communication as in the DDD's oral presentation strand.
+Mathematics
+Integers and change: variable starts at 0; Button A adds 1 (increment); Button B subtracts 1 (decrement). Track the value after 5 button presses on a number line drawn on paper. Introduction to signed integers: what happens when the variable goes below 0? Is −3 greater or less than 0? Comparison: if Pair A's Micro:bit sends 7 and Pair B's sends 12, what is the difference? Which is greater?
+LESSON STRUCTURE
+Step
+Activity
+HOOK – What Is a Variable? (10 min)
+1
+Hold up a labelled box (or draw one on the board). Label it 'score'. Write '0' inside. Ask: 'If I press Button A, the score goes up by 1. What is score now?' Change to 1. Repeat twice. 'What am I doing each time? What is the BOX called?' Guide to: a variable.
+2
+Show the variable concept card. Learners read the two fields aloud: name (what the box is called) and value (what is inside it right now). Ask: 'Where do you see variables in real life?' (score in a game, temperature on a thermometer, money in a wallet).
+3
+Show on the projected MakeCode screen: a 'set score to 0' block and a 'change score by 1' block inside an 'on button A pressed' event. Ask: 'Which block creates the variable? Which block changes it?'
+4
+Bridge: 'Today we will make a variable that TWO Micro:bits can share — wirelessly. One Micro:bit sends the number; the other one catches it and shows it.'
+DESIGN – Plan the Programme (10 min)
+5
+Distribute the radio programme planning sheet. Pairs plan BOTH sides before coding: Sender side — what variable? What events change it? What block sends it? Receiver side — what block catches the incoming number? What does the LED show?
+6
+Pairs write the plan in plain English in each column. Facilitator checks: 'Do both sides have a radio group number? Is it the SAME number for both?' Confirm all pairs have the same group (e.g. group 1) before laptops are distributed.
+7
+Vocabulary check: each pair holds up their vocabulary cards for 'radio group', 'send', 'receive'. Facilitator confirms understanding before coding begins.
+DELIVER – Code Both Sides (30 min)
+8
+Distribute 2 Micro:bits and 1 laptop per pair. Assign Driver (codes) and Navigator (holds the planning sheet and checks each block).
+9
+Part 1 – Variable programme (10 min): on start → set score to 0. On button A pressed → change score by 1 → show number score. On button B pressed → change score by −1 → show number score. Download to Micro:bit 1. Test: does button A increase and button B decrease the displayed number?
+10
+Part 2 – Add radio send (8 min): inside each button event, AFTER updating the variable, add 'radio send number score'. Set radio group to 1. Re-download to Micro:bit 1.
+11
+Part 3 – Receiver programme (8 min): new project on same laptop. On radio received (receivedNumber) → show number receivedNumber. Set radio group to 1. Download to Micro:bit 2.
+12
+Part 4 – Test the link (4 min): both Micro:bits connected. Press Button A on Micro:bit 1 — does the number appear on Micro:bit 2? SWAP Driver and Navigator. New Driver explains each block aloud before any change is made.
+DISCOVER – Investigate and Reflect (8 min)
+13
+Challenge: 'Change the radio send to send a STRING (a word) instead of a number. What block do you need? What changes on the receiver side?' Pairs investigate in MakeCode for 3 minutes.
+14
+Two pairs share their radio results with the class. Each explains: 'Our variable was called ___. Micro:bit 1 sent ___ and Micro:bit 2 showed ___.'
+15
+Maths debrief: Facilitator asks — 'Start at 0. Press A five times and B twice. What is the value now?' Learners calculate: 5 − 2 = 3. 'What if you pressed B once more?' Answer: 2. Record on the number-line worksheet.
+16
+Vocabulary consolidation: learners write three sentences on their sticky-note exit ticket — one for 'variable', one for 'radio send', one for 'radio receive'.
+WRAP-UP – Save and Reflect (2 min)
+17
+Rename both MakeCode projects: 'T2W1_[Name]_Sender' and 'T2W1_[Name]_Receiver'. Disconnect both Micro:bits and return to kit box.
+18
+Collect exit-ticket sticky notes and planning sheets. Facilitator records which pairs demonstrated a working radio link on the assessment record sheet.
+Assessment
+Formative (During)
+Observation: Does the variable change correctly on button presses and display on the LED? (functionality check — Micro:bit 1)
+Does Micro:bit 2 display the received number when Micro:bit 1 sends it? (radio link functionality check)
+Can learner define 'variable' and 'radio group' in one sentence each? (oral check)
+Planning sheet completed with both sender and receiver programmes written in plain English before coding? (worksheet check)
+Exit Assessment
+Sticky-note exit ticket: 3 sentences — ① 'A variable is…' ② 'Radio send means…' ③ 'Radio receive means…'. Collected by facilitator. Assessment criteria: each sentence must use the word in context correctly, not just repeat the definition from the card. 3 points per learner.
+Differentiation
+Support: Pre-build the variable and button blocks so learner only needs to add the radio send and radio group blocks. Provide a colour-coded planning sheet where Sender blocks are blue and Receiver blocks are green. Extension: Programme a two-player reaction game — Micro:bit 1 sends a random number when shaken; Micro:bit 2 displays it and the player must press Button A if the number is greater than 5, or Button B if not. Add a win/lose icon based on the response.
+Key Vocabulary
+variable · value · set · change by · increment · decrement · radio · radio group · radio send · radio receive · receivedNumber · integer
+Safeguarding Note: Radio programmes broadcast to all Micro:bits on the same group number. Ensure learners do not send personal names, surnames, or identifying data via the radio block. Use only numbers or agreed neutral words (e.g. 'hello', 'go') in radio transmissions during the session.
+Facilitator Name:
+_________________________________
+Date Delivered:
+_________________________________
+Signature:
+_________________________________
+```

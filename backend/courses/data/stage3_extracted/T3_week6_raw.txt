@@ -1,0 +1,122 @@
+ISOMA EDUTECH LIMITED
+Micro:bit Lesson Plan
+Stage 3 (P3 · Cambridge Stage 3/Year 3)  |  Term Three
+Lesson 22: Portfolio & Mastery Review – Auditing Your Stage 3 Learning Journey
+T3 · W6
+(Week 22)
+Duration
+60 minutes
+Term / Week
+Term 3 · Week 6
+Age Range
+8–10 years
+Group Size
+8 learners (pair programming, 4 pairs)
+Hardware
+BBC Micro:bit v2 + USB cables + shared laptops
+Software
+Microsoft MakeCode (makecode.microbit.org)
+Bloom's
+L5 Evaluating
+DDD Phase
+DISCOVER – Learners audit their complete Stage 3 artifact portfolio against the DDD Part 8.5 rubric, identify their strongest and weakest evidence, and produce a written Stage 3 Portfolio Summary to guide their final project
+NCDC Ref
+Uganda NCDC P3–P4: ICT Literacy Strand; Numeracy Strand – Patterns, Logic, Data & Problem Solving
+Cambridge Ref
+Cambridge Primary Computing 0845 – Stage 3/4: Evaluating own digital work against criteria; Identifying strengths and areas for improvement; Setting goals for a final project
+Term Three Focus
+DDD Part 8.1 states assessment must be 'LOW ANXIETY and HIGH DIGNITY' and Part 8.2 identifies Weekly Evidence Artifacts as 30% of the total grade. This dedicated portfolio review session is grounded in the DDD's formative assessment philosophy: learners who understand their own evidence before Demo Day perform with more confidence and produce stronger final projects.
+Key ILO(s)
+ILOs 2.1–2.4 (all evaluated at L5) – Review and evaluate personal Stage 3 artifact portfolio against DDD Part 8.5 rubric criteria; identify the strongest artifact for each ILO; produce a written Stage 3 Portfolio Summary documenting evidence of all four ILOs; set one specific improvement goal for the Final Creative Sprint.
+Big Idea
+A portfolio is not just a collection of work — it is a record of your thinking. Reviewing it honestly tells you two things: what you have already proved you can do, and what you still need to show. Today you become the assessor of your own learning — using the same criteria the facilitator uses.
+Prior Learning Link
+All 21 prior sessions have produced artifact evidence. This session is the first time learners see all their work together and evaluate it systematically against the DDD Part 8.5 rubric. The four ILO columns of the portfolio audit directly mirror the four assessment criteria in DDD Part 8.5: Functionality, Coding, English/Written, and Maths.
+LEARNING OBJECTIVES
+#
+Objective
+1
+Retrieve and organise all physical and digital artifacts from Terms One, Two, and Three into four ILO categories: ILO 2.1 (programming), ILO 2.2 (conditions/logic), ILO 2.3 (sensor data), ILO 2.4 (narrative/creative)
+2
+Score each ILO category 1–4 using the DDD Part 8.5 rubric criteria as a self-assessment tool — one score per ILO, supported by written justification citing specific evidence
+3
+Identify the ONE artifact that best demonstrates each ILO and write one sentence explaining why it is the strongest piece of evidence for that ILO
+4
+Identify the ILO with the lowest self-assessment score and write a specific, actionable improvement goal for the Final Creative Sprint in Week 23
+5
+Complete the Stage 3 Portfolio Summary document: four ILO sections, each with a score (1–4), strongest artifact reference, and one sentence of justification
+6
+Share the Portfolio Summary with a partner and give each other one specific, evidence-based piece of feedback using the frame: 'Your strongest evidence for ILO ___ is ___ because ___.'
+Materials & Preparation
+All returned physical artifacts from Terms 1, 2, and 3 (distributed by facilitator before session — pre-organised by learner in labelled folders)
+Digital artifact access: learners open their saved MakeCode projects on laptops to review code quality
+DDD Part 8.5 Rubric reference card (A5 per learner — printed extract of the Stage 3–4 rubric from the DDD, 5 criteria, 1–4 descriptors per criterion)
+Portfolio Audit Grid (A4 per learner) — 4 rows (one per ILO), 4 columns: ILO | Self-Score (1–4) | Strongest Artifact | One-Sentence Justification
+Stage 3 Portfolio Summary template (A4 per learner) — 4 sections, each with a heading, score box, artifact reference line, and 2-sentence justification box
+Improvement goal card (A5 per learner): 'My lowest ILO is ___. My specific improvement goal for the Final Sprint is ___. I will show this by ___.'
+Facilitator device + projected screen (display the DDD Part 8.5 rubric on screen throughout)
+Vocabulary cards: 'portfolio', 'artifact', 'rubric', 'criterion', 'evidence', 'justify', 'evaluate', 'ILO', 'self-assessment', 'improvement goal'
+Cross-Curricular Links
+English Literacy
+Evaluative writing at Bloom's L5 — the most sophisticated writing task in the Stage 3 programme. Each Portfolio Summary section requires: a specific artifact reference ('In T1 Week 5, I collected temperature data and drew a line graph showing…'), a score with justification ('I scored myself 3/4 because all sections were complete but my analysis paragraph only had 3 sentences instead of 5'), and one honest limitation ('My weakest evidence for ILO 2.3 is my data table because I only recorded 5 of the 6 required readings.'). Peer feedback writing: the partner feedback sentence requires evidence-based language — not 'good job' but 'your strongest evidence for ILO 2.4 is your T2 Week 4 storyboard because it shows all 5 scenes with LED plans, buttons, and durations correctly filled in.'
+Mathematics
+Weighted score estimation: using the DDD Part 8.2 weighting (Participation 15%, Weekly Artifacts 30%, Demo Day 35%, Oral Presentation 10%, Peer Feedback 5%), learners estimate their current weighted score based on their portfolio audit self-scores. Example: if a learner scores themselves 3/4 on 5 artifacts (Weekly Artifacts component) = (3/4) × 30% = 22.5% out of a maximum 30%. If their participation average is 2.5/3 = (2.5/3) × 15% = 12.5%. Estimated subtotal before Demo Day = 35%. Learners calculate what minimum Demo Day score they need to reach 55% overall. This directly engages the DDD Part 9.3 weighted score calculation and makes the certification criteria transparent — as the DDD Part 9 explicitly requires.
+LESSON STRUCTURE
+Step
+Activity
+HOOK – What Does Your Portfolio Say About You? (8 min)
+1
+Distribute pre-organised artifact folders to each learner. Allow 90 seconds of silent browsing. Ask: 'What is the FIRST piece of work you looked at? Why that one?' Take 3 responses.
+2
+Project the DDD Part 8.5 rubric on screen. Read each criterion aloud: Functionality, Coding, English/Written, Maths. Ask: 'Which of these criteria do you feel most confident about? Be honest with yourself — there is no wrong answer.' Show of hands for each criterion. Record on the board.
+3
+Introduce the purpose: 'Today you are the assessor. You will use the same rubric the facilitator uses on Demo Day to score your own work — not to judge yourself, but to KNOW yourself. If you know exactly what you need to improve, you still have two weeks to improve it.'
+4
+Distribute the DDD Part 8.5 rubric reference cards and portfolio audit grids. Learners write their name and the date at the top.
+DESIGN – Audit the Portfolio (20 min)
+5
+Independent audit phase — 15 minutes of quiet individual work. Learners sort artifacts into the four ILO categories on the desk. For each ILO: select the strongest artifact, read the rubric descriptors for that ILO, assign a self-score 1–4, and write one justification sentence in the Portfolio Audit Grid. Facilitator circulates silently — observe but do not prompt scores.
+6
+Maths calculation — 5 minutes: learners complete the weighted score estimation on the back of the audit grid. Guide: 'Use the scores from your audit as your Weekly Artifact average. Use your best estimate for participation. Calculate what Demo Day score you need.' Facilitator supports any learner who finds the percentage calculation challenging — this is formative, not summative.
+7
+Complete the improvement goal card: 'My lowest ILO is ___. My specific improvement goal for the Final Sprint is ___. I will show this by ___.' Facilitator checks: is the improvement goal specific and achievable in one session? If not, help the learner reframe it. Example of poor goal: 'Do better at coding.' Example of good goal: 'Show ILO 2.2 by building a nested if/else condition with AND logic in my Final Sprint project.'
+DELIVER – Write the Portfolio Summary (22 min)
+8
+Distribute Stage 3 Portfolio Summary templates. Learners write all four ILO sections using the Portfolio Audit Grid as their source. Each section: ILO heading → score (1–4) → artifact reference → 2-sentence justification. Facilitator circulates: 'Is your justification SPECIFIC? Does it name the artifact, the week, and the evidence it contains?'
+9
+Peer feedback — 8 minutes: SWAP Portfolio Summary with a partner. Partner reads the full summary silently for 2 minutes. Then reads the improvement goal card. Writes one sentence of evidence-based feedback for each ILO using the frame: 'Your strongest evidence for ILO ___ is ___ because ___.' Returns the summary with the feedback written at the bottom.
+10
+Response — 4 minutes: learner reads partner feedback. Writes one sentence responding to the most useful piece of feedback: 'The feedback that will most help me is ___ because ___. I will act on it by ___.'
+11
+Weighted score review — 4 minutes: learners calculate the Demo Day score needed to reach 55%. Facilitator identifies any learner whose estimated subtotal puts them at risk and flags for targeted support during Week 23 and 24.
+DISCOVER – Reflect and Set the Final Goal (8 min)
+12
+Two pairs share one finding from their portfolio audit — not their score, but something they noticed: 'I was surprised that my strongest evidence was actually ___ because I thought it was ___.' Facilitator affirms the reflection without commenting on the scores.
+13
+Facilitator closes with a structured whole-group moment: 'If you have a lowest-ILO improvement goal on your card, hold it up. You do not need to share it. Just know: that card is your Final Sprint brief. Everything you build next week should show exactly that.' Brief pause. 'Put the card somewhere you will see it when you open MakeCode.'
+14
+Preview Week 23: 'The Final Creative Sprint is your last chance to build before Demo Day. Your improvement goal card is your guiding brief. Come with ideas. We will design first, then build. You already know how to do this — you have done it twice before.'
+WRAP-UP – Organise and Return (2 min)
+15
+Learners return all artifacts to their folders in order. Folders retained by the facilitator — returned on Demo Day as the presentation reference pack.
+16
+Collect Portfolio Summary templates and improvement goal cards. The Portfolio Summary is this week's formally assessed artifact. Facilitator checks: all 4 ILO sections complete with scores, artifact references, and 2-sentence justifications; peer feedback written; learner response sentence present.
+Assessment
+Formative (During)
+Portfolio Audit Grid: all 4 ILO rows completed with a self-score (1–4), artifact reference, and one justification sentence? (audit completeness check)
+Weighted score estimation attempted and Demo Day target calculated? (maths application check)
+Improvement goal card completed with a specific, achievable goal naming the ILO, the method, and the evidence? (goal quality check)
+Peer feedback written for all 4 ILO sections using evidence-based language? (peer feedback quality check)
+Exit Assessment
+Facilitator reads one DDD Part 8.5 rubric descriptor (score 3 for Coding criterion) aloud and asks each learner: ① 'Which of your artifacts best meets this descriptor?' ② 'Does your current self-score match — if not, why?' ③ 'What is your one improvement goal for the Final Sprint?' 3 points per learner — facilitator notes which learners have realistic vs. unrealistic self-scores for calibration before Week 23.
+Differentiation
+Support: Reduce audit to 2 ILOs (ILO 2.1 and ILO 2.4 — the two with the most artifact evidence). Provide pre-selected artifact examples for each ILO and ask learner to choose between two options rather than searching the full folder. Skip the weighted score calculation and instead ask: 'Do you feel ready for Demo Day — yes, almost, or not yet?' Extension: Write a full 4-paragraph Portfolio Reflection (one paragraph per ILO, minimum 4 sentences each), citing specific evidence for each score. Calculate the minimum Demo Day score needed to achieve each grade band (Pass, Merit, Distinction) using the DDD Part 9 weighted formula. Present the calculation to the facilitator as a worked example.
+Key Vocabulary
+portfolio · artifact · rubric · criterion · evidence · justify · evaluate · self-assessment · ILO · improvement goal · weighted score · formative · summative · benchmark
+Safeguarding Note: Self-assessment scores are private — facilitators must not display or discuss individual scores publicly. The portfolio audit is explicitly framed as a tool for self-improvement, not as a ranking exercise. Facilitator must not express surprise or disappointment at any self-assigned score, even if it diverges significantly from the facilitator's own assessment. Any significant divergence (self-score of 4 where evidence supports 1 or 2) should be addressed in a private, supportive 1-to-1 conversation, not in front of the group. All artifact folders are handled with care — they represent weeks of learner effort and must be treated respectfully.
+Facilitator Name:
+_________________________________
+Date Delivered:
+_________________________________
+Signature:
+_________________________________

@@ -1,0 +1,182 @@
+# Lesson 22  ·  Term 3 · Week 6
+
+**Duration:** 60 minutes (split across Week 6 Lesson 1 start + Lesson 2 finish)
+**Term / Week:** Term 3 · Week 6
+**Age Range:** 7–8 years
+**Hardware:** Tablets with Stack KIDI App
+**Bloom's:** L5 Evaluate · L6 Create
+
+**Big Idea:** A portfolio is not a scrapbook. A portfolio is evidence. Every item you choose must earn its place by demonstrating something — a skill, a decision, a moment of learning. Choosing what to leave OUT is as important as choosing what to include.
+
+**Source plan:** `Stage2_Lesson22_Term3_Week6.docx`
+
+## Learning Objectives
+
+- Curate a Technical Portfolio selecting one piece of evidence per term (3 total) with a written justification for each choice
+- Write a technical annotation for each evidence piece explaining: what it shows, what computing concept it demonstrates, and how it compares to earlier work
+- Complete a Year-Long Progress Narrative: a 5-paragraph structured reflection connecting Term 1 beginnings to Term 3 achievements
+- Identify one specific skill that will be built upon in Stage 2 and write a Stage 2 Learning Contract with two measurable goals
+
+## Materials and Preparation
+
+- 4 tablets — available for reviewing projects (read-only today)
+- Technical Portfolio Folder (A4 folder per learner): already containing all accumulated documents from Terms 1–3
+
+## Cross-Curricular Links
+
+**English:** This is the most demanding written English task of the year: a 5-paragraph formal reflective narrative with technical content. Learners must write in complete sentences, use causal connectives (because, therefore, as a result), and maintain formal register throughout. The Technical Annotations require precise descriptive writing using subject vocabulary. Vocabulary: curate, evidence, demonstrate, annotate, narrative, reflect, progress, formal, justify, contract.
+
+**Maths:** Quantitative portfolio statistics: each learner calculates their own year-in-numbers — total lessons attended, total projects completed, highest rubric score (and which term), lowest score and growth since then, total skills ticked in the Year-Long Skills Self-Assessment. These statistics are cited in Paragraph 4 of the narrative as quantitative evidence of achievement.
+
+## Lesson Structure
+
+### HOOK — What Makes a Portfolio Powerful? (8 min)
+1. Portfolio Evidence Selection Guide (A5 per learner): 3 rows (Term 1 / Term 2 / Term 3), each with: Evidence piece chosen / Why I chose it (2 sentences) / Computing concept it demonstrates / How it shows progress from earlier work
+2. Technical Annotation Template (A5 per evidence piece): Title / Term / Concept demonstrated / "This shows ___" / "Compared to Term ___ Week 1, this is more advanced because ___"
+3. Year-Long Progress Narrative Template (A4): 5 paragraphs with sentence starters — ① "When I started computing in Term 1, I ___." ② "The most important skill I learned in Term 1 was ___ because ___." ③ "In Term 2, the biggest challenge was ___ and I solved it by ___." ④ "In Term 3, I proved I could ___ by ___." ⑤ "When I begin Stage 2, I am ready to ___ because ___."
+4. Stage 2 Learning Contract (A5): "Goal 1: By ___ in Stage 2, I will be able to ___. I will know I have achieved this when ___. Goal 2: ___"
+5. Facilitator shows two hypothetical portfolio items: Item A = a messy worksheet with no annotation; Item B = the same worksheet with a 3-sentence annotation explaining what the learner learned from it.
+
+### DESIGN — Portfolio Selection (10 min)
+6. "Which is more powerful? Why? Item B has the SAME evidence — but the annotation tells me what the learner understood. Without the annotation, I cannot read your mind."
+7. "Today you are writing the annotations. You are telling me — and anyone who reads this portfolio — exactly what you understood, what was hard, and how you grew."
+8. Distribute Portfolio Folders. Each learner spends 3 minutes reviewing their own accumulated documents silently.
+9. Individual work. Complete the Portfolio Evidence Selection Guide.
+10. Term 1 piece: choose one item that shows your best early work. It does NOT need to be your most complex — it needs to be the one that best shows where you started.
+
+### DELIVER — Write the Technical Annotations and Narrative (30 min)
+11. Term 2 piece: choose one item that shows the most significant skill jump from Term 1.
+12. Term 3 piece: choose one item that shows what you can do NOW that you could not do in Term 1 or Term 2.
+13. Write the 2-sentence justification for each choice. Read each justification aloud to yourself. Does it explain the "why"? If not, rewrite.
+14. Facilitator reviews: "Is each selection justified? Is there clear evidence of progression from Term 1 to Term 3?"
+15. ANNOTATIONS (15 min): For each of the 3 selected pieces, complete a Technical Annotation Template. The "compared to earlier work" sentence is the most important — this is where progress is made visible.
+
+### DISCOVER — Portfolio Pair Share (8 min)
+16. YEAR-LONG PROGRESS NARRATIVE (12 min): Write all 5 paragraphs using the template. Target length: 2–3 sentences per paragraph (10–15 sentences total). Learners who struggle with writing may dictate to the facilitator for scribing.
+17. STAGE 2 LEARNING CONTRACT (3 min): Write both goals. Goals must be specific: "I will be able to build a programme with a variable that changes over time" — not "I will get better at coding."
+18. Pair up (any pairing — not the usual coding partners). Share one Technical Annotation from any term.
+19. Partner reads it and responds: "The most interesting thing you wrote is ___. One thing I would like to know more about: ___."
+20. Switch. Other partner shares.
+
+### WRAP-UP (4 min)
+21. Class: facilitator asks for 3 volunteers to share their "what I proved I could do in Term 3" paragraph sentence. Celebrate each one.
+22. File all completed documents into the Technical Portfolio Folder. Folder sealed.
+23. Each learner signs the Stage 2 Learning Contract. Facilitator countersigns.
+24. Preview: "Next lesson — full dress rehearsal for the End-of-Year Showcase. Your portfolio will be displayed alongside your programme. Guests will read both."
+
+## Assessment
+
+- Formative (During)
+- Portfolio Evidence Selection Guide: 3 selections with justified choices showing progression from Term 1 to 3
+- Technical Annotations: 3 completed — "compared to earlier work" sentence present in each
+- Year-Long Progress Narrative: all 5 paragraphs completed in formal register
+- Stage 2 Learning Contract: 2 specific, measurable goals — facilitator countersigned
+- Exit / Summative
+- Facilitator reads the Paragraph 5 ("When I begin Stage 2, I am ready to ___ because ___") of every narrative. This is the clearest indicator of readiness for Stage 2. Any learner who writes "I am not ready" — facilitator addresses directly and privately. Reframe: "You ARE ready. Here is what tells me that."
+- Differentiation
+- Support: Reduce the narrative to 3 paragraphs (Terms 1, 2, 3 — one each, no opening or closing). Facilitator scripts the annotation structure and learner fills in the content. Extension: Write a 1-page "Executive Summary" for the portfolio — a document written for a school governor or parent who has never attended a computing lesson. What should they understand about what was learned and why it matters?
+
+## Key Vocabulary
+
+_See source._
+
+## Full source extract (complete)
+
+### Detail body
+
+```
+Curate a Technical Portfolio selecting one piece of evidence per term (3 total) with a written justification for each choice
+Write a technical annotation for each evidence piece explaining: what it shows, what computing concept it demonstrates, and how it compares to earlier work
+Complete a Year-Long Progress Narrative: a 5-paragraph structured reflection connecting Term 1 beginnings to Term 3 achievements
+Identify one specific skill that will be built upon in Stage 2 and write a Stage 2 Learning Contract with two measurable goals
+4 tablets — available for reviewing projects (read-only today)
+Technical Portfolio Folder (A4 folder per learner): already containing all accumulated documents from Terms 1–3
+Portfolio Evidence Selection Guide (A5 per learner): 3 rows (Term 1 / Term 2 / Term 3), each with: Evidence piece chosen / Why I chose it (2 sentences) / Computing concept it demonstrates / How it shows progress from earlier work
+Technical Annotation Template (A5 per evidence piece): Title / Term / Concept demonstrated / "This shows ___" / "Compared to Term ___ Week 1, this is more advanced because ___"
+Year-Long Progress Narrative Template (A4): 5 paragraphs with sentence starters — ① "When I started computing in Term 1, I ___." ② "The most important skill I learned in Term 1 was ___ because ___." ③ "In Term 2, the biggest challenge was ___ and I solved it by ___." ④ "In Term 3, I proved I could ___ by ___." ⑤ "When I begin Stage 2, I am ready to ___ because ___."
+Stage 2 Learning Contract (A5): "Goal 1: By ___ in Stage 2, I will be able to ___. I will know I have achieved this when ___. Goal 2: ___"
+Facilitator shows two hypothetical portfolio items: Item A = a messy worksheet with no annotation; Item B = the same worksheet with a 3-sentence annotation explaining what the learner learned from it.
+"Which is more powerful? Why? Item B has the SAME evidence — but the annotation tells me what the learner understood. Without the annotation, I cannot read your mind."
+"Today you are writing the annotations. You are telling me — and anyone who reads this portfolio — exactly what you understood, what was hard, and how you grew."
+Distribute Portfolio Folders. Each learner spends 3 minutes reviewing their own accumulated documents silently.
+Individual work. Complete the Portfolio Evidence Selection Guide.
+Term 1 piece: choose one item that shows your best early work. It does NOT need to be your most complex — it needs to be the one that best shows where you started.
+Term 2 piece: choose one item that shows the most significant skill jump from Term 1.
+Term 3 piece: choose one item that shows what you can do NOW that you could not do in Term 1 or Term 2.
+Write the 2-sentence justification for each choice. Read each justification aloud to yourself. Does it explain the "why"? If not, rewrite.
+Facilitator reviews: "Is each selection justified? Is there clear evidence of progression from Term 1 to Term 3?"
+ANNOTATIONS (15 min): For each of the 3 selected pieces, complete a Technical Annotation Template. The "compared to earlier work" sentence is the most important — this is where progress is made visible.
+YEAR-LONG PROGRESS NARRATIVE (12 min): Write all 5 paragraphs using the template. Target length: 2–3 sentences per paragraph (10–15 sentences total). Learners who struggle with writing may dictate to the facilitator for scribing.
+STAGE 2 LEARNING CONTRACT (3 min): Write both goals. Goals must be specific: "I will be able to build a programme with a variable that changes over time" — not "I will get better at coding."
+Pair up (any pairing — not the usual coding partners). Share one Technical Annotation from any term.
+Partner reads it and responds: "The most interesting thing you wrote is ___. One thing I would like to know more about: ___."
+Switch. Other partner shares.
+Class: facilitator asks for 3 volunteers to share their "what I proved I could do in Term 3" paragraph sentence. Celebrate each one.
+File all completed documents into the Technical Portfolio Folder. Folder sealed.
+Each learner signs the Stage 2 Learning Contract. Facilitator countersigns.
+Preview: "Next lesson — full dress rehearsal for the End-of-Year Showcase. Your portfolio will be displayed alongside your programme. Guests will read both."
+```
+
+### Plan header and sections
+
+```
+ISOMA EDUTECH LIMITED
+Stack KIDI Lesson Plan  ·  DDD Framework
+Stage 2  (P2 · Cambridge Stage 2 / Year 2)
+Lesson 22  ·  Term 3 · Week 6
+The Technical Portfolio — Documenting a Year of Computing
+Duration
+60 minutes
+Term / Week
+Term 3 · Week 6
+Age Range
+7–8 years
+Group Size
+8 learners  (individual work this session)
+Hardware
+Tablets with Stack KIDI App
+Bloom's
+L5 Evaluate · L6 Create
+NCDC
+Uganda NCDC Thematic Curriculum P2 — Literacy: Writing a formal technical portfolio narrative; evaluating personal growth using evidence; Creative Arts: Curating a portfolio of digital creative work; Numeracy: Calculating and presenting year-long quantitative achievement data
+Cambridge
+Cambridge Primary Computing 0845 — Stage 2: Compiling and presenting evidence of computing achievement across the year; writing technical annotations; communicating computational thinking in formal written English; preparing a year-end portfolio for assessment
+DDD Phase
+DISCOVER — Individual session: learners curate, annotate, and write a formal Technical Portfolio that covers all three terms, selecting their strongest evidence from each term and writing a structured narrative connecting their Year 1 computing journey
+Big Idea
+A portfolio is not a scrapbook. A portfolio is evidence. Every item you choose must earn its place by demonstrating something — a skill, a decision, a moment of learning. Choosing what to leave OUT is as important as choosing what to include.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+⚠  Facilitator Preparation Note:
+SCAFFOLDING FOR WRITING: Many 7–8 year olds will find the 5-paragraph narrative the most challenging written task they have faced. Prepare sentence-starter strips for each paragraph — cut into individual strips so learners physically place them at the start of each paragraph before writing. This removes the "blank page" barrier. Scribing is acceptable for learners with writing difficulties — ensure the ideas are the learner's own even if the transcription is supported.
+CROSS-CURRICULAR LINKS
+English
+This is the most demanding written English task of the year: a 5-paragraph formal reflective narrative with technical content. Learners must write in complete sentences, use causal connectives (because, therefore, as a result), and maintain formal register throughout. The Technical Annotations require precise descriptive writing using subject vocabulary. Vocabulary: curate, evidence, demonstrate, annotate, narrative, reflect, progress, formal, justify, contract.
+Maths
+Quantitative portfolio statistics: each learner calculates their own year-in-numbers — total lessons attended, total projects completed, highest rubric score (and which term), lowest score and growth since then, total skills ticked in the Year-Long Skills Self-Assessment. These statistics are cited in Paragraph 4 of the narrative as quantitative evidence of achievement.
+LESSON STRUCTURE
+HOOK — What Makes a Portfolio Powerful? (8 min)
+DESIGN — Portfolio Selection (10 min)
+DELIVER — Write the Technical Annotations and Narrative (30 min)
+DISCOVER — Portfolio Pair Share (8 min)
+WRAP-UP (4 min)
+ASSESSMENT
+Formative (During)
+Portfolio Evidence Selection Guide: 3 selections with justified choices showing progression from Term 1 to 3
+Technical Annotations: 3 completed — "compared to earlier work" sentence present in each
+Year-Long Progress Narrative: all 5 paragraphs completed in formal register
+Stage 2 Learning Contract: 2 specific, measurable goals — facilitator countersigned
+Exit / Summative
+Facilitator reads the Paragraph 5 ("When I begin Stage 2, I am ready to ___ because ___") of every narrative. This is the clearest indicator of readiness for Stage 2. Any learner who writes "I am not ready" — facilitator addresses directly and privately. Reframe: "You ARE ready. Here is what tells me that."
+Differentiation
+Support: Reduce the narrative to 3 paragraphs (Terms 1, 2, 3 — one each, no opening or closing). Facilitator scripts the annotation structure and learner fills in the content. Extension: Write a 1-page "Executive Summary" for the portfolio — a document written for a school governor or parent who has never attended a computing lesson. What should they understand about what was learned and why it matters?
+KEY VOCABULARY
+portfolio   ·   curate   ·   evidence   ·   annotate   ·   narrative   ·   progression   ·   reflect   ·   formal   ·   contract   ·   justify
+⚠  Safeguarding Note: Technical Portfolios contain personal reflections and self-assessments. These are private documents. Learners should not be asked to share their Year-Long Progress Narrative publicly without explicit, voluntary consent. Portfolio Folders should be stored securely and returned to families at the End-of-Year Showcase.
+Facilitator Name:
+________________________
+Date Delivered:
+________________________
+Signature:
+________________________
+```

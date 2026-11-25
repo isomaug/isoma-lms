@@ -1,0 +1,90 @@
+Design 4 structured playtest observation questions before the playtest session begins
+Facilitate a silent playtest observation — watch a player use the game without interfering and record specific behavioural observations (not opinions)
+Analyse playtest feedback and identify the single highest-priority improvement based on frequency of occurrence across multiple testers
+Implement the priority improvement and retest with the same observation question to verify the fix works
+4 tablets with Stack KIDI — game projects from Lesson 14
+Playtest Observation Sheet (A4 per pair): 4 observation questions (written by the pair before testing) + a 3-column table: Tester 1 / Tester 2 / Tester 3 with row for each question
+Feedback Frequency Tally (A5): list of potential issues with tally marks — "Couldn't find tap area", "Confused by level transition", "Win condition unclear", "Too easy", "Too hard", "Sound not matching action", "Other: ___"
+Priority Improvement Card (A5): "Most common issue: ___. How many testers experienced it: ___. Our fix: ___. How we will test the fix: ___."
+Post-fix retest record (A5): "Before fix — Tester experienced: ___. After fix — Same tester now experiences: ___. Is the fix successful? YES / PARTIALLY / NO."
+Stopwatch per pair — for timing how long it takes a new player to understand the game rules without explanation
+Facilitator demonstrates BAD playtesting: stands next to a learner playing the game, explains every step, says "No, tap THERE," corrects mistakes immediately.
+Ask: "Was that useful? What did I find out about whether the game works?" Nothing — because the player was guided.
+Demonstrate GOOD playtesting: hands game to learner, says nothing, watches and takes notes on what the player does. Notes specific actions: "Tapped background twice before finding character. Understood Level 2 immediately after transition."
+Key rule: "In a playtest, the designer is a SCIENTIST — they observe. They do not help, explain, or react. All emotions happen AFTER the tester has finished."
+Pairs write 4 observation questions on their Playtest Observation Sheet. Questions must be answerable by watching — not by asking the player.
+Good examples: "Does the tester find the tap target within 5 seconds?", "Does the tester attempt to replay after winning?", "Does the Level 2 transition surprise the tester?"
+Poor examples: "Did the tester enjoy it?", "Was it fun?", "Did they understand?" (These require asking — not observing.)
+Facilitator reviews questions: "Can this be answered by watching? Yes/No." Rewrite any that require verbal input.
+TESTER 1 (8 min): One member from the adjacent pair plays the game for 5 minutes. Designer pair observes SILENTLY, completing the tally sheet and observation sheet. No speaking unless the tester is completely stuck for 60 seconds. Record all observations factually.
+After Tester 1 (2 min): Tester 1 verbally describes what they found easy and hard. Designer pair records responses. Tally sheet updated.
+TESTER 2 (8 min): A learner from a DIFFERENT pair playtests. Same silent observation protocol.
+After Tester 2 (2 min): Same debrief process.
+FREQUENCY ANALYSIS (5 min): Review both sets of observations. Complete the Feedback Frequency Tally. Identify the top issue — the one that appears most often across both testers.
+PRIORITY FIX (5 min): Complete the Priority Improvement Card. Decide: "What is the single most impactful fix we can make in 10 minutes?"
+Implement the priority fix (8 min). One change only — the highest-priority item from the Improvement Card.
+Retest (2 min): Ask one of the original testers to replay ONLY the part that was problematic. Observe. Complete the Post-Fix Retest Record.
+Class debrief: "How many pairs fixed their priority issue? How many found the fix created a new problem?" (This is normal — real software iterations often introduce regressions.)
+Reflection: "Playtesting taught me that ___. Before I thought my game was ___ but after watching real players I know ___."
+Save the updated game as "PLAYTESTED GAME — [Pair Names]."
+File all playtest materials: observation sheets, tally, improvement card, retest record.
+Preview: "Demo Day next week. Your game will be played by adults and guests who have never seen it before. You will present it just like you observed today — but now YOU are explaining it to THEM."
+ISOMA EDUTECH LIMITED
+Stack KIDI Lesson Plan  ·  DDD Framework
+Stage 2  (P2 · Cambridge Stage 2 / Year 2)
+Lesson 15  ·  Term 2 · Week 7
+Playtest and Iterate — Real Users, Real Feedback, Real Improvements
+Duration
+60 minutes
+Term / Week
+Term 2 · Week 7
+Age Range
+7–8 years
+Group Size
+8 learners  (pair programming — 4 pairs)
+Hardware
+Tablets with Stack KIDI App
+Bloom's
+L4 Analyse · L5 Evaluate · L6 Create
+NCDC
+Uganda NCDC Thematic Curriculum P2 — Literacy: Giving and receiving constructive written feedback; evaluating a creative product against design criteria; Creative Arts: Iterative refinement of a designed artefact; Numeracy: Using quantitative feedback data to make design decisions
+Cambridge
+Cambridge Primary Computing 0845 — Stage 2: User testing a programme with external players; collecting structured feedback; prioritising and implementing improvements; understanding that iteration (repeat improving based on feedback) is central to how real software is made
+DDD Phase
+DISCOVER — Learners run a structured playtest session with peers as users, collect and analyse feedback systematically, prioritise the most impactful improvements, implement them, and retest
+Big Idea
+Real software is never finished on the first build — it is improved through testing with real users. Playtesting is not about showing off a finished game. It is about discovering what does NOT work yet, so you can fix it.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+⚠  Facilitator Preparation Note:
+TESTER ASSIGNMENT: Assign testers from different pairs to avoid pairs always testing each other's games. If the class has 8 learners in 4 pairs: Pair 1 tests Pair 3's game, Pair 3 tests Pair 1. Pair 2 tests Pair 4, Pair 4 tests Pair 2. This ensures fresh eyes on every game and prevents friends being too lenient with feedback.
+CROSS-CURRICULAR LINKS
+English
+Observation vs opinion in writing: "The tester tapped the background instead of the character" (observation — factual, specific) vs "The tester was confused" (opinion — vague, not actionable). Learners rewrite 3 opinion statements as observation statements. This is a core academic writing skill. Vocabulary: observation, evidence, frequency, priority, actionable, specific, tester, facilitate, silent.
+Maths
+Frequency analysis: after 3 testers, tally the most common issues. Which issue has the highest tally? That is the priority improvement. Calculate: if 2 of 3 testers experienced the same issue, what percentage is that? (67%.) If the fix reduces it to 1/3 testers, what is the new percentage? (33%.) Improvement = 67% − 33% = 34% reduction.
+LESSON STRUCTURE
+HOOK — What Playtesting Is (and Is Not) (8 min)
+DESIGN — Observation Questions (8 min)
+DELIVER — Playtest Round (30 min)
+DISCOVER — Fix and Retest (10 min)
+WRAP-UP (4 min)
+ASSESSMENT
+Formative (During)
+Observation questions approved: all 4 answerable by watching (no verbal questions)
+Playtest Observation Sheet completed for 2 testers with specific factual observations
+Feedback Frequency Tally: top issue correctly identified with tally evidence
+Priority fix implemented and retest completed (post-fix retest record)
+Exit / Summative
+"What is the difference between an observation and an opinion? Give one example of each from your playtest notes today." Full marks: clear distinction drawn with specific game-related examples.
+Differentiation
+Support: Reduce to 1 playtest tester + 1 observation question. Facilitator assists with tally analysis. Extension: Write a 1-page "Playtest Report" — formal summary with sections: Method / Findings / Priority Fix / Result / Recommendation for further iteration. Use professional language throughout.
+KEY VOCABULARY
+playtest   ·   observe   ·   silent   ·   frequency   ·   priority   ·   iterate   ·   tester   ·   actionable   ·   retest   ·   regression
+⚠  Safeguarding Note: Ensure testers know they are testing the GAME, not the programmer. If a tester struggles, the designer should not express frustration or embarrassment. Remind designers: "When a player struggles, that is the GAME'S problem, not the player's problem — and it is very useful data."
+Facilitator Name:
+________________________
+Date Delivered:
+________________________
+Signature:
+________________________

@@ -1,0 +1,216 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block content %}
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    .dashboard-header {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        color: #2c3e50;
+        letter-spacing: -0.5px;
+    }
+    .dashboard-subtitle {
+        font-family: 'Poppins', sans-serif;
+        color: #7f8c8d;
+        font-size: 1.1rem;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="dashboard-header">Financial Dashboard</h1>
+            <p class="dashboard-subtitle">Real-time unit economics and CSR sponsorship tracking based on the business plan.</p>
+        </div>
+    </div>
+
+    <!-- Small Boxes / Metrics -->
+    <div class="row">
+        <div class="col-lg-4 col-6">
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h3>UGX {{ total_revenue|floatformat:"0" }}</h3>
+                    <p>Total Platform Revenue</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-6">
+            <div class="small-box {% if total_profit > 0 %}bg-success{% else %}bg-danger{% endif %}">
+                <div class="inner">
+                    <h3>UGX {{ total_profit|floatformat:"0" }}</h3>
+                    <p>Total Platform Profit</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-6">
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <h3>{{ sponsors|length }}</h3>
+                    <p>Active Corporate Sponsors</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Cohort Economics Table -->
+        <div class="col-lg-12">
+            <div class="card card-primary card-outline">
+                <div class="card-header">
+                    <h3 class="card-title"><i class="fas fa-users mr-1"></i> Cohort Unit Economics</h3>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover m-0">
+                            <thead>
+                                <tr>
+                                    <th>Cohort Name</th>
+                                    <th>Enrolled (Retail / Sponsored)</th>
+                                    <th>Total Revenue</th>
+                                    <th>Total Costs</th>
+                                    <th>Net Profit</th>
+                                    <th>Break-Even Point</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for cohort in cohort_data %}
+                                <tr>
+                                    <td><strong>{{ cohort.name }}</strong></td>
+                                    <td>{{ cohort.enrolled }} ({{ cohort.retail_count }} / {{ cohort.sponsored_count }})</td>
+                                    <td>UGX {{ cohort.revenue|floatformat:"0" }}</td>
+                                    <td>UGX {{ cohort.costs|floatformat:"0" }}</td>
+                                    <td class="{% if cohort.profit > 0 %}text-success text-bold{% else %}text-danger text-bold{% endif %}">
+                                        UGX {{ cohort.profit|floatformat:"0" }}
+                                    </td>
+                                    <td>{{ cohort.break_even_point }} learners</td>
+                                    <td>
+                                        {% if cohort.is_profitable %}
+                                            <span class="badge badge-success px-2 py-1">Profitable</span>
+                                        {% else %}
+                                            <span class="badge badge-danger px-2 py-1">Loss (Needs {{ cohort.break_even_point }} total)</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="7" class="text-center py-4 text-muted">
+                                        No cohorts found. Add a cohort to see unit economics.
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Sponsor ROI Table -->
+        <div class="col-lg-7">
+            <div class="card card-success card-outline">
+                <div class="card-header">
+                    <h3 class="card-title"><i class="fas fa-building mr-1"></i> Corporate Sponsor ROI</h3>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table m-0">
+                            <thead>
+                                <tr>
+                                    <th>Sponsor Name</th>
+                                    <th>Total Budget</th>
+                                    <th>Deployed (Subsidized)</th>
+                                    <th>Students Supported</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for sponsor in sponsors %}
+                                <tr>
+                                    <td><strong>{{ sponsor.name }}</strong></td>
+                                    <td>UGX {{ sponsor.total_budget|floatformat:"0" }}</td>
+                                    <td>UGX {{ sponsor.total_given|default:"0"|floatformat:"0" }}</td>
+                                    <td><span class="badge badge-info">{{ sponsor.students_supported }}</span></td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center py-4 text-muted">
+                                        No corporate sponsors found.
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Profit Chart Placeholder -->
+        <div class="col-lg-5">
+            <div class="card card-info card-outline">
+                <div class="card-header">
+                    <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i> Revenue Split (Retail vs Sponsored)</h3>
+                </div>
+                <div class="card-body">
+                    <canvas id="revenuePieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Student Split for the pie chart
+    let retailStudents = 0;
+    let sponsoredStudents = 0;
+    
+    {% for cohort in cohort_data %}
+        retailStudents += {{ cohort.retail_count|default:0 }};
+        sponsoredStudents += {{ cohort.sponsored_count|default:0 }};
+    {% endfor %}
+    
+    var ctx = document.getElementById('revenuePieChart').getContext('2d');
+    var pieChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Retail Students', 'Sponsored Students'],
+            datasets: [{
+                data: [retailStudents, sponsoredStudents],
+                backgroundColor: ['#17a2b8', '#28a745'],
+                hoverBackgroundColor: ['#138496', '#218838'],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '60%',
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+});
+</script>
+{% endblock %}

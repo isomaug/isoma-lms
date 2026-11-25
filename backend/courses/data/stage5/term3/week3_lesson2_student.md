@@ -1,0 +1,59 @@
+# Week 3 - Lesson 2
+
+## Session length
+**About half of this week's plan** (finish what you started in Lesson 1)
+
+## Finish the week
+- Read a problem specification and decompose it into named sub-problems, each of which maps to a function in the final implementation
+- Write a complete pseudocode algorithm for a given problem specification — using standard pseudocode conventions: WHILE, FOR, IF/ELSE, SET, INPUT, OUTPUT, CALL — with enough detail that a partner could implement it without seeing the specification
+- Draw a flowchart for the same algorithm using correct notation: oval (start/end), rectangle (process), diamond (decision), arrow (flow)
+- Trace through the pseudocode with at least 2 distinct input scenarios and record the expected output for each — proving the algorithm is correct before any code is written
+- Implement the algorithm in Arduino code, mapping each pseudocode line to one or more lines of code with a comment linking them: // Pseudocode line 7: IF temperature > threshold
+- Evaluate the algorithm's efficiency: identify the best case (fewest decisions reached), the worst case (most decisions evaluated), and propose one optimisation with a justification
+
+## Continue
+
+### INDEPENDENT WORK — Implementation and Efficiency Evaluation  (50 min)
+1. Efficiency evaluation (15 min): complete the algorithm efficiency evaluation worksheet. Best case: which scenario causes the algorithm to take the fewest steps? Count the exact number of decisions made and state the specific input values that produce this case. Worst case: which scenario causes the most decisions? Count and state. Optimisation proposal: identify one place in the algorithm where two IF statements could be merged into one compound condition (&&/||) without changing the output. Write the optimised pseudocode line and calculate the reduction in decision steps.
+2. Threshold calculation (10 min): for the temperature threshold in the specification, calculate the median-based optimal threshold: range = max recorded − min recorded; optimal threshold = min + (range÷2). If the specification uses a different threshold, evaluate: is the chosen threshold above or below the median? Who or what is disadvantaged by this choice? (Link to the bias concept from T2 Week 6.)
+3. Check your work carefully. Ask: "If someone handed you only the flowchart, could they implement this programme correctly without seeing the specification? If not, what is missing from the flowchart?"
+4. 2–3 you present their algorithm — not their code — to yourself. They show the flowchart on the projected screen and walk through it for Scenario 1, narrating each step: "The algorithm starts here. It reads the sensors. The temperature is 31°C — greater than the threshold of 28. So the YES branch is taken. The buzzer is activated. The algorithm then checks the light level…"
+5. Class self-check of the presented flowchart: "Is every diamond labelled with a YES and a NO branch? Is there a path that reaches the end oval? Is there any path that results in an infinite loop?" Identify and discuss any issues found.
+6. One pair presents their efficiency evaluation: "The best case for our algorithm is when the temperature is above threshold AND the light is above threshold — both conditions are satisfied on the first evaluation, 2 decisions total. The worst case is when both conditions are below threshold — both branches must be evaluated, 4 decisions. We proposed merging the two IF statements into a single compound condition: IF temp > 28 AND light > 500 — this reduces the worst case to 2 decisions."
+
+### SHOWCASE & DEBRIEF  (30 min)
+7. Draw the connection to professional software development: "In industry, the algorithm design phase — pseudocode, flowchart, trace — happens before any developer opens a code editor. The design document is reviewed, approved, and version-controlled. The code you have written today is the implementation of a design that was already proven correct. That sequence — design, prove, implement — is the engineering standard."
+8. Remember English link: "Pseudocode is a writing register — like formal letters or academic essays, it has rules about vocabulary and structure. You followed those rules today. The ability to express a complex process in formal, unambiguous language is a skill that transfers directly to technical writing, legal drafting, and scientific documentation."
+9. Remember Math link: "Efficiency analysis counts decisions. The best case is the minimum; the worst case is the maximum. Together they define the range of your algorithm's performance — exactly as mean and range define a dataset. You now have a quantitative way to compare two algorithms: which has the smaller worst case? That is a mathematical argument about quality."
+10. Exit question (written): "Name one thing your algorithm does correctly and one thing that could be improved. Be specific — name the pseudocode line." Collect.
+11. Submit pseudocode, flowchart, trace table, efficiency evaluation, and Arduino sketch via USB flash drive.
+
+## All Lesson 2 steps (complete list)
+
+1. Efficiency evaluation (15 min): complete the algorithm efficiency evaluation worksheet. Best case: which scenario causes the algorithm to take the fewest steps? Count the exact number of decisions made and state the specific input values that produce this case. Worst case: which scenario causes the most decisions? Count and state. Optimisation proposal: identify one place in the algorithm where two IF statements could be merged into one compound condition (&&/||) without changing the output. Write the optimised pseudocode line and calculate the reduction in decision steps.
+2. Threshold calculation (10 min): for the temperature threshold in the specification, calculate the median-based optimal threshold: range = max recorded − min recorded; optimal threshold = min + (range÷2). If the specification uses a different threshold, evaluate: is the chosen threshold above or below the median? Who or what is disadvantaged by this choice? (Link to the bias concept from T2 Week 6.)
+3. Check your work carefully. Ask: "If someone handed you only the flowchart, could they implement this programme correctly without seeing the specification? If not, what is missing from the flowchart?"
+4. 2–3 you present their algorithm — not their code — to yourself. They show the flowchart on the projected screen and walk through it for Scenario 1, narrating each step: "The algorithm starts here. It reads the sensors. The temperature is 31°C — greater than the threshold of 28. So the YES branch is taken. The buzzer is activated. The algorithm then checks the light level…"
+5. Class self-check of the presented flowchart: "Is every diamond labelled with a YES and a NO branch? Is there a path that reaches the end oval? Is there any path that results in an infinite loop?" Identify and discuss any issues found.
+6. One pair presents their efficiency evaluation: "The best case for our algorithm is when the temperature is above threshold AND the light is above threshold — both conditions are satisfied on the first evaluation, 2 decisions total. The worst case is when both conditions are below threshold — both branches must be evaluated, 4 decisions. We proposed merging the two IF statements into a single compound condition: IF temp > 28 AND light > 500 — this reduces the worst case to 2 decisions."
+7. Draw the connection to professional software development: "In industry, the algorithm design phase — pseudocode, flowchart, trace — happens before any developer opens a code editor. The design document is reviewed, approved, and version-controlled. The code you have written today is the implementation of a design that was already proven correct. That sequence — design, prove, implement — is the engineering standard."
+8. Remember English link: "Pseudocode is a writing register — like formal letters or academic essays, it has rules about vocabulary and structure. You followed those rules today. The ability to express a complex process in formal, unambiguous language is a skill that transfers directly to technical writing, legal drafting, and scientific documentation."
+9. Remember Math link: "Efficiency analysis counts decisions. The best case is the minimum; the worst case is the maximum. Together they define the range of your algorithm's performance — exactly as mean and range define a dataset. You now have a quantitative way to compare two algorithms: which has the smaller worst case? That is a mathematical argument about quality."
+10. Exit question (written): "Name one thing your algorithm does correctly and one thing that could be improved. Be specific — name the pseudocode line." Collect.
+11. Submit pseudocode, flowchart, trace table, efficiency evaluation, and Arduino sketch via USB flash drive.
+
+## Check your understanding
+- Formative | (During) | Decomposition: sub-problems named as functions before pseudocode writing begins — you check during guided phase | Pseudocode: complete, uses correct conventions, every IF has ELSE, every WHILE has termination condition (checked during guided phase) | Algorithm trace: both scenarios traced correctly, any discrepancy corrected in pseudocode before coding (collected) | Exit question: one specific correct strength and one specific improvement identified (collected)
+- Exit Assessment | Pseudocode: complete algorithm using correct conventions, decomposed into named sub-problems, submitted (assessed on 5-point artifact rubric) | Flowchart: correct notation throughout, all paths reach end node, no dangling arrows (submitted) | Arduino sketch: every pseudocode line has a corresponding // PSEUDOCODE LINE N: comment, all named functions implemented, hardware behaviour matches trace prediction (verified by you and submitted) | Efficiency evaluation: best case and worst case step counts calculated with specific input values, one optimisation proposed with pseudocode (submitted) | All materials submitted via USB flash drive
+- Differentiation | Support: Reduce to the simplest Problem Specification Card (single sensor, 2 decision nodes). Provide the pseudocode skeleton with function names and IF/ELSE structure already present — learner fills in variable names, threshold values, and output actions. For the flowchart, provide pre-drawn shapes and ask learner to add labels and arrows only. Reduce the trace to one scenario. | Extension: After implementing the original algorithm, redesign it using an event-driven architecture: instead of polling sensors in a loop, use Arduino interrupt functions (attachInterrupt()) for the push button input. Write a comparison pseudocode for both the polling version and the interrupt-driven version. Evaluate: which has the better worst case? Which is more appropriate for a battery-powered device where loop() running continuously would drain the battery? This introduces interrupt-driven programming — a Stage 6 concept.
+
+## Key words to remember
+algorithm · pseudocode · flowchart · decomposition · trace · best case · worst case · efficiency · stepwise refinement · decision node · termination condition · event-driven · interrupt · threshold optimisation · compound condition
+
+## Stay safe
+Safeguarding Note: Problem specifications used in this session are fictional engineering scenarios — no personal data is involved. Ensure that any real-world problem a pair chooses to discuss during the debrief does not involve monitoring or tracking specific individuals. The buzzer component should be tested briefly — sustained buzzer output in a small room can be uncomfortable for you with auditory sensitivity. Remind you to test the buzzer for no more than 3 seconds at a time during circuit verification.
+
+## Wrap-up
+1. Save your sketch with a clear name for this week.
+2. Submit or store your files as required for your course.
+3. Unplug hardware and pack kits safely.

@@ -1,0 +1,56 @@
+Connect the Micro:bit temperature sensor in MakeCode and display a live reading on the LED every 10 seconds
+Record 6 temperature readings over time in a paper data table with correct column headers (Time, Temperature °C)
+Plot the 6 readings on a hand-drawn line graph with a labelled x-axis (Time), y-axis (Temperature °C), a title, and an appropriate scale
+Calculate the mean temperature from the 6 readings (sum ÷ 6) and the range (highest − lowest)
+Write a short scientific report using the structure: Aim / Method / Results (graph) / Conclusion – minimum 5 sentences
+Discuss one real-world application where a temperature sensor could be useful and explain why
+4 BBC Micro:bit v2 kits with USB cables (temperature sensor is built-in)
+Data table recording sheet (A4 per learner) – pre-printed with columns: Reading #, Time (min), Temperature (°C)
+Blank graph paper (A4 per learner) – with x-axis and y-axis pre-drawn for line graph
+Scientific report writing frame (A4 per learner) – sections: Aim / Method / Results / Conclusion
+Rulers and pencils for graph drawing
+Facilitator device + projected screen
+Optional: warm hand warmer or ice pack to vary temperature readings for demonstration
+Facilitator holds the Micro:bit and asks: 'Can this device feel the temperature in this room right now?' Pause. Run a pre-loaded temperature display programme on the projected screen. Show the reading.
+Ask: 'Where do you see temperature sensors in real life?' Collect answers (fridge, weather app, fever thermometer, car dashboard, air conditioner). Bridge: 'Today we will turn your Micro:bit into a science instrument.'
+Introduce scientific vocabulary: sensor, data, reading, mean, range, trend. Pairs read each word on a reference card and give one example from daily life.
+Show a blank data table on screen. Ask: 'Why do scientists record data in a table? Why not just remember the numbers?' Establish: tables organise data; we can spot patterns.
+Distribute data table sheets and scientific report frames. Each learner writes their Aim: 'Our aim is to measure the temperature in the room every 2 minutes for 12 minutes and look for a pattern.'
+Pairs write the Method (2–3 sentences): what they will do, what they will record, and how they will display the results. Facilitator checks before devices are opened.
+Graph preparation: on graph paper, draw x-axis (0–12 minutes) and y-axis (choose a scale that fits expected readings of ~20–35°C). Add title and axis labels.
+Maths warm-up: 'If my 6 readings are 23, 24, 24, 25, 25, 26 – what is the mean? What is the range?' Pairs calculate and share.
+Step 1 – Sensor Programme (8 min): Driver opens MakeCode. Using 'Input' category → 'temperature (°C)' block. Build: 'on button A pressed → show number temperature'. Alternatively, build a 'forever' loop: 'show number temperature → pause 10000ms (10 seconds) → clear screen'. Download to Micro:bit.
+Step 2 – Data Collection (10 min): Every 2 minutes, Driver reads the temperature shown on the LED and calls it out. Navigator records it in the data table (Reading #, Time, Temperature). Collect 6 readings. Swap Driver/Navigator after reading 3.
+Step 3 – Graph Plotting (5 min): Each learner plots their 6 readings on their line graph. Connect the points with a smooth line. Check: title written? Both axes labelled with units? Scale consistent?
+Step 4 – Mean & Range (2 min): Calculate mean (sum ÷ 6) and range (max − min). Write both values clearly at the bottom of the data table.
+Pairs compare their graphs. Ask: 'Does your temperature go up, go down, or stay roughly the same? What might cause it to change?'
+Facilitator asks 3 learners: 'What is the mean temperature in this room according to your data? What is the range? What trend does your graph show?'
+Learners write their Conclusion on the report frame (minimum 2 sentences): 'We found that… The data showed that… One real-world use for this sensor would be…'
+Teaser: 'Next week, we will use the Micro:bit to tell a STORY on the LED – a 3-scene animation with a beginning, a problem, and a resolution. You will write the story on paper BEFORE you code it.'
+Learners complete the tick sheet: ☑ Data table (6 readings) ☑ Line graph (labelled, title, scale) ☑ Mean calculated ☑ Range calculated ☑ Report (Aim + Method + Conclusion).
+Collect all paper artifacts (data table, graph, report frame) – these are the Week 5 assessed artifacts.
+Disconnect and store Micro:bit kits safely.
+ISOMA EDUTECH LIMITED Micro:bit (MakeCode) Lesson Plan – Stage 4 (P4 · Cambridge Stage 4 / Year 4) Lesson 5: Sensors & Data Logging – Our Micro:bit Experiment
+Duration | 60 minutes | Term / Week | Term 1 · Week 5
+Age Range | 8–10 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | BBC Micro:bit v2 (temperature sensor built-in), USB cables, shared laptops | Bloom's | L4 Analysing
+NCDC Ref | Uganda NCDC P4 – Literacy Strand: Scientific Report Writing; Numeracy Strand: Data Tables, Line Graphs, Mean & Range | Cambridge | Cambridge Primary Computing 0845 – Stage 4: Using sensors to collect data; Recording and presenting data; Analysing patterns
+DDD Phase | DELIVER – Learners programme the Micro:bit temperature sensor, record 6 readings in a data table, plot a line graph, and write a short scientific report | Big Idea | Sensors let computers read the real world. When we record data over time and plot it on a graph, we can see patterns and trends that are invisible in a list of numbers.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS | CROSS-CURRICULAR LINKS
+English | Scientific report writing: write a short experiment report using the four-section structure – Aim / Method / Results (attach graph) / Conclusion. Minimum 5 full sentences. Sentence starters provided: 'Our aim was to…', 'We found that…', 'The data showed that…'. Reports collected as a written artifact. | Maths | Data table: record 6 readings with correct units (°C). Line graph: plot readings with time on x-axis, temperature on y-axis; choose an appropriate scale; label both axes with title. Calculate mean = sum of readings ÷ 6. Calculate range = highest reading − lowest reading. Identify any trend (rising, falling, stable).
+LESSON STRUCTURE
+HOOK – What Can Your Micro:bit Feel? (10 min)
+DESIGN – Plan the Experiment (10 min)
+DELIVER – Programme, Measure, Record (25 min)
+DISCOVER – Analyse and Report (10 min)
+WRAP-UP – Collect and Store (5 min)
+ASSESSMENT | ASSESSMENT
+Formative (During) | Observe data collection: is the learner reading the sensor correctly and recording with correct units? Graph check: are both axes labelled with title? Is the scale appropriate and consistent?
+Exit Assessment | Collected artifacts (data table + line graph + 5-sentence report) assessed against the 4-point rubric (see DDD Part 8.3). Mean and range must be calculated and written. Report must include all 4 sections with at least 5 sentences total.
+Differentiation | Support: pre-draw the graph axes with scale and labels; learner only plots the points and writes Conclusion. Extension: Learner adds a second line to the graph (e.g. readings from near a window vs. centre of room) and compares the two trends in writing.
+KEY VOCABULARY
+sensor · temperature · data · reading · mean · range · trend · line graph · x-axis · y-axis · scale · conclusion
+Safeguarding Note: Do not ask learners to touch each other to generate body-heat readings. Use the room environment, a warm cup, or a facilitator-held heat source only. Ensure no learner is singled out for having a different body temperature.
+Facilitator Name:    ___________________ | Date Delivered:    ____________________ | Signature:    ____________________

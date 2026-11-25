@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ meta_title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ page_url }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Peter Gordon Ekebu Courses">
+    <meta property="og:title" content="{{ meta_title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ image_url }}">
+    <meta property="og:image:alt" content="{{ course.title }} course thumbnail">
+    <meta property="og:url" content="{{ page_url }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ meta_title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ image_url }}">
+    <meta name="twitter:image:alt" content="{{ course.title }} course thumbnail">
+  </head>
+  <body>
+    <main>
+      <h1>{{ course.title }}</h1>
+      <p>{{ description }}</p>
+      <a href="{{ page_url }}">View course and enroll</a>
+    </main>
+  </body>
+</html>

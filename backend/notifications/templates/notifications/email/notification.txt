@@ -1,0 +1,32 @@
+Hello {{ recipient.first_name|default:recipient.username }},
+
+{{ notification.title }}
+
+{{ notification.message }}
+
+{% if meeting %}
+Meeting details
+---------------
+Title: {{ meeting.title }}
+Hosted by: {{ meeting.host_name }}
+When: {{ meeting.date }} at {{ meeting.time }} ({{ meeting.timezone }})
+Duration: {{ meeting.duration }}
+Venue: {{ meeting.venue }}
+{% if meeting.agenda %}Agenda: {{ meeting.agenda }}{% endif %}
+{% endif %}
+
+{% if action_url %}Open: {{ action_url }}{% endif %}
+
+{% if is_ekebulive %}
+You are receiving this email from EkebuLive. You can manage notification preferences from your account.
+
+EkebuLive Support
+support@petergordonekebu.com
+https://www.ekebulive.com
+{% else %}
+You are receiving this email from Peter Gordon Ekebu Educational Platform. You can manage notification preferences from your account.
+
+Peter Gordon Ekebu
+hello@petergordonekebu.com
+https://petergordonekebu.com
+{% endif %}

@@ -1,0 +1,60 @@
+Declare and initialise an integer array of at least 5 elements and access each element by index using a for loop
+Write a sketch that finds the maximum, minimum, mean, and range of values stored in an array and prints each result to Serial Monitor
+Declare and manipulate String variables using at least three String methods: length(), toUpperCase(), and indexOf()
+Write a sketch that accepts a String, checks its length, splits it at a specific character, and prints both halves
+Explain array indexing using a real-world analogy (e.g. a row of market stalls numbered from 0) and write the analogy on the architecture map
+Identify and fix 3 array-related errors in a provided debug sketch: off-by-one index, wrong array size declaration, accessing index out of bounds
+4 laptops with Arduino IDE 2.x
+4 Arduino Uno boards + USB cables (Serial Monitor primary output device this session)
+Printed "Array Indexing Visual" (A4 per pair) — diagram of 6 labelled market stalls numbered [0] to [5] with blank spaces for values
+Printed "Array Operations Worksheet" (A5 per learner) — calculations for max, min, mean, range on a given dataset to verify Serial Monitor output
+Printed "String Methods Reference Card" (A5 per pair) — table of 6 String methods with syntax and example
+Printed "Debug Challenge" (A4 per pair) — 18-line array sketch with 3 marked errors
+USB flash drives
+Facilitator device + projected screen
+Recap (5 min): facilitator writes on the board — int age = 12; — and asks: "What if I need to store the ages of all 8 learners in this class? How many variable declarations would I need?" Learners respond: 8. "Is there a better way?" Introduce the word array.
+Market stall analogy (10 min): distribute the Array Indexing Visual. "Imagine a row of market stalls in Nakasero market. Each stall has a number starting from 0. You can go directly to stall [3] without opening stalls [0], [1], or [2]." Learners fill in values in the stall diagram as the facilitator dictates: [0]=72, [1]=88, [2]=45, [3]=91, [4]=63. Ask: "What is at stall [2]? What stall holds 91?"
+Show the array declaration on the board: int scores[5] = {72, 88, 45, 91, 63}; — map each number to a stall. Learners copy and label with the stall diagram on the reverse of the worksheet.
+Bridge: "A String is also a collection — a collection of characters. String name = "Amara"; — A is at index 0, m is at index 1, a is at index 2, r is at index 3, a is at index 4. Every String is secretly an array of characters."
+Array traversal: facilitator live-codes. Declare int scores[5] = {72, 88, 45, 91, 63}; in setup(). Write a for loop that prints each element: for(int i = 0; i < 5; i++) { Serial.println(scores[i]); }. Upload. Observe output. Ask: "What index does the last element have? What happens if I write scores[5]?"
+Array statistics challenge (pair task): learners hand-calculate max, min, mean, and range on the worksheet first (5 min). Then write code to compute and print each result using the array. Must use the loop to find max and min — not hardcode the values. Upload and verify output matches hand calculation.
+Expand to a 10-element array: int temps[10] = {28, 31, 29, 33, 27, 30, 32, 28, 29, 31}; — representing 10 temperature readings. Calculate and print mean and range. Ask: "Does this look familiar?" (Link to Week 5 Term One sensor data exercise.)
+String methods (facilitator demonstrates): String city = "Kampala"; — Serial.println(city.length()); → 7. Serial.println(city.toUpperCase()); → KAMPALA. Serial.println(city.indexOf("a")); → 1 (first occurrence). Serial.println(city.substring(0, 4)); → Kamp.
+Rotate Driver/Navigator. Learners write their own String sketch: store their project name from Term One as a String, use all 4 methods above, and print each result with a label.
+Discussion: "What English skills did you just apply in code? Finding the index of a letter is like finding the page number of a word in an index. Length() is word count. toUpperCase() is the capitalise function in Microsoft Word."
+Debug challenge: distribute the printed debug sketch. Pairs identify all 3 array errors on paper. Errors: (1) int data[5] = {1, 2, 3, 4, 5, 6}; — array size declared as 5 but 6 values given. (2) for(int i = 0; i <= 5; i++) — off-by-one, accesses index 5 in a 5-element array. (3) Serial.println(data[5]); — index out of bounds. Fix each error on paper first, then in Arduino IDE. Upload and verify.
+Composition challenge: write a sketch that stores the names of 4 Ugandan cities in a String array: String cities[4] = {"Kampala", "Entebbe", "Jinja", "Gulu"};. Loop through the array and print each city with its character count and whether it contains the letter "a". Use length() and indexOf().
+Mathematics integration: extend the temperature array sketch. Calculate the mean as a float (sum ÷ 10, using float result). If any reading is above 30°C, print "High temperature detected at index [i]". This adds an if/else condition inside the loop — connecting Week 4 Term One logic to today's array work.
+Facilitator circulates. Ask: "Why does your for loop stop at i < 5 and not i <= 5? What would happen at i = 5?" Check that all pairs can explain zero-based indexing.
+Extension: write a function int findMax(int arr[], int size) that returns the maximum value in any integer array passed to it. Call it with two different arrays and print both results. Calculate by hand: is the function's answer correct?
+2–3 pairs share their city array output on the projected Serial Monitor. Class verifies: are the city names correct? Are the character counts correct? Does indexOf("a") return the right index for each city?
+One pair presents the debug challenge: "Error 1 was here — the array size said 5 but there were 6 values. Error 2 was here — the loop went one step too far. Error 3 was here — index 5 does not exist in a 5-element array." Class confirms.
+Facilitator restates English link: "indexOf() is the search function of language. You use it when you look for a word in a paragraph. length() is the word count tool. toUpperCase() is the style rule. Today you made a computer apply three English language operations."
+Facilitator restates Math link: "Mean, range, maximum, minimum — you calculated all four by hand first, then let the code verify. That is how professional data analysts work: estimate first, compute second, compare both."
+Exit question: "Write down what happens when your programme tries to access scores[5] in an array declared as int scores[5]. Why is this a problem?" Collect as formative evidence.
+Submit all sketches and worksheets via USB flash drive.
+array · index · element · zero-based indexing · traversal · String · length() · toUpperCase() · indexOf() · substring() · out-of-bounds · off-by-one error
+ISOMA EDUTECH LIMITED | Arduino · Python Lesson Plan | Stage 5  (Ages 10–12 · AI Engineers) | Lesson T2–2: Advanced Variables, Arrays & String Manipulation
+Duration | 3 hours (Saturday) / 90 min × 2 days (Holiday) | Term / Week | Term 2 · Week 2
+Age Range | 10–12 years | Group Size | 8 learners (pair programming, 4 pairs)
+Hardware | Arduino Uno, USB cable, laptop with Arduino IDE 2.x, Serial Monitor (no additional components required beyond the built-in LED on pin 13) | Bloom's Level | L3 Applying → L4 Analysing
+NCDC Ref | Uganda NCDC P5–P6 – ICT Strand: Data structures, arrays, string operations; English Strand: Vocabulary precision, sentence construction, textual analysis; Mathematics Strand: Indexing, arrays as ordered lists, arithmetic with stored values | Cambridge | Cambridge Primary Computing 0845 – Stage 5: Data structures; arrays; string handling; manipulating and storing data
+DDD ILO | ILO 3.1 – Write Arduino sketches using variables, data types, and Serial.println(); extend to arrays, array traversal, and String methods to store and manipulate collections of data | Big Idea | A single variable holds one piece of information. An array holds a collection. The difference between a word and a sentence is the same as the difference between a variable and an array.
+Term Two Context: In Term One, learners declared individual variables (int, float, String) and used them in simple sketches. Term Two Week 2 scales this up: arrays allow multiple values to be stored, traversed, and processed in a single loop. String manipulation extends the text handling introduced in Term One. Both skills are prerequisites for the sensor data project and the final Term Two project.
+LEARNING OBJECTIVES
+MATERIALS AND PREPARATION
+CROSS-CURRICULAR LINKS
+English | String manipulation as language processing: every String method connects to an English concept. length() = word count. toUpperCase() = capitalisation rules. indexOf() = finding a word within a sentence. substring() = extracting a phrase. The parallel is made explicit: "When you proofread an essay, you scan for specific words, check their position, and count their frequency. String methods let code do the same thing." The analogy task requires a formal written sentence in the architecture map.
+Maths | Array operations as descriptive statistics: given int scores[5] = {72, 88, 45, 91, 63}; — learners calculate maximum (91), minimum (45), mean ((72+88+45+91+63)÷5 = 71.8), and range (91−45 = 46) by hand on the worksheet before writing code to verify. Array indexing starts at 0: this is a formal mathematical convention. Off-by-one errors (accessing index 5 in a 5-element array) are a direct consequence of misunderstanding zero-based indexing — a P6-level number line concept applied to computing.
+LESSON STRUCTURE
+WARM-UP & REVIEW — From Variables to Collections  (20 min)
+GUIDED ACTIVITY — Array Traversal and String Methods  (60 min)
+INDEPENDENT WORK — Debug and Compose  (50 min)
+SHOWCASE & DEBRIEF  (30 min)
+ASSESSMENT
+Formative | (During) | Array Indexing Visual: completed with correct values mapped to stall positions (checked during warm-up) | Array Operations Worksheet: hand-calculated max, min, mean, range before coding (collected) | Debug challenge: all 3 errors identified on paper before upload (collected) | Exit written response: out-of-bounds access explained correctly (collected)
+Exit Assessment | Array traversal sketch: correctly prints all 5 elements via for loop and Serial Monitor (verified by facilitator) | Statistics sketch: max, min, mean, and range all printed correctly and match hand calculations (verified) | String sketch: at least 4 String methods used correctly on a meaningful String variable (verified) | Debug challenge: all 3 errors fixed, sketch compiles (verified) | All materials submitted via USB flash drive
+Differentiation | Support: Provide a pre-declared array and a loop shell: for(int i = 0; i < ___; i++) { Serial.println(scores[___]); }. For statistics, give the sum pre-calculated and ask learners to complete only the division. For the city array, reduce to 2 cities. | Extension: Write a void sortAscending(int arr[], int size) function that sorts the scores array in ascending order using bubble sort (from Term One Week 4) and prints the sorted array. Then write void printStats(int arr[], int size) that calls findMax(), findMin(), and calculates mean — all in one function call from loop().
+KEY VOCABULARY
+Safeguarding Note: The city array and any String data used in sketches must contain only fictional or publicly known place names — no personal addresses, phone numbers, or school names. Remind learners: strings printed to the Serial Monitor can be seen by anyone who opens the application on that laptop.
+Facilitator Name: | _______________________ | Date Delivered: | _______________________ | Signature: | _______________________
